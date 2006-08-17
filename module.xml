@@ -1,0 +1,13 @@
+<module>
+	<rawname>parking</rawname>
+	<name>Parking Lot</name>
+	<version>2.0.0</version>
+	<type>setup</type>
+	<category>Module</category>
+	<menuitems>
+		<parking>Parking Lot</parking>
+	</menuitems>
+	<location>release/parking-2.0.0.tgz</location>
+	<info>http://aussievoip.com.au/wiki/freePBX-ParkingLot</info>
+	<md5sum></md5sum>
+</module>
