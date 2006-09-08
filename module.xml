@@ -7,7 +7,7 @@
 	<menuitems>
 		<parking>Parking Lot</parking>
 	</menuitems>
-	<location>release//2.2/parking-2.0.0.tgz</location>
+	<location>release/2.2/parking-2.0.0.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-ParkingLot</info>
-	<md5sum></md5sum>
+	<md5sum>6a98d063b420a033f9bfb5532aa5cce5</md5sum>
 </module>
