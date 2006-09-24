@@ -53,7 +53,7 @@ function parking_get_config($engine) {
 			// Now generate dialplan
 			$ext->add($contextname, "t", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
 			if ($parkalertinfo) {
-				$ext->add($contextname, "t", '', new ext_setvar('__ALERT_INFO',$parkalertinfo));
+				$ext->add($contextname, "t", '', new ext_setvar('__ALERT_INFO',str_replace(';', '\;', $parkalertinfo)));
 			}
 			if ($parkcid) {
 				$ext->add($contextname, "t", '', new ext_setvar('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
