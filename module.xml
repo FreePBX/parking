@@ -3,7 +3,10 @@
 	<name>Parking Lot</name>
 	<version>2.0.1</version>
 	<type>setup</type>
-	<category>Module</category>
+	<category>Internal Options &amp; Configuration</category>
+	<description>Manages parking lot extensions and other options.
+	
+	Parking is a way of putting calls "on hold", and then picking them up from any extension.</description>
 	<menuitems>
 		<parking>Parking Lot</parking>
 	</menuitems>
