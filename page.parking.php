@@ -36,6 +36,7 @@ if(isset($_POST['action'])){
 	if ($action == 'edtPARKING') {
 		parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkingcontext, $parkalertinfo, $parkcid, $parkingannmsg, $goto);
 		needreload();
+		redirect_standard();
 	}
 }
 ?>
