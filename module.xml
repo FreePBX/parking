@@ -13,7 +13,7 @@
 	<changelog>
 		*2.0.2* Add he_IL translation
 	</changelog>
-	<location>release/2.2/parking-2.0.2.tgz</location>
+	<location>release/2.3/parking-2.0.2.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-ParkingLot</info>
-	<md5sum>bfc593350434e47b8f291214fc2d137c</md5sum>
+	<md5sum>a5c34fd88f855402c50c49b91dfad443</md5sum>
 </module>
