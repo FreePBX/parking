@@ -9,6 +9,7 @@ function parking_destinations() {
 function parking_get_config($engine) {
 	global $db;
 	global $ext;  // is this the best way to pass this?
+	global $asterisk_conf;
 	switch($engine) {
 		case "asterisk":
 
@@ -35,7 +36,8 @@ function parking_get_config($engine) {
 		//open the file and truncate. If diabled, file will be deleted this way
 		//AND GET THE ENV VARIABLES TO CALL THIS BY
 
-		$filename = (isset($amp_conf["ASTETCDIR"]) ? $amp_conf["ASTETCDIR"] : "/etc/asterisk/") . "parking_additional.inc";
+		$filename = isset($asterisk_conf["astetcdir"]) && $asterisk_conf["astetcdir"] != '' ? rtrim($asterisk_conf["astetcdir"],DIRECTORY_SEPARATOR) : "/etc/asterisk";
+		$filename .= "/parking_additional.inc";
 		$fh = fopen($filename, "w+");
 		fwrite($fh, ";*** WARNING: DO NOT HAND EDIT THIS FILE IT IS AUTO-GENERATD ***\n;\n");
 
