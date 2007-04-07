@@ -15,7 +15,7 @@
 		*2.1* Remove settings on uninstall bug #1597
 		*2.0.2* Add he_IL translation
 	</changelog>
-	<location>release/2.3/parking-2.1.tgz</location>
+	<location>release/2.3/parking-2.1.1.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-ParkingLot</info>
-	<md5sum>bc271d7ad8ef2e512f86906b70f5944f</md5sum>
+	<md5sum>e94565cfa4d0e54b0922a20ffcc4c11d</md5sum>
 </module>
