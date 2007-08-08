@@ -85,7 +85,7 @@ function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkin
 	$sql = "DELETE FROM parkinglot WHERE id = '$parkinglot_id'";
 	$result = $db->query($sql);
 	if(DB::IsError($result)) {
-		die($result->getMessage().$sql);
+		die_freepbx($result->getMessage().$sql);
 	}
 
 	// Check for interger only inputs and set to default if not
@@ -110,7 +110,7 @@ function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkin
 
 	$result = $db->executeMultiple($compiled,$parkfields);
 	if(DB::IsError($result)) {
-		die($result->getDebugInfo()."<br><br>".'error adding to PARKING table');
+		die_freepbx($result->getDebugInfo()."<br><br>".'error adding to PARKING table');
 	}
 }
 
