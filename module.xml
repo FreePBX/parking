@@ -1,7 +1,7 @@
 <module>
 	<rawname>parking</rawname>
 	<name>Parking Lot</name>
-	<version>2.1.2</version>
+	<version>2.1.2.1</version>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Manages parking lot extensions and other options.
@@ -11,12 +11,12 @@
 		<parking>Parking Lot</parking>
 	</menuitems>
 	<changelog>
+		*2.1.2.1* bump for rc1
 		*2.1.2* merge findmefollow/core extension destinations if any
 		*2.1.1* fix pseudo hardcoded path issue (hardcoded form missing global)
 		*2.1* Remove settings on uninstall bug #1597
 		*2.0.2* Add he_IL translation
 	</changelog>
 	<location>release/2.3/parking-2.1.2.tgz</location>
-	<info>http://aussievoip.com.au/wiki/freePBX-ParkingLot</info>
 	<md5sum>693687106df687dccd1fd8bc140eba21</md5sum>
 </module>
