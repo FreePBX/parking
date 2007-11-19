@@ -67,7 +67,7 @@ function parking_get_config($engine) {
 			//
 			$ext->add($contextname, "t", '', new ext_goto($goto));
 		} else {
-		fwrite($fh, ";***              PARKING LOT HAS BEEN DISABLED              ***\n");
+			fwrite($fh, ";***              PARKING LOT HAS BEEN DISABLED              ***\n");
 		}
 		fclose($fh);
 		chmod($filename, 0660);
@@ -123,6 +123,32 @@ function parking_getconfig($parkinglot_id=1) {
 		$results = null;
 	}
 	return $results;
+}
+
+function parking_check_destinations($dest=true) {
+	global $active_modules;
+
+	$destlist = array();
+	if (is_array($dest) && empty($dest)) {
+		return $destlist;
+	}
+	$sql = "SELECT keyword, data FROM parkinglot WHERE keyword = 'goto' ";
+	if ($dest !== true) {
+		$sql .= "AND data in ('".implode("','",$dest)."')";
+	}
+	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
+
+	$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
+
+	foreach ($results as $result) {
+		$thisdest = $result['data'];
+		$destlist[] = array(
+			'dest' => $thisdest,
+			'description' => 'Parking Lot',
+			'edit_url' => 'config.php?type='.$type.'&display=parking',
+		);
+	}
+	return $destlist;
 }
 
 // Duly stolen from the queues module (since I can't count on it being there, but would not be bad to stuff back in the common include
