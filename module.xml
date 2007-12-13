@@ -1,16 +1,16 @@
 <module>
 	<rawname>parking</rawname>
 	<name>Parking Lot</name>
-	<version>2.4.0</version>
+	<version>2.4.0.1</version>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Manages parking lot extensions and other options.
-	
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.</description>
 	<menuitems>
 		<parking>Parking Lot</parking>
 	</menuitems>
 	<changelog>
+		*2.4.0.1* add parking_conf class, support PARKINGPATCH config
 		*2.4.0* Destination registry, it translation
 		*2.1.2.1* bump for rc1
 		*2.1.2* merge findmefollow/core extension destinations if any

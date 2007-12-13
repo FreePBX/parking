@@ -1,15 +1,35 @@
 <?php /* $Id: functions.inc.php 2188 2006-07-27 02:21:52Z p_lindheimer $ */
 
-function parking_destinations() {
-}
-
 /* 	Generates dialplan for parkinglot
 	We call this with retrieve_conf
 */
+
+class parking_conf {
+	// return the filename to write
+	function get_filename() {
+		return "parking_additional.inc";
+	}
+	function addSetting($param, $value) {
+		$this->_params[] = array($param, $value);
+	}
+	// return the output that goes in the file
+	function generateConf() {
+		$output = "";
+		if (isset($this->_params) && is_array($this->_params)) {
+			foreach ($this->_params as $settings) {
+				$output .= $settings[0].' => '.$settings[1]."\n";
+			}
+		}
+		return $output;
+	}
+}
+
 function parking_get_config($engine) {
 	global $db;
+	global $amp_conf;
 	global $ext;  // is this the best way to pass this?
 	global $asterisk_conf;
+	global $parking_conf;
 	switch($engine) {
 		case "asterisk":
 
@@ -33,44 +53,47 @@ function parking_get_config($engine) {
 		$parkpos1	= $parkext + 1;
 		$parkpos2	= $parkpos1 + $numslots;
 
-		//open the file and truncate. If diabled, file will be deleted this way
-		//AND GET THE ENV VARIABLES TO CALL THIS BY
-
-		$filename = isset($asterisk_conf["astetcdir"]) && $asterisk_conf["astetcdir"] != '' ? rtrim($asterisk_conf["astetcdir"],DIRECTORY_SEPARATOR) : "/etc/asterisk";
-		$filename .= "/parking_additional.inc";
-		$fh = fopen($filename, "w+");
-		fwrite($fh, ";*** WARNING: DO NOT HAND EDIT THIS FILE IT IS AUTO-GENERATD ***\n;\n");
-
 		if ($parkingenabled) {
 			// TODO: lookup ampportal.conf variables for this, don't hard code
 			// first write features_additional.inc include file
 			//
-			fwrite($fh, "parkext => ".$parkext."\n");
-			fwrite($fh, "parkpos => ".$parkpos1."-".$parkpos2."\n");
-			fwrite($fh, "context => ".$parkingcontext."\n");
+			$parking_conf->addSetting('parkext',$parkext);
+			$parking_conf->addSetting('parkpos',$parkpos1."-".$parkpos2);
+			$parking_conf->addSetting('context',$parkingcontext);
+
 			if ($parkingtime) {
-				fwrite($fh, "parkingtime => ".$parkingtime."\n");
+				$parking_conf->addSetting('parkingtime',$parkingtime);
 			}
 
 			// Now generate dialplan
 			$ext->add($contextname, "t", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
-			if ($parkalertinfo) {
-				$ext->add($contextname, "t", '', new ext_setvar('__ALERT_INFO',str_replace(';', '\;', $parkalertinfo)));
+
+			// If we have an appropriate Asterisk patch, set paraemters for Asterisk
+			//
+			if (isset($amp_conf["PARKINGPATCH"]) && strtolower($amp_conf["PARKINGPATCH"]) == 'true') {
+				if ($parkalertinfo) {
+					$parking_conf->addSetting('parkreturnalertinfo',$parkalertinfo);
+				}
+				if ($parkcid) {
+					$parking_conf->addSetting('parkreturncidprefix',$parkcid);
+				}
+			// No patch, do the default for orphaned calls
+			} else {
+				if ($parkalertinfo) {
+					$ext->add($contextname, "t", '', new ext_setvar('__ALERT_INFO',str_replace(';', '\;', $parkalertinfo)));
+				}
+				if ($parkcid) {
+					$ext->add($contextname, "t", '', new ext_setvar('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
+				}
 			}
-			if ($parkcid) {
-				$ext->add($contextname, "t", '', new ext_setvar('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
-			}
+
 			if ($parkingannmsg) {
 				$ext->add($contextname, "t", '', new ext_playback($parkingannmsg));
 			}
 			// goto the destination here
 			//
 			$ext->add($contextname, "t", '', new ext_goto($goto));
-		} else {
-			fwrite($fh, ";***              PARKING LOT HAS BEEN DISABLED              ***\n");
 		}
-		fclose($fh);
-		chmod($filename, 0660);
 		break;
 	}
 }
