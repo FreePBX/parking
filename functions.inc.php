@@ -30,6 +30,8 @@ function parking_get_config($engine) {
 	global $ext;  // is this the best way to pass this?
 	global $asterisk_conf;
 	global $parking_conf;
+	global $version;
+
 	switch($engine) {
 		case "asterisk":
 
@@ -93,6 +95,17 @@ function parking_get_config($engine) {
 			// goto the destination here
 			//
 			$ext->add($contextname, "t", '', new ext_goto($goto));
+
+			// Asterisk 1.4 requires hints to be generated for parking
+			//
+			if (version_compare($version, "1.4", "ge")) {
+				$parkhints = 'park-hints';
+				$ext->addInclude('from-internal-additional', $parkhints); // Add the include from from-internal
+				for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
+					$ext->addHint($parkhints, $slot, "park:$slot@$parkingcontext");
+					$ext->add($parkhints, $slot, '', new ext_parkedcall($slot));
+				}
+			}
 		}
 		break;
 	}
