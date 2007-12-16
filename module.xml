@@ -1,7 +1,7 @@
 <module>
 	<rawname>parking</rawname>
 	<name>Parking Lot</name>
-	<version>2.4.0.2</version>
+	<version>2.4.0.3</version>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Manages parking lot extensions and other options.
@@ -10,6 +10,7 @@
 		<parking>Parking Lot</parking>
 	</menuitems>
 	<changelog>
+		*2.4.0.3* change to core_conf and features_general_addtional.conf, no more parking_additianal.inc
 		*2.4.0.2* create hints for Asterisk 1.4 and above
 		*2.4.0.1* add parking_conf class, support PARKINGPATCH config
 		*2.4.0* Destination registry, it translation
@@ -19,6 +20,6 @@
 		*2.1* Remove settings on uninstall bug #1597
 		*2.0.2* Add he_IL translation
 	</changelog>
-	<location>release/2.4/parking-2.4.0.2.tgz</location>
-	<md5sum>12aa27520119687e7707aca5152adfd5</md5sum>
+	<location>release/2.4/parking-2.4.0.3.tgz</location>
+	<md5sum>4fb482d2b19a36695603aafe8426b137</md5sum>
 </module>
