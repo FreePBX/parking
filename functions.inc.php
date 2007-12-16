@@ -4,32 +4,12 @@
 	We call this with retrieve_conf
 */
 
-class parking_conf {
-	// return the filename to write
-	function get_filename() {
-		return "parking_additional.inc";
-	}
-	function addSetting($param, $value) {
-		$this->_params[] = array($param, $value);
-	}
-	// return the output that goes in the file
-	function generateConf() {
-		$output = "";
-		if (isset($this->_params) && is_array($this->_params)) {
-			foreach ($this->_params as $settings) {
-				$output .= $settings[0].' => '.$settings[1]."\n";
-			}
-		}
-		return $output;
-	}
-}
-
 function parking_get_config($engine) {
 	global $db;
 	global $amp_conf;
 	global $ext;  // is this the best way to pass this?
 	global $asterisk_conf;
-	global $parking_conf;
+	global $core_conf;
 	global $version;
 
 	switch($engine) {
@@ -59,12 +39,12 @@ function parking_get_config($engine) {
 			// TODO: lookup ampportal.conf variables for this, don't hard code
 			// first write features_additional.inc include file
 			//
-			$parking_conf->addSetting('parkext',$parkext);
-			$parking_conf->addSetting('parkpos',$parkpos1."-".$parkpos2);
-			$parking_conf->addSetting('context',$parkingcontext);
+			$core_conf->addFeatureGeneral('parkext',$parkext);
+			$core_conf->addFeatureGeneral('parkpos',$parkpos1."-".$parkpos2);
+			$core_conf->addFeatureGeneral('context',$parkingcontext);
 
 			if ($parkingtime) {
-				$parking_conf->addSetting('parkingtime',$parkingtime);
+				$core_conf->addFeatureGeneral('parkingtime',$parkingtime);
 			}
 
 			// Now generate dialplan
@@ -74,10 +54,10 @@ function parking_get_config($engine) {
 			//
 			if (isset($amp_conf["PARKINGPATCH"]) && strtolower($amp_conf["PARKINGPATCH"]) == 'true') {
 				if ($parkalertinfo) {
-					$parking_conf->addSetting('parkreturnalertinfo',$parkalertinfo);
+					$core_conf->addFeatureGeneral('parkreturnalertinfo',$parkalertinfo);
 				}
 				if ($parkcid) {
-					$parking_conf->addSetting('parkreturncidprefix',$parkcid);
+					$core_conf->addFeatureGeneral('parkreturncidprefix',$parkcid);
 				}
 			// No patch, do the default for orphaned calls
 			} else {
@@ -105,6 +85,8 @@ function parking_get_config($engine) {
 					$ext->addHint($parkhints, $slot, "park:$slot@$parkingcontext");
 					$ext->add($parkhints, $slot, '', new ext_parkedcall($slot));
 				}
+			} else {
+				$core_conf->addFeatureGeneral('parkhints','yes');
 			}
 		}
 		break;
