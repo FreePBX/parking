@@ -85,8 +85,6 @@ function parking_get_config($engine) {
 					$ext->addHint($parkhints, $slot, "park:$slot@$parkingcontext");
 					$ext->add($parkhints, $slot, '', new ext_parkedcall($slot));
 				}
-			} else {
-				$core_conf->addFeatureGeneral('parkhints','yes');
 			}
 		}
 		break;
