@@ -21,6 +21,6 @@
 		*2.1* Remove settings on uninstall bug #1597
 		*2.0.2* Add he_IL translation
 	</changelog>
-	<location>release/2.4/parking-2.4.0.3.tgz</location>
-	<md5sum>4fb482d2b19a36695603aafe8426b137</md5sum>
+	<location>release/2.4/parking-2.4.0.4.tgz</location>
+	<md5sum>af4c4b20cb5a640b21d13d6ab25036ad</md5sum>
 </module>
