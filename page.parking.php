@@ -72,7 +72,7 @@ if (!$action) {
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Number of Slots:")?><span><?php echo _("The total number of parking lot spaces to configure. Example, if 70 is the extension and 8 slots are configured, the parking slots will be 71-79")?></span></a></td>
 		<td align=right>
-			<select name="numslots"/>
+			<select name="numslots">
 			<?php
 				$default = (isset($numslots) ? $numslots : 8);
 				for ($i=2; $i <= 20; $i++) {
@@ -85,7 +85,7 @@ if (!$action) {
 	<tr>
 	<td><a href="#" class="info"><?php echo _("Parking Timeout:")?><span><?php echo _("The timeout period that a parked call will attempt to ring back the original parker if not answered")?></span></a></td>
 		<td align=right>
-			<select name="parkingtime"/>
+			<select name="parkingtime">
 			<?php
 				$default = (isset($parkingtime) ? $parkingtime : 45);
 				for ($i=15; $i <= 600; $i+=15) {
@@ -118,7 +118,7 @@ if (!$action) {
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Announcement:")?><span><?php echo _("Optional message to be played to the orphaned caller prior to going on the to supplied destination below.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td align=right>
-			<select name="parkingannmsg"/>
+			<select name="parkingannmsg">
 			<?php
 				$tresults = recordings_list();
 				$default = (isset($parkingannmsg) ? $parkingannmsg : '');
