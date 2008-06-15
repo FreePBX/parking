@@ -53,7 +53,7 @@ if (!$action) {
 }
 
 ?>
-<h2>Parking Lot Configuration</h2>
+<h2><?php echo _("Parking Lot Configuration")?></h2>
 <form name="parking" action="config.php" method="post" onsubmit="return parking_onsubmit();">
 <input type="hidden" name="display" value="parking"/>
 <input type="hidden" name="action" value="edtPARKING"/>
