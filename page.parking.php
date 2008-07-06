@@ -61,18 +61,18 @@ if (!$action) {
 <tr><td colspan="2"><h5><?php echo _("Parking Lot Options")?><hr></h5></td></tr>
 	<tr>
 	<td><a href=# class="info"><?php echo _("Enable Parking Lot Feature")?><span><?php echo _("Check this box to enable the parking feature")?></span></a></td>
-	<td align=right><input type="checkbox" value="s" name="parkingenabled" <?php  echo ($parkingenabled ? 'CHECKED' : '')?>></td>
+	<td align=right><input type="checkbox" value="s" name="parkingenabled" <?php  echo ($parkingenabled ? 'CHECKED' : '')?> tabindex="<?php echo ++$tabindex;?>"></td>
 	</tr>
 	<tr>
 	<td><a href=# class="info"><?php echo _("Parking Lot Extension:")?><span>
 <?php echo _("This is the extension where you will transfer a call to park it.")?><br>
 	</span></a></td>
-	<td align=right><input type="text" size="3" name="parkext" value="<?php  echo htmlspecialchars($parkext)?>"/></td>
+	<td align=right><input type="text" size="3" name="parkext" value="<?php  echo htmlspecialchars($parkext)?>" tabindex="<?php echo ++$tabindex;?>"/></td>
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Number of Slots:")?><span><?php echo _("The total number of parking lot spaces to configure. Example, if 70 is the extension and 8 slots are configured, the parking slots will be 71-79")?></span></a></td>
 		<td align=right>
-			<select name="numslots">
+			<select name="numslots" tabindex="<?php echo ++$tabindex;?>">
 			<?php
 				$default = (isset($numslots) ? $numslots : 8);
 				for ($i=2; $i <= 20; $i++) {
@@ -85,7 +85,7 @@ if (!$action) {
 	<tr>
 	<td><a href="#" class="info"><?php echo _("Parking Timeout:")?><span><?php echo _("The timeout period that a parked call will attempt to ring back the original parker if not answered")?></span></a></td>
 		<td align=right>
-			<select name="parkingtime">
+			<select name="parkingtime" tabindex="<?php echo ++$tabindex;?>">
 			<?php
 				$default = (isset($parkingtime) ? $parkingtime : 45);
 				for ($i=15; $i <= 600; $i+=15) {
@@ -99,26 +99,26 @@ if (!$action) {
 	<td><a href=# class="info"><?php echo _("Parking Lot Context:")?><span>
 <?php echo _("This is the parking lot context. You should not change it from the default unless you know what you are doing.")?><br>
 	</span></a></td>
-	<td align=right><input type="text" size="19" name="parkingcontext" value="<?php  echo htmlspecialchars($parkingcontext)?>"/></td>
+	<td align=right><input type="text" size="19" name="parkingcontext" value="<?php  echo htmlspecialchars($parkingcontext)?>" tabindex="<?php echo ++$tabindex;?>"/></td>
 	</tr>
 <tr><td colspan="2"><br><h5><?php echo _("Actions for Timed-Out Orphans")?><hr></h5></td></tr>
 	<tr>
 	<td><a href=# class="info"><?php echo _("Parking Alert-Info:")?><span>
 <?php echo _("Alert-Info to put in channel before going to defined destination below. This can create distinct rings on some SIP phones and can serve to alert the recipients that the call is from an Orphaned parked call")?><br>
 	</span></a></td>
-	<td align=right><input type="text" size="19" name="parkalertinfo" value="<?php  echo htmlspecialchars($parkalertinfo)?>"/></td>
+	<td align=right><input type="text" size="19" name="parkalertinfo" value="<?php  echo htmlspecialchars($parkalertinfo)?>" tabindex="<?php echo ++$tabindex;?>"/></td>
 	</tr>
 	<tr>
 	<td><a href=# class="info"><?php echo _("CallerID Prepend:")?><span>
 <?php echo _("String to pre-pend to the current Caller-ID associated with this call (if any), before going to defined destination below. This can serve to alert the recipients that the call is from an Orphaned parked call")?><br>
 	</span></a></td>
-	<td align=right><input type="text" size="19" name="parkcid" value="<?php  echo htmlspecialchars($parkcid)?>"/></td>
+	<td align=right><input type="text" size="19" name="parkcid" value="<?php  echo htmlspecialchars($parkcid)?>" tabindex="<?php echo ++$tabindex;?>"/></td>
 	</tr>
 <?php if(function_exists('recordings_list')) { //only include if recordings is enabled?>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Announcement:")?><span><?php echo _("Optional message to be played to the orphaned caller prior to going on the to supplied destination below.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td align=right>
-			<select name="parkingannmsg">
+			<select name="parkingannmsg" tabindex="<?php echo ++$tabindex;?>">
 			<?php
 				$tresults = recordings_list();
 				$default = (isset($parkingannmsg) ? $parkingannmsg : '');
@@ -150,7 +150,7 @@ if (!$action) {
 echo drawselects($goto,0);
 ?>
 	<tr>
-		<td colspan="2"><br><h6><input name="Submit" type="submit" value="<?php echo _("Submit Changes")?>"></h6></td>
+		<td colspan="2"><br><h6><input name="Submit" type="submit" value="<?php echo _("Submit Changes")?>" tabindex="<?php echo ++$tabindex;?>"></h6></td>
 	</tr>
 	</table>
 
