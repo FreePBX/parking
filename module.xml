@@ -27,6 +27,6 @@
 	<depends>
 		<version>2.4.0</version>
 	</depends>
-	<location>release/2.4/parking-2.4.0.6.tgz</location>
-	<md5sum>3eabcee5f3880d85fc909388d75f2e52</md5sum>
+	<location>release/2.5/parking-2.5.0.tgz</location>
+	<md5sum>227b9d455731ec7720b15c2db94eb086</md5sum>
 </module>
