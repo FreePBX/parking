@@ -22,7 +22,7 @@ isset($_REQUEST['parkingtime'])?$parkingtime = trim($_REQUEST['parkingtime']):$p
 isset($_REQUEST['parkingcontext'])?$parkingcontext = trim($_REQUEST['parkingcontext']):$parkingcontext='parkedcalls';
 isset($_REQUEST['parkalertinfo'])?$parkalertinfo = trim($_REQUEST['parkalertinfo']):$parkalertinfo='';
 isset($_REQUEST['parkcid'])?$parkcid = trim($_REQUEST['parkcid']):$parkcid='';
-isset($_REQUEST['parkingannmsg'])?$parkingannmsg = trim($_REQUEST['parkingannmsg']):$parkingannmsg='';
+isset($_REQUEST['parkingannmsg_id'])?$parkingannmsg_id = trim($_REQUEST['parkingannmsg_id']):$parkingannmsg_id='';
 
 if (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0']."0"])) {
         $goto = $_REQUEST[$_REQUEST['goto0']."0"];
@@ -34,7 +34,7 @@ if (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0']."0"])) {
 if(isset($_POST['action'])){
 
 	if ($action == 'edtPARKING') {
-		parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkingcontext, $parkalertinfo, $parkcid, $parkingannmsg, $goto);
+		parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkingcontext, $parkalertinfo, $parkcid, $parkingannmsg_id, $goto);
 		needreload();
 		redirect_standard();
 	}
@@ -118,16 +118,17 @@ if (!$action) {
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Announcement:")?><span><?php echo _("Optional message to be played to the orphaned caller prior to going on the to supplied destination below.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 		<td align=right>
-			<select name="parkingannmsg" tabindex="<?php echo ++$tabindex;?>">
+			<select name="parkingannmsg_id" tabindex="<?php echo ++$tabindex;?>">
 			<?php
 				$tresults = recordings_list();
-				$default = (isset($parkingannmsg) ? $parkingannmsg : '');
+				$default = (isset($parkingannmsg_id) ? $parkingannmsg_id : '');
 				echo '<option value="">'._("None")."</option>";
 				if (isset($tresults[0])) {
 					foreach ($tresults as $tresult) {
-						echo '<option value="'.$tresult[2].'"'.($tresult[2] == $default ? ' SELECTED' : '').'>'.$tresult[1]."</option>\n";
+						echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $default ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
 					}
 				}
+
 			?>
 			</select>
 		</td>
@@ -137,9 +138,9 @@ if (!$action) {
 		<td><a href="#" class="info"><?php echo _("Announcement:")?><span><?php echo _("Optional message to be played to the orphaned caller prior to going on to the supplied destination below.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option")?></span></a></td>
 		<td align=right>
 			<?php
-				$default = (isset($parkingannmsg) ? $parkingannmsg : '');
+				$default = (isset($parkingannmsg_id) ? $parkingannmsg_id : '');
 			?>
-			<input type="hidden" name="parkingannmsg" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
+			<input type="hidden" name="parkingannmsg_id" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
 		</td>
 	</tr>
 <?php } ?>

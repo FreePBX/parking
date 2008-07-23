@@ -29,7 +29,7 @@ function parking_get_config($engine) {
 		$parkingcontext	= isset($results['parkingcontext'])?$results['parkingcontext']:'parkedcalls';
 		$parkalertinfo 	= isset($results['parkalertinfo'])?$results['parkalertinfo']:'';
 		$parkcid 	= isset($results['parkcid'])?$results['parkcid']:'';
-		$parkingannmsg 	= isset($results['parkingannmsg'])?$results['parkingannmsg']:'';
+		$parkingannmsg_id 	= isset($results['parkingannmsg_id'])?$results['parkingannmsg_id']:'';
 		$goto	 	= isset($results['goto'])?$results['goto']:'from-pstn,s,1';
 
 		$parkpos1	= $parkext + 1;
@@ -69,7 +69,8 @@ function parking_get_config($engine) {
 				}
 			}
 
-			if ($parkingannmsg) {
+			if ($parkingannmsg_id != '') {
+				$parkingannmsg = recordings_get_file($parkingannmsg_id);
 				$ext->add($contextname, "t", '', new ext_playback($parkingannmsg));
 			}
 			// goto the destination here
@@ -91,7 +92,7 @@ function parking_get_config($engine) {
 	}
 }
 
-function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkingcontext, $parkalertinfo, $parkcid, $parkingannmsg, $goto) {
+function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkingcontext, $parkalertinfo, $parkcid, $parkingannmsg_id, $goto) {
 	global $db;
 
 	$parkinglot_id 	= 1; // only 1 parkinglot but prepare for future
@@ -119,7 +120,7 @@ function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkin
 			array($parkinglot_id, 'parkingcontext', trim("$parkingcontext")),
 			array($parkinglot_id, 'parkalertinfo', trim("$parkalertinfo")),
 			array($parkinglot_id, 'parkcid', trim("$parkcid")),
-			array($parkinglot_id, 'parkingannmsg', "$parkingannmsg"),
+			array($parkinglot_id, 'parkingannmsg_id', "$parkingannmsg_id"),
 			array($parkinglot_id, 'goto', "$goto"));
 
 	$compiled = $db->prepare('INSERT INTO parkinglot (id, keyword, data) values (?,?,?)');
@@ -154,7 +155,7 @@ function parking_check_destinations($dest=true) {
 	}
 	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
 
-	$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
+	$type = isset($active_modules['parking']['type'])?$active_modules['parking']['type']:'setup';
 
 	foreach ($results as $result) {
 		$thisdest = $result['data'];
@@ -165,6 +166,22 @@ function parking_check_destinations($dest=true) {
 		);
 	}
 	return $destlist;
+}
+
+function parking_recordings_usage($recording_id) {
+	global $active_modules;
+
+	$my_id = sql("SELECT `data` FROM `parkinglot` WHERE `id` = '1' AND `keyword` = 'parkingannmsg_id' AND `data` = '$recording_id'","getOne");
+	if (!isset($my_id) || $my_id == '') {
+		return array();
+	} else {
+		$type = isset($active_modules['parking']['type'])?$active_modules['parking']['type']:'setup';
+		$usage_arr[] = array(
+			'url_query' => 'config.php?type='.$type.'&display=parking',
+			'description' => "Parking Lot",
+		);
+		return $usage_arr;
+	}
 }
 
 // Duly stolen from the queues module (since I can't count on it being there, but would not be bad to stuff back in the common include
