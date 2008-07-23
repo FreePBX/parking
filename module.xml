@@ -29,6 +29,6 @@
 		<version>2.5.0alpha1</version>
 		<module>recordings ge 3.3.8</module>
 	</depends>
-	<location>release/2.5/parking-2.5.0.tgz</location>
-	<md5sum>227b9d455731ec7720b15c2db94eb086</md5sum>
+	<location>release/2.5/parking-2.5.1.tgz</location>
+	<md5sum>f276ed11d73db5c6fb767f26d0fc55ab</md5sum>
 </module>
