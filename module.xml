@@ -1,7 +1,7 @@
 <module>
 	<rawname>parking</rawname>
 	<name>Parking Lot</name>
-	<version>2.5.1</version>
+	<version>2.5.1.1</version>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Manages parking lot extensions and other options.
@@ -10,6 +10,7 @@
 		<parking>Parking Lot</parking>
 	</menuitems>
 	<changelog>
+		*2.5.1.1* #2718 fix orphaned call not going to destination
 		*2.5.1* #2067 change recording to recording id
 		*2.5.0* #2845 tabindex
 		*2.4.0.6* #2604, #2716, #2843 fix mal-formed html tags, localization fix, Russian Translation
@@ -29,6 +30,6 @@
 		<version>2.5.0alpha1</version>
 		<module>recordings ge 3.3.8</module>
 	</depends>
-	<location>release/2.5/parking-2.5.1.tgz</location>
-	<md5sum>f276ed11d73db5c6fb767f26d0fc55ab</md5sum>
+	<location>release/2.5/parking-2.5.1.1.tgz</location>
+	<md5sum>ad7483d5bd05824c0d111906ae363ac4</md5sum>
 </module>
