@@ -207,11 +207,11 @@ function parking_timeString($seconds, $full = false) {
 
         if ($full) {
                 return substr(
-                                ($days ? $days." day".(($days == 1) ? "" : "s").", " : "").
-                                ($hours ? $hours." hour".(($hours == 1) ? "" : "s").", " : "").
-                                ($minutes ? $minutes." minute".(($minutes == 1) ? "" : "s").", " : "").
-                                ($seconds ? $seconds." second".(($seconds == 1) ? "" : "s").", " : ""),
-                               0, -2);
+				($days ? $days." "._("day").(($days == 1) ? "" : "s").", " : "").
+                              	($hours ? $hours." ".(($hours == 1) ? _("hour") : _("hours")).", " : "").
+                              	($minutes ? $minutes." ".(($minutes == 1) ? _("minute") : _("minutes")).", " : "").
+                              	($seconds ? $seconds." ".(($seconds == 1) ? _("second") : _("seconds")).", " : ""),
+                              	0, -2);
         } else {
                 return substr(($days ? $days."d, " : "").($hours ? $hours."h, " : "").($minutes ? $minutes."m, " : "").($seconds ? $seconds."s, " : ""), 0, -2);
         }
