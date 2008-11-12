@@ -166,7 +166,7 @@ function parking_check_destinations($dest=true) {
 		$thisdest = $result['data'];
 		$destlist[] = array(
 			'dest' => $thisdest,
-			'description' => 'Parking Lot',
+			'description' => _('Parking Lot'),
 			'edit_url' => 'config.php?type='.$type.'&display=parking',
 		);
 	}
@@ -183,7 +183,7 @@ function parking_recordings_usage($recording_id) {
 		$type = isset($active_modules['parking']['type'])?$active_modules['parking']['type']:'setup';
 		$usage_arr[] = array(
 			'url_query' => 'config.php?type='.$type.'&display=parking',
-			'description' => "Parking Lot",
+			'description' => _("Parking Lot"),
 		);
 		return $usage_arr;
 	}
