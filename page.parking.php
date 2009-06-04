@@ -12,6 +12,7 @@
 //GNU General Public License for more details.
 
 $dispnum = 'parking'; //used for switch on config.php
+$tabindex = 0;
 
 $action = isset($_REQUEST['action'])?$_REQUEST['action']:'';
 
