@@ -49,7 +49,7 @@ function parking_get_config($engine) {
 
 			// Now generate dialplan
 			$ext->add($contextname, "t", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
-			$ext->add($contextname, "_.", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
+			$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
 
 			// If we have an appropriate Asterisk patch, set paraemters for Asterisk
 			//
@@ -64,23 +64,23 @@ function parking_get_config($engine) {
 			} else {
 				if ($parkalertinfo) {
 					$ext->add($contextname, "t", '', new ext_setvar('__ALERT_INFO',str_replace(';', '\;', $parkalertinfo)));
-					$ext->add($contextname, "_.", '', new ext_setvar('__ALERT_INFO',str_replace(';', '\;', $parkalertinfo)));
+					$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_setvar('__ALERT_INFO',str_replace(';', '\;', $parkalertinfo)));
 				}
 				if ($parkcid) {
 					$ext->add($contextname, "t", '', new ext_setvar('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
-					$ext->add($contextname, "_.", '', new ext_setvar('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
+					$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_setvar('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
 				}
 			}
 
 			if ($parkingannmsg_id != '') {
 				$parkingannmsg = recordings_get_file($parkingannmsg_id);
 				$ext->add($contextname, "t", '', new ext_playback($parkingannmsg));
-				$ext->add($contextname, "_.", '', new ext_playback($parkingannmsg));
+				$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_playback($parkingannmsg));
 			}
 			// goto the destination here
 			//
 			$ext->add($contextname, "t", '', new ext_goto($goto));
-			$ext->add($contextname, "_.", '', new ext_goto($goto));
+			$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_goto($goto));
 
 			// Asterisk 1.4 requires hints to be generated for parking
 			//
