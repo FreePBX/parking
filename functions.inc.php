@@ -33,7 +33,7 @@ function parking_get_config($engine) {
 		$goto	 	= isset($results['goto'])?$results['goto']:'from-pstn,s,1';
 
 		$parkpos1	= $parkext + 1;
-		$parkpos2	= $parkpos1 + $numslots;
+		$parkpos2	= $parkpos1 + $numslots -1;
 
 		if ($parkingenabled) {
 			// TODO: lookup ampportal.conf variables for this, don't hard code

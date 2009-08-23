@@ -71,7 +71,7 @@ if (!$action) {
 	<td align=right><input type="text" size="3" name="parkext" value="<?php  echo htmlspecialchars($parkext)?>" tabindex="<?php echo ++$tabindex;?>"/></td>
 	</tr>
 	<tr>
-		<td><a href="#" class="info"><?php echo _("Number of Slots:")?><span><?php echo _("The total number of parking lot spaces to configure. Example, if 70 is the extension and 8 slots are configured, the parking slots will be 71-79")?></span></a></td>
+		<td><a href="#" class="info"><?php echo _("Number of Slots:")?><span><?php echo _("The total number of parking lot spaces to configure. Example, if 70 is the extension and 8 slots are configured, the parking slots will be 71-78")?></span></a></td>
 		<td align=right>
 			<select name="numslots" tabindex="<?php echo ++$tabindex;?>">
 			<?php
