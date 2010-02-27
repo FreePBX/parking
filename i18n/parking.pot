@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-27 13:45+0100\n"
+"POT-Creation-Date: 2010-02-27 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,182 +28,142 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: parking/functions.inc.php:169 parking/functions.inc.php:186
-#: parking/parking.i18n.php:5 parking/parking.i18n.php:13
 msgid "Parking Lot"
 msgstr ""
 
-#: parking/functions.inc.php:210
 msgid "day"
 msgstr ""
 
-#: parking/functions.inc.php:211
 msgid "hour"
 msgstr ""
 
-#: parking/functions.inc.php:211
 msgid "hours"
 msgstr ""
 
-#: parking/functions.inc.php:212
 msgid "minute"
 msgstr ""
 
-#: parking/functions.inc.php:212
 msgid "minutes"
 msgstr ""
 
-#: parking/functions.inc.php:213
 msgid "second"
 msgstr ""
 
-#: parking/functions.inc.php:213
 msgid "seconds"
 msgstr ""
 
-#: parking/install.php:53
 msgid "Migrating recordings if needed.."
 msgstr ""
 
-#: parking/install.php:70 parking/install.php:76 parking/install.php:83
 msgid "fatal error"
 msgstr ""
 
-#: parking/install.php:86
 msgid "ok"
 msgstr ""
 
-#: parking/install.php:88
 msgid "not needed"
 msgstr ""
 
-#: parking/page.parking.php:57
 msgid "Parking Lot Configuration"
 msgstr ""
 
-#: parking/page.parking.php:62
 msgid "Parking Lot Options"
 msgstr ""
 
-#: parking/page.parking.php:64
 msgid "Enable Parking Lot Feature"
 msgstr ""
 
-#: parking/page.parking.php:64
 msgid "Check this box to enable the parking feature"
 msgstr ""
 
-#: parking/page.parking.php:68
 msgid "Parking Lot Extension:"
 msgstr ""
 
-#: parking/page.parking.php:69
 msgid "This is the extension where you will transfer a call to park it."
 msgstr ""
 
-#: parking/page.parking.php:74
 msgid "Number of Slots:"
 msgstr ""
 
-#: parking/page.parking.php:74
 msgid ""
 "The total number of parking lot spaces to configure. Example, if 70 is the "
 "extension and 8 slots are configured, the parking slots will be 71-78"
 msgstr ""
 
-#: parking/page.parking.php:87
 msgid "Parking Timeout:"
 msgstr ""
 
-#: parking/page.parking.php:87
 msgid ""
 "The timeout period that a parked call will attempt to ring back the original "
 "parker if not answered"
 msgstr ""
 
-#: parking/page.parking.php:100
 msgid "Parking Lot Context:"
 msgstr ""
 
-#: parking/page.parking.php:101
 msgid ""
 "This is the parking lot context. You should not change it from the default "
 "unless you know what you are doing."
 msgstr ""
 
-#: parking/page.parking.php:105
 msgid "Actions for Timed-Out Orphans"
 msgstr ""
 
-#: parking/page.parking.php:107
 msgid "Parking Alert-Info:"
 msgstr ""
 
-#: parking/page.parking.php:108
 msgid ""
 "Alert-Info to put in channel before going to defined destination below. This "
 "can create distinct rings on some SIP phones and can serve to alert the "
 "recipients that the call is from an Orphaned parked call"
 msgstr ""
 
-#: parking/page.parking.php:113
 msgid "CallerID Prepend:"
 msgstr ""
 
-#: parking/page.parking.php:114
 msgid ""
 "String to pre-pend to the current Caller-ID associated with this call (if "
 "any), before going to defined destination below. This can serve to alert the "
 "recipients that the call is from an Orphaned parked call"
 msgstr ""
 
-#: parking/page.parking.php:120 parking/page.parking.php:139
 msgid "Announcement:"
 msgstr ""
 
-#: parking/page.parking.php:120
 msgid ""
 "Optional message to be played to the orphaned caller prior to going on the "
 "to supplied destination below.<br><br>To add additional recordings please "
 "use the \"System Recordings\" MENU to the left"
 msgstr ""
 
-#: parking/page.parking.php:126
 msgid "None"
 msgstr ""
 
-#: parking/page.parking.php:139
 msgid ""
 "Optional message to be played to the orphaned caller prior to going on to "
 "the supplied destination below.<br><br>You must install and enable the "
 "\"Systems Recordings\" Module to edit this option"
 msgstr ""
 
-#: parking/page.parking.php:149
 msgid "Destination for Orphaned Parked Calls"
 msgstr ""
 
-#: parking/page.parking.php:155
 msgid "Submit Changes"
 msgstr ""
 
-#: parking/page.parking.php:165
 msgid "Please enter a valid numeric parking lot extension"
 msgstr ""
 
-#: parking/parking.i18n.php:7
 msgid ""
 "Internal Options \n"
 "&\n"
 " Configuration"
 msgstr ""
 
-#: parking/parking.i18n.php:11
 msgid ""
 "Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
 
-#: parking/parking.i18n.php:11
 msgid ", and then picking them up from any extension."
 msgstr ""
