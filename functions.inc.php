@@ -173,6 +173,11 @@ function parking_check_destinations($dest=true) {
 	return $destlist;
 }
 
+function parking_change_destination($old_dest, $new_dest) {
+	$sql = 'UPDATE parkinglot SET data = "' . $new_dest . '" WHERE data = "' . $old_dest . '" AND keyword = "goto"';
+	sql($sql, "query");
+}
+
 function parking_recordings_usage($recording_id) {
 	global $active_modules;
 
