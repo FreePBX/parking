@@ -88,6 +88,8 @@ if (isset($results[0])) {
 	out(_("not needed"));
 }
 
+$freepbx_conf =& freepbx_conf::create();
+
   // PARKINGPATCH
   //
   $set['value'] = false;
