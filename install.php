@@ -100,6 +100,7 @@ $freepbx_conf =& freepbx_conf::create();
   $set['module'] = 'parking';
   $set['category'] = 'System Setup';
   $set['emptyok'] = 0;
+  $set['name'] = 'Use Old Parking Patch';
   $set['description'] = 'Set to generate some additional dialplan if using a particular patch that was available in Asterisk 1.2 and 1.4 to add behavior to parking like adding Alert Info and CID prepends to timed out parked calls. This patch is mostly obsoleted and the setting will probably go away at some point when Asterisk 1.6+ parking enhacements are added to the module.';
   $set['type'] = CONF_TYPE_BOOL;
   $freepbx_conf->define_conf_setting('PARKINGPATCH',$set,true);
