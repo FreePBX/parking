@@ -13,7 +13,11 @@ function parking_get_config($engine) {
 	global $version;
 
 	switch($engine) {
-		case "asterisk":
+	case "asterisk":
+
+    $ast_lt_16 = version_compare($version,'1.6','lt');
+    $ast_lt_162 = version_compare($version,'1.6.2','lt');
+    $ast_ge_18 = version_compare($version,'1.8','ge');
 
 		$contextname = 'park-dial';
 
@@ -30,7 +34,9 @@ function parking_get_config($engine) {
 		$parkalertinfo 	= isset($results['parkalertinfo'])?$results['parkalertinfo']:'';
 		$parkcid 	= isset($results['parkcid'])?$results['parkcid']:'';
 		$parkingannmsg_id 	= isset($results['parkingannmsg_id'])?$results['parkingannmsg_id']:'';
-		$goto	 	= isset($results['goto'])?$results['goto']:'from-pstn,s,1';
+		$goto	 	= isset($results['goto'])?$results['goto']:'';
+
+    $parkinghints = isset($results['parkinghints'])?$results['parkinghints']:'no';
 
 		$parkpos1	= $parkext + 1;
 		$parkpos2	= $parkpos1 + $numslots -1;
@@ -47,58 +53,132 @@ function parking_get_config($engine) {
 				$core_conf->addFeatureGeneral('parkingtime',$parkingtime);
 			}
 
-			// Now generate dialplan
-			$ext->add($contextname, "t", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
-			$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
-
 			// If we have an appropriate Asterisk patch, set paraemters for Asterisk
 			//
-			if (isset($amp_conf["PARKINGPATCH"]) && strtolower($amp_conf["PARKINGPATCH"]) == 'true') {
+			if ($amp_conf["PARKINGPATCH"] && $ast_lt_16) {
 				if ($parkalertinfo) {
 					$core_conf->addFeatureGeneral('parkreturnalertinfo',$parkalertinfo);
 				}
 				if ($parkcid) {
 					$core_conf->addFeatureGeneral('parkreturncidprefix',$parkcid);
 				}
-			// No patch, do the default for orphaned calls
-			} else {
+			  // Now generate dialplan
+			  $ext->add($contextname, "t", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
+			  $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_noop('Parked Call Timed Out and Got Orphaned'));
+
+			  if ($parkingannmsg_id != '') {
+				  $parkingannmsg = recordings_get_file($parkingannmsg_id);
+				  $ext->add($contextname, "t", '', new ext_playback($parkingannmsg));
+				  $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_playback($parkingannmsg));
+			  }
+
+			} else if ($ast_lt_18) {
+
 				if ($parkalertinfo) {
-					$ext->add($contextname, "t", '', new ext_setvar('__ALERT_INFO',str_replace(';', '\;', $parkalertinfo)));
-					$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_setvar('__ALERT_INFO',str_replace(';', '\;', $parkalertinfo)));
+					$ext->add($contextname, "t", '', new ext_alertinfo(str_replace(';', '\;', $parkalertinfo)));
+					$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_alertinfo(str_replace(';', '\;', $parkalertinfo)));
 				}
 				if ($parkcid) {
 					$ext->add($contextname, "t", '', new ext_setvar('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
 					$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_setvar('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
 				}
-			}
+			  if ($parkingannmsg_id != '') {
+				  $parkingannmsg = recordings_get_file($parkingannmsg_id);
+				  $ext->add($contextname, "t", '', new ext_playback($parkingannmsg));
+				  $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_playback($parkingannmsg));
+			  }
 
-			if ($parkingannmsg_id != '') {
-				$parkingannmsg = recordings_get_file($parkingannmsg_id);
-				$ext->add($contextname, "t", '', new ext_playback($parkingannmsg));
-				$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_playback($parkingannmsg));
-			}
-			// goto the destination here
-			//
-			$ext->add($contextname, "t", '', new ext_goto($goto));
-			$ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_goto($goto));
+			} else {
+
+        $parking_dest = isset($results['parking_dest'])?$results['parking_dest']:'device';
+
+        // in 1.8 we never come back to the origin, we always run it through our processing and then send it
+        // either to the original caller through the generated context in park-dial, or to the default destination
+        //
+				$core_conf->addFeatureGeneral('comebacktoorigin','no');
+
+				$core_conf->addFeatureGeneral('parkinghints',$parkinghints);
+				$core_conf->addFeatureGeneral('parkedplay',isset($results['parkedplay']) ? $results['parkedplay'] : 'both');
+				$core_conf->addFeatureGeneral('parkedcalltransfers',isset($results['parkedcalltransfers']) ? $results['parkedcalltransfers'] : 'caller');
+				$core_conf->addFeatureGeneral('parkedcallrepark',isset($results['parkedcallrepark']) ? $results['parkedcallrepark'] : 'caller');
+				$core_conf->addFeatureGeneral('parkedcallhangup',isset($results['parkedcallhangup']) ? $results['parkedcallhangup'] : 'no');
+				$core_conf->addFeatureGeneral('parkedcallrecording',isset($results['parkedcallrecording']) ? $results['parkedcallrecording'] : 'no');
+				$core_conf->addFeatureGeneral('parkedmusicclass',isset($results['parkedmusicclass']) ? $results['parkedmusicclass'] : 'default');
+				$core_conf->addFeatureGeneral('adsipark',isset($results['adsipark']) ? $results['adsipark'] : 'no');
+				$core_conf->addFeatureGeneral('findslot',isset($results['findslot']) ? $results['findslot'] : 'first');
+
+        $contextname = 'parkedcallstimeout';
+        $exten = $parking_dest == 'dest' && $goto ? 's' : '_[0-9a-zA-Z*#].';
+			  if ($parkalertinfo) {
+				  $ext->add($contextname, $exten, '', new ext_sipremoveheader('Alert-Info:'));
+				  $ext->add($contextname, $exten, '', new ext_alertinfo(str_replace(';', '\;', $parkalertinfo)));
+         }
+			  if ($parkcid) {
+				  $ext->add($contextname, $exten, '', new ext_set('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
+			  }
+		    if ($parkingannmsg_id != '') {
+			    $parkingannmsg = recordings_get_file($parkingannmsg_id);
+			    $ext->add($contextname, $exten, '', new ext_playback($parkingannmsg));
+		    }
+			  $ext->add($contextname, $exten, '', new ext_goto($parking_dest == 'dest' && $goto ? $goto : 'park-dial,${EXTEN},1'));
+      }
+
+      // In all cases, add a timeout and catchall in the park-dial context to revert to the
+      // $goto destination if all else fails
+		  //
+      $contextname = 'park-dial';
+      if ($goto) {
+		    $ext->add($contextname, "t", '', new ext_goto($goto));
+		    $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_goto($goto));
+      }
+
 
 			// Asterisk 1.4 requires hints to be generated for parking
 			//
-			if (version_compare($version, "1.4", "ge")) {
-				$parkhints = 'park-hints';
-				$ext->addInclude('from-internal-additional', $parkhints); // Add the include from from-internal
-				for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
-					$ext->addHint($parkhints, $slot, "park:$slot@$parkingcontext");
-					$ext->add($parkhints, $slot, '', new ext_parkedcall($slot));
-				}
-			}
-		}
+      // TODO: parkinghints = yes 1.6.2+
+      //
+      if ($ast_lt_162 && $parkinghints == 'yes') {
+        $parkhints = 'park-hints';
+        $ext->addInclude('from-internal-additional', $parkhints); // Add the include from from-internal
+        for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
+				  $ext->addHint($parkhints, $slot, "park:$slot@$parkingcontext");
+				  $ext->add($parkhints, $slot, '', new ext_parkedcall($slot));
+        }
+		  }
 		break;
+    }
 	}
 }
 
 function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkingcontext, $parkalertinfo, $parkcid, $parkingannmsg_id, $goto) {
+  $pargs['parkingenabled'] = $parkingenabled;
+  $pargs['parkext'] = $parkext;
+  $pargs['numslots'] = $numslots;
+  $pargs['parkingtime'] = $parkingtime;
+  $pargs['parkingcontext'] = $parkingcontext;
+  $pargs['parkalertinfo'] = $parkalertinfo;
+  $pargs['parkcid'] = $parkcid;
+  $pargs['parkingannmsg_id'] = $parkingannmsg_id;
+  $pargs['goto'] = $goto;
+  
+  return parking_update($pargs);
+}
+
+function parking_update($pargs) {
 	global $db;
+	global $amp_conf;
+
+  $ast_ge_18 = version_compare($amp_conf['ASTVERSION'],'1.8','ge');
+
+  $parkingenabled = isset($pargs['parkingenabled']) ? $pargs['parkingenabled'] : '';
+  $parkext = isset($pargs['parkext']) ? $pargs['parkext'] : '70';
+  $numslots = isset($pargs['numslots']) ? $pargs['numslots'] : '8';
+  $parkingtime = isset($pargs['parkingtime']) ? $pargs['parkingtime'] : '45';
+  $parkingcontext = isset($pargs['parkingcontext']) ? $pargs['parkingcontext'] : 'parkedcalls';
+  $parkalertinfo = isset($pargs['parkalertinfo']) ? $pargs['parkalertinfo'] : '';
+  $parkcid = isset($pargs['parkcid']) ? $pargs['parkcid'] : '';
+  $parkingannmsg_id = isset($pargs['parkingannmsg_id']) ? $pargs['parkingannmsg_id'] : '';
+  $goto = isset($pargs['goto']) ? $pargs['goto'] : '';
 
 	$parkinglot_id 	= 1; // only 1 parkinglot but prepare for future
 
@@ -116,7 +196,6 @@ function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkin
 	$parkext	= ctype_digit($parkext)		? $parkext	: 70;
 	$numslots		= ctype_digit($numslots)		? $numslots	: 8;
 	$parkingtime	= ctype_digit($parkingtime)	? $parkingtime	: '';
-	$goto		= ($goto) 			? $goto		: 'from-pstn,s,1';
 
 	$parkfields =	array(array($parkinglot_id, 'parkingenabled', "$parkingenabled"),
 			array($parkinglot_id, 'parkext', "$parkext"),
@@ -128,6 +207,19 @@ function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkin
 			array($parkinglot_id, 'parkingannmsg_id', "$parkingannmsg_id"),
 			array($parkinglot_id, 'goto', "$goto"));
 
+  if ($ast_ge_18) {
+    $parkfields[] = array($parkinglot_id, 'parking_dest', isset($pargs['parking_dest'])?$pargs['parking_dest']:'device');
+    $parkfields[] = array($parkinglot_id, 'parkinghints', isset($pargs['parkinghints'])?$pargs['parkinghints']:'yes');
+    $parkfields[] = array($parkinglot_id, 'parkedplay', isset($pargs['parkedplay'])?$pargs['parkedplay']:'both');
+    $parkfields[] = array($parkinglot_id, 'parkedcalltransfers', isset($pargs['parkedcalltransfers'])?$pargs['parkedcalltransfers']:'caller');
+    $parkfields[] = array($parkinglot_id, 'parkedcallreparking', isset($pargs['parkedcallreparking'])?$pargs['parkedcallreparking']:'caller');
+    $parkfields[] = array($parkinglot_id, 'parkedcallhangup', isset($pargs['parkedcallhangup'])?$pargs['parkedcallhangup']:'no');
+    $parkfields[] = array($parkinglot_id, 'parkedcallrecording', isset($pargs['parkedcallrecording'])?$pargs['parkedcallrecording']:'no');
+    $parkfields[] = array($parkinglot_id, 'parkedmusicclass', isset($pargs['parkedmusicclass'])?$pargs['parkedmusicclass']:'default');
+    $parkfields[] = array($parkinglot_id, 'findslot', isset($pargs['findslot'])?$pargs['findslot']:'first');
+    $parkfields[] = array($parkinglot_id, 'adsipark', isset($pargs['adsipark'])?$pargs['adsipark']:'no');
+  }
+
 	$compiled = $db->prepare('INSERT INTO parkinglot (id, keyword, data) values (?,?,?)');
 
 	$result = $db->executeMultiple($compiled,$parkfields);
@@ -135,7 +227,6 @@ function parking_add($parkingenabled, $parkext, $numslots, $parkingtime, $parkin
 		die_freepbx($result->getDebugInfo()."<br><br>".'error adding to PARKING table');
 	}
 }
-
 
 function parking_getconfig($parkinglot_id=1) {
 	global $db;
