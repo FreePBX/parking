@@ -113,7 +113,7 @@ if (!$action) {
 			<select name="numslots" tabindex="<?php echo ++$tabindex;?>">
 			<?php
 				$default = (isset($numslots) ? $numslots : 8);
-				for ($i=2; $i <= 20; $i++) {
+				for ($i=1; $i <= 30; $i++) {
 					echo '<option value="'.$i.'" '.($i == $default ? 'SELECTED' : '').'>'.$i.'</option>';
 				}
 			?>
@@ -190,7 +190,7 @@ if (!$action) {
   <td><a href="#" class="info"><?php echo _("Pickup Courtesy Tone:")?><span><?php echo _("Whom to play the courtesy tone to when a parked call is retreived.")?></span></a></td>
   <td>
     <input type="radio" name="parkedplay" id="parkedplay-caller" value="caller" <?php echo $parkedplay == 'caller' ? "checked=\"yes\"" : ""?>/><label for="parkedplay-caller"><?php echo _("Caller") ?></label>
-    <input type="radio" name="parkedplay" id="parkedplay-parked" value="parked" <?php echo $parkedplay == 'parked' ? "checked=\"yes\"" : ""?>/><label for="parkedplay-parked"><?php echo _("Parked") ?></label>
+    <input type="radio" name="parkedplay" id="parkedplay-callee" value="callee" <?php echo $parkedplay == 'callee' ? "checked=\"yes\"" : ""?>/><label for="parkedplay-callee"><?php echo _("Parked") ?></label>
     <input type="radio" name="parkedplay" id="parkedplay-both" value="both" <?php echo $parkedplay == 'both' ? "checked=\"yes\"" : ""?>/><label for="parkedplay-both"><?php echo _("Both") ?></label>
   </td>
 	</tr>				
@@ -199,7 +199,7 @@ if (!$action) {
   <td><a href="#" class="info"><?php echo _("Transfer Capability:")?><span><?php echo _("Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when picking up a parked call.")?></span></a></td>
   <td>
     <input type="radio" name="parkedcalltransfers" id="parkedcalltransfers-caller" value="caller" <?php echo $parkedcalltransfers == 'caller' ? "checked=\"yes\"" : ""?>/><label for="parkedcalltransfers-caller"><?php echo _("Caller") ?></label>
-    <input type="radio" name="parkedcalltransfers" id="parkedcalltransfers-parked" value="parked" <?php echo $parkedcalltransfers == 'parked' ? "checked=\"yes\"" : ""?>/><label for="parkedcalltransfers-parked"><?php echo _("Parked") ?></label>
+    <input type="radio" name="parkedcalltransfers" id="parkedcalltransfers-callee" value="callee" <?php echo $parkedcalltransfers == 'callee' ? "checked=\"yes\"" : ""?>/><label for="parkedcalltransfers-callee"><?php echo _("Parked") ?></label>
     <input type="radio" name="parkedcalltransfers" id="parkedcalltransfers-both" value="both" <?php echo $parkedcalltransfers == 'both' ? "checked=\"yes\"" : ""?>/><label for="parkedcalltransfers-both"><?php echo _("Both") ?></label>
     <input type="radio" name="parkedcalltransfers" id="parkedcalltransfers-no" value="no" <?php echo $parkedcalltransfers == 'no' ? "checked=\"yes\"" : ""?>/><label for="parkedcalltransfers-no"><?php echo _("Neither") ?></label>
   </td>
@@ -209,7 +209,7 @@ if (!$action) {
   <td><a href="#" class="info"><?php echo _("Re-Parking Capability:")?><span><?php echo _("Asterisk: parkedcallreparking. Enables or disables DTMF based parking when picking up a parked call.")?></span></a></td>
   <td>
     <input type="radio" name="parkedcallreparking" id="parkedcallreparking-caller" value="caller" <?php echo $parkedcallreparking == 'caller' ? "checked=\"yes\"" : ""?>/><label for="parkedcallreparking-caller"><?php echo _("Caller") ?></label>
-    <input type="radio" name="parkedcallreparking" id="parkedcallreparking-parked" value="parked" <?php echo $parkedcallreparking == 'parked' ? "checked=\"yes\"" : ""?>/><label for="parkedcallreparking-parked"><?php echo _("Parked") ?></label>
+    <input type="radio" name="parkedcallreparking" id="parkedcallreparking-callee" value="callee" <?php echo $parkedcallreparking == 'callee' ? "checked=\"yes\"" : ""?>/><label for="parkedcallreparking-callee"><?php echo _("Parked") ?></label>
     <input type="radio" name="parkedcallreparking" id="parkedcallreparking-both" value="both" <?php echo $parkedcallreparking == 'both' ? "checked=\"yes\"" : ""?>/><label for="parkedcallreparking-both"><?php echo _("Both") ?></label>
     <input type="radio" name="parkedcallreparking" id="parkedcallreparking-no" value="no" <?php echo $parkedcallreparking == 'no' ? "checked=\"yes\"" : ""?>/><label for="parkedcallreparking-no"><?php echo _("Neither") ?></label>
   </td>
@@ -219,7 +219,7 @@ if (!$action) {
   <td><a href="#" class="info"><?php echo _("One Touch Recording Capability:")?><span><?php echo _("Asterisk: parkedcallrecording. Enables or disables DTMF based one-touch recording when picking up a parked call.")?></span></a></td>
   <td>
     <input type="radio" name="parkedcallrecording" id="parkedcallrecording-caller" value="caller" <?php echo $parkedcallrecording == 'caller' ? "checked=\"yes\"" : ""?>/><label for="parkedcallrecording-caller"><?php echo _("Caller") ?></label>
-    <input type="radio" name="parkedcallrecording" id="parkedcallrecording-parked" value="parked" <?php echo $parkedcallrecording == 'parked' ? "checked=\"yes\"" : ""?>/><label for="parkedcallrecording-parked"><?php echo _("Parked") ?></label>
+    <input type="radio" name="parkedcallrecording" id="parkedcallrecording-callee" value="callee" <?php echo $parkedcallrecording == 'callee' ? "checked=\"yes\"" : ""?>/><label for="parkedcallrecording-callee"><?php echo _("Parked") ?></label>
     <input type="radio" name="parkedcallrecording" id="parkedcallrecording-both" value="both" <?php echo $parkedcallrecording == 'both' ? "checked=\"yes\"" : ""?>/><label for="parkedcallrecording-both"><?php echo _("Both") ?></label>
     <input type="radio" name="parkedcallrecording" id="parkedcallrecording-no" value="no" <?php echo $parkedcallrecording == 'no' ? "checked=\"yes\"" : ""?>/><label for="parkedcallrecording-no"><?php echo _("Neither") ?></label>
   </td>
@@ -229,17 +229,9 @@ if (!$action) {
   <td><a href="#" class="info"><?php echo _("DTMF Based Hangup Capability:")?><span><?php echo _("Asterisk: parkedcallhangup. Enables or disables DTMF based hangups when picking up a parked call.")?></span></a></td>
   <td>
     <input type="radio" name="parkedcallhangup" id="parkedcallhangup-caller" value="caller" <?php echo $parkedcallhangup == 'caller' ? "checked=\"yes\"" : ""?>/><label for="parkedcallhangup-caller"><?php echo _("Caller") ?></label>
-    <input type="radio" name="parkedcallhangup" id="parkedcallhangup-parked" value="parked" <?php echo $parkedcallhangup == 'parked' ? "checked=\"yes\"" : ""?>/><label for="parkedcallhangup-parked"><?php echo _("Parked") ?></label>
+    <input type="radio" name="parkedcallhangup" id="parkedcallhangup-callee" value="callee" <?php echo $parkedcallhangup == 'callee' ? "checked=\"yes\"" : ""?>/><label for="parkedcallhangup-callee"><?php echo _("Parked") ?></label>
     <input type="radio" name="parkedcallhangup" id="parkedcallhangup-both" value="both" <?php echo $parkedcallhangup == 'both' ? "checked=\"yes\"" : ""?>/><label for="parkedcallhangup-both"><?php echo _("Both") ?></label>
     <input type="radio" name="parkedcallhangup" id="parkedcallhangup-no" value="no" <?php echo $parkedcallhangup == 'no' ? "checked=\"yes\"" : ""?>/><label for="parkedcallhangup-no"><?php echo _("Neither") ?></label>
-  </td>
-	</tr>				
-
-  <tr>
-  <td><a href="#" class="info"><?php echo _("Return Destination Behavior:")?><span><?php echo _("Where to send a parked call that has timed out. The call can be sent back to the original device that parked the call, or it can be sent back to the alternate destination. In both cases, any configured Alert-Info, Caller ID prepend, or annoucement will be applied to the call. If configured to send back to the Originator and they are not available (phone is offline), the alternate destination will be used.")?></span></a></td>
-  <td>
-    <input type="radio" name="parking_dest" id="parking_dest-device" value="device" <?php echo $parking_dest == 'device' ? "checked=\"yes\"" : ""?>/><label for="parking_dest-device"><?php echo _("Originator") ?></label>
-    <input type="radio" name="parking_dest" id="parking_dest-dest" value="dest" <?php echo $parking_dest == 'dest' ? "checked=\"yes\"" : ""?>/><label for="parking_dest-dest"><?php echo _("Alternate Destination") ?></label>
   </td>
 	</tr>				
 <?php
@@ -295,10 +287,21 @@ if (!$action) {
 			<input type="hidden" name="parkingannmsg_id" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
 		</td>
 	</tr>
-<?php } ?>
-
+<?php }
+?>
 	<tr><td colspan="2"><br><h5><?php echo $dest_label?>:<hr></h5></td></tr>
 <?php
+      if ($ast_ge_18) {
+?>
+  <tr>
+  <td><a href="#" class="info"><?php echo _("Return Destination Behavior:")?><span><?php echo _("Where to send a parked call that has timed out. The call can be sent back to the original device that parked the call, or it can be sent back to the alternate destination. In both cases, any configured Alert-Info, Caller ID prepend, or annoucement will be applied to the call. If configured to send back to the Originator and they are not available (phone is offline), the alternate destination will be used.")?></span></a></td>
+  <td>
+    <input type="radio" name="parking_dest" id="parking_dest-device" value="device" <?php echo $parking_dest == 'device' ? "checked=\"yes\"" : ""?>/><label for="parking_dest-device"><?php echo _("Originator") ?></label>
+    <input type="radio" name="parking_dest" id="parking_dest-dest" value="dest" <?php echo $parking_dest == 'dest' ? "checked=\"yes\"" : ""?>/><label for="parking_dest-dest"><?php echo _("Alternate Destination") ?></label>
+  </td>
+	</tr>
+  <tr><td><br /></td></tr>
+<?php }
 //draw goto selects
 echo drawselects($goto,0);
 ?>

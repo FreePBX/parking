@@ -129,9 +129,12 @@ function parking_get_config($engine) {
       $contextname = 'park-dial';
       if ($goto) {
 		    $ext->add($contextname, "t", '', new ext_goto($goto));
+		    $ext->add($contextname, "t", '', new ext_noop('WARNING: PARKRETURN to: [${EXTEN}] failed with: [${DIALSTATUS}]. Trying Alternate Dest'));
+		    $ext->add($contextname, "t", '', new ext_goto($goto));
+		    $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_goto($goto));
+		    $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_noop('WARNING: PARKRETURN to: [${EXTEN}] failed with: [${DIALSTATUS}]. Trying Alternate Dest'));
 		    $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_goto($goto));
       }
-
 
 			// Asterisk 1.4 requires hints to be generated for parking
 			//
