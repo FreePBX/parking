@@ -32,7 +32,7 @@ function parking_get_config($engine) {
 		$parkingtime 	= isset($results['parkingtime'])?$results['parkingtime']:'';
 		$parkingcontext	= isset($results['parkingcontext'])?$results['parkingcontext']:'parkedcalls';
 		$parkalertinfo 	= isset($results['parkalertinfo'])?$results['parkalertinfo']:'';
-		$parkcid 	= isset($results['parkcid'])?$results['parkcid']:'';
+		$parkcid 	= isset($results['parkcid'])?trim($results['parkcid']):'';
 		$parkingannmsg_id 	= isset($results['parkingannmsg_id'])?$results['parkingannmsg_id']:'';
 		$goto	 	= isset($results['goto'])?$results['goto']:'';
 
@@ -42,12 +42,14 @@ function parking_get_config($engine) {
 		$parkpos2	= $parkpos1 + $numslots -1;
 
 		if ($parkingenabled) {
-			// TODO: lookup ampportal.conf variables for this, don't hard code
-			// first write features_additional.inc include file
-			//
+
 			$core_conf->addFeatureGeneral('parkext',$parkext);
 			$core_conf->addFeatureGeneral('parkpos',$parkpos1."-".$parkpos2);
 			$core_conf->addFeatureGeneral('context',$parkingcontext);
+
+      if (!$ast_ge_18) {
+        $ext->addInclude('from-internal-additional', $parkingcontext);
+      }
 
 			if ($parkingtime) {
 				$core_conf->addFeatureGeneral('parkingtime',$parkingtime);
@@ -97,7 +99,6 @@ function parking_get_config($engine) {
         //
 				$core_conf->addFeatureGeneral('comebacktoorigin','no');
 
-				$core_conf->addFeatureGeneral('parkinghints',$parkinghints);
 				$core_conf->addFeatureGeneral('parkedplay',isset($results['parkedplay']) ? $results['parkedplay'] : 'both');
 				$core_conf->addFeatureGeneral('parkedcalltransfers',isset($results['parkedcalltransfers']) ? $results['parkedcalltransfers'] : 'caller');
 				$core_conf->addFeatureGeneral('parkedcallrepark',isset($results['parkedcallrepark']) ? $results['parkedcallrepark'] : 'caller');
@@ -114,7 +115,7 @@ function parking_get_config($engine) {
 				  $ext->add($contextname, $exten, '', new ext_alertinfo(str_replace(';', '\;', $parkalertinfo)));
          }
 			  if ($parkcid) {
-				  $ext->add($contextname, $exten, '', new ext_set('CALLERID(name)', $parkcid.'${CALLERID(name)}'));
+				  $ext->add($contextname, $exten, '', new ext_execif('$["${CALLERID(name):0:' .strlen($parkcid). '}" != "' .$parkcid. '"]','Set','CALLERID(name)=' .$parkcid. '${CALLERID(name)}'));
 			  }
 		    if ($parkingannmsg_id != '') {
 			    $parkingannmsg = recordings_get_file($parkingannmsg_id);
@@ -136,17 +137,57 @@ function parking_get_config($engine) {
 		    $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_goto($goto));
       }
 
-			// Asterisk 1.4 requires hints to be generated for parking
-			//
-      // TODO: parkinghints = yes 1.6.2+
+      // Although 1.6.2+ can generate the hints, we are going to do it since we need to make some other changes
+      // and thus don't want to include the default context in 1.8. Also, when we get to multi-parking lots we
+      // need to generate their hints anyhow.
       //
-      if ($ast_lt_162 && $parkinghints == 'yes') {
+      if ($parkinghints == 'yes' || $ast_ge_18) {
         $parkhints = 'park-hints';
-        $ext->addInclude('from-internal-additional', $parkhints); // Add the include from from-internal
+        $ext->addInclude('from-internal-additional', $parkhints);
+        $ext->addInclude($parkhints, $parkingcontext);
+        $hv_all = '';
         for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
-				  $ext->addHint($parkhints, $slot, "park:$slot@$parkingcontext");
-				  $ext->add($parkhints, $slot, '', new ext_parkedcall($slot));
+          if ($ast_ge_18) {
+				    $ext->add($parkhints, $slot, '', new ext_macro('parked-call',$slot));
+          } else {
+				    $ext->add($parkhints, $slot, '', new ext_parkedcall($slot));
+          }
+          if ($parkinghints == 'yes') {
+            $hv = "park:$slot@$parkingcontext";
+            $hv_all .= $hv.'&';
+				    $ext->addHint($parkhints, $slot, $hv);
+          }
         }
+
+        $fcc = new featurecode('parking', 'parkedcall');
+        $pc_code = $fcc->getCodeActive();
+        unset($fcc);
+
+        if ($pc_code != '') {
+          if ($ast_ge_18) {
+				    $ext->add($parkhints, $pc_code, '', new ext_macro('parked-call',''));
+          } else {
+				    $ext->add($parkhints, $pc_code, '', new ext_parkedcall());
+          }
+          if ($parkinghints == 'yes') {
+            $hv = rtrim($hv_all,'&');
+				    $ext->addHint($parkhints, $pc_code, $hv);
+          }
+        }
+        $pc = 'macro-parked-call';
+        $exten = 's';
+				$ext->add($pc, $exten, '', new ext_set('CCSS_SETUP','TRUE'));
+				$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
+				$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(parkedcalls,${ARG1},1)} = 1]','parkedcall'));
+				$ext->add($pc, $exten, '', new ext_resetcdr(''));
+				$ext->add($pc, $exten, '', new ext_nocdr(''));
+				$ext->add($pc, $exten, '', new ext_wait('1'));
+				$ext->add($pc, $exten, '', new ext_noop_trace('User: ${CALLERID(all)} tried to pickup non-existent Parked Call Slot ${ARG1}'));
+				$ext->add($pc, $exten, '', new ext_playback('pbx-invalidpark'));
+				$ext->add($pc, $exten, '', new ext_wait('1'));
+				$ext->add($pc, $exten, '', new ext_hangup(''));
+				$ext->add($pc, $exten, 'parkedcall', new ext_noop_trace('User: ${CALLERID(all)} picking up Parked Call Slot ${ARG1}'));
+				$ext->add($pc, $exten, 'parkedcall', new ext_parkedcall('${ARG1}'));
 		  }
 		break;
     }
