@@ -74,7 +74,7 @@ function parking_get_config($engine) {
 				  $ext->add($contextname, "_[0-9a-zA-Z*#].", '', new ext_playback($parkingannmsg));
 			  }
 
-			} else if ($ast_lt_18) {
+			} else if (!$ast_ge_18) {
 
 				if ($parkalertinfo) {
 					$ext->add($contextname, "t", '', new ext_alertinfo(str_replace(';', '\;', $parkalertinfo)));
