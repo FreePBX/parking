@@ -180,14 +180,14 @@ if (!$action) {
 	<td align=right><input type="checkbox" value="yes" name="findslot" <?php  echo ($findslot == 'yes' ? 'CHECKED' : '')?> tabindex="<?php echo ++$tabindex;?>"></td>
 	</tr>
 	<tr>
-	<td><a href=# class="info"><?php echo _("Enable ADSI Annoucements:")?><span><?php echo _("Check this box if you are using ADSI enabled analog phones and want to have ADSI parking annoucements sent to the phones. Other adsi.conf configurations may be neceesary for this to work.")?></span></a></td>
+	<td><a href=# class="info"><?php echo _("Enable ADSI Announcements:")?><span><?php echo _("Check this box if you are using ADSI enabled analog phones and want to have ADSI parking announcements sent to the phones. Other adsi.conf configurations may be necessary for this to work.")?></span></a></td>
 	<td align=right><input type="checkbox" value="yes" name="adsipark" <?php  echo ($adsipark == 'yes' ? 'CHECKED' : '')?> tabindex="<?php echo ++$tabindex;?>"></td>
 	</tr>
 
 <tr><td colspan="2"><br><h5><?php echo _("Returned Call Behavior:")?><hr></h5></td></tr>
 
   <tr>
-  <td><a href="#" class="info"><?php echo _("Pickup Courtesy Tone:")?><span><?php echo _("Whom to play the courtesy tone to when a parked call is retreived.")?></span></a></td>
+  <td><a href="#" class="info"><?php echo _("Pickup Courtesy Tone:")?><span><?php echo _("Whom to play the courtesy tone to when a parked call is retrieved.")?></span></a></td>
   <td>
     <input type="radio" name="parkedplay" id="parkedplay-caller" value="caller" <?php echo $parkedplay == 'caller' ? "checked=\"yes\"" : ""?>/><label for="parkedplay-caller"><?php echo _("Caller") ?></label>
     <input type="radio" name="parkedplay" id="parkedplay-callee" value="callee" <?php echo $parkedplay == 'callee' ? "checked=\"yes\"" : ""?>/><label for="parkedplay-callee"><?php echo _("Parked") ?></label>
@@ -236,12 +236,12 @@ if (!$action) {
 	</tr>				
 <?php
     $alert_info_tt = _("Alert-Info to add to the call prior to sending back to the Originator or to the Alternate Destination.");
-    $caller_id_tt = _("String to prepend to the current Caller ID assoicated with the parked call prior to sending back to the Originator or the Alternate Destination.");
+    $caller_id_tt = _("String to prepend to the current Caller ID associated with the parked call prior to sending back to the Originator or the Alternate Destination.");
     $announcement_tt = _("Optional message to be played to the call prior to sending back to the Originator or the Alternate Destination.");
 	  $dest_label = _("Alternate Destination");
   } else {
     $alert_info_tt = _("Alert-Info to put in channel before going to defined destination below. This can create distinct rings on some SIP phones and can serve to alert the recipients that the call is from an Orphaned parked call");
-    $caller_id_tt = _("String to pre-pend to the current Caller-ID associated with this call (if any), before going to defined destination below. This can serve to alert the recipients that the call is from an Orphaned parked call");
+    $caller_id_tt = _("String to prepend to the current CallerID associated with this call (if any), before going to defined destination below. This can serve to alert the recipients that the call is from an Orphaned parked call");
     $announcement_tt = _("Announcement:")?><span><?php echo _("Optional message to be played to the orphaned caller prior to going on the to supplied destination below.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left");
 	  $dest_label = _("Destination for Orphaned Parked Calls");
 ?>
@@ -294,7 +294,7 @@ if (!$action) {
       if ($ast_ge_18) {
 ?>
   <tr>
-  <td><a href="#" class="info"><?php echo _("Return Destination Behavior:")?><span><?php echo _("Where to send a parked call that has timed out. The call can be sent back to the original device that parked the call, or it can be sent back to the alternate destination. In both cases, any configured Alert-Info, Caller ID prepend, or annoucement will be applied to the call. If configured to send back to the Originator and they are not available (phone is offline), the alternate destination will be used.")?></span></a></td>
+  <td><a href="#" class="info"><?php echo _("Return Destination Behavior:")?><span><?php echo _("Where to send a parked call that has timed out. The call can be sent back to the original device that parked the call, or it can be sent back to the alternate destination. In both cases, any configured Alert-Info, Caller ID prepend, or announcement will be applied to the call. If configured to send back to the Originator and they are not available (phone is offline), the alternate destination will be used.")?></span></a></td>
   <td>
     <input type="radio" name="parking_dest" id="parking_dest-device" value="device" <?php echo $parking_dest == 'device' ? "checked=\"yes\"" : ""?>/><label for="parking_dest-device"><?php echo _("Originator") ?></label>
     <input type="radio" name="parking_dest" id="parking_dest-dest" value="dest" <?php echo $parking_dest == 'dest' ? "checked=\"yes\"" : ""?>/><label for="parking_dest-dest"><?php echo _("Alternate Destination") ?></label>
