@@ -223,6 +223,7 @@ function parking_update($pargs) {
   $parkcid = isset($pargs['parkcid']) ? $pargs['parkcid'] : '';
   $parkingannmsg_id = isset($pargs['parkingannmsg_id']) ? $pargs['parkingannmsg_id'] : '';
   $goto = isset($pargs['goto']) ? $pargs['goto'] : '';
+  $parkinghints = isset($pargs['parkinghints']) ? $pargs['parkinghints'] : 'yes';
 
 	$parkinglot_id 	= 1; // only 1 parkinglot but prepare for future
 
@@ -249,11 +250,12 @@ function parking_update($pargs) {
 			array($parkinglot_id, 'parkalertinfo', trim("$parkalertinfo")),
 			array($parkinglot_id, 'parkcid', trim("$parkcid")),
 			array($parkinglot_id, 'parkingannmsg_id', "$parkingannmsg_id"),
-			array($parkinglot_id, 'goto', "$goto"));
+      array($parkinglot_id, 'goto', "$goto"),
+      array($parkinglot_id, 'parkinghints', "$parkinghints"),
+    );
 
   if ($ast_ge_18) {
     $parkfields[] = array($parkinglot_id, 'parking_dest', isset($pargs['parking_dest'])?$pargs['parking_dest']:'device');
-    $parkfields[] = array($parkinglot_id, 'parkinghints', isset($pargs['parkinghints'])?$pargs['parkinghints']:'yes');
     $parkfields[] = array($parkinglot_id, 'parkedplay', isset($pargs['parkedplay'])?$pargs['parkedplay']:'both');
     $parkfields[] = array($parkinglot_id, 'parkedcalltransfers', isset($pargs['parkedcalltransfers'])?$pargs['parkedcalltransfers']:'caller');
     $parkfields[] = array($parkinglot_id, 'parkedcallreparking', isset($pargs['parkedcallreparking'])?$pargs['parkedcallreparking']:'caller');
