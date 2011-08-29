@@ -78,8 +78,6 @@ if(isset($_POST['action'])){
 	}
 }
 ?>
-</div>
-<div class="content">
 <?php
 
 // get the parkinglot settings if not a submit
