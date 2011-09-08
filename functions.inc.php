@@ -188,6 +188,7 @@ function parking_get_config($engine) {
 				$ext->add($pc, $exten, '', new ext_hangup(''));
 				$ext->add($pc, $exten, 'parkedcall', new ext_noop_trace('User: ${CALLERID(all)} picking up Parked Call Slot ${ARG1}'));
 				$ext->add($pc, $exten, 'parkedcall', new ext_parkedcall('${ARG1}'));
+				$ext->add($pc, 'h', '', new ext_macro('hangupcall'));
 		  }
 		break;
     }
