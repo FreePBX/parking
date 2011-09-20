@@ -5,7 +5,7 @@
 	<version>2.9.0.4</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
-	<category>Apps</category>
+	<category>Settings</category>
 	<description>Manages parking lot extensions and other options.
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.</description>
 	<menuitems>
