@@ -1,4 +1,5 @@
 <?php /* $Id: page.parking.php 2243 2006-08-12 17:13:17Z p_lindheimer $ */
+if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 //Copyright (C) 2006 Astrogen LLC 
 //
 //This program is free software; you can redistribute it and/or
