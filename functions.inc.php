@@ -110,19 +110,32 @@ function parking_get_config($engine) {
 				$core_conf->addFeatureGeneral('findslot',isset($results['findslot']) ? $results['findslot'] : 'first');
 
         $contextname = 'parkedcallstimeout';
-        $exten = $parking_dest == 'dest' && $goto ? 's' : '_[0-9a-zA-Z*#].';
+				// Asterisk is suppose to go to the 's' extension if the specific one is not found, however a bug in Asterisk 10
+				// results in a failure and since _[...] works anyhow it is more resilient to future asterisk issues.
+				//
+        $exten = '_[0-9a-zA-Z*#].';
+
+				$next = 'next';
+				$ext->add($contextname, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
+				$ext->add($contextname, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
+				$ext->add($contextname, $exten, '', new ext_mixmonitor('${MIXMON_DIR}${YEAR}/${MONTH}/${DAY}/${CALLFILENAME}.${MIXMON_FORMAT}','a','${MIXMON_POST}'));
+
 			  if ($parkalertinfo) {
-				  $ext->add($contextname, $exten, '', new ext_sipremoveheader('Alert-Info:'));
-				  $ext->add($contextname, $exten, '', new ext_alertinfo(str_replace(';', '\;', $parkalertinfo)));
+					$ext->add($contextname, $exten, $next, new ext_sipremoveheader('Alert-Info:'));
+					$next = '';
+					$ext->add($contextname, $exten, '', new ext_alertinfo(str_replace(';', '\;', $parkalertinfo)));
          }
 			  if ($parkcid) {
-				  $ext->add($contextname, $exten, '', new ext_execif('$["${CALLERID(name):0:' .strlen($parkcid). '}" != "' .$parkcid. '"]','Set','CALLERID(name)=' .$parkcid. '${CALLERID(name)}'));
+					$ext->add($contextname, $exten, $next, new ext_execif('$["${CALLERID(name):0:' .strlen($parkcid). '}" != "' .$parkcid. '"]','Set','CALLERID(name)=' .$parkcid. '${CALLERID(name)}'));
+					$next = '';
 			  }
 		    if ($parkingannmsg_id != '') {
 			    $parkingannmsg = recordings_get_file($parkingannmsg_id);
-			    $ext->add($contextname, $exten, '', new ext_playback($parkingannmsg));
+			    $ext->add($contextname, $exten, $next, new ext_playback($parkingannmsg));
+					$next = '';
 		    }
-			  $ext->add($contextname, $exten, '', new ext_goto($parking_dest == 'dest' && $goto ? $goto : 'park-dial,${EXTEN},1'));
+			  $ext->add($contextname, $exten, $next, new ext_goto($parking_dest == 'dest' && $goto ? $goto : 'park-dial,${EXTEN},1'));
+				$next = '';
       }
 
       // In all cases, add a timeout and catchall in the park-dial context to revert to the
@@ -177,7 +190,16 @@ function parking_get_config($engine) {
         }
         $pc = 'macro-parked-call';
         $exten = 's';
-				$ext->add($pc, $exten, '', new ext_set('CCSS_SETUP','TRUE'));
+
+				// Determine from parked channel if we were previously recording and if so keep doing so
+				//
+				$ext->add($pc, $exten, '', new ext_agi('parkfetch.agi,${ARG1}'));
+				$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
+				$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
+				$ext->add($pc, $exten, '', new ext_set('CDR(recordingfile)','${CALLFILENAME}.${MON_FMT}'));
+				$ext->add($pc, $exten, '', new ext_mixmonitor('${MIXMON_DIR}${YEAR}/${MONTH}/${DAY}/${CALLFILENAME}.${MIXMON_FORMAT}','a','${MIXMON_POST}'));
+
+				$ext->add($pc, $exten, 'next', new ext_set('CCSS_SETUP','TRUE'));
 				$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
 				$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(parkedcalls,${ARG1},1)} = 1]','parkedcall'));
 				$ext->add($pc, $exten, '', new ext_resetcdr(''));
