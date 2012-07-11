@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>2.10.0.1</version>
+	<version>2.10.0.2</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<category>Settings</category>
@@ -12,6 +12,7 @@
 		<parking>Parking Lot</parking>
 	</menuitems>
 	<changelog>
+		*2.10.0.2* #5901
 		*2.10.0.1* #5478 
 		*2.10.0.0* new version changes
 		*2.9.0.4* #4965, #4972
@@ -24,6 +25,6 @@
 		<version>2.5.0alpha1</version>
 		<module>recordings ge 3.3.8</module>
 	</depends>
-	<location>release/2.10/parking-2.10.0.1.tgz</location>
-	<md5sum>686c240415fc93a37ea46a0a21e343a6</md5sum>
+	<location>release/2.10/parking-2.10.0.2.tgz</location>
+	<md5sum>bec88a43ddfa16e91f61d0ee65a9e4cd</md5sum>
 </module>
