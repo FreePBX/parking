@@ -1,113 +1,151 @@
 <?php
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
-global $db;
-global $amp_conf;
+
 //for translation only
 if (false) {
 _("Pickup ParkedCall Any");
+_("Park Prefix");
 }
 
 $fcc = new featurecode('parking', 'parkedcall');
-$fcc->setDescription('Pickup ParkedCall Any');
+$fcc->setDescription('Pickup ParkedCall Prefix');
 $fcc->setDefault('*85');
 $fcc->setProvideDest();
 $fcc->update();
 unset($fcc);
 
-$sql = "
-CREATE TABLE IF NOT EXISTS `parkinglot` 
-(
-	`id` VARCHAR( 20 ) NOT NULL default '1',
-	`keyword` varchar(40) NOT NULL default '',
-	`data` varchar(150) NOT NULL default '',
-	PRIMARY KEY  (`id`,`keyword`)
-)
-";
-$check = $db->query($sql);
-if(DB::IsError($check)) {
-	die_freepbx("Can not create parkinglot table");
+$autoincrement = (($amp_conf["AMPDBENGINE"] == "sqlite") || ($amp_conf["AMPDBENGINE"] == "sqlite3")) ? "AUTOINCREMENT":"AUTO_INCREMENT";
+
+$sql['parkplus'] = "
+	CREATE TABLE IF NOT EXISTS parkplus (
+		id INTEGER NOT NULL $autoincrement,
+		defaultlot VARCHAR(10) NOT NULL DEFAULT 'no',
+		type VARCHAR(10) NOT NULL DEFAULT 'public',
+		name VARCHAR(40) NOT NULL DEFAULT '',
+		parkext VARCHAR(40) NOT NULL DEFAULT '',
+		parkpos VARCHAR(40) NOT NULL DEFAULT '',
+		numslots INTEGER NOT NULL DEFAULT 4,
+		parkingtime INTEGER NOT NULL DEFAULT 45,
+		parkedmusicclass VARCHAR(100) DEFAULT 'default',
+		generatefc VARCHAR(10) NOT NULL DEFAULT 'yes',
+		generatehints VARCHAR(10) NOT NULL DEFAULT 'yes',
+		findslot VARCHAR(10) NOT NULL DEFAULT 'first',
+		parkedplay VARCHAR(10) NOT NULL DEFAULT 'both',
+		parkedcalltransfers VARCHAR(10) NOT NULL DEFAULT 'caller',
+		parkedcallreparking VARCHAR(10) NOT NULL DEFAULT 'caller',
+		alertinfo VARCHAR(254) NOT NULL DEFAULT '',
+		cidpp VARCHAR(100) NOT NULL DEFAULT '',
+		autocidpp VARCHAR(10) NOT NULL DEFAULT 'none',
+		announcement_id INT DEFAULT NULL,
+		comebacktoorigin VARCHAR(10) NOT NULL DEFAULT 'yes',
+		dest VARCHAR(100) NOT NULL DEFAULT '',
+		PRIMARY KEY (id)
+	)";
+
+foreach ($sql as $t => $s) {
+	out(sprintf(_("creating table %s if needed"), $t));
+	$result = $db->query($s);
+	if(DB::IsError($result)) {
+		die_freepbx($result->getDebugInfo());
+	}
 }
 
-$results = array();
-$sql = "SELECT id, keyword, data FROM parkinglot WHERE keyword = 'goto'";
-$results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
-if (!DB::IsError($results)) { // error - table must not be there
-	foreach ($results as $result) {
-		$old_dest  = $result['data'];
-		$id        = $result['id'];
-		$keyword   = $result['keyword'];
+$sql = "SELECT * FROM parkplus WHERE defaultlot = 'yes'";
+$default_lot = sql($sql,"getAll");
 
-		$new_dest = merge_ext_followme(trim($old_dest));
-		if ($new_dest != $old_dest) {
-			$sql = "UPDATE parkinglot SET data = '$new_dest' WHERE id = '$id'  AND keyword = '$keyword' AND data = '$old_dest'";
-			$results = $db->query($sql);
-			if(DB::IsError($results)) {
-				die_freepbx($results->getMessage());
+// There should never be more than a single default lot so just blow them
+// all away if we or esomeone did something dumb.
+if (count($default_lot) > 1) {
+	out(_("ERROR: too many default lots detected, deleting and reinitializing"));
+	$sql = "DELETE FROM parkplus WHERE defaultlot = 'yes'";
+	sql($sql);
+}
+
+if (count($default_lot) == 0) {
+
+	outn(_("Initializing default parkinglot.."));
+	$sql = "INSERT INTO parkplus (id, defaultlot, name, parkext, parkpos, numslots) VALUES (1, 'yes', 'Default Lot', '70', '71', 8)";
+	sql($sql);
+	out(_("done"));
+
+	$sql = "SELECT keyword,data FROM parkinglot WHERE id = '1'";
+	$results = $db->getAssoc($sql);
+	if (!DB::IsError($results)) {
+
+		out(_("migrating old parkinglot data"));
+
+		$var['name'] = "Default Lot";
+		$var['type'] = 'public';
+		$var['parkext'] = '';
+		$var['parkpos'] = '';
+		$var['numslots'] = 4;
+		$var['parkingtime'] = 45;
+		$var['parkedmusicclass'] = 'default';
+		$var['generatehints'] = 'yes';
+		$var['generatefc'] = 'yes';
+		$var['findslot'] = 'first';
+		$var['parkedplay'] = 'both';
+		$var['parkedcalltransfers'] = 'caller';
+		$var['parkedcallreparking'] = 'caller';
+		$var['alertinfo'] = '';
+		$var['cidpp'] = '';
+		$var['autocidpp'] = 'none';
+		$var['announcement_id'] = null;
+		$var['comebacktoorigin'] = 'yes';
+		$var['dest'] = '';
+
+		foreach ($results as $set => $val) {
+			switch($set) {
+			case 'numslots':
+			case 'parkingtime':
+			case 'parkedplay':
+			case 'parkedcalltransfers':
+			case 'parkedcallreparking':
+			case 'parkedmusicclass':
+			case 'findslot':
+				$var[$set] = $val;
+				break;
+			case 'parkext':
+				$var[$set] = $val;
+				$var['parkpos'] = $val + 1;
+				break;
+			case 'parkalertinfo':
+				$var['alertinfo'] = $val;
+				break;
+			case 'parkcid':
+				$var['cidpp'] = $val;
+				break;
+			case 'parkingannmsg_id':
+				$var['announcement_id'] = $val;
+				break;
+			case 'goto':
+				$var['dest'] = $val;
+				break;
+			case 'parkinghints':
+				$var['generatehints'] = $val;
+				break;
+			case 'parking_dest':
+				$var['comebacktoorigin'] = ($val == 'device' ? 'yes' : 'no');
+				break;
+			default:
+				/* parkedcallhangup
+					 parkedcallrecording
+					 adsipark
+					 parkingcontext
+				 */
+				out(sprintf(_("%s no longer supported"),$set));
+				break;
 			}
 		}
+
+		foreach ($var as $key => $value) {
+			$sql = "UPDATE parkplus SET `$key` = " . q($value) . "WHERE defaultlot = 'yes'";
+			sql($sql);
+		}
+
+		out(_("migrated ... dropping old table parkinglot"));
+		sql('DROP TABLE IF EXISTS parkinglot');
+		unset($var);
+		unset($results);
 	}
 }
-
-// Version 2.5 migrate to recording ids
-//
-outn(_("Migrating recordings if needed.."));
-
-$sql = "SELECT `data` FROM `parkinglot` WHERE  `id` = '1' AND `keyword` = 'parkingannmsg'";
-$results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
-if(DB::IsError($results)) {
-	die_freepbx($results->getMessage());
-}
-if (isset($results[0])) {
-	if (trim($results[0]['data']) != '') {
-		$rec_id = recordings_get_or_create_id($results[0]['data'], 'parking');
-	} else {
-		$rec_id = '';
-	}
-	// Delete just in case
-	$sql="DELETE FROM `parkinglot` WHERE `keyword` = 'parkingannmsg_id'";
-	$results = $db->query($sql);
-	if(DB::IsError($results)) {
-		out(_("fatal error"));
-		die_freepbx($results->getMessage());
-	}
-	$sql="INSERT INTO `parkinglot` (`id`, `keyword`, `data`) VALUES ('1', 'parkingannmsg_id', '$rec_id')";
-	$results = $db->query($sql);
-	if(DB::IsError($results)) {
-		out(_("fatal error"));
-		die_freepbx($results->getMessage());
-	}
-	// Either way, delete it if it were there
-	$sql="DELETE FROM `parkinglot` WHERE `keyword` = 'parkingannmsg'";
-	$results = $db->query($sql);
-	if(DB::IsError($results)) {
-		out(_("fatal error"));
-		die_freepbx($results->getMessage());
-	}
-	out(_("ok"));
-} else {
-	out(_("not needed"));
-}
-
-// Initialize parkinghints to yes since that was the defacto standard before. If already there
-// then this will fail but we don't care since we don't want to replace what is there
-//
-$sql="INSERT INTO `parkinglot` (`id`, `keyword`, `data`) VALUES ('1', 'parkinghints', 'yes')";
-$results = $db->query($sql);
-
-$freepbx_conf =& freepbx_conf::create();
-
-// PARKINGPATCH
-//
-$set['value'] = false;
-$set['defaultval'] =& $set['value'];
-$set['readonly'] = 0;
-$set['hidden'] = 0;
-$set['level'] = 3;
-$set['module'] = 'parking';
-$set['category'] = 'System Setup';
-$set['emptyok'] = 0;
-$set['name'] = 'Use Old Parking Patch';
-$set['description'] = 'Set to generate some additional dialplan if using a particular patch that was available in Asterisk 1.2 and 1.4 to add behavior to parking like adding Alert Info and CID prepends to timed out parked calls. This patch is mostly obsoleted and the setting will probably go away at some point when Asterisk 1.6+ parking enhacements are added to the module.';
-$set['type'] = CONF_TYPE_BOOL;
-$freepbx_conf->define_conf_setting('PARKINGPATCH',$set,true);
-

@@ -2,16 +2,14 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>2.10.0.2</version>
+	<version>2.11.0.1</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
-	<category>Settings</category>
+	<category>Applications</category>
 	<description>Manages parking lot extensions and other options.
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.</description>
-	<menuitems>
-		<parking>Parking Lot</parking>
-	</menuitems>
 	<changelog>
+        *2.11.01* Completely rewritten from the ground up. Fixes #5498, #5549
 		*2.10.0.2* #5901
 		*2.10.0.1* #5478 
 		*2.10.0.0* new version changes
@@ -21,9 +19,12 @@
 		*2.9.0.1* #4740
 		*2.9.0.0* #4655
 	</changelog>
+	<menuitems>
+		<parking>Parking</parking>
+	</menuitems>
 	<depends>
-		<version>2.5.0alpha1</version>
-		<module>recordings ge 3.3.8</module>
+        <engine>asterisk ge 1.8</engine>
+		<version>2.11</version>
 	</depends>
 	<location>release/2.11/parking-2.10.0.2.tgz</location>
 	<md5sum>12e73cb180ab31c9ec20d184da862fa3</md5sum>
