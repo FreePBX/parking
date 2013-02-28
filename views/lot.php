@@ -12,13 +12,13 @@
         <tr>
             <td><a href=# class="info"><?php echo _("Parking Lot Name:")?><span><?php echo _("Provide a Descriptive Title for this Parking Lot")?></span></a></td>
             <td>
-                <input id="name" type="textbox" name="name" size="5" value="<?php echo $name?>">
+                <input id="name" type="textbox" name="name" size="30" value="<?php echo $name?>">
             </td>
         </tr>
         <tr>
             <td><a href=# class="info"><?php echo _("Parking Lot Starting Position:")?><span><?php echo _("The starting postion of the parking lot")?></span></a></td>
             <td>
-                <input type="text" id="parkpos" name="parkpos" value="<?php echo $parkpos?>">
+                <input type="text" id="parkpos" name="parkpos" size="5" value="<?php echo $parkpos?>">
             </td>
         </tr>
     	<tr>
@@ -71,7 +71,7 @@
             </td>
         </tr>
     	<tr>
-    	    <td><a href=# class="info"><?php echo _("Use Next Slot:")?><span><?php echo _("Asterisk: findslot. Enable this if you want the parking lot to seek the next sequential parking slot relative to the the last parked call instead of seeking the first available slot. Normally this is left disabled.")?></span></a></td>
+    	    <td><a href=# class="info"><?php echo _("Find Slot:")?><span><?php echo _("Next: If you want the parking lot to seek the next sequential parking slot relative to the the last parked call instead of seeking the first available slot. First: Use the first parking lot slot available")?></span></a></td>
     	    <td>
                 <span class="radioset">
                     <input type="radio" name="findslot" value="next" id="findslot_next" <?php echo ($findslot == 'next' ? 'checked' : '')?>><label for="findslot_next">Next</label>
@@ -119,13 +119,13 @@
     	<tr>
     	    <td><a href=# class="info"><?php echo _("Parking Alert-Info:")?><span><?php echo _("Alert-Info to add to the call prior to sending back to the Originator or to the Alternate Destination.")?><br></span></a></td>
     	    <td>
-                <input type="text" size="40" name="alertinfo" value="<?php  echo htmlspecialchars($alertinfo)?>"/>
+                <input type="text" size="30" name="alertinfo" value="<?php  echo htmlspecialchars($alertinfo)?>"/>
             </td>
     	</tr>
     	<tr>
     	    <td><a href=# class="info"><?php echo _("CallerID Prepend:")?><span><?php echo _("String to prepend to the current Caller ID associated with the parked call prior to sending back to the Originator or the Alternate Destination.") ?><br></span></a></td>
     	    <td>
-                <input type="text" size="20" name="cidpp" value="<?php  echo htmlspecialchars($cidpp)?>"/>
+                <input type="text" size="30" name="cidpp" value="<?php  echo htmlspecialchars($cidpp)?>"/>
             </td>
     	</tr>
     	<tr>
