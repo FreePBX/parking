@@ -6,13 +6,13 @@
         <tr>
             <td><a href=# class="info"><?php echo _("Parking Lot Extension:")?><span><?php echo _("This is the extension where you will transfer a call to park it")?></span></a></td>
             <td>
-                <input type="text" id="parkext" name="parkext" size="3" value="<?php echo $parkext?>">
+                <input type="text" id="parkext" name="parkext" size="5" value="<?php echo $parkext?>">
             </td>
         </tr>
         <tr>
             <td><a href=# class="info"><?php echo _("Parking Lot Name:")?><span><?php echo _("Provide a Descriptive Title for this Parking Lot")?></span></a></td>
             <td>
-                <input id="name" type="textbox" name="name" value="<?php echo $name?>">
+                <input id="name" type="textbox" name="name" size="5" value="<?php echo $name?>">
             </td>
         </tr>
         <tr>
@@ -34,7 +34,7 @@
     		</td>
     	</tr>
     	<tr>
-    	<td><a href="#" class="info"><?php echo _("Parking Timeout (seconds):")?><span><?php echo _("The timeout period in seconds that a parked call will attempt to ring back the original parker if not answered")?></span></a></td>
+    	    <td><a href="#" class="info"><?php echo _("Parking Timeout (seconds):")?><span><?php echo _("The timeout period in seconds that a parked call will attempt to ring back the original parker if not answered")?></span></a></td>
     		<td>
                 <input type="number" id="parkingtime" name="parkingtime" value="<?php echo $parkingtime?>">
     		</td>
@@ -74,8 +74,8 @@
     	    <td><a href=# class="info"><?php echo _("Use Next Slot:")?><span><?php echo _("Asterisk: findslot. Enable this if you want the parking lot to seek the next sequential parking slot relative to the the last parked call instead of seeking the first available slot. Normally this is left disabled.")?></span></a></td>
     	    <td>
                 <span class="radioset">
-                    <input type="radio" name="findslot" value="next" id="findslot_enable" <?php echo ($findslot == 'next' ? 'checked' : '')?>><label for="findslot_enable">Enable</label>
-                    <input type="radio" name="findslot" value="first" id="findslot_disable" <?php echo ($findslot == 'first' ? 'checked' : '')?>><label for="findslot_disable">Disable</label>
+                    <input type="radio" name="findslot" value="next" id="findslot_next" <?php echo ($findslot == 'next' ? 'checked' : '')?>><label for="findslot_next">Next</label>
+                    <input type="radio" name="findslot" value="first" id="findslot_first" <?php echo ($findslot == 'first' ? 'checked' : '')?>><label for="findslot_first">First</label>
                 </span>
             </td>
     	</tr>
