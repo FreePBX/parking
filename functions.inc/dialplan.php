@@ -65,7 +65,7 @@ function parking_get_config($engine) {
 		$core_conf->addFeatureGeneral('parkingtime', $lot['parkingtime']);
 		$core_conf->addFeatureGeneral('comebacktoorigin', 'no');
 		$core_conf->addFeatureGeneral('parkedplay', $lot['parkedplay']);
-        $core_conf->addFeatureGeneral('courtesytone', 'beep');
+		$core_conf->addFeatureGeneral('courtesytone', 'beep');
 		$core_conf->addFeatureGeneral('parkedcalltransfers', $lot['parkedcalltransfers']);
 		$core_conf->addFeatureGeneral('parkedcallreparking', $lot['parkedcallreparking']);
 		$core_conf->addFeatureGeneral('parkedmusicclass', $lot['parkedmusicclass']);
