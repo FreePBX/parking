@@ -65,8 +65,8 @@
             <td><a href=# class="info"><?php echo _("BLF Capabilities:")?><span><?php echo _("Enable this to have Asterisk 'hints' generated to use with BLF buttons.")?></span></a></td>
             <td>
                 <span class="radioset">
-                    <input type="radio" name="generatehints" value="yes" id="parkinghints_enable" <?php echo ($generatehints == 'yes' ? 'checked' : '')?>><label for="parkinghints_enable">Enable</label>
-                    <input type="radio" name="generatehints" value="no" id="parkinghints_disable" <?php echo ($generatehints == 'no' ? 'checked' : '')?>><label for="parkinghints_disable">Disable</label>
+									<input type="radio" name="generatehints" value="yes" id="parkinghints_enable" <?php echo ($generatehints == 'yes' ? 'checked' : '')?>><label for="parkinghints_enable"><?php echo("Enable") ?></label>
+									<input type="radio" name="generatehints" value="no" id="parkinghints_disable" <?php echo ($generatehints == 'no' ? 'checked' : '')?>><label for="parkinghints_disable"><?php echo("Disable") ?></label>
                 </span>
             </td>
         </tr>
@@ -74,8 +74,8 @@
     	    <td><a href=# class="info"><?php echo _("Find Slot:")?><span><?php echo _("Next: If you want the parking lot to seek the next sequential parking slot relative to the the last parked call instead of seeking the first available slot. First: Use the first parking lot slot available")?></span></a></td>
     	    <td>
                 <span class="radioset">
-                    <input type="radio" name="findslot" value="next" id="findslot_next" <?php echo ($findslot == 'next' ? 'checked' : '')?>><label for="findslot_next">Next</label>
-                    <input type="radio" name="findslot" value="first" id="findslot_first" <?php echo ($findslot == 'first' ? 'checked' : '')?>><label for="findslot_first">First</label>
+									<input type="radio" name="findslot" value="next" id="findslot_next" <?php echo ($findslot == 'next' ? 'checked' : '')?>><label for="findslot_next"><?php echo _("Next") ?></label>
+									<input type="radio" name="findslot" value="first" id="findslot_first" <?php echo ($findslot == 'first' ? 'checked' : '')?>><label for="findslot_first"><?php echo _("First") ?></label>
                 </span>
             </td>
     	</tr>
@@ -119,25 +119,25 @@
     	<tr>
     	    <td><a href=# class="info"><?php echo _("Parking Alert-Info:")?><span><?php echo _("Alert-Info to add to the call prior to sending back to the Originator or to the Alternate Destination.")?><br></span></a></td>
     	    <td>
-                <input type="text" size="30" name="alertinfo" value="<?php  echo htmlspecialchars($alertinfo)?>"/>
+                <input type="text" size="30" name="alertinfo" value="<?php echo htmlspecialchars($alertinfo)?>"/>
             </td>
     	</tr>
     	<tr>
     	    <td><a href=# class="info"><?php echo _("CallerID Prepend:")?><span><?php echo _("String to prepend to the current Caller ID associated with the parked call prior to sending back to the Originator or the Alternate Destination.") ?><br></span></a></td>
     	    <td>
-                <input type="text" size="30" name="cidpp" value="<?php  echo htmlspecialchars($cidpp)?>"/>
+                <input type="text" size="30" name="cidpp" value="<?php echo htmlspecialchars($cidpp)?>"/>
             </td>
     	</tr>
     	<tr>
     		<td><a href="#" class="info"><?php echo _("Auto CallerID Prepend:")?><span><?php echo _("These options will be appended after CallerID Prepend if set. Otherwise they will appear first. The automatic options are as follows:<ul><li><strong>None:</strong> No Automatic Prepend</li><li><strong>Slot:</strong> Parking lot they were parked on</li><li><strong>Extension:</strong> The extension number that parked the call</li><li><strong>Name:</strong> The user who parked the call</li></ul>")?></span></a></td>
     		<td>
     			<select name="autocidpp">
-                    <option value="none" <?php echo ($autocidpp == 'none' ? 'selected' : '')?>>None</option>
-                    <option value="slot" <?php echo ($autocidpp == 'slot' ? 'selected' : '')?>>Slot</option>
-                    <option value="exten" <?php echo ($autocidpp == 'exten' ? 'selected' : '')?>>Extension</option>
-                    <option value="name" <?php echo ($autocidpp == 'name' ? 'selected' : '')?>>Name</option>
-                </select>
-            </td>
+						<option value="none" <?php echo ($autocidpp == 'none' ? 'selected' : '')?>><?php _("None") ?></option>
+						<option value="slot" <?php echo ($autocidpp == 'slot' ? 'selected' : '')?>><?php _("Slot") ?></option>
+						<option value="exten" <?php echo ($autocidpp == 'exten' ? 'selected' : '')?>><?php _("Extension") ?></option>
+						<option value="name" <?php echo ($autocidpp == 'name' ? 'selected' : '')?>><?php _("Name") ?></option>
+					</select>
+				</td>
         </tr>
         <?php if(function_exists('recordings_list')) { //only include if recordings is enabled?>
         	<tr>
@@ -178,7 +178,7 @@
             </td>
       	</tr>
         <tr>
-            <td>Destination:</td>
+					<td><?php echo _("Destination:") ?></td>
             <td>
                 <?php
                   echo drawselects($dest,0,false,false);
