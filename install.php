@@ -139,7 +139,7 @@ if (count($default_lot) == 0) {
 		}
 
 		foreach ($var as $key => $value) {
-			$sql = "UPDATE parkplus SET `$key` = " . q($value) . "WHERE defaultlot = 'yes'";
+			$sql = "UPDATE parkplus SET `$key` = " . q($value) . " WHERE defaultlot = 'yes'";
 			sql($sql);
 		}
 
