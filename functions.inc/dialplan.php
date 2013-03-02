@@ -237,7 +237,7 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_wait('1'));
 	$ext->add($pc, $exten, '', new ext_hangup(''));
 	$ext->add($pc, $exten, 'pcall', new ext_noop('User: ${CALLERID(all)} picking up Parked Call Slot ${ARG1}'));
-	$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1},${ARG2}'));
+	$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1}'));
 	$ext->add($pc, 'h', '', new ext_macro('hangupcall'));
 }
 

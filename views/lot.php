@@ -132,10 +132,10 @@
     		<td><a href="#" class="info"><?php echo _("Auto CallerID Prepend:")?><span><?php echo _("These options will be appended after CallerID Prepend if set. Otherwise they will appear first. The automatic options are as follows:<ul><li><strong>None:</strong> No Automatic Prepend</li><li><strong>Slot:</strong> Parking lot they were parked on</li><li><strong>Extension:</strong> The extension number that parked the call</li><li><strong>Name:</strong> The user who parked the call</li></ul>")?></span></a></td>
     		<td>
     			<select name="autocidpp">
-						<option value="none" <?php echo ($autocidpp == 'none' ? 'selected' : '')?>><?php _("None") ?></option>
-						<option value="slot" <?php echo ($autocidpp == 'slot' ? 'selected' : '')?>><?php _("Slot") ?></option>
-						<option value="exten" <?php echo ($autocidpp == 'exten' ? 'selected' : '')?>><?php _("Extension") ?></option>
-						<option value="name" <?php echo ($autocidpp == 'name' ? 'selected' : '')?>><?php _("Name") ?></option>
+						<option value="none" <?php echo ($autocidpp == 'none' ? 'selected' : '')?>><?php echo _("None") ?></option>
+						<option value="slot" <?php echo ($autocidpp == 'slot' ? 'selected' : '')?>><?php echo _("Slot") ?></option>
+						<option value="exten" <?php echo ($autocidpp == 'exten' ? 'selected' : '')?>><?php echo _("Extension") ?></option>
+						<option value="name" <?php echo ($autocidpp == 'name' ? 'selected' : '')?>><?php echo _("Name") ?></option>
 					</select>
 				</td>
         </tr>

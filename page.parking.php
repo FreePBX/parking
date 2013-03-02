@@ -64,9 +64,27 @@ if(!empty($action) && !empty($id)) {
 } elseif(!empty($action)) {
     $o = parking_views($action,$data);
     if(!$o) {
+        $m = "paging";
+        $d = module_getinfo($m);
+        $data['modules']['paging'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+        $m = "pagingpro";
+        $d = module_getinfo($m);
+        $data['modules']['pagingpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+        $m = "parkpro";
+        $d = module_getinfo($m);
+        $data['modules']['parkpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+
         echo parking_views('overview',$data);
     }
 } else {
+    $m = "paging";
+    $d = module_getinfo($m);
+    $data['modules']['paging'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+    $m = "pagingpro";
+    $d = module_getinfo($m);
+    $data['modules']['pagingpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+    $m = "parkpro";
+    $d = module_getinfo($m);
+    $data['modules']['parkpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
     echo parking_views('overview',$data);
 }
-
