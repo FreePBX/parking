@@ -30,10 +30,11 @@ function parking_get_config($engine) {
 		$por = 'park-orphan-routing';
 		$ph  = 'park-hints';
 		$pd  = 'park-dial';
-
+        $lot = parking_get();
 		parking_generate_parked_call();
 		parking_generate_parkedcallstimeout();
-		parking_generate_park_dial($pd, $por);
+		parking_generate_park_dial($pd, $por, $lot);
+        
 
 		//--------------------------------------
 		// End Here if there is a parkpro module
@@ -45,8 +46,6 @@ function parking_get_config($engine) {
 		$fcc = new featurecode('parking', 'parkedcall');
 		$parkfetch_code = $fcc->getCodeActive();
 		unset($fcc);
-
-		$lot = parking_get();
 
 		// Need to setup featurecode.conf configuration for the parking lot:
 		//
@@ -63,7 +62,7 @@ function parking_get_config($engine) {
 		$core_conf->addFeatureGeneral('context', $hint_context);
 		$core_conf->addFeatureGeneral('parkext_exclusive', 'no');
 		$core_conf->addFeatureGeneral('parkingtime', $lot['parkingtime']);
-		$core_conf->addFeatureGeneral('comebacktoorigin', 'no');
+		$core_conf->addFeatureGeneral('comebacktoorigin', $lot['comebacktoorigin']);
 		$core_conf->addFeatureGeneral('parkedplay', $lot['parkedplay']);
 		$core_conf->addFeatureGeneral('courtesytone', 'beep');
 		$core_conf->addFeatureGeneral('parkedcalltransfers', $lot['parkedcalltransfers']);
@@ -85,11 +84,14 @@ function parking_get_config($engine) {
 			// to be nice to cusotmers and broken systems.
 			//
 			if (!$lot['dest']) {
-				$ext->add($por, 's', '', new ext_noop('ERROR: No Alternate Destination Available for Orphaned Call'));
-				$ext->add($por, 's', '', new ext_playback('sorry&an-error-has-occured'));
-			}
-			$dest = $lot['dest'] ? $lot['dest'] : 's,1';
-			$ext->add($por, $lot['parkext'], '', new ext_goto($dest));
+				$ext->add($por, $lot['parkext'], '', new ext_noop('ERROR: No Alternate Destination Available for Orphaned Call'));
+				$ext->add($por, $lot['parkext'], '', new ext_playback('sorry&an-error-has-occured'));
+                $ext->add($por, $lot['parkext'], '', new ext_hangup(''));
+            } else {
+                $ext->add($por, $lot['parkext'], '', new ext_goto($lot['dest']));
+            }
+			//$dest = $lot['dest'] ? $lot['dest'] : 's,1';
+			//$ext->add($por, $lot['parkext'], '', new ext_goto($dest));
 		}
 
 		// Setup the specific items to do in the park-return-routing context for each lot, we will deal
@@ -103,7 +105,7 @@ function parking_get_config($engine) {
 		$hv_all = '';
 		for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
 
-			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $hint_context : '${CHANNEL(parkinglot)}')));
+			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $park_context : '${CHANNEL(parkinglot)}')));
 
 			if ($lot['generatehints'] == 'yes') {
 				$hv = "park:$slot@$hint_context";
@@ -198,7 +200,15 @@ function parking_generate_sub_return_routing($lot, $pd) {
 		$parkingannmsg = recordings_get_file($lot['announcement_id']);
 		$ext->add($prr, $pexten, '', new ext_playback($parkingannmsg));
 	}
-	$ext->add($prr, $pexten, '', new ext_goto($lot['dest'] ? $lot['dest'] : $pd . ',${PARK_TARGET},1'));
+	//$ext->add($prr, $pexten, '', new ext_goto($lot['dest'] ? $lot['dest'] : $pd . ',${PARK_TARGET},1'));
+    
+    if (!$lot['dest']) {
+        $ext->add($prr, $pexten, '', new ext_noop('ERROR: No Alternate Destination Available for Orphaned Call'));
+        $ext->add($prr, $pexten, '', new ext_playback('sorry&an-error-has-occured'));
+        $ext->add($prr, $pexten, '', new ext_hangup(''));
+    } else {
+        $ext->add($prr, $pexten, '', new ext_goto($lot['dest'] ? $lot['dest'] : $pd . ',${PARK_TARGET},1'));
+    }
 
 	// Route park-return-routing from slot to PARK_TARGET:
 	for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
@@ -225,10 +235,14 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
 	$ext->add($pc, $exten, '', new ext_set('CDR(recordingfile)','${CALLFILENAME}.${MON_FMT}'));
 	$ext->add($pc, $exten, '', new ext_mixmonitor('${MIXMON_DIR}${YEAR}/${MONTH}/${DAY}/${CALLFILENAME}.${MIXMON_FORMAT}','a','${MIXMON_POST}'));
-
 	$ext->add($pc, $exten, 'next', new ext_set('CCSS_SETUP','TRUE'));
 	$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
-	$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(${ARG2},${ARG1},1)} = 1]','pcall'));
+	
+	/*
+	This dialplan check is failing because there already is a default context in freepbx created by pbx_config, the function below gets confused by which one you are asking about
+	localhost*CLI> dialplan show default
+	
+	$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(${ARG2},${ARG1},1)} = 1]','pcall')); //fails here when ${ARG2} defined in ext_parkedcall
 	$ext->add($pc, $exten, '', new ext_resetcdr(''));
 	$ext->add($pc, $exten, '', new ext_nocdr(''));
 	$ext->add($pc, $exten, '', new ext_wait('1'));
@@ -236,8 +250,10 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_playback('pbx-invalidpark'));
 	$ext->add($pc, $exten, '', new ext_wait('1'));
 	$ext->add($pc, $exten, '', new ext_hangup(''));
-	$ext->add($pc, $exten, 'pcall', new ext_noop('User: ${CALLERID(all)} picking up Parked Call Slot ${ARG1}'));
-	$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1}'));
+	*/
+	$ext->add($pc, $exten, '', new ext_noop('User: ${CALLERID(all)} attempting to pick up Parked Call Slot ${ARG1}'));
+	$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1},${ARG2}'));
+	
 	$ext->add($pc, 'h', '', new ext_macro('hangupcall'));
 }
 
@@ -251,7 +267,7 @@ function parking_generate_parkedcallstimeout() {
 	$pc = 'parkedcallstimeout';
 	$exten = '_[0-9a-zA-Z*#].';
 
-	$ext->add($pc, $exten, '', new ext_noop_trace('Slot: ${PARKINGSLOT} retunred directed at ${EXTEN}'));
+	$ext->add($pc, $exten, '', new ext_noop_trace('Slot: ${PARKINGSLOT} returned directed at ${EXTEN}'));
 	$ext->add($pc, $exten, '', new ext_set('PARK_TARGET','${EXTEN}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
 	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
@@ -259,7 +275,7 @@ function parking_generate_parkedcallstimeout() {
 	$ext->add($pc, $exten, 'next', new ext_goto('1','${PARKINGSLOT}','park-return-routing'));
 }
 
-function parking_generate_park_dial($pd, $por) {
+function parking_generate_park_dial($pd, $por, $lot) {
 	global $ext;
 	// park-dial
 	// This is a special context where calls are routed if they are being sent back to the parker. The parking application dynamically
@@ -268,8 +284,10 @@ function parking_generate_park_dial($pd, $por) {
 	// determine where their final destinaition lies.
 	//
 	foreach (array('t', '_[0-9a-zA-Z*#].') as $exten) {
-		$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
-		$ext->add($pd, $exten, '', new ext_noop('WARNING: PARKRETURN to: [${EXTEN}] failed with: [${DIALSTATUS}]. Trying Alternate Dest'));
-		$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
+		//$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
+        $ext->add($pd, $exten, '', new ext_goto('1', $lot['parkext'], $por));
+		$ext->add($pd, $exten, '', new ext_noop('WARNING: PARKRETURN to: [${EXTEN}] failed with: [${DIALSTATUS}]. Trying Alternate Dest On Parking Lot ${PARKINGSLOT}'));
+		//$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
+        $ext->add($pd, $exten, '', new ext_goto('1', $lot['parkext'], $por));
 	}
 }

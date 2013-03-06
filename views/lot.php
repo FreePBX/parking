@@ -24,13 +24,7 @@
     	<tr>
     		<td><a href="#" class="info"><?php echo _("Number of Slots:")?><span><?php echo _("The total number of parking lot spaces to configure. Example, if 70 is the extension and 8 slots are configured, the parking slots will be 71-78")?></span></a></td>
     		<td>
-    			<select name="numslots" id="numslots">
-    			<?php
-    				for ($i=1; $i <= 30; $i++) {
-    					echo '<option value="'.$i.'" '.($i == $numslots ? 'selected' : '').'>'.$i.'</option>';
-    				}
-    			?>
-    			</select><span id="slotslist" style="font-size:90%"></span>
+				<input type="number" id="numslots" name="numslots" size="5" value="<?php echo $numslots?>"><span id="slotslist" style="font-size:90%"></span>
     		</td>
     	</tr>
     	<tr>

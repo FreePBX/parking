@@ -1,9 +1,11 @@
 $(function() {
     if($("#parkext").length != 0) {
+		
         $("#parkext").numeric();
         $("#parkpos").numeric();
         $("#parkingtime").numeric();
-    
+    	$("#numslots").numeric();
+		
         var parkext = Number($('#parkext').val());
         delete extmap[parkext]
         var parkpos = Number($('#parkpos').val());
@@ -35,10 +37,15 @@ $(function() {
                 alert('Parking Lot Starting Position can not be blank!');
                 return false;
             }
+			
+			if(!$('#goto0').val()) {
+				alert('You must select a valid destination')
+				return false;
+			}
         });
     }
     
-    $('input[type=text][name=parkext],input[type=text][name=parkpos],select[name=numslots]')
+    $('input[type=text][name=parkext],input[type=text][name=parkpos],input[type=number][name=numslots]')
     .after(" <span style='display:none'><a href='#'><img src='images/notify_critical.png'/></a></span>").change(function(){
         //Recalc
         var new_parkext = Number($('#parkext').val());        
