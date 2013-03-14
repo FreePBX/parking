@@ -105,7 +105,7 @@ function parking_get_config($engine) {
 		$hv_all = '';
 		for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
 
-			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $hint_context : '${CHANNEL(parkinglot)}')));
+			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $park_context : '${CHANNEL(parkinglot)}')));
 
 			if ($lot['generatehints'] == 'yes') {
 				$hv = "park:$slot@$hint_context";
@@ -115,8 +115,8 @@ function parking_get_config($engine) {
 		}
 		$hv_all = rtrim($hv_all,'&');
 		if ($parkfetch_code != '') {
-			$ext->add($ph, $parkfetch_code, '', new ext_macro('parked-call', ',' . $hint_context));
-			$ext->add($ph, $parkfetch_code.$lot['parkext'], '', new ext_macro('parked-call', ',' . $hint_context));
+			$ext->add($ph, $parkfetch_code, '', new ext_macro('parked-call', ',' . $park_context));
+			$ext->add($ph, $parkfetch_code.$lot['parkext'], '', new ext_macro('parked-call', ',' . $park_context));
 			if ($lot['generatehints'] == 'yes') {
 				$ext->addHint($ph, $parkfetch_code, $hv_all);
 				$ext->addHint($ph, $parkfetch_code.$lot['parkext'], $hv_all);
@@ -237,7 +237,7 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_mixmonitor('${MIXMON_DIR}${YEAR}/${MONTH}/${DAY}/${CALLFILENAME}.${MIXMON_FORMAT}','a','${MIXMON_POST}'));
 	$ext->add($pc, $exten, 'next', new ext_set('CCSS_SETUP','TRUE'));
 	$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
-	$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(${ARG2},${ARG1},1)} = 1]','pcall')); //fails here when ${ARG2} defined in ext_parkedcall
+	$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(${IF($["${ARG2}" = "default"]?parkedcalls:${ARG2})},${ARG1},1)} = 1]','pcall')); //fails here when ${ARG2} defined in ext_parkedcall
 	$ext->add($pc, $exten, '', new ext_resetcdr(''));
 	$ext->add($pc, $exten, '', new ext_nocdr(''));
 	$ext->add($pc, $exten, '', new ext_wait('1'));
@@ -249,7 +249,7 @@ function parking_generate_parked_call() {
 
 	// ParkedCalls can't handle picking up the default lot as 'parkedcalls' context, it wants 'default'
 	//
-	$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1},${IF($["${ARG2}" != "parkedcalls"]?${ARG2}:default)}'));
+	$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1},${ARG2}'));
 	$ext->add($pc, 'h', '', new ext_macro('hangupcall'));
 }
 
