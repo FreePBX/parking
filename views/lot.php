@@ -24,13 +24,13 @@
     	<tr>
     		<td><a href="#" class="info"><?php echo _("Number of Slots:")?><span><?php echo _("The total number of parking lot spaces to configure. Example, if 70 is the extension and 8 slots are configured, the parking slots will be 71-78")?></span></a></td>
     		<td>
-				<input type="number" id="numslots" name="numslots" size="5" value="<?php echo $numslots?>"><span id="slotslist" style="font-size:90%"></span>
+				<input type="number" min="1" id="numslots" name="numslots" size="5" value="<?php echo $numslots?>"><span id="slotslist" style="font-size:90%"></span>
     		</td>
     	</tr>
     	<tr>
     	    <td><a href="#" class="info"><?php echo _("Parking Timeout (seconds):")?><span><?php echo _("The timeout period in seconds that a parked call will attempt to ring back the original parker if not answered")?></span></a></td>
     		<td>
-                <input type="number" id="parkingtime" name="parkingtime" value="<?php echo $parkingtime?>">
+                <input type="number" min="0" id="parkingtime" name="parkingtime" value="<?php echo $parkingtime?>">
     		</td>
     	</tr>
     	<tr>
