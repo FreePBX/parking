@@ -38,7 +38,7 @@ $sql['parkplus'] = "
 		autocidpp VARCHAR(10) NOT NULL DEFAULT 'none',
 		announcement_id INT DEFAULT NULL,
 		comebacktoorigin VARCHAR(10) NOT NULL DEFAULT 'yes',
-		dest VARCHAR(100) NOT NULL DEFAULT '',
+		dest VARCHAR(100) NOT NULL DEFAULT 'app-blackhole,hangup,1',
 		PRIMARY KEY (id)
 	)";
 
@@ -59,8 +59,17 @@ if (count($default_lot) > 1) {
 	out(_("ERROR: too many default lots detected, deleting and reinitializing"));
 	$sql = "DELETE FROM parkplus WHERE defaultlot = 'yes'";
 	sql($sql);
+	//We deleted all default lots to we need to trick the system into reinstalling the default lot!
+	$default_lot = 0;
 }
 
+//If we have a default parking lot and we are within the new verion then we should check to make sure destination isn't blank
+if(count($default_lot) == 1 && empty($default_lot[0]['dest'])) {
+	$sql = "UPDATE parkplus SET dest = 'app-blackhole,hangup,1' WHERE defaultlot = 'yes'";
+	sql($sql);
+}
+
+//Add default parking lot or try to migrate the old one.
 if (count($default_lot) == 0) {
 
 	outn(_("Initializing default parkinglot.."));
