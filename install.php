@@ -3,8 +3,9 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
 //for translation only
 if (false) {
-_("Pickup ParkedCall Any");
-_("Park Prefix");
+  _("Pickup ParkedCall Any");
+  _("Park Prefix");
+  _("Pickup ParkedCall Prefix");
 }
 
 $fcc = new featurecode('parking', 'parkedcall');
