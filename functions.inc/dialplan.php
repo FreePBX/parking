@@ -62,7 +62,7 @@ function parking_get_config($engine) {
 		$core_conf->addFeatureGeneral('context', $hint_context);
 		$core_conf->addFeatureGeneral('parkext_exclusive', 'no');
 		$core_conf->addFeatureGeneral('parkingtime', $lot['parkingtime']);
-		$core_conf->addFeatureGeneral('comebacktoorigin', $lot['comebacktoorigin']);
+		$core_conf->addFeatureGeneral('comebacktoorigin', 'no'); //Set this to no as we can manage our own internal comebacktoorigin
 		$core_conf->addFeatureGeneral('parkedplay', $lot['parkedplay']);
 		$core_conf->addFeatureGeneral('courtesytone', 'beep');
 		$core_conf->addFeatureGeneral('parkedcalltransfers', $lot['parkedcalltransfers']);
@@ -90,8 +90,6 @@ function parking_get_config($engine) {
             } else {
                 $ext->add($por, $lot['parkext'], '', new ext_goto($lot['dest']));
             }
-			//$dest = $lot['dest'] ? $lot['dest'] : 's,1';
-			//$ext->add($por, $lot['parkext'], '', new ext_goto($dest));
 		}
 
 		// Setup the specific items to do in the park-return-routing context for each lot, we will deal
@@ -181,6 +179,7 @@ function parking_generate_sub_return_routing($lot, $pd) {
 	$ext->add($prr, $pexten, '', new ext_set('PLOT',$pexten));
 	if ($lot['alertinfo']) {
 		$ext->add($prr, $pexten, '', new ext_sipremoveheader('Alert-Info:'));
+		$ext->add($prr, $pexten, '', new ext_sipaddheader('Alert-Info',$lot['alertinfo']));
 	}
 
 	// Prepend options are parkingslot they were parked on, or the extension number or user name of the user who parked them
@@ -210,8 +209,15 @@ function parking_generate_sub_return_routing($lot, $pd) {
 		$parkingannmsg = recordings_get_file($lot['announcement_id']);
 		$ext->add($prr, $pexten, '', new ext_playback($parkingannmsg));
 	}
-	//$ext->add($prr, $pexten, '', new ext_goto($lot['dest'] ? $lot['dest'] : $pd . ',${PARK_TARGET},1'));
-    
+
+	// If comeback to origin is set then send the call back to the parking target
+	// This is our workaround so that we can send Alert-Info and Prepend on a comeback to origin request
+	// The default method in Asterisk will not let us send or setup alert-info or prepend anything
+    if ($lot['comebacktoorigin'] == 'yes') {
+        $ext->add($prr, $pexten, '', new ext_goto($pd . ',${PARK_TARGET},1'));
+    }
+	
+	// If comback to origin wasn't set or if we have already tried that.
     if (!$lot['dest']) {
         $ext->add($prr, $pexten, '', new ext_noop('ERROR: No Alternate Destination Available for Orphaned Call'));
         $ext->add($prr, $pexten, '', new ext_playback('sorry&an-error-has-occured'));
@@ -291,7 +297,6 @@ function parking_generate_park_dial($pd, $por, $lot) {
 	//
 	foreach (array('t', '_[0-9a-zA-Z*#].') as $exten) {
 		//$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
-        $ext->add($pd, $exten, '', new ext_goto('1', $lot['parkext'], $por));
 		$ext->add($pd, $exten, '', new ext_noop('WARNING: PARKRETURN to: [${EXTEN}] failed with: [${DIALSTATUS}]. Trying Alternate Dest On Parking Lot ${PARKINGSLOT}'));
 		//$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
         $ext->add($pd, $exten, '', new ext_goto('1', $lot['parkext'], $por));
