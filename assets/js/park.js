@@ -46,7 +46,7 @@ $(function() {
     }
     
     $('input[type=text][name=parkext],input[type=text][name=parkpos],input[type=number][name=numslots]')
-    .after(" <span style='display:none'><a href='#'><img src='images/notify_critical.png'/></a></span>").change(function(){
+    .after(" <span style='display:none'><a href='#'><img src='images/notify_critical.png'/></a></span>").bind("keyup change", function(){
         //Recalc
         var new_parkext = Number($('#parkext').val());        
         var new_parkpos = Number($('#parkpos').val());
