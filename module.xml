@@ -38,6 +38,6 @@
         <engine>asterisk ge 1.8</engine>
 		<version>2.11</version>
 	</depends>
-	<location>release/2.11/parking-2.11.0.11.tgz</location>
-	<md5sum>871c232c98d164ef4e9ad7fda914116c</md5sum>
+	<location>release/2.11/parking-2.11.0.12.tgz</location>
+	<md5sum>50cbecaad3561592c837d64e4c64745c</md5sum>
 </module>
