@@ -38,4 +38,4 @@
 	</depends>
 	<location>release/2.11/parking-2.11.0.10.tgz</location>
 	<md5sum>9df62388b9a1a8efc30ec472cd391f93</md5sum>
-</module>
+<supported><version>2.11</version></supported></module>
