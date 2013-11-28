@@ -30,4 +30,4 @@
 	</depends>
 	<location>release/2.11/parking-2.11.0.2.tgz</location>
 	<md5sum>5267d709777788c148f9d395d8bbcb51</md5sum>
-</module>
+<supported><version>2.11</version></supported></module>
