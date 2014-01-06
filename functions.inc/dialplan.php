@@ -57,21 +57,24 @@ function parking_get_config($engine) {
 		//
 		$park_context = 'default';
 		$hint_context = 'parkedcalls';
-		$core_conf->addFeatureGeneral('parkext', $lot['parkext']);
-		$core_conf->addFeatureGeneral('parkpos', $parkpos1."-".$parkpos2);
-		$core_conf->addFeatureGeneral('context', $hint_context);
-		$core_conf->addFeatureGeneral('parkext_exclusive', 'no');
-		$core_conf->addFeatureGeneral('parkingtime', $lot['parkingtime']);
-		$core_conf->addFeatureGeneral('comebacktoorigin', 'no'); //Set this to no as we can manage our own internal comebacktoorigin
-		$core_conf->addFeatureGeneral('parkedplay', $lot['parkedplay']);
-		$core_conf->addFeatureGeneral('courtesytone', 'beep');
-		$core_conf->addFeatureGeneral('parkedcalltransfers', $lot['parkedcalltransfers']);
-		$core_conf->addFeatureGeneral('parkedcallreparking', $lot['parkedcallreparking']);
-		$core_conf->addFeatureGeneral('parkedmusicclass', $lot['parkedmusicclass']);
-		$core_conf->addFeatureGeneral('findslot', $lot['findslot']);
+		
+		if(version_compare($version, '12', 'lt')) {
+			$core_conf->addFeatureGeneral('parkext', $lot['parkext']);
+			$core_conf->addFeatureGeneral('parkpos', $parkpos1."-".$parkpos2);
+			$core_conf->addFeatureGeneral('context', $hint_context);
+			$core_conf->addFeatureGeneral('parkext_exclusive', 'no');
+			$core_conf->addFeatureGeneral('parkingtime', $lot['parkingtime']);
+			$core_conf->addFeatureGeneral('comebacktoorigin', 'no'); //Set this to no as we can manage our own internal comebacktoorigin
+			$core_conf->addFeatureGeneral('parkedplay', $lot['parkedplay']);
+			$core_conf->addFeatureGeneral('courtesytone', 'beep');
+			$core_conf->addFeatureGeneral('parkedcalltransfers', $lot['parkedcalltransfers']);
+			$core_conf->addFeatureGeneral('parkedcallreparking', $lot['parkedcallreparking']);
+			$core_conf->addFeatureGeneral('parkedmusicclass', $lot['parkedmusicclass']);
+			$core_conf->addFeatureGeneral('findslot', $lot['findslot']);
 
-		$ext->addInclude('from-internal-additional', $ph);
-		$ext->addInclude($ph, $hint_context, $lot['name']);
+			$ext->addInclude('from-internal-additional', $ph);
+			$ext->addInclude($ph, $hint_context, $lot['name']);
+		}
 
 		// Each lot needs a routing table to handle orphaned calls in the event
 		// that the call were to timeout if they were routed to return to
