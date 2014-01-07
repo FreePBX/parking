@@ -16,16 +16,13 @@ class Parking implements BMO {
 	public function uninstall() {
 		
 	}
-	public function showPage($request) {
-		
-	}
 	public function backup(){
 		
 	}
 	public function restore($backup){
 		
 	}
-	public function getConfig() {
+	public function genConfig() {
 		global $version;
 		
 		if (function_exists('parkpro_get_config')) {
@@ -56,12 +53,5 @@ class Parking implements BMO {
 	}
 	public function writeConfig($conf){
 		$this->FreePBX->WriteConfig($conf);
-	}
-	
-	public function doConfigPageInit($page) {
-	
-	}
-	
-	public function doGuiHook(&$currentconfig) {
 	}
 }
