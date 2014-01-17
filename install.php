@@ -6,10 +6,12 @@ if (false) {
   _("Pickup ParkedCall Any");
   _("Park Prefix");
   _("Pickup ParkedCall Prefix");
+  _("Defines the Feature Code to use for Direct Call Pickup");
 }
 
 $fcc = new featurecode('parking', 'parkedcall');
 $fcc->setDescription('Pickup ParkedCall Prefix');
+$fcc->setHelpText('Defines the Feature Code to use for Direct Call Pickup');
 $fcc->setDefault('*85');
 $fcc->setProvideDest();
 $fcc->update();
