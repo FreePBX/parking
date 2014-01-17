@@ -59,8 +59,8 @@
             <td><a href=# class="info"><?php echo _("BLF Capabilities:")?><span><?php echo _("Enable this to have Asterisk 'hints' generated to use with BLF buttons.")?></span></a></td>
             <td>
                 <span class="radioset">
-									<input type="radio" name="generatehints" value="yes" id="parkinghints_enable" <?php echo ($generatehints == 'yes' ? 'checked' : '')?>><label for="parkinghints_enable"><?php echo("Enable") ?></label>
-									<input type="radio" name="generatehints" value="no" id="parkinghints_disable" <?php echo ($generatehints == 'no' ? 'checked' : '')?>><label for="parkinghints_disable"><?php echo("Disable") ?></label>
+									<input type="radio" name="generatehints" value="yes" id="parkinghints_enable" <?php echo ($generatehints == 'yes' ? 'checked' : '')?>><label for="parkinghints_enable"><?php echo _("Enable") ?></label>
+									<input type="radio" name="generatehints" value="no" id="parkinghints_disable" <?php echo ($generatehints == 'no' ? 'checked' : '')?>><label for="parkinghints_disable"><?php echo _("Disable") ?></label>
                 </span>
             </td>
         </tr>

@@ -2,12 +2,12 @@
 
 <div class="rnav">
 	<ul>
-		<li><a href="config.php?display=parking">Overview</a></li>
+		<li><a href="config.php?display=parking"><?php echo _('Overview') ?></a></li>
         <li><hr></li>
         <?php foreach($lots as $l) {?>
         <li><a href="config.php?display=parking&amp;id=<?php echo $l['id']?>&amp;action=modify"><?php echo $l['defaultlot'] == 'yes' ? '<strong>[D]</strong> ' : ''?><?php echo $l['name']?></a></li>
         <?php } ?>
 	</ul>
 </div>
-<h2>Parking Lot</h2>
+<h2><?php echo _('Parking Lot') ?></h2>
 <hr class="parking-hr"/>
