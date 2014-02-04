@@ -4,15 +4,15 @@
 <br/>
 <table width="50%">
 	<tr>
-		<td colspan="2">Example usage:</td>
+		<td colspan="2"><?php echo _("Example usage") ?>:</td>
 	</tr>
 	<tr>
-		<td>*2nn:</td>
-		<td>Attended Transfer call into Park lot nnn (It will announce the slot back to you)</td>
+		<td><?php echo _("*2nn:") ?></td>
+		<td><?php echo _("Attended Transfer call into Park lot nnn (It will announce the slot back to you)") ?></td>
 	</tr>
 	<tr>
-		<td>nn:</td>
-		<td>Park Yourself into Parking lot nnn (Annoucning your parked slot to you)</td>
+		<td><?php echo _("nn:") ?></td>
+		<td><?php echo _("Park Yourself into Parking lot nnn (Announcing your parked slot to you)") ?></td>
 	</tr>
 </table>
 
