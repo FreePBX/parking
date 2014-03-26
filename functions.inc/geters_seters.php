@@ -92,7 +92,11 @@ function parking_save($parms=array()) {
 		$id = false;
 		// TODO log error
 	} elseif (empty($var['id'])) {
-        $id = $amp_conf["AMPDBENGINE"] == "sqlite3" ? sqlite_last_insert_rowid($db->connection) : mysql_insert_id($db->connection);
+		if(method_exists($db,'insert_id')) {
+			$id = $db->insert_id();
+		} else {
+			$id = $amp_conf["AMPDBENGINE"] == "sqlite3" ? sqlite_last_insert_rowid($db->connection) : mysql_insert_id($db->connection);
+		}
         needreload();
 	} else {
 		$id = $var['id'];
