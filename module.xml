@@ -2,14 +2,16 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>2.11.0.14</version>
-	<publisher>FreePBX</publisher>
-	<license>GPLv2+</license>
+	<version>2.11.0.15</version>
+	<publisher>Schmooze Com Inc</publisher>
+	<license>GPLv3+</license>
+	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Applications</category>
 	<description>Manages parking lot extensions and other options.
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
     </description>
 	<changelog>
+		*2.11.0.15* Update license file
 		*2.11.0.14* Using insert_id function from wrapper
 		*2.11.0.13* Changed the specified lines in the files mentioned to add gettext formatting
 		*2.11.0.12* Fixed #6871, Basically dont use Asterisk's built in come back to origin, do it ourselves. Also Fixed #6774, act like the rest of FreePBX
