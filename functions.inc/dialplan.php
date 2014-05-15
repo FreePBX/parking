@@ -9,9 +9,6 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
  * Short dialplan generation for this module
  * Long dialplan generation as well as population of conf_classes etc
  * that this module is responsible for.
- *
- * @author Philippe Lindheimer
- * @param string
  */
 
 function parking_get_config($engine) {
