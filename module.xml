@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>12.0.1alpha3</version>
+	<version>12.0.1alpha4</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<category>Applications</category>
@@ -10,14 +10,15 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
     </description>
 	<changelog>
+		*12.0.1alpha4* Fixes for recordings when call is picked up, also fix FREEPBX-7129, FREEPBX-7229
 		*12.0.1alpha3* Using insert_id function from wrapper
 		*12.0.1alpha2* Use genConfig
 		*12.0.1alpha1* Update/Upgrade for Asterisk 12
 		*2.11.0.14* Using insert_id function from wrapper
 		*2.11.0.13* Changed the specified lines in the files mentioned to add gettext formatting
 		*2.11.0.12* Fixed #6871, Basically dont use Asterisk's built in come back to origin, do it ourselves. Also Fixed #6774, act like the rest of FreePBX
-		*2.11.0.11* Fix typo 
-   		*2.11.0.10* Add hint for the Parking Lot as a whole
+		*2.11.0.11* Fix typo
+		*2.11.0.10* Add hint for the Parking Lot as a whole
 		*2.11.0.9* Set default destination to terminate call, hangup
 		*2.11.0.8* Add min range to number boxes
 		*2.11.0.7* #6375 proper fix
@@ -28,7 +29,7 @@
 		*2.11.0.2* Cleanup of wording
 		*2.11.0.1* Completely rewritten from the ground up. Fixes #5498, #5549
 		*2.10.0.2* #5901
-		*2.10.0.1* #5478 
+		*2.10.0.1* #5478
 		*2.10.0.0* new version changes
 		*2.9.0.4* #4965, #4972
 		*2.9.0.3* #4914

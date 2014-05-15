@@ -14,24 +14,26 @@
 //
 //    You should have received a copy of the GNU General Public License
 //    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
-//    
+//
 //    Copyright 2012-2013 Philippe Lindheimer
 
-if ($argc < 2) {
+if ($argc < 3) {
 	exit;
 }
 
-/*
+
 // Not bootstraping for now, adds a lot of overhead not being used but can be swapped
 // out for below if debugging is necessary
 //
+/*
 $restrict_mods = true;
 if (!@include_once(getenv('FREEPBX_CONF') ? getenv('FREEPBX_CONF') : '/etc/freepbx.conf')) {
     include_once('/etc/asterisk/freepbx.conf');
 }
 require_once "phpagi.php";
-$agi = new AGI();
+//$agi = new AGI();
 */
+
 require_once "phpagi.php";
 require_once "phpagi-asmanager.php";
 
@@ -39,23 +41,45 @@ $agi = new AGI();
 
 $ampmgruser   = get_var( "AMPMGRUSER" );
 $ampmgrpass   = get_var( "AMPMGRPASS" );
-$astman = new AGI_AsteriskManager( );	
+$astman = new AGI_AsteriskManager( );
 if (!$astman->connect("127.0.0.1", $ampmgruser , $ampmgrpass)) {
 	exit (1);
 }
 
-$r = $astman->send_request('Command',array('Command'=>"parkedcalls show"));
-$d=explode("\n",trim($r['data']));
 
-// Looks for the parking slot passed in the first ([0] column, if it finds it then
-// it get's the channel from the second ([1]) column. 
-//
-$channel = '';
-foreach ($d as $l) {
-	$p= preg_split('/ /', $l,-1,PREG_SPLIT_NO_EMPTY);
-	if ($p[0] == $argv[1]) {
-		$channel = $p[1];
-		break;
+$r = $astman->send_request('Command',array('Command'=>"parkedcalls show"));
+if(preg_match('/no such command/i',$r['data'])) {
+	//12 system, parking was redone
+	$r = $astman->send_request('Command',array('Command'=>"parking show ".$argv[2]));
+	if(preg_match('/no such command/i',$r['data'])) {
+		exit (1);
+	}
+	$d=explode("\n",trim($r['data']));
+	$next = false;
+	foreach ($d as $k => $l) {
+		if(!$next && preg_match('/Space\s*:\s*'.$argv[1].'/',$l)) {
+			$next = true;
+		} elseif($next && preg_match('/Channel\s*:\s*(.*)/',$l,$matches)) {
+			if(empty($matches[1])) {
+				exit;
+			}
+			$channel = $matches[1];
+			break;
+		}
+	}
+} else {
+	$d=explode("\n",trim($r['data']));
+
+	// Looks for the parking slot passed in the first ([0] column, if it finds it then
+	// it get's the channel from the second ([1]) column.
+	//
+	$channel = '';
+	foreach ($d as $l) {
+		$p= preg_split('/ /', $l,-1,PREG_SPLIT_NO_EMPTY);
+		if ($p[0] == $argv[1]) {
+			$channel = $p[1];
+			break;
+		}
 	}
 }
 
@@ -64,8 +88,9 @@ foreach ($d as $l) {
 //
 if ($channel) {
 	$rec_status = get_var("IMPORT($channel,REC_STATUS)");
+	//dbug($channel . " " . $rec_status);
 	$agi->set_variable('REC_STATUS', $rec_status);
-	if ($rec_status == "RECORDING") {
+	if ($rec_status == "RECORDING" || $rec_status == "INITIALIZED") {
 		foreach (array('MIXMON_DIR', 'YEAR', 'MONTH', 'DAY', 'CALLFILENAME', 'MIXMON_FORMAT', 'MIXMON_POST', 'MON_FMT') as $v) {
 			$agi->set_variable($v, get_var("IMPORT($channel,$v)"));
 		}

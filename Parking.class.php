@@ -9,26 +9,26 @@ class Parking implements BMO {
 		$this->FreePBX = $freepbx;
 		$this->db = $freepbx->Database;
 	}
-	
+
 	public function install() {
-		
+
 	}
 	public function uninstall() {
-		
+
 	}
 	public function backup(){
-		
+
 	}
 	public function restore($backup){
-		
+
 	}
 	public function genConfig() {
 		global $version;
-		
+
 		if (function_exists('parkpro_get_config')) {
 			return true;
 		}
-		
+
 		if(version_compare($version, '12', 'ge')) {
 			$lot = parking_get();
 			$parkpos1	= $lot['parkpos'];

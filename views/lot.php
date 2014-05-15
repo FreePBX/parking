@@ -47,12 +47,12 @@
                         foreach ($tresults as $tresult) {
                             $searchvalue="$tresult";
                             $ttext = $tresult;
-                            if($tresult == 'default') $ttext = _("default");						
+                            if($tresult == 'default') $ttext = _("default");
                             echo '<option value="'.$tresult.'" '.($searchvalue == $parkedmusicclass ? 'SELECTED' : '').'>'.$ttext;
                         }
                     }
-                ?>		
-    			</select>		
+                ?>
+    			</select>
     		</td>
     	</tr>
         <tr>
@@ -83,6 +83,7 @@
                     <input type="radio" name="parkedplay" id="parkedplay-caller" value="caller" <?php echo ($parkedplay == 'caller' ? 'checked' : '')?>/><label for="parkedplay-caller"><?php echo _("Caller") ?></label>
                     <input type="radio" name="parkedplay" id="parkedplay-callee" value="callee" <?php echo ($parkedplay == 'callee' ? 'checked' : '')?>/><label for="parkedplay-callee"><?php echo _("Parked") ?></label>
                     <input type="radio" name="parkedplay" id="parkedplay-both" value="both" <?php echo ($parkedplay == 'both' ? 'checked' : '')?>/><label for="parkedplay-both"><?php echo _("Both") ?></label>
+                    <input type="radio" name="parkedplay" id="parkedplay-no" value="no" <?php echo ($parkedplay == 'no' ? 'checked' : '')?>/><label for="parkedplay-no"><?php echo _("None") ?></label>
                 </span>
             </td>
       	</tr>
