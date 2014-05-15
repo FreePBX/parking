@@ -4,11 +4,12 @@
 	<name>Parking Lot</name>
 	<version>12.0.1alpha3</version>
 	<publisher>FreePBX</publisher>
-	<license>GPLv2+</license>
+	<license>GPLv3+</license>
+	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Applications</category>
 	<description>Manages parking lot extensions and other options.
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
-    </description>
+	</description>
 	<changelog>
 		*12.0.1alpha3* Using insert_id function from wrapper
 		*12.0.1alpha2* Use genConfig
@@ -16,8 +17,8 @@
 		*2.11.0.14* Using insert_id function from wrapper
 		*2.11.0.13* Changed the specified lines in the files mentioned to add gettext formatting
 		*2.11.0.12* Fixed #6871, Basically dont use Asterisk's built in come back to origin, do it ourselves. Also Fixed #6774, act like the rest of FreePBX
-		*2.11.0.11* Fix typo 
-   		*2.11.0.10* Add hint for the Parking Lot as a whole
+		*2.11.0.11* Fix typo
+		*2.11.0.10* Add hint for the Parking Lot as a whole
 		*2.11.0.9* Set default destination to terminate call, hangup
 		*2.11.0.8* Add min range to number boxes
 		*2.11.0.7* #6375 proper fix
@@ -28,7 +29,7 @@
 		*2.11.0.2* Cleanup of wording
 		*2.11.0.1* Completely rewritten from the ground up. Fixes #5498, #5549
 		*2.10.0.2* #5901
-		*2.10.0.1* #5478 
+		*2.10.0.1* #5478
 		*2.10.0.0* new version changes
 		*2.9.0.4* #4965, #4972
 		*2.9.0.3* #4914
@@ -40,7 +41,7 @@
 		<parking>Parking</parking>
 	</menuitems>
 	<depends>
-        <engine>asterisk ge 1.8</engine>
+		<engine>asterisk ge 1.8</engine>
 		<version>12.0.1alpha10</version>
 	</depends>
 	<supported>
