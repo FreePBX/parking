@@ -243,10 +243,10 @@ function parking_generate_parked_call() {
 	$pc = 'macro-parked-call';
 	$exten = 's';
 
-	//We can accept both blind and attended
-	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${BLINDTRANSFER})} > 0 | ${LEN(${ATTENDEDTRANSFER})} > 0]','attemptpark'));
-	//Back to sender hack for A11, though I dont think it's needed
+	//hack for asterisk 12!
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${PARKRETURNTO})} > 0]','backtosender'));
+	//We can accept both blind and attended (But attended only in asterisk 12!)
+	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${BLINDTRANSFER})} > 0 | ${LEN(${ATTENDEDTRANSFER})} > 0]','attemptpark'));
 	// Determine from parked channel if we were previously recording and if so keep doing so
 	$ext->add($pc, $exten, '', new ext_agi('parkfetch.agi,${ARG1},${ARG2}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
@@ -280,13 +280,16 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_execif('$[${LEN(${BLINDTRANSFER})} > 0]','Set','PARKRETURNTO=${CUT(BLINDTRANSFER,-,1)}','Set','PARKRETURNTO=${CUT(ATTENDEDTRANSFER,-,1)}'));
 
 	if(version_compare($version, '12', 'ge')) {
-		$ext->add($pc, $exten, '', new ext_park('${ARG2},sc(${CONTEXT},s,backtosender)'));
+		$ext->add($pc, $exten, '', new ext_park('${ARG2},sc(${CONTEXT},s,200)'));
 	} else {
 		//TODO: need to check this in Asterisk 11, says use label but I think thats incorrect
-		$ext->add($pc, $exten, '', new ext_park('${ARG2},${CONTEXT},s,1,s')); //return priority here must be a number, not a label.
+		$ext->add($pc, $exten, '', new ext_park(',${CONTEXT},s,200,s,${ARG2}')); //return priority here must be a number, not a label.
 	}
 
-	$ext->add($pc, $exten, 'backtosender', new ext_dial('${PARKRETURNTO},15'));
+	$ext->add($pc, $exten, 'backtosender', new ext_noop('Doing important stuff'),1,199);
+	$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${PARKRETURNTO}'));
+	$ext->add($pc, $exten, '', new ext_set('PARKRETURNTO',''));
+	$ext->add($pc, $exten, '', new ext_dial('${PARKCALLBACK},15'));
 	$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${ARG1},1'));
 }
 
