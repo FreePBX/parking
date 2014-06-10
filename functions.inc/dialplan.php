@@ -243,10 +243,10 @@ function parking_generate_parked_call() {
 	$pc = 'macro-parked-call';
 	$exten = 's';
 
-	//Back to sender hack for A11, though I dont think it's needed
-	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${PARKRETURNTO})} > 0]','backtosender'));
 	//We can accept both blind and attended
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${BLINDTRANSFER})} > 0 | ${LEN(${ATTENDEDTRANSFER})} > 0]','attemptpark'));
+	//Back to sender hack for A11, though I dont think it's needed
+	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${PARKRETURNTO})} > 0]','backtosender'));
 	// Determine from parked channel if we were previously recording and if so keep doing so
 	$ext->add($pc, $exten, '', new ext_agi('parkfetch.agi,${ARG1},${ARG2}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
