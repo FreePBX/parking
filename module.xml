@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>12.0.1alpha4</version>
+	<version>12.0.2</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
+		*12.0.2* FREEPBX-6453 Allows Blind and Attended transfer into specific slot. 
 		*12.0.1alpha4* Fixes for recordings when call is picked up, also fix FREEPBX-7129, FREEPBX-7229
 		*12.0.1alpha3* Using insert_id function from wrapper
 		*12.0.1alpha2* Use genConfig

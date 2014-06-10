@@ -243,9 +243,11 @@ function parking_generate_parked_call() {
 	$pc = 'macro-parked-call';
 	$exten = 's';
 
-	//
+	//Back to sender hack for A11, though I dont think it's needed
+	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${PARKRETURNTO})} > 0]','backtosender'));
+	//We can accept both blind and attended
+	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${BLINDTRANSFER})} > 0 | ${LEN(${ATTENDEDTRANSFER})} > 0]','attemptpark'));
 	// Determine from parked channel if we were previously recording and if so keep doing so
-	//
 	$ext->add($pc, $exten, '', new ext_agi('parkfetch.agi,${ARG1},${ARG2}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
 	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
@@ -271,6 +273,21 @@ function parking_generate_parked_call() {
 		$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1},${ARG2}'));
 	}
 	$ext->add($pc, 'h', '', new ext_macro('hangupcall'));
+
+	//Direct Slot Parking
+	$ext->add($pc, $exten, 'attemptpark', new ext_noop('User: ${CALLERID(all)} attempting to Park into slot ${ARG1}'));
+	$ext->add($pc, $exten, '', new ext_set('PARKINGEXTEN','${ARG1}'));
+	$ext->add($pc, $exten, '', new ext_execif('$[${LEN(${BLINDTRANSFER})} > 0]','Set','PARKRETURNTO=${CUT(BLINDTRANSFER,-,1)}','Set','PARKRETURNTO=${CUT(ATTENDEDTRANSFER,-,1)}'));
+
+	if(version_compare($version, '12', 'ge')) {
+		$ext->add($pc, $exten, '', new ext_park('${ARG2},sc(${CONTEXT},s,backtosender)'));
+	} else {
+		//TODO: need to check this in Asterisk 11, says use label but I think thats incorrect
+		$ext->add($pc, $exten, '', new ext_park('${ARG2},${CONTEXT},s,1,s')); //return priority here must be a number, not a label.
+	}
+
+	$ext->add($pc, $exten, 'backtosender', new ext_dial('${PARKRETURNTO},15'));
+	$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${ARG1},1'));
 }
 
 function parking_generate_parkedcallstimeout() {
