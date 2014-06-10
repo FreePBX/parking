@@ -22,6 +22,9 @@ class Parking implements BMO {
 	public function restore($backup){
 
 	}
+	public function doConfigPageInit($page){
+		return true;
+	}
 	public function genConfig() {
 		global $version;
 
