@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-18 14:32+0900\n"
-"PO-Revision-Date: 2014-07-22 16:04+0200\n"
+"PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian "
 "<http://git.freepbx.org/projects/freepbx/parking/bg/>\n"
@@ -47,29 +47,31 @@ msgstr "създаване на таблица %s ако е необходимо
 
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
+"ГРЕШКА: открити са много паркирания по подразбиране, изтриване и "
+"реинициализиране"
 
 msgid "Initializing default parkinglot.."
-msgstr ""
+msgstr "Инициализиране на parkinglot по-подразбиране.."
 
 msgid "done"
-msgstr ""
+msgstr "Изпълнено"
 
 msgid "migrating old parkinglot data"
-msgstr ""
+msgstr "преместване на стари данни на parkinglot"
 
 #, php-format
 msgid "%s no longer supported"
-msgstr ""
+msgstr "%s вече не се поддържа"
 
 msgid "migrated ... dropping old table parkinglot"
-msgstr ""
+msgstr "преместване ... премахване на стара таблица parkinglot"
 
 #, php-format
 msgid "ParkPlus: ParkCall %s"
 msgstr ""
 
 msgid "INUSE"
-msgstr ""
+msgstr "ИЗПОЛЗВА СЕ"
 
 #, php-format
 msgid "ParkPlus: PickupSlot %s"
@@ -77,36 +79,40 @@ msgstr ""
 
 #, php-format
 msgid "Parking Lot: %s (%s)"
-msgstr ""
+msgstr "Група за Паркиране: %s (%s)"
 
 msgid "Parking Lot"
-msgstr ""
+msgstr "Група за Паркиране"
 
 msgid "Applications"
-msgstr ""
+msgstr "Приложения"
 
 msgid ""
 "Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
+"Управление на вътрешните линии за паркиране на разговор и други опции.\t"
+"Паркирането поставя обаждането "
 
 msgid "Parking"
-msgstr ""
+msgstr "Паркиране"
 
 msgid "Parking Lot Options"
-msgstr ""
+msgstr "Настройки на Група за Паркиране"
 
 msgid "Parking Lot Extension:"
-msgstr ""
+msgstr "Вътрешен Номер на Група за Паркиране:"
 
 msgid "This is the extension where you will transfer a call to park it"
 msgstr ""
+"Това е вътрешен номер към който ще прехвърляте обаждането което искате да "
+"паркирате"
 
 msgid "Parking Lot Name:"
-msgstr ""
+msgstr "Име на Група за Паркиране:"
 
 msgid "Provide a Descriptive Title for this Parking Lot"
-msgstr ""
+msgstr "Наименование за тази Група за Паркиране"
 
 msgid "Parking Lot Starting Position:"
 msgstr ""
@@ -115,12 +121,14 @@ msgid "The starting postion of the parking lot"
 msgstr ""
 
 msgid "Number of Slots:"
-msgstr ""
+msgstr "Брой Слотове:"
 
 msgid ""
 "The total number of parking lot spaces to configure. Example, if 70 is the "
 "extension and 8 slots are configured, the parking slots will be 71-78"
 msgstr ""
+"Общия брой на свободните позиции за паркиране. Например, ако 70 е вътрешната "
+"линия и са въведени 8 слота, позициите за паркиране ще бъдат от 71 до 78"
 
 msgid "Parking Timeout (seconds):"
 msgstr ""
@@ -131,7 +139,7 @@ msgid ""
 msgstr ""
 
 msgid "Parked Music Class:"
-msgstr ""
+msgstr "Категория на Музика при Паркиране:"
 
 msgid ""
 "This is the music class that will be played to a parked call while in the "
@@ -141,7 +149,7 @@ msgid ""
 msgstr ""
 
 msgid "default"
-msgstr ""
+msgstr "по-подразбиране"
 
 msgid "BLF Capabilities:"
 msgstr ""
