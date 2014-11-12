@@ -4,35 +4,13 @@
 //	Copyright 2013 Schmooze Com Inc.
 //
 
-if ($argc < 3) {
-	exit;
-}
-
-
-// Not bootstraping for now, adds a lot of overhead not being used but can be swapped
-// out for below if debugging is necessary
-//
-/*
 $restrict_mods = true;
 if (!@include_once(getenv('FREEPBX_CONF') ? getenv('FREEPBX_CONF') : '/etc/freepbx.conf')) {
     include_once('/etc/asterisk/freepbx.conf');
 }
-require_once "phpagi.php";
-//$agi = new AGI();
-*/
 
-require_once "phpagi.php";
-require_once "phpagi-asmanager.php";
-
+include FreePBX::Config()->get('ASTAGIDIR')."/phpagi.php";
 $agi = new AGI();
-
-$ampmgruser   = get_var( "AMPMGRUSER" );
-$ampmgrpass   = get_var( "AMPMGRPASS" );
-$astman = new AGI_AsteriskManager( );
-if (!$astman->connect("127.0.0.1", $ampmgruser , $ampmgrpass)) {
-	exit (1);
-}
-
 
 $r = $astman->send_request('Command',array('Command'=>"parkedcalls show"));
 if(preg_match('/no such command/i',$r['data'])) {
@@ -70,17 +48,12 @@ if(preg_match('/no such command/i',$r['data'])) {
 	}
 }
 
-// If the REC_STATUS is RECORDING then we need the remaining channel variables
-// for the resulting dialplan to restart MixMonitor appending to the old recording
-//
-if ($channel) {
-	$rec_status = get_var("IMPORT($channel,REC_STATUS)");
-	//dbug($channel . " " . $rec_status);
-	$agi->set_variable('REC_STATUS', $rec_status);
-	if ($rec_status == "RECORDING" || $rec_status == "INITIALIZED") {
-		foreach (array('MIXMON_DIR', 'YEAR', 'MONTH', 'DAY', 'CALLFILENAME', 'MIXMON_FORMAT', 'MIXMON_POST', 'MON_FMT') as $v) {
-			$agi->set_variable($v, get_var("IMPORT($channel,$v)"));
-		}
+// Grab the Recording channel variables that we need to keep track of.
+$vars = array('MIXMON_DIR', 'YEAR', 'MONTH', 'DAY', 'CALLFILENAME', 'MIXMON_FORMAT', 'MIXMON_POST', 'MON_FMT', 'MIXMON_ID', 'REC_STATUS', 'REC_POLICY_MODE');
+foreach ($vars as $v) {
+	$tmpvar = get_var("IMPORT($channel,$v)");
+	if (!empty($tmpvar)) {
+		$agi->set_variable($v, $tmpvar);
 	}
 }
 
