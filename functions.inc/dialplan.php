@@ -247,12 +247,11 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${PARKRETURNTO})} > 0]','backtosender'));
 	//We can accept both blind and attended (But attended only in asterisk 12!)
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${BLINDTRANSFER})} > 0 | ${LEN(${ATTENDEDTRANSFER})} > 0]','attemptpark'));
-	// Determine from parked channel if we were previously recording and if so keep doing so
+	// Retrieve all previous recording variables, and set the CDR for this leg of the call
 	$ext->add($pc, $exten, '', new ext_agi('parkfetch.agi,${ARG1},${ARG2}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
 	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
 	$ext->add($pc, $exten, '', new ext_set('CDR(recordingfile)','${CALLFILENAME}.${MON_FMT}'));
-	$ext->add($pc, $exten, '', new ext_mixmonitor('${MIXMON_DIR}${YEAR}/${MONTH}/${DAY}/${CALLFILENAME}.${MIXMON_FORMAT}','a','${MIXMON_POST}'));
 	$ext->add($pc, $exten, 'next', new ext_set('CCSS_SETUP','TRUE'));
 	$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(${IF($["${ARG2}" = "default"]?parkedcalls:${ARG2})},${ARG1},1)} = 1]','pcall')); //fails here when ${ARG2} defined in ext_parkedcall
