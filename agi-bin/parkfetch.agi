@@ -55,6 +55,7 @@ foreach ($vars as $v) {
 	if (!empty($tmpvar)) {
 		$agi->set_variable($v, $tmpvar);
 	}
+	$agi->set_variable("PARKIE", $channel);
 }
 
 function get_var($value) {
