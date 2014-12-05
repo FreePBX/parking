@@ -209,20 +209,36 @@ function parking_generate_sub_return_routing($lot, $pd) {
 		$ext->add($prr, $pexten, '', new ext_playback($parkingannmsg));
 	}
 
+
 	// If comeback to origin is set then send the call back to the parking target
 	// This is our workaround so that we can send Alert-Info and Prepend on a comeback to origin request
 	// The default method in Asterisk will not let us send or setup alert-info or prepend anything
     if ($lot['comebacktoorigin'] == 'yes') {
-        $ext->add($prr, $pexten, '', new ext_goto($pd . ',${PARK_TARGET},1'));
+				/*
+				//If we detect PARKCALLBACK then we are coming from a transfer and thus we have no PARK_TARGET set
+				$ext->add($prr, $pexten, '', new ext_gotoif('$[${LEN(${PARKCALLBACK})} > 0]','transfercallback'));
+        //$ext->add($prr, $pexten, '', new ext_goto($pd . ',${PARK_TARGET},1'));
+        //The below string is pretty lame and will cause issues with PJSIP (maybe?)
+        //But in Asterisk 12 PARK_TARGET (as a goto, see above) is not working right so we are going to
+        //just string replace what we want and hope for the best until this is resolved
+				$ext->add($prr, $pexten, '', new ext_dial('${REPLACE(PARK_TARGET,_,/)},15'));
+				$ext->add($prr, $pexten, '', new ext_goto('next'));
+				$ext->add($prr, $pexten, 'transfercallback', new ext_noop('Yes'));
+				$ext->add($prr, $pexten, '', new ext_dial('${PARKCALLBACK},15'));
+				$ext->add($prr, $pexten, '', new ext_goto('next'));
+				*/
+				$ext->add($prr, $pexten, '', new ext_dial('${PARKCALLBACK},15'));
+				$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK',''));
+				//$ext->add($prr, $pexten, '', new ext_goto('next'));
     }
 
 	// If comback to origin wasn't set or if we have already tried that.
-    if (!$lot['dest']) {
+    if (empty($lot['dest'])) {
         $ext->add($prr, $pexten, '', new ext_noop('ERROR: No Alternate Destination Available for Orphaned Call'));
         $ext->add($prr, $pexten, '', new ext_playback('sorry&an-error-has-occured'));
         $ext->add($prr, $pexten, '', new ext_hangup(''));
     } else {
-        $ext->add($prr, $pexten, '', new ext_goto($lot['dest'] ? $lot['dest'] : $pd . ',${PARK_TARGET},1'));
+        $ext->add($prr, $pexten, '', new ext_goto($lot['dest']));
     }
 
 	// Route park-return-routing from slot to PARK_TARGET:
@@ -297,8 +313,7 @@ function parking_generate_parked_call() {
 
 	$ext->add($pc, $exten, 'backtosender', new ext_noop('Attempting to go back to sender'),1,199);
 	$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${SHARED(PARKRETURNTO,${CHANNEL})}'));
-	$ext->add($pc, $exten, '', new ext_set('${SHARED(PARKRETURNTO,${CHANNEL})}',''));
-	$ext->add($pc, $exten, '', new ext_dial('${PARKCALLBACK},15'));
+	$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${CHANNEL})',''));
 	$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${ARG1},1'));
 }
 
@@ -313,7 +328,8 @@ function parking_generate_parkedcallstimeout() {
 	$exten = '_[0-9a-zA-Z*#].';
 
 	$ext->add($pc, $exten, '', new ext_noop_trace('Slot: ${PARKINGSLOT} returned directed at ${EXTEN}'));
-	$ext->add($pc, $exten, '', new ext_set('PARK_TARGET','${EXTEN}'));
+	//$ext->add($pc, $exten, '', new ext_set('PARK_TARGET','${EXTEN}'));
+	$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${REPLACE(EXTEN,_,/)}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
 	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
 	$ext->add($pc, $exten, '', new ext_mixmonitor('${MIXMON_DIR}${YEAR}/${MONTH}/${DAY}/${CALLFILENAME}.${MIXMON_FORMAT}','a','${MIXMON_POST}'));
