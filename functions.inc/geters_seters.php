@@ -32,9 +32,9 @@ function parking_get($id='default') {
 
 /** parking_save
  * Short insert or update parking settings
- * Long takes array of settings to update, missing settings will 
+ * Long takes array of settings to update, missing settings will
  * get default values, if id not present it will insert a new row.
- * Returns the id of the current or newly inserted record or 
+ * Returns the id of the current or newly inserted record or
  * boolean false upon a failure.
  *
  * @author Philippe Lindheimer
@@ -77,7 +77,7 @@ function parking_save($parms=array()) {
 	}
 	$var['defaultlot'] = isset($var['id']) && $var['id'] == 1 ? 'yes' : 'no';
 
-	$fields = "name, type, parkext, parkpos, numslots, parkingtime, parkedmusicclass, generatehints, generatefc, findslot, parkedplay, 
+	$fields = "name, type, parkext, parkpos, numslots, parkingtime, parkedmusicclass, generatehints, generatefc, findslot, parkedplay,
 		parkedcalltransfers, parkedcallreparking, alertinfo, cidpp, autocidpp, announcement_id, comebacktoorigin, dest, defaultlot";
 	$holders = "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?";
 
@@ -85,9 +85,9 @@ function parking_save($parms=array()) {
 		$sql = "INSERT INTO parkplus ($fields) VALUES ($holders)";
 	} else {
 		$sql = "REPLACE INTO parkplus (id, $fields) VALUES (?,$holders)";
-	}	
+	}
 
-	$res = $db->query($sql,$var);
+	$res = $db->query($sql,array_values($var));
 	if (DB::IsError($res)) {
 		$id = false;
 		// TODO log error
