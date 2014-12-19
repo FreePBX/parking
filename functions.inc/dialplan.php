@@ -228,7 +228,7 @@ function parking_generate_sub_return_routing($lot, $pd) {
 				$ext->add($prr, $pexten, '', new ext_goto('next'));
 				*/
 				$ext->add($prr, $pexten, '', new ext_dial('${PARKCALLBACK},15'));
-				$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK',''));
+				$ext->add($prr, $pexten, '', new ext_set('PARKCALLBACK',''));
 				//$ext->add($prr, $pexten, '', new ext_goto('next'));
     }
 
