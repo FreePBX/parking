@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 18:03-0500\n"
+"POT-Creation-Date: 2015-02-20 19:45-0500\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -48,32 +48,35 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 1.8\n"
 
-#: /usr/src/freepbx/parking/install.php:146
+#: install.php:146
 #, php-format
 msgid "%s no longer supported"
 msgstr "%sは現在、サポートされていません。"
 
-#: /usr/src/freepbx/parking/views/overview.php:10
+#: views/overview.php:10
 msgid "*2nn:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:114
+#: views/lot.php:114
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前にコールに追加するアラート情報。"
 
-#: /usr/src/freepbx/parking/views/lot.php:163
+#: views/lot.php:163
 msgid "Alternate Destination"
 msgstr "代わりの宛先："
 
-#: /usr/src/freepbx/parking/views/lot.php:138
-#: /usr/src/freepbx/parking/views/lot.php:155
+#: views/lot.php:138 views/lot.php:155
 msgid "Announcement:"
 msgstr "アナウンス："
 
-#: /usr/src/freepbx/parking/views/lot.php:103
+#: parking.i18n.php:4
+msgid "Applications"
+msgstr "アプリケーション"
+
+#: views/lot.php:103
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
@@ -81,7 +84,7 @@ msgstr ""
 "Asteris： parkedcallreparking。パークされたコールをピックアップする際にDTMF"
 "ベースでパーキングする機能を有効にするか無効にするか。"
 
-#: /usr/src/freepbx/parking/views/lot.php:90
+#: views/lot.php:90
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
@@ -89,99 +92,100 @@ msgstr ""
 "Asterisk： パークコール転送。 パークコールをピックアップした際に、DTMFベース"
 "の転送を有効にするか無効にするか。"
 
-#: /usr/src/freepbx/parking/views/overview.php:11
+#: views/overview.php:11
 msgid ""
 "Attended Transfer call into Park lot nnn (It will announce the slot back to "
 "you)"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:126
+#: views/lot.php:126
 msgid "Auto CallerID Prepend:"
 msgstr "CallerID自動付与："
 
-#: /usr/src/freepbx/parking/views/lot.php:59
+#: views/lot.php:59
 msgid "BLF Capabilities:"
 msgstr "BLF機能："
 
-#: /usr/src/freepbx/parking/views/lot.php:85
-#: /usr/src/freepbx/parking/views/lot.php:96
-#: /usr/src/freepbx/parking/views/lot.php:108
+#: views/lot.php:85 views/lot.php:96 views/lot.php:108
 msgid "Both"
 msgstr "両方"
 
-#: /usr/src/freepbx/parking/views/lot.php:83
-#: /usr/src/freepbx/parking/views/lot.php:94
-#: /usr/src/freepbx/parking/views/lot.php:106
+#: views/lot.php:83 views/lot.php:94 views/lot.php:106
 msgid "Caller"
 msgstr "発信者"
 
-#: /usr/src/freepbx/parking/views/lot.php:120
+#: views/lot.php:120
 msgid "CallerID Prepend:"
 msgstr "CallerID付与："
 
-#: /usr/src/freepbx/parking/views/lot.php:166
+#: views/lot.php:166
 msgid "Come Back to Origin:"
 msgstr "発信元に戻る"
 
-#: /usr/src/freepbx/parking/views/lot.php:175
+#: views/lot.php:175
 msgid "Destination:"
 msgstr "宛先："
 
-#: /usr/src/freepbx/parking/views/lot.php:63
+#: views/lot.php:63
 msgid "Disable"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:60
+#: install.php:60
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "エラー：デフォルトlotは多すぎるため、削除・再初期化します… "
 
-#: /usr/src/freepbx/parking/views/lot.php:62
+#: views/lot.php:62
 msgid "Enable"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:59
+#: views/lot.php:59
 msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
 msgstr "BLFボタンで使用するために生成されたAsteriskの'ヒント'を有効にする。"
 
-#: /usr/src/freepbx/parking/views/overview.php:7
+#: views/overview.php:7
 msgid "Example usage"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:131
+#: views/lot.php:131
 msgid "Extension"
 msgstr "内線"
 
-#: /usr/src/freepbx/parking/views/lot.php:68
+#: views/lot.php:68
 msgid "Find Slot:"
 msgstr "スロット検索："
 
-#: /usr/src/freepbx/parking/views/lot.php:72
+#: views/lot.php:72
 msgid "First"
 msgstr "最初"
 
-#: /usr/src/freepbx/parking/functions.inc/registries.php:23
-#: /usr/src/freepbx/parking/functions.inc/registries.php:32
+#: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
 msgstr "使用中"
 
-#: /usr/src/freepbx/parking/install.php:76
+#: install.php:76
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
-#: /usr/src/freepbx/parking/views/lot.php:132
+#: parking.i18n.php:5
+msgid ""
+"Manages parking lot extensions and other options.\n"
+"\tParking is a way of putting calls \"on hold\", and then picking them up "
+"from any extension."
+msgstr ""
+
+#: views/lot.php:132
 msgid "Name"
 msgstr "名前"
 
-#: /usr/src/freepbx/parking/views/lot.php:97
-#: /usr/src/freepbx/parking/views/lot.php:109
+#: views/lot.php:97 views/lot.php:109
 msgid "Neither"
 msgstr "両方なし"
 
-#: /usr/src/freepbx/parking/views/lot.php:71
+#: views/lot.php:71
 msgid "Next"
 msgstr "次"
 
-#: /usr/src/freepbx/parking/views/lot.php:68
+#: views/lot.php:68
 msgid ""
 "Next: If you want the parking lot to seek the next sequential parking slot "
 "relative to the the last parked call instead of seeking the first available "
@@ -190,21 +194,19 @@ msgstr ""
 "次：最初に使用できるロットを探させる代わりに、最後にパークしたロットを探す。"
 "　最初:利用可能な最初のパーキングロットを探す"
 
-#: /usr/src/freepbx/parking/views/lot.php:170
+#: views/lot.php:170
 msgid "No"
 msgstr "いいえ"
 
-#: /usr/src/freepbx/parking/views/lot.php:129
-#: /usr/src/freepbx/parking/views/lot.php:143
+#: views/lot.php:129 views/lot.php:143
 msgid "None"
 msgstr "なし"
 
-#: /usr/src/freepbx/parking/views/lot.php:25
+#: views/lot.php:25
 msgid "Number of Slots:"
 msgstr "スロット数"
 
-#: /usr/src/freepbx/parking/views/lot.php:138
-#: /usr/src/freepbx/parking/views/lot.php:155
+#: views/lot.php:138 views/lot.php:155
 msgid ""
 "Optional message to be played to the call prior to sending back to the "
 "Originator or the Alternate Destination."
@@ -212,125 +214,122 @@ msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前にコールに再生される追加のメッ"
 "セージ。"
 
-#: /usr/src/freepbx/parking/views/header.php:5
+#: views/header.php:5
 msgid "Overview"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:22
+#: views/overview.php:22
 msgid "Paging"
 msgstr "ページング"
 
-#: /usr/src/freepbx/parking/views/overview.php:26
+#: views/overview.php:26
 msgid "Paging Pro"
 msgstr "ページングプロ"
 
-#: /usr/src/freepbx/parking/views/overview.php:26
+#: views/overview.php:26
 msgid "Paging Pro enables the Ability to setup Park and Announce"
 msgstr "ページングプロでは、パークとアナウンスを設定する機能が有効"
 
-#: /usr/src/freepbx/parking/views/overview.php:22
+#: views/overview.php:22
 msgid "Paging Provides the Ability to setup Park and Announce"
 msgstr "ページングでは、パークとアナウンスを設定する機能を提供"
 
-#: /usr/src/freepbx/parking/install.php:7
+#: install.php:7
 msgid "Park Prefix"
 msgstr "パークプリフィックス"
 
-#: /usr/src/freepbx/parking/views/overview.php:30
+#: views/overview.php:30
 msgid "Park Pro"
 msgstr "パーク保留プロ"
 
-#: /usr/src/freepbx/parking/views/overview.php:30
+#: views/overview.php:30
 msgid "Park Pro enables the Ability to setup Park and Announce"
 msgstr "パーク保留プロでは、パークとアナウンスを設定する機能が有効"
 
-#: /usr/src/freepbx/parking/views/overview.php:15
+#: views/overview.php:15
 msgid "Park Yourself into Parking lot nnn (Announcing your parked slot to you)"
 msgstr ""
 
-#: /usr/src/freepbx/parking/functions.inc/registries.php:22
+#: functions.inc/registries.php:22
 #, php-format
 msgid "ParkPlus: ParkCall %s"
 msgstr "ParkPlus: ParkCall %s"
 
-#: /usr/src/freepbx/parking/functions.inc/registries.php:31
+#: functions.inc/registries.php:31
 #, php-format
 msgid "ParkPlus: PickupSlot %s"
 msgstr "ParkPlus: PickupSlot %s"
 
-#: /usr/src/freepbx/parking/views/lot.php:84
-#: /usr/src/freepbx/parking/views/lot.php:95
-#: /usr/src/freepbx/parking/views/lot.php:107
+#: views/lot.php:84 views/lot.php:95 views/lot.php:107
 msgid "Parked"
 msgstr "パーク中"
 
-#: /usr/src/freepbx/parking/views/lot.php:37
+#: views/lot.php:37
 msgid "Parked Music Class:"
 msgstr "パーク音楽クラス："
 
-#: /usr/src/freepbx/parking/parking.i18n.php:7
+#: parking.i18n.php:7
 msgid "Parking"
 msgstr "パーキング"
 
-#: /usr/src/freepbx/parking/views/lot.php:114
+#: views/lot.php:114
 msgid "Parking Alert-Info:"
 msgstr "パーキングアラート情報："
 
-#: /usr/src/freepbx/parking/views/header.php:12
+#: parking.i18n.php:3 views/header.php:12
 msgid "Parking Lot"
 msgstr "パーキングロット"
 
-#: /usr/src/freepbx/parking/views/lot.php:7
+#: views/lot.php:7
 msgid "Parking Lot Extension:"
 msgstr "パーキングロット内線："
 
-#: /usr/src/freepbx/parking/views/lot.php:13
+#: views/lot.php:13
 msgid "Parking Lot Name:"
 msgstr "パーキングロット名"
 
-#: /usr/src/freepbx/parking/views/lot.php:4
+#: views/lot.php:4
 msgid "Parking Lot Options"
 msgstr "パーキングロットオプション"
 
-#: /usr/src/freepbx/parking/views/lot.php:19
+#: views/lot.php:19
 msgid "Parking Lot Starting Position:"
 msgstr "パーキングロット開始位置："
 
-#: /usr/src/freepbx/parking/functions.inc/registries.php:59
-#: /usr/src/freepbx/parking/functions.inc/registries.php:94
+#: functions.inc/registries.php:59 functions.inc/registries.php:94
 #, php-format
 msgid "Parking Lot: %s (%s)"
 msgstr "パーキングロット: %s (%s)"
 
-#: /usr/src/freepbx/parking/views/lot.php:31
+#: views/lot.php:31
 msgid "Parking Timeout (seconds):"
 msgstr "パーキングタイムアウト（秒）："
 
-#: /usr/src/freepbx/parking/views/lot.php:80
+#: views/lot.php:80
 msgid "Pickup Courtesy Tone:"
 msgstr "ピックアップ時\"ピー\"音再生"
 
-#: /usr/src/freepbx/parking/install.php:6
+#: install.php:6
 msgid "Pickup ParkedCall Any"
 msgstr "パークされたコールを全てピックアップする"
 
-#: /usr/src/freepbx/parking/install.php:8
+#: install.php:8
 msgid "Pickup ParkedCall Prefix"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:13
+#: views/lot.php:13
 msgid "Provide a Descriptive Title for this Parking Lot"
 msgstr "このパーキングロットに詳細な名称を与える"
 
-#: /usr/src/freepbx/parking/views/lot.php:103
+#: views/lot.php:103
 msgid "Re-Parking Capability:"
 msgstr "再パーキング機能："
 
-#: /usr/src/freepbx/parking/views/lot.php:77
+#: views/lot.php:77
 msgid "Returned Call Behavior"
 msgstr "呼の戻り時の挙動"
 
-#: /usr/src/freepbx/parking/views/overview.php:3
+#: views/overview.php:3
 msgid ""
 "Simply transfer the call to said parking lot extension. Asterisk will then "
 "read back the parking lot number the call has been placed in. To retrieve "
@@ -340,11 +339,11 @@ msgstr ""
 "パーク保留されたロット番号を読み上げます。呼を再取得するには、その番号に発信"
 "します。"
 
-#: /usr/src/freepbx/parking/views/lot.php:130
+#: views/lot.php:130
 msgid "Slot"
 msgstr "スロット"
 
-#: /usr/src/freepbx/parking/views/lot.php:120
+#: views/lot.php:120
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
@@ -352,22 +351,22 @@ msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前に、パークされたコールに付与され"
 "た現在のCaller ID文字列。"
 
-#: /usr/src/freepbx/parking/views/lot.php:184
+#: views/lot.php:184
 msgid "Submit Changes"
 msgstr "変更を適用"
 
-#: /usr/src/freepbx/parking/views/lot.php:19
+#: views/lot.php:19
 msgid "The starting postion of the parking lot"
 msgstr "パーキングロットの開始位置"
 
-#: /usr/src/freepbx/parking/views/lot.php:31
+#: views/lot.php:31
 msgid ""
 "The timeout period in seconds that a parked call will attempt to ring back "
 "the original parker if not answered"
 msgstr ""
 "応答が無い場合、パーク中の呼を、パークした者に戻すまでのタイムアウト（秒）"
 
-#: /usr/src/freepbx/parking/views/lot.php:25
+#: views/lot.php:25
 msgid ""
 "The total number of parking lot spaces to configure. Example, if 70 is the "
 "extension and 8 slots are configured, the parking slots will be 71-78"
@@ -376,7 +375,7 @@ msgstr ""
 "定して、スロット数を8スロットとした場合、パーキングスロットは71-78になりま"
 "す。"
 
-#: /usr/src/freepbx/parking/views/overview.php:19
+#: views/overview.php:19
 msgid ""
 "There are also different levels of Parking. To see what level you have and "
 "to see options and features you'd get from other modules please see the "
@@ -385,7 +384,7 @@ msgstr ""
 "パーキングには、様々なレベルがあります。利用可能レベルや、他のモジュールを利"
 "用した場合に利用できるようになる機能を確認するには、以下の表をご覧ください"
 
-#: /usr/src/freepbx/parking/views/lot.php:126
+#: views/lot.php:126
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -401,11 +400,11 @@ msgstr ""
 "キングされた内線</li><li><strong>名前：</strong> パーキングしたユーザー</"
 "li></ul>"
 
-#: /usr/src/freepbx/parking/views/lot.php:7
+#: views/lot.php:7
 msgid "This is the extension where you will transfer a call to park it"
 msgstr "呼をパーク保留するための内線番号"
 
-#: /usr/src/freepbx/parking/views/lot.php:37
+#: views/lot.php:37
 msgid ""
 "This is the music class that will be played to a parked call while in the "
 "parking lot UNLESS the call flow prior to parking the call explicitly set a "
@@ -416,15 +415,15 @@ msgstr ""
 "されていない時に、パーク中のコールに再生される音楽クラスです、例えば、コール"
 "がキューやリンググループ経由で入ってきたような場合です。"
 
-#: /usr/src/freepbx/parking/views/overview.php:1
+#: views/overview.php:1
 msgid "This module is used to configure Parking Lot(s) in Asterisk."
 msgstr "このモジュールでは、Asteriskのパーキングロットの設定使用します。"
 
-#: /usr/src/freepbx/parking/views/lot.php:90
+#: views/lot.php:90
 msgid "Transfer Capability:"
 msgstr "転送機能："
 
-#: /usr/src/freepbx/parking/views/lot.php:166
+#: views/lot.php:166
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -436,16 +435,16 @@ msgstr ""
 "パーク保留した内線に戻します。もしパーク保留元が通話中の場合、次で選択した宛"
 "先に転送します。「いいえ」に設定すると、次の宛先に直接転送します"
 
-#: /usr/src/freepbx/parking/views/lot.php:80
+#: views/lot.php:80
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 "パークされたコールが取得された時に誰に対して\"ピー\"という音を再生するか。"
 
-#: /usr/src/freepbx/parking/views/lot.php:169
+#: views/lot.php:169
 msgid "Yes"
 msgstr "はい"
 
-#: /usr/src/freepbx/parking/views/lot.php:155
+#: views/lot.php:155
 msgid ""
 "You must install and enable the \"Systems Recordings\" Module to edit this "
 "option"
@@ -453,39 +452,30 @@ msgstr ""
 "このオプションを編集にするには、\"システム録音\"モジュールをインストールし有"
 "効にする必要があります。"
 
-#: /usr/src/freepbx/parking/install.php:47
+#: install.php:47
 #, php-format
 msgid "creating table %s if needed"
 msgstr "必要に応じてテーブル%sを作成"
 
-#: /usr/src/freepbx/parking/views/lot.php:50
+#: views/lot.php:50
 msgid "default"
 msgstr "デフォルト"
 
-#: /usr/src/freepbx/parking/install.php:79
+#: install.php:79
 msgid "done"
 msgstr "完了"
 
-#: /usr/src/freepbx/parking/install.php:156
+#: install.php:156
 msgid "migrated ... dropping old table parkinglot"
 msgstr "移行しました… 旧テーブルのparkinglotを無効にしている"
 
-#: /usr/src/freepbx/parking/install.php:85
+#: install.php:85
 msgid "migrating old parkinglot data"
 msgstr "旧parkinglotのデータを移行中…"
 
-#: /usr/src/freepbx/parking/views/overview.php:14
+#: views/overview.php:14
 msgid "nn:"
 msgstr ""
-
-#: /usr/src/freepbx/parking/parking.i18n.php:8
-msgid ""
-"}\n"
-"?>"
-msgstr ""
-
-#~ msgid "Applications"
-#~ msgstr "アプリケーション"
 
 #~ msgid ""
 #~ "Manages parking lot extensions and other options.\tParking is a way of "

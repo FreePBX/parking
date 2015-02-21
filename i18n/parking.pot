@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 18:03-0500\n"
+"POT-Creation-Date: 2015-02-20 19:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,324 +17,336 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /usr/src/freepbx/parking/install.php:146
+#: install.php:146
 #, php-format
 msgid "%s no longer supported"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:10
+#: views/overview.php:10
 msgid "*2nn:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:114
+#: views/lot.php:114
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:163
+#: views/lot.php:163
 msgid "Alternate Destination"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:138
-#: /usr/src/freepbx/parking/views/lot.php:155
+#: views/lot.php:138
+#: views/lot.php:155
 msgid "Announcement:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:103
+#: parking.i18n.php:4
+msgid "Applications"
+msgstr ""
+
+#: views/lot.php:103
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:90
+#: views/lot.php:90
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:11
+#: views/overview.php:11
 msgid ""
 "Attended Transfer call into Park lot nnn (It will announce the slot back to "
 "you)"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:126
+#: views/lot.php:126
 msgid "Auto CallerID Prepend:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:59
+#: views/lot.php:59
 msgid "BLF Capabilities:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:85
-#: /usr/src/freepbx/parking/views/lot.php:96
-#: /usr/src/freepbx/parking/views/lot.php:108
+#: views/lot.php:85
+#: views/lot.php:96
+#: views/lot.php:108
 msgid "Both"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:83
-#: /usr/src/freepbx/parking/views/lot.php:94
-#: /usr/src/freepbx/parking/views/lot.php:106
+#: views/lot.php:83
+#: views/lot.php:94
+#: views/lot.php:106
 msgid "Caller"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:120
+#: views/lot.php:120
 msgid "CallerID Prepend:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:166
+#: views/lot.php:166
 msgid "Come Back to Origin:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:175
+#: views/lot.php:175
 msgid "Destination:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:63
+#: views/lot.php:63
 msgid "Disable"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:60
+#: install.php:60
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:62
+#: views/lot.php:62
 msgid "Enable"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:59
+#: views/lot.php:59
 msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:7
+#: views/overview.php:7
 msgid "Example usage"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:131
+#: views/lot.php:131
 msgid "Extension"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:68
+#: views/lot.php:68
 msgid "Find Slot:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:72
+#: views/lot.php:72
 msgid "First"
 msgstr ""
 
-#: /usr/src/freepbx/parking/functions.inc/registries.php:23
-#: /usr/src/freepbx/parking/functions.inc/registries.php:32
+#: functions.inc/registries.php:23
+#: functions.inc/registries.php:32
 msgid "INUSE"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:76
+#: install.php:76
 msgid "Initializing default parkinglot.."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:132
+#: parking.i18n.php:5
+msgid ""
+"Manages parking lot extensions and other options.\n"
+"\tParking is a way of putting calls \"on hold\", and then picking them up "
+"from any extension."
+msgstr ""
+
+#: views/lot.php:132
 msgid "Name"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:97
-#: /usr/src/freepbx/parking/views/lot.php:109
+#: views/lot.php:97
+#: views/lot.php:109
 msgid "Neither"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:71
+#: views/lot.php:71
 msgid "Next"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:68
+#: views/lot.php:68
 msgid ""
 "Next: If you want the parking lot to seek the next sequential parking slot "
 "relative to the the last parked call instead of seeking the first available "
 "slot. First: Use the first parking lot slot available"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:170
+#: views/lot.php:170
 msgid "No"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:129
-#: /usr/src/freepbx/parking/views/lot.php:143
+#: views/lot.php:129
+#: views/lot.php:143
 msgid "None"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:25
+#: views/lot.php:25
 msgid "Number of Slots:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:138
-#: /usr/src/freepbx/parking/views/lot.php:155
+#: views/lot.php:138
+#: views/lot.php:155
 msgid ""
 "Optional message to be played to the call prior to sending back to the "
 "Originator or the Alternate Destination."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/header.php:5
+#: views/header.php:5
 msgid "Overview"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:22
+#: views/overview.php:22
 msgid "Paging"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:26
+#: views/overview.php:26
 msgid "Paging Pro"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:26
+#: views/overview.php:26
 msgid "Paging Pro enables the Ability to setup Park and Announce"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:22
+#: views/overview.php:22
 msgid "Paging Provides the Ability to setup Park and Announce"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:7
+#: install.php:7
 msgid "Park Prefix"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:30
+#: views/overview.php:30
 msgid "Park Pro"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:30
+#: views/overview.php:30
 msgid "Park Pro enables the Ability to setup Park and Announce"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:15
+#: views/overview.php:15
 msgid "Park Yourself into Parking lot nnn (Announcing your parked slot to you)"
 msgstr ""
 
-#: /usr/src/freepbx/parking/functions.inc/registries.php:22
+#: functions.inc/registries.php:22
 #, php-format
 msgid "ParkPlus: ParkCall %s"
 msgstr ""
 
-#: /usr/src/freepbx/parking/functions.inc/registries.php:31
+#: functions.inc/registries.php:31
 #, php-format
 msgid "ParkPlus: PickupSlot %s"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:84
-#: /usr/src/freepbx/parking/views/lot.php:95
-#: /usr/src/freepbx/parking/views/lot.php:107
+#: views/lot.php:84
+#: views/lot.php:95
+#: views/lot.php:107
 msgid "Parked"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:37
+#: views/lot.php:37
 msgid "Parked Music Class:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/parking.i18n.php:7
+#: parking.i18n.php:7
 msgid "Parking"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:114
+#: views/lot.php:114
 msgid "Parking Alert-Info:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/header.php:12
+#: parking.i18n.php:3
+#: views/header.php:12
 msgid "Parking Lot"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:7
+#: views/lot.php:7
 msgid "Parking Lot Extension:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:13
+#: views/lot.php:13
 msgid "Parking Lot Name:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:4
+#: views/lot.php:4
 msgid "Parking Lot Options"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:19
+#: views/lot.php:19
 msgid "Parking Lot Starting Position:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/functions.inc/registries.php:59
-#: /usr/src/freepbx/parking/functions.inc/registries.php:94
+#: functions.inc/registries.php:59
+#: functions.inc/registries.php:94
 #, php-format
 msgid "Parking Lot: %s (%s)"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:31
+#: views/lot.php:31
 msgid "Parking Timeout (seconds):"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:80
+#: views/lot.php:80
 msgid "Pickup Courtesy Tone:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:6
+#: install.php:6
 msgid "Pickup ParkedCall Any"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:8
+#: install.php:8
 msgid "Pickup ParkedCall Prefix"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:13
+#: views/lot.php:13
 msgid "Provide a Descriptive Title for this Parking Lot"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:103
+#: views/lot.php:103
 msgid "Re-Parking Capability:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:77
+#: views/lot.php:77
 msgid "Returned Call Behavior"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:3
+#: views/overview.php:3
 msgid ""
 "Simply transfer the call to said parking lot extension. Asterisk will then "
 "read back the parking lot number the call has been placed in. To retrieve "
 "the call simply dial that number back."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:130
+#: views/lot.php:130
 msgid "Slot"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:120
+#: views/lot.php:120
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:184
+#: views/lot.php:184
 msgid "Submit Changes"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:19
+#: views/lot.php:19
 msgid "The starting postion of the parking lot"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:31
+#: views/lot.php:31
 msgid ""
 "The timeout period in seconds that a parked call will attempt to ring back "
 "the original parker if not answered"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:25
+#: views/lot.php:25
 msgid ""
 "The total number of parking lot spaces to configure. Example, if 70 is the "
 "extension and 8 slots are configured, the parking slots will be 71-78"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:19
+#: views/overview.php:19
 msgid ""
 "There are also different levels of Parking. To see what level you have and "
 "to see options and features you'd get from other modules please see the "
 "chart below"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:126
+#: views/lot.php:126
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -344,11 +356,11 @@ msgid ""
 "call</li></ul>"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:7
+#: views/lot.php:7
 msgid "This is the extension where you will transfer a call to park it"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:37
+#: views/lot.php:37
 msgid ""
 "This is the music class that will be played to a parked call while in the "
 "parking lot UNLESS the call flow prior to parking the call explicitly set a "
@@ -356,15 +368,15 @@ msgid ""
 "group."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:1
+#: views/overview.php:1
 msgid "This module is used to configure Parking Lot(s) in Asterisk."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:90
+#: views/lot.php:90
 msgid "Transfer Capability:"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:166
+#: views/lot.php:166
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -373,47 +385,41 @@ msgid ""
 "to the destination selected below"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:80
+#: views/lot.php:80
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:169
+#: views/lot.php:169
 msgid "Yes"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:155
+#: views/lot.php:155
 msgid ""
 "You must install and enable the \"Systems Recordings\" Module to edit this "
 "option"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:47
+#: install.php:47
 #, php-format
 msgid "creating table %s if needed"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/lot.php:50
+#: views/lot.php:50
 msgid "default"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:79
+#: install.php:79
 msgid "done"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:156
+#: install.php:156
 msgid "migrated ... dropping old table parkinglot"
 msgstr ""
 
-#: /usr/src/freepbx/parking/install.php:85
+#: install.php:85
 msgid "migrating old parkinglot data"
 msgstr ""
 
-#: /usr/src/freepbx/parking/views/overview.php:14
+#: views/overview.php:14
 msgid "nn:"
-msgstr ""
-
-#: /usr/src/freepbx/parking/parking.i18n.php:8
-msgid ""
-"}\n"
-"?>"
 msgstr ""
