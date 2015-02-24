@@ -29,7 +29,7 @@ class Parking implements BMO {
 		global $version;
 
 		if (function_exists('parkpro_get_config')) {
-			return true;
+			return null;
 		}
 
 		if(version_compare($version, '12', 'ge')) {
