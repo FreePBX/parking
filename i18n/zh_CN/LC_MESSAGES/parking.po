@@ -13,6 +13,7 @@ msgstr ""
 "PO-Revision-Date: 2015-02-20 19:45-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,11 +35,11 @@ msgstr ""
 
 #: views/lot.php:163
 msgid "Alternate Destination"
-msgstr ""
+msgstr "可选目的地"
 
 #: views/lot.php:138 views/lot.php:155
 msgid "Announcement:"
-msgstr ""
+msgstr "公告："
 
 #: parking.i18n.php:4
 msgid "Applications"
@@ -68,7 +69,7 @@ msgstr ""
 
 #: views/lot.php:59
 msgid "BLF Capabilities:"
-msgstr ""
+msgstr "BLF功能"
 
 #: views/lot.php:85 views/lot.php:96 views/lot.php:108
 msgid "Both"
@@ -80,7 +81,7 @@ msgstr ""
 
 #: views/lot.php:120
 msgid "CallerID Prepend:"
-msgstr ""
+msgstr "主叫ID前加上字符串："
 
 #: views/lot.php:166
 msgid "Come Back to Origin:"
@@ -108,7 +109,7 @@ msgstr ""
 
 #: views/overview.php:7
 msgid "Example usage"
-msgstr ""
+msgstr "举例"
 
 #: views/lot.php:131
 msgid "Extension"
@@ -116,7 +117,7 @@ msgstr ""
 
 #: views/lot.php:68
 msgid "Find Slot:"
-msgstr ""
+msgstr "查找驻留地"
 
 #: views/lot.php:72
 msgid "First"
@@ -162,11 +163,11 @@ msgstr ""
 
 #: views/lot.php:129 views/lot.php:143
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #: views/lot.php:25
 msgid "Number of Slots:"
-msgstr ""
+msgstr "驻留数量："
 
 #: views/lot.php:138 views/lot.php:155
 msgid ""
@@ -176,7 +177,7 @@ msgstr ""
 
 #: views/header.php:5
 msgid "Overview"
-msgstr ""
+msgstr "总览"
 
 #: views/overview.php:22
 msgid "Paging"
@@ -226,7 +227,7 @@ msgstr ""
 
 #: views/lot.php:37
 msgid "Parked Music Class:"
-msgstr ""
+msgstr "驻留背景音乐"
 
 #: parking.i18n.php:7
 msgid "Parking"
@@ -234,27 +235,27 @@ msgstr ""
 
 #: views/lot.php:114
 msgid "Parking Alert-Info:"
-msgstr ""
+msgstr "驻留警告信息："
 
 #: parking.i18n.php:3 views/header.php:12
 msgid "Parking Lot"
-msgstr ""
+msgstr "驻留区"
 
 #: views/lot.php:7
 msgid "Parking Lot Extension:"
-msgstr ""
+msgstr "驻留分机："
 
 #: views/lot.php:13
 msgid "Parking Lot Name:"
-msgstr ""
+msgstr "驻留地名称"
 
 #: views/lot.php:4
 msgid "Parking Lot Options"
-msgstr ""
+msgstr "呼叫驻留选项"
 
 #: views/lot.php:19
 msgid "Parking Lot Starting Position:"
-msgstr ""
+msgstr "驻留地起始位置"
 
 #: functions.inc/registries.php:59 functions.inc/registries.php:94
 #, php-format
@@ -263,7 +264,7 @@ msgstr ""
 
 #: views/lot.php:31
 msgid "Parking Timeout (seconds):"
-msgstr ""
+msgstr "驻留超时（秒）"
 
 #: views/lot.php:80
 msgid "Pickup Courtesy Tone:"
@@ -287,7 +288,7 @@ msgstr ""
 
 #: views/lot.php:77
 msgid "Returned Call Behavior"
-msgstr ""
+msgstr "返回的通话行为"
 
 #: views/overview.php:3
 msgid ""
@@ -308,7 +309,7 @@ msgstr ""
 
 #: views/lot.php:184
 msgid "Submit Changes"
-msgstr ""
+msgstr "提交更改"
 
 #: views/lot.php:19
 msgid "The starting postion of the parking lot"
