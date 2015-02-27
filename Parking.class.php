@@ -23,7 +23,69 @@ class Parking implements BMO {
 
 	}
 	public function doConfigPageInit($page){
-		return true;
+		$id = isset($_REQUEST['id']) ? $_REQUEST['id'] : '';
+		$parking_defaults = array(
+			"name" => "Lot Name",
+			"type" => "public",
+			"parkext" => "",
+			"parkpos" => "",
+			"numslots" => 4,
+			"parkingtime" => 45,
+			"parkedmusicclass" => "default",
+			"generatehints" => "yes",
+			"generatefc" => "yes",
+			"findslot" => "first",
+			"parkedplay" => "both",
+			"parkedcalltransfers" => "caller",
+			"parkedcallreparking" => "caller",
+			"alertinfo" => "",
+			"cidpp" => "",
+			"autocidpp" => "",
+			"announcement_id" => null,
+			"comebacktoorigin" => "yes",
+			"dest" => ""
+		);
+
+		$data = array();
+
+			if(function_exists('parkpro_del')) {
+				if(parkpro_del($id)) {
+					$action = '';
+					$id = '';
+					
+				}
+			};
+		switch ($_REQUEST['action']) {
+			case 'add':
+			case 'update':
+				$vars = array();
+				foreach(array_keys($parking_defaults) as $k) {
+					if(isset($_REQUEST[$k]))
+						$vars[$k] = $_REQUEST[$k];
+				}
+				if(!empty($vars)) {
+					$vars['dest'] = (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0'].'0'])) ? $_REQUEST[$_REQUEST['goto0'].'0'] : '';
+					if($action == 'update') {
+						$vars['id'] = $_REQUEST['id'];
+					}
+					$id = parking_save($vars);
+					$_REQUEST['id'] = $id;
+					if($id !== false){
+						$_REQUEST['action'] = 'modify';
+					}
+				}
+			break;
+			case 'delete':
+				if(function_exists('parkpro_del')) {
+					if(parkpro_del($id)) {
+						$action = '';
+						$id = '';
+					}
+				}
+			break;
+			default:
+			break;
+		}
 	}
 	public function genConfig() {
 		global $version;
@@ -56,5 +118,36 @@ class Parking implements BMO {
 	}
 	public function writeConfig($conf){
 		$this->FreePBX->WriteConfig($conf);
+	}
+	public function getActionBar($request) {
+		$buttons = array();
+		switch($request['display']) {
+			case 'parking':
+				$buttons = array(
+					'delete' => array(
+						'name' => 'delete',
+						'id' => 'delete',
+						'value' => _('Delete')
+					),
+					'reset' => array(
+						'name' => 'reset',
+						'id' => 'reset',
+						'value' => _('Reset')
+					),
+					'submit' => array(
+						'name' => 'submit',
+						'id' => 'submit',
+						'value' => _('Submit')
+					)
+				);
+				if (empty($request['id']) || !function_exists('parkpro_view')) {
+					unset($buttons['delete']);
+				}
+				if($request['action'] == ''){
+					unset($buttons);
+				}
+			break;
+		}
+		return $buttons;
 	}
 }
