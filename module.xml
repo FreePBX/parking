@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>13.0.1</version>
+	<version>13.0.1alpha1</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,7 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
-		*13.0.1* Fix saving in 13 with PDO
+		*13.0.1alpha1* Fix saving in 13 with PDO
 		*12.0.5* Fixes for how Asterisk handles parking directly into a slot
 		*12.0.4* Support for new call recording
 		*12.0.3* Get rid of warning message, fixes for Asterisk 12
