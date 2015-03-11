@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:45-0500\n"
+"POT-Creation-Date: 2015-03-11 19:42-0400\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -32,52 +32,76 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.10-dev\n"
 
-#: install.php:146
+#: install.php:148
 #, php-format
 msgid "%s no longer supported"
 msgstr "%s вече не се поддържа"
 
-#: views/overview.php:10
+#: views/overview.php:14
+msgid "*270:"
+msgstr ""
+
+#: views/overview.php:18
+msgid "*275:"
+msgstr ""
+
+#: views/overview.php:22
 msgid "*2nn:"
 msgstr ""
 
-#: views/lot.php:114
+#: views/overview.php:26
+msgid "70:"
+msgstr ""
+
+#: views/overview.php:30
+msgid "75:"
+msgstr ""
+
+#: views/lot.php:115
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
 
-#: views/lot.php:163
+#: views/lot.php:164
 msgid "Alternate Destination"
 msgstr ""
 
-#: views/lot.php:138 views/lot.php:155
+#: views/lot.php:139 views/lot.php:156
 msgid "Announcement:"
 msgstr ""
 
-#: parking.i18n.php:4
+#: parking.i18n.php:6 parking.i18n.php:12
 msgid "Applications"
 msgstr "Приложения"
 
-#: views/lot.php:103
+#: views/lot.php:104
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
 msgstr ""
 
-#: views/lot.php:90
+#: views/lot.php:91
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
 msgstr ""
 
-#: views/overview.php:11
-msgid ""
-"Attended Transfer call into Park lot nnn (It will announce the slot back to "
-"you)"
+#: views/overview.php:23
+msgid "Attended Transfer call into Park lot nn"
 msgstr ""
 
-#: views/lot.php:126
+#: views/overview.php:15
+msgid ""
+"Attended Transfer call to the Parking Lot Extension. The lot number will be "
+"announced to the parker"
+msgstr ""
+
+#: views/overview.php:19
+msgid "Attended transfer to lot 75"
+msgstr ""
+
+#: views/lot.php:127
 msgid "Auto CallerID Prepend:"
 msgstr ""
 
@@ -85,23 +109,27 @@ msgstr ""
 msgid "BLF Capabilities:"
 msgstr ""
 
-#: views/lot.php:85 views/lot.php:96 views/lot.php:108
+#: views/lot.php:85 views/lot.php:97 views/lot.php:109
 msgid "Both"
 msgstr ""
 
-#: views/lot.php:83 views/lot.php:94 views/lot.php:106
+#: views/lot.php:83 views/lot.php:95 views/lot.php:107
 msgid "Caller"
 msgstr ""
 
-#: views/lot.php:120
+#: views/lot.php:121
 msgid "CallerID Prepend:"
 msgstr ""
 
-#: views/lot.php:166
+#: views/lot.php:167
 msgid "Come Back to Origin:"
 msgstr ""
 
-#: views/lot.php:175
+#: install.php:9
+msgid "Defines the Feature Code to use for Direct Call Pickup"
+msgstr ""
+
+#: views/lot.php:176
 msgid "Destination:"
 msgstr ""
 
@@ -109,7 +137,7 @@ msgstr ""
 msgid "Disable"
 msgstr ""
 
-#: install.php:60
+#: install.php:62
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ГРЕШКА: открити са много паркирания по подразбиране, изтриване и "
@@ -123,11 +151,11 @@ msgstr ""
 msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
 msgstr ""
 
-#: views/overview.php:7
+#: views/overview.php:11
 msgid "Example usage"
 msgstr ""
 
-#: views/lot.php:131
+#: views/lot.php:132
 msgid "Extension"
 msgstr ""
 
@@ -143,22 +171,23 @@ msgstr ""
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
-#: install.php:76
+#: install.php:78
 msgid "Initializing default parkinglot.."
 msgstr "Инициализиране на parkinglot по-подразбиране.."
 
-#: parking.i18n.php:5
+#: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options.\n"
-"\tParking is a way of putting calls \"on hold\", and then picking them up "
-"from any extension."
+"Manages parking lot extensions and other options.\tParking is a way of "
+"putting calls "
 msgstr ""
+"Управление на вътрешните линии за паркиране на разговор и други опции."
+"\tПаркирането поставя обаждането "
 
-#: views/lot.php:132
+#: views/lot.php:133
 msgid "Name"
 msgstr ""
 
-#: views/lot.php:97 views/lot.php:109
+#: views/lot.php:98 views/lot.php:110
 msgid "Neither"
 msgstr ""
 
@@ -173,11 +202,11 @@ msgid ""
 "slot. First: Use the first parking lot slot available"
 msgstr ""
 
-#: views/lot.php:170
+#: views/lot.php:171
 msgid "No"
 msgstr ""
 
-#: views/lot.php:129 views/lot.php:143
+#: views/lot.php:86 views/lot.php:130 views/lot.php:144
 msgid "None"
 msgstr ""
 
@@ -185,7 +214,7 @@ msgstr ""
 msgid "Number of Slots:"
 msgstr "Брой Слотове:"
 
-#: views/lot.php:138 views/lot.php:155
+#: views/lot.php:139 views/lot.php:156
 msgid ""
 "Optional message to be played to the call prior to sending back to the "
 "Originator or the Alternate Destination."
@@ -195,19 +224,19 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: views/overview.php:22
+#: views/overview.php:43
 msgid "Paging"
 msgstr ""
 
-#: views/overview.php:26
+#: views/overview.php:47
 msgid "Paging Pro"
 msgstr ""
 
-#: views/overview.php:26
+#: views/overview.php:47
 msgid "Paging Pro enables the Ability to setup Park and Announce"
 msgstr ""
 
-#: views/overview.php:22
+#: views/overview.php:43
 msgid "Paging Provides the Ability to setup Park and Announce"
 msgstr ""
 
@@ -215,16 +244,24 @@ msgstr ""
 msgid "Park Prefix"
 msgstr "Префикс за Паркиране"
 
-#: views/overview.php:30
+#: views/overview.php:51
 msgid "Park Pro"
 msgstr ""
 
-#: views/overview.php:30
+#: views/overview.php:51
 msgid "Park Pro enables the Ability to setup Park and Announce"
 msgstr ""
 
-#: views/overview.php:15
-msgid "Park Yourself into Parking lot nnn (Announcing your parked slot to you)"
+#: views/overview.php:31
+msgid "Park Yourself into lot 75"
+msgstr ""
+
+#: views/overview.php:35
+msgid "Park Yourself into lot nn"
+msgstr ""
+
+#: views/overview.php:27
+msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
 #: functions.inc/registries.php:22
@@ -237,7 +274,7 @@ msgstr ""
 msgid "ParkPlus: PickupSlot %s"
 msgstr ""
 
-#: views/lot.php:84 views/lot.php:95 views/lot.php:107
+#: views/lot.php:84 views/lot.php:96 views/lot.php:108
 msgid "Parked"
 msgstr ""
 
@@ -245,15 +282,15 @@ msgstr ""
 msgid "Parked Music Class:"
 msgstr "Категория на Музика при Паркиране:"
 
-#: parking.i18n.php:7
+#: parking.i18n.php:10
 msgid "Parking"
 msgstr "Паркиране"
 
-#: views/lot.php:114
+#: views/lot.php:115
 msgid "Parking Alert-Info:"
 msgstr ""
 
-#: parking.i18n.php:3 views/header.php:12
+#: parking.i18n.php:4 views/header.php:12
 msgid "Parking Lot"
 msgstr "Група за Паркиране"
 
@@ -298,7 +335,7 @@ msgstr "Префикс за Изтегляне на Паркирани Разг�
 msgid "Provide a Descriptive Title for this Parking Lot"
 msgstr "Наименование за тази Група за Паркиране"
 
-#: views/lot.php:103
+#: views/lot.php:104
 msgid "Re-Parking Capability:"
 msgstr ""
 
@@ -306,25 +343,23 @@ msgstr ""
 msgid "Returned Call Behavior"
 msgstr ""
 
-#: views/overview.php:3
-msgid ""
-"Simply transfer the call to said parking lot extension. Asterisk will then "
-"read back the parking lot number the call has been placed in. To retrieve "
-"the call simply dial that number back."
-msgstr ""
-
-#: views/lot.php:130
+#: views/lot.php:131
 msgid "Slot"
 msgstr ""
 
-#: views/lot.php:120
+#: views/lot.php:121
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: views/lot.php:184
+#: views/lot.php:185
 msgid "Submit Changes"
+msgstr ""
+
+#: views/overview.php:38
+msgid ""
+"The Parking Lot Extension and lot numbers can be changed using this module"
 msgstr ""
 
 #: views/lot.php:19
@@ -340,19 +375,18 @@ msgstr ""
 #: views/lot.php:25
 msgid ""
 "The total number of parking lot spaces to configure. Example, if 70 is the "
-"extension and 8 slots are configured, the parking slots will be 71-78"
+"extension and 8 slots are configured, the parking slots will be 71-78. Users "
+"can transfer a call directly into a parking slot."
 msgstr ""
-"Общия брой на свободните позиции за паркиране. Например, ако 70 е вътрешната "
-"линия и са въведени 8 слота, позициите за паркиране ще бъдат от 71 до 78"
 
-#: views/overview.php:19
+#: views/overview.php:40
 msgid ""
 "There are also different levels of Parking. To see what level you have and "
 "to see options and features you'd get from other modules please see the "
 "chart below"
 msgstr ""
 
-#: views/lot.php:126
+#: views/lot.php:127
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -377,14 +411,14 @@ msgid ""
 msgstr ""
 
 #: views/overview.php:1
-msgid "This module is used to configure Parking Lot(s) in Asterisk."
+msgid "This module is used to configure Parking Lot(s)"
 msgstr ""
 
-#: views/lot.php:90
+#: views/lot.php:91
 msgid "Transfer Capability:"
 msgstr ""
 
-#: views/lot.php:166
+#: views/lot.php:167
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -397,17 +431,30 @@ msgstr ""
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 
-#: views/lot.php:169
+#: views/lot.php:170
 msgid "Yes"
 msgstr ""
 
-#: views/lot.php:155
+#: views/overview.php:6
+msgid ""
+"You can also transfer directly to a lot number (71 through 78) and if that "
+"lot is empty, your call will be parked there"
+msgstr ""
+
+#: views/overview.php:4
+msgid ""
+"You can transfer a call to the Parking Lot Extension (70 by default), the "
+"call will then be placed into a lot (71-78 by default) and the lot number "
+"will be announced to you"
+msgstr ""
+
+#: views/lot.php:156
 msgid ""
 "You must install and enable the \"Systems Recordings\" Module to edit this "
 "option"
 msgstr ""
 
-#: install.php:47
+#: install.php:49
 #, php-format
 msgid "creating table %s if needed"
 msgstr "създаване на таблица %s ако е необходимо"
@@ -416,25 +463,26 @@ msgstr "създаване на таблица %s ако е необходимо
 msgid "default"
 msgstr "по-подразбиране"
 
-#: install.php:79
+#: install.php:81
 msgid "done"
 msgstr "Изпълнено"
 
-#: install.php:156
+#: install.php:158
 msgid "migrated ... dropping old table parkinglot"
 msgstr "преместване ... премахване на стара таблица parkinglot"
 
-#: install.php:85
+#: install.php:87
 msgid "migrating old parkinglot data"
 msgstr "преместване на стари данни на parkinglot"
 
-#: views/overview.php:14
+#: views/overview.php:34
 msgid "nn:"
 msgstr ""
 
 #~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
+#~ "The total number of parking lot spaces to configure. Example, if 70 is "
+#~ "the extension and 8 slots are configured, the parking slots will be 71-78"
 #~ msgstr ""
-#~ "Управление на вътрешните линии за паркиране на разговор и други опции."
-#~ "\tПаркирането поставя обаждането "
+#~ "Общия брой на свободните позиции за паркиране. Например, ако 70 е "
+#~ "вътрешната линия и са въведени 8 слота, позициите за паркиране ще бъдат "
+#~ "от 71 до 78"
