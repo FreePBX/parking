@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>12.0.8</version>
+	<version>12.0.9</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
+		*12.0.9* FREEPBX-8904 Fix park return routing for asterisk 13.2 and higher
 		*12.0.8* FREEPBX-8443 Better descriptions for 12 systems
 		*12.0.7* FREEPBX-8475 Fix Empty Context created
 		*12.0.6* Handle transfers better and fix for bug in asterisk 12

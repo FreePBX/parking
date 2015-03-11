@@ -312,9 +312,27 @@ function parking_generate_parked_call() {
 	}
 
 	$ext->add($pc, $exten, 'backtosender', new ext_noop('Attempting to go back to sender'),1,199);
-	$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${SHARED(PARKRETURNTO,${CHANNEL})}'));
-	$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${CHANNEL})',''));
-	$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${ARG1},1'));
+	/* These variables work in 13.2, some are broken in lower it appears
+	 * PARKING_SPACE - extension that the call was parked in prior to timing out.
+	 * PARKINGSLOT - Deprecated. Use PARKING_SPACE instead.
+	 * PARKEDLOT - name of the lot that the call was parked in prior to timing out.
+	 * PARKER - The device that parked the call
+	 * PARKER_FLAT - The flat version of PARKER
+	 * $ext->add($pc, $exten, '', new ext_noop('PARKING_SPACE: ${PARKING_SPACE}'));
+	 * $ext->add($pc, $exten, '', new ext_noop('PARKINGSLOT: ${PARKINGSLOT}'));
+	 * $ext->add($pc, $exten, '', new ext_noop('PARKEDLOT: ${PARKINGLOT}'));
+	 * $ext->add($pc, $exten, '', new ext_noop('PARKER: ${PARKER}'));
+	 * $ext->add($pc, $exten, '', new ext_noop('PARKER_FLAT: ${PARKER_FLAT}'));
+	 */
+	if(version_compare($version, '13.2', 'ge')) {
+		$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${PARKER}'));
+		$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${CHANNEL})',''));
+		$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${PARKINGSLOT},1'));
+	} else {
+		$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${SHARED(PARKRETURNTO,${CHANNEL})}'));
+		$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${CHANNEL})',''));
+		$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${ARG1},1'));
+	}
 }
 
 function parking_generate_parkedcallstimeout() {
