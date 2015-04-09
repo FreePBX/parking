@@ -178,7 +178,7 @@ function parking_generate_sub_return_routing($lot, $pd) {
 	$ext->add($prr, $pexten, '', new ext_set('PLOT',$pexten));
 	if ($lot['alertinfo']) {
 		$ext->add($prr, $pexten, '', new ext_sipremoveheader('Alert-Info:'));
-		$ext->add($prr, $pexten, '', new ext_sipaddheader('Alert-Info',$lot['alertinfo']));
+		$ext->add($prr, $pexten, '', new ext_sipaddheader('Alert-Info',str_replace(';', '\;', $lot['alertinfo'])));
 	}
 
 	// Prepend options are parkingslot they were parked on, or the extension number or user name of the user who parked them
