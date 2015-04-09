@@ -28,27 +28,26 @@ $parking_defaults = array(
 $all_pl['lots'] = parking_get('all');
 $heading = parking_views('header',$all_pl);
 
-
 switch ($_REQUEST['action']) {
 	case 'modify':
 	case 'update':
-		$data = !empty($id) ? parking_get($id) : parking_get('default');
+		$data = parking_get($_REQUEST['id'])? parking_get($_REQUEST['id']) : parking_get('default');
 		$content = parking_views('lot',$data);
 	break;
 	case 'add':
 		$content = parking_views('lot',$parking_defaults);
 	break;
 	default:
+		$mc = \module_functions::create();
 		$o = parking_views($action,$data);
 		if(!$o) {
 			$m = "paging";
-			$d = module_getinfo($m);
+			$d = $mc->getinfo($m);
 			$data['modules']['paging'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
 			$m = "pagingpro";
-			$d = module_getinfo($m);
 			$data['modules']['pagingpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
 			$m = "parkpro";
-			$d = module_getinfo($m);
+			$d = $mc->getinfo($m);
 			$data['modules']['parkpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
 		}
 		$content = parking_views('overview',$data);

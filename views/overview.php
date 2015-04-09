@@ -1,5 +1,11 @@
 <?php 
-        $extendedhelp = '
+        $extendedhelp = '<div class="well well-default">';
+        $extendedhelp .= _("The Parking Lot Extension and lot numbers can be changed using this module");
+        $extendedhelp .= '</div>';
+        if(function_exists('parking_overview_display')) {
+            $extendedhelp .= parking_overview_display();
+        }
+        $extendedhelp .= '
             <div class="panel panel-default" id="extendedhelp">
                 <div class="panel-heading">
                     '._("Example Usage").'
@@ -32,11 +38,6 @@
                         </tr>
                     </table>
                     ';
-        $extendedhelp .= _("The Parking Lot Extension and lot numbers can be changed using this module");
-        if(function_exists('parking_overview_display')) {
-            $extendedhelp .= parking_overview_display();
-        }
         $extendedhelp .='</div>';
         $extendedhelp .='</div>';
 echo $extendedhelp;
-?>

@@ -47,14 +47,6 @@ class Parking implements BMO {
 		);
 
 		$data = array();
-
-			if(function_exists('parkpro_del')) {
-				if(parkpro_del($id)) {
-					$action = '';
-					$id = '';
-					
-				}
-			};
 		switch ($_REQUEST['action']) {
 			case 'add':
 			case 'update':
@@ -69,17 +61,17 @@ class Parking implements BMO {
 						$vars['id'] = $_REQUEST['id'];
 					}
 					$id = parking_save($vars);
-					$_REQUEST['id'] = $id;
 					if($id !== false){
 						$_REQUEST['action'] = 'modify';
+						$_REQUEST['id'] = $id;
 					}
 				}
 			break;
 			case 'delete':
 				if(function_exists('parkpro_del')) {
 					if(parkpro_del($id)) {
-						$action = '';
-						$id = '';
+						$_REQUEST['action'] = '';
+						$_REQUEST['id'] = '';
 					}
 				}
 			break;
@@ -127,7 +119,7 @@ class Parking implements BMO {
 					'delete' => array(
 						'name' => 'delete',
 						'id' => 'delete',
-						'value' => _('Delete')
+						'value' => _("Delete")
 					),
 					'reset' => array(
 						'name' => 'reset',
@@ -143,8 +135,8 @@ class Parking implements BMO {
 				if (empty($request['id']) || !function_exists('parkpro_view')) {
 					unset($buttons['delete']);
 				}
-				if($request['action'] == ''){
-					unset($buttons);
+				if(!isset($request['action'])){
+					$buttons = array();
 				}
 			break;
 		}
