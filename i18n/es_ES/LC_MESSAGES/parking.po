@@ -62,7 +62,7 @@ msgstr ""
 
 #: views/lot.php:104
 msgid "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when picking up a parked call."
-msgstr "Asterisk: parkedcallreparking. Habilita o Deshabilita el aparcamiento basado en DTMF cuando se captura una llamada aparcada"
+msgstr "Asterisk: parkedcallreparking. Habilita o Deshabilita el aparcamiento basado en DTMF cuando se captura una llamada aparcada."
 
 #: views/lot.php:91
 msgid "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when picking up a parked call."
@@ -74,6 +74,11 @@ msgstr ""
 
 #: views/overview.php:15
 msgid "Attended Transfer call to the Parking Lot Extension. The lot number will be announced to the parker"
+msgstr ""
+
+#: views/overview.php:19
+#, php-format
+msgid "Attended transfer to lot %d"
 msgstr ""
 
 #: views/overview.php:19
@@ -98,7 +103,7 @@ msgstr "Llamante"
 
 #: views/lot.php:121
 msgid "CallerID Prepend:"
-msgstr "Anteponer CallerID"
+msgstr "Anteponer CallerID:"
 
 #: views/lot.php:167
 msgid "Come Back to Origin:"
@@ -218,6 +223,11 @@ msgstr ""
 
 #: views/overview.php:51
 msgid "Park Pro enables the Ability to setup Park and Announce"
+msgstr ""
+
+#: views/overview.php:31
+#, php-format
+msgid "Park Yourself into lot %d"
 msgstr ""
 
 #: views/overview.php:31
@@ -376,7 +386,17 @@ msgid "Yes"
 msgstr ""
 
 #: views/overview.php:6
+#, php-format
+msgid "You can also transfer directly to a lot number (%d through %d) and if that lot is empty, your call will be parked there"
+msgstr ""
+
+#: views/overview.php:6
 msgid "You can also transfer directly to a lot number (71 through 78) and if that lot is empty, your call will be parked there"
+msgstr ""
+
+#: views/overview.php:4
+#, php-format
+msgid "You can transfer a call to the Parking Lot Extension (%d by default), the call will then be placed into a lot (%d-%d by default) and the lot number will be announced to you"
 msgstr ""
 
 #: views/overview.php:4
@@ -408,30 +428,10 @@ msgstr ""
 msgid "migrating old parkinglot data"
 msgstr ""
 
-#: views/overview.php:34
-msgid "nn:"
-msgstr ""
-
-#: views/overview.php:19
-#, php-format
-msgid "Attended transfer to lot %d"
-msgstr ""
-
-#: views/overview.php:31
-#, php-format
-msgid "Park Yourself into lot %d"
-msgstr ""
-
-#: views/overview.php:6
-#, php-format
-msgid "You can also transfer directly to a lot number (%d through %d) and if that lot is empty, your call will be parked there"
-msgstr ""
-
-#: views/overview.php:4
-#, php-format
-msgid "You can transfer a call to the Parking Lot Extension (%d by default), the call will then be placed into a lot (%d-%d by default) and the lot number will be announced to you"
-msgstr ""
-
 #: views/overview.php:22 views/overview.php:34
 msgid "nn"
+msgstr ""
+
+#: views/overview.php:34
+msgid "nn:"
 msgstr ""
