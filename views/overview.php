@@ -19,7 +19,7 @@
 		<td><?php echo sprintf(_("Attended transfer to lot %d"),75) ?></td>
 	</tr>
 	<tr>
-		<td><?php echo "*2nn:" ?></td>
+		<td><?php echo "*2"._("nn").":" ?></td>
 		<td><?php echo _("Attended Transfer call into Park lot nn") ?></td>
 	</tr>
 	<tr>

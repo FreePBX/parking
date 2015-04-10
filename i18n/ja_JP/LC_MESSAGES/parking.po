@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-11 19:42-0400\n"
+"POT-Creation-Date: 2015-04-10 13:02-0400\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -52,26 +52,6 @@ msgstr ""
 #, php-format
 msgid "%s no longer supported"
 msgstr "%sは現在、サポートされていません。"
-
-#: views/overview.php:14
-msgid "*270:"
-msgstr ""
-
-#: views/overview.php:18
-msgid "*275:"
-msgstr ""
-
-#: views/overview.php:22
-msgid "*2nn:"
-msgstr ""
-
-#: views/overview.php:26
-msgid "70:"
-msgstr ""
-
-#: views/overview.php:30
-msgid "75:"
-msgstr ""
 
 #: views/lot.php:115
 msgid ""
@@ -119,7 +99,8 @@ msgid ""
 msgstr ""
 
 #: views/overview.php:19
-msgid "Attended transfer to lot 75"
+#, php-format
+msgid "Attended transfer to lot %d"
 msgstr ""
 
 #: views/lot.php:127
@@ -246,36 +227,13 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: views/overview.php:43
-msgid "Paging"
-msgstr "ページング"
-
-#: views/overview.php:47
-msgid "Paging Pro"
-msgstr "ページングプロ"
-
-#: views/overview.php:47
-msgid "Paging Pro enables the Ability to setup Park and Announce"
-msgstr "ページングプロでは、パークとアナウンスを設定する機能が有効"
-
-#: views/overview.php:43
-msgid "Paging Provides the Ability to setup Park and Announce"
-msgstr "ページングでは、パークとアナウンスを設定する機能を提供"
-
 #: install.php:7
 msgid "Park Prefix"
 msgstr "パークプリフィックス"
 
-#: views/overview.php:51
-msgid "Park Pro"
-msgstr "パーク保留プロ"
-
-#: views/overview.php:51
-msgid "Park Pro enables the Ability to setup Park and Announce"
-msgstr "パーク保留プロでは、パークとアナウンスを設定する機能が有効"
-
 #: views/overview.php:31
-msgid "Park Yourself into lot 75"
+#, php-format
+msgid "Park Yourself into lot %d"
 msgstr ""
 
 #: views/overview.php:35
@@ -404,15 +362,6 @@ msgid ""
 "can transfer a call directly into a parking slot."
 msgstr ""
 
-#: views/overview.php:40
-msgid ""
-"There are also different levels of Parking. To see what level you have and "
-"to see options and features you'd get from other modules please see the "
-"chart below"
-msgstr ""
-"パーキングには、様々なレベルがあります。利用可能レベルや、他のモジュールを利"
-"用した場合に利用できるようになる機能を確認するには、以下の表をご覧ください"
-
 #: views/lot.php:127
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
@@ -474,15 +423,17 @@ msgid "Yes"
 msgstr "はい"
 
 #: views/overview.php:6
+#, php-format
 msgid ""
-"You can also transfer directly to a lot number (71 through 78) and if that "
+"You can also transfer directly to a lot number (%d through %d) and if that "
 "lot is empty, your call will be parked there"
 msgstr ""
 
 #: views/overview.php:4
+#, php-format
 msgid ""
-"You can transfer a call to the Parking Lot Extension (70 by default), the "
-"call will then be placed into a lot (71-78 by default) and the lot number "
+"You can transfer a call to the Parking Lot Extension (%d by default), the "
+"call will then be placed into a lot (%d-%d by default) and the lot number "
 "will be announced to you"
 msgstr ""
 
@@ -515,9 +466,36 @@ msgstr "移行しました… 旧テーブルのparkinglotを無効にしてい�
 msgid "migrating old parkinglot data"
 msgstr "旧parkinglotのデータを移行中…"
 
-#: views/overview.php:34
-msgid "nn:"
+#: views/overview.php:22 views/overview.php:34
+msgid "nn"
 msgstr ""
+
+#~ msgid "Paging"
+#~ msgstr "ページング"
+
+#~ msgid "Paging Pro"
+#~ msgstr "ページングプロ"
+
+#~ msgid "Paging Pro enables the Ability to setup Park and Announce"
+#~ msgstr "ページングプロでは、パークとアナウンスを設定する機能が有効"
+
+#~ msgid "Paging Provides the Ability to setup Park and Announce"
+#~ msgstr "ページングでは、パークとアナウンスを設定する機能を提供"
+
+#~ msgid "Park Pro"
+#~ msgstr "パーク保留プロ"
+
+#~ msgid "Park Pro enables the Ability to setup Park and Announce"
+#~ msgstr "パーク保留プロでは、パークとアナウンスを設定する機能が有効"
+
+#~ msgid ""
+#~ "There are also different levels of Parking. To see what level you have "
+#~ "and to see options and features you'd get from other modules please see "
+#~ "the chart below"
+#~ msgstr ""
+#~ "パーキングには、様々なレベルがあります。利用可能レベルや、他のモジュールを"
+#~ "利用した場合に利用できるようになる機能を確認するには、以下の表をご覧くださ"
+#~ "い"
 
 #~ msgid ""
 #~ "Simply transfer the call to said parking lot extension. Asterisk will "
