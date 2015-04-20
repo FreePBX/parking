@@ -76,7 +76,7 @@ if(count($default_lot) == 1 && empty($default_lot[0]['dest'])) {
 if (count($default_lot) == 0) {
 
 	outn(_("Initializing default parkinglot.."));
-	$sql = "INSERT INTO parkplus (id, defaultlot, name, parkext, parkpos, numslots) VALUES (1, 'yes', 'Default Lot', '70', '71', 8)";
+	$sql = "INSERT INTO parkplus (id, defaultlot, name, parkext, parkpos, numslots) VALUES (1, 'yes', '"._('Default Lot')."', '70', '71', 8)";
 	sql($sql);
 	out(_("done"));
 

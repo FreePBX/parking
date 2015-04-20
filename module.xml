@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>12.0.11</version>
+	<version>12.0.12</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
+		*12.0.12* Localize default parking lot
 		*12.0.11* Dont localize numbers
 		*12.0.10* FREEPBX-8905 Parking module doesn't set return Alert-Info properly - patch attached
 		*12.0.9* FREEPBX-8904 Fix park return routing for asterisk 13.2 and higher
