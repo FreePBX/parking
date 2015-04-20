@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-10 13:02-0400\n"
+"POT-Creation-Date: 2015-04-20 13:20-0400\n"
 "PO-Revision-Date: 2012-11-06 16:38+0100\n"
 "Last-Translator: Alexander Kozyrev <ceo@postmet.com>\n"
 "Language-Team: Russian <faq@postmet.com>\n"
@@ -93,6 +93,10 @@ msgstr "Префикс для Caller ID:"
 
 #: views/lot.php:167
 msgid "Come Back to Origin:"
+msgstr ""
+
+#: install.php:79
+msgid "Default Lot"
 msgstr ""
 
 #: install.php:9

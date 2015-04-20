@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-10 13:02-0400\n"
+"POT-Creation-Date: 2015-04-20 13:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,6 +95,10 @@ msgstr ""
 
 #: views/lot.php:167
 msgid "Come Back to Origin:"
+msgstr ""
+
+#: install.php:79
+msgid "Default Lot"
 msgstr ""
 
 #: install.php:9
