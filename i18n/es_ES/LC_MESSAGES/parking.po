@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-20 13:20-0400\n"
-"PO-Revision-Date: 2015-04-21 04:05+0200\n"
-"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
+"PO-Revision-Date: 2015-04-23 06:33+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish "
 "<http://weblate.freepbx.org/projects/freepbx/parking/es_ES/>\n"
 "Language: es_ES\n"
@@ -104,9 +104,8 @@ msgid "Come Back to Origin:"
 msgstr "Retorno al Origen:"
 
 #: install.php:79
-#, fuzzy
 msgid "Default Lot"
-msgstr "Por defecto Lote"
+msgstr "Lote Por defecto"
 
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
