@@ -8,12 +8,17 @@ msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-20 13:20-0400\n"
-"PO-Revision-Date: 2012-11-06 16:38+0100\n"
-"Last-Translator: Alexander Kozyrev <ceo@postmet.com>\n"
-"Language-Team: Russian <faq@postmet.com>\n"
+"PO-Revision-Date: 2015-05-04 00:18+0200\n"
+"Last-Translator: Yuriy <alliancesko@gmail.com>\n"
+"Language-Team: Russian "
+"<http://weblate.freepbx.org/projects/freepbx/parking/ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: install.php:148
 #, php-format
@@ -152,8 +157,8 @@ msgid ""
 "Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
-"Управление лотом парковки внутренних номеров и другие опции.\tПарковка - "
-"один из способов обработки входящих вызовов."
+"Управление лотом парковки внутренних номеров и другие опции.\t\tПарковка - "
+"один из способов отложить звонки "
 
 #: views/lot.php:133
 msgid "Name"
@@ -365,7 +370,7 @@ msgstr ""
 
 #: views/lot.php:91
 msgid "Transfer Capability:"
-msgstr "Возможность перевода звонка"
+msgstr "Возможность передачи:"
 
 #: views/lot.php:167
 msgid ""
@@ -406,7 +411,7 @@ msgid ""
 "option"
 msgstr ""
 "Необходимо инсталлировать и задействовать модуль \"Записи в системе\" для "
-"редактирования этой опции."
+"редактирования этой опции"
 
 #: install.php:49
 #, php-format
