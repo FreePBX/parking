@@ -85,6 +85,10 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
+#: install.php:79
+msgid "Default Lot"
+msgstr "Lote Por defecto"
+
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "Define el Código de Función a usar para Tomado de Llamada Directo"
@@ -370,58 +374,6 @@ msgstr "migrando datos de vieja tabla de aparcamiento"
 msgid "nn"
 msgstr "nn"
 
-#: install.php:79
-msgid "Default Lot"
-msgstr ""
-
-#~ msgid "Auto CallerID Prepend:"
-#~ msgstr "ID de llamada Automático prefijado:"
-
-#~ msgid "Parked Music Class:"
-#~ msgstr "Música Aparcamiento:"
-
-#~ msgid "Parking Alert-Info:"
-#~ msgstr "Info-Alert Aparcamiento:"
-
-#~ msgid "Parking Lot Extension:"
-#~ msgstr "Extensión de Aparcamiento:"
-
-#~ msgid "Parking Lot Name:"
-#~ msgstr "Nombre del Parqueadero:"
-
-#~ msgid "Parking Lot Options"
-#~ msgstr "Opciones de Aparcamiento"
-
-#~ msgid "Parking Lot Starting Position:"
-#~ msgstr "Posición inicial del Parqueadero:"
-
-#~ msgid "Parking Timeout (seconds):"
-#~ msgstr "Aparcamiento Tiempo de espera (segundos):"
-
-#~ msgid "Pickup Courtesy Tone:"
-#~ msgstr "Tono de Cortesía en Captura:"
-
-#~ msgid "Re-Parking Capability:"
-#~ msgstr "Capacidad Re-Aparcar:"
-
-#~ msgid "Submit Changes"
-#~ msgstr "Aplicar Cambios"
-
-#~ msgid "The starting postion of the parking lot"
-#~ msgstr "Posición inicial del Aparcamiento"
-
-#~ msgid "Transfer Capability:"
-#~ msgstr "Capacidad de Transferir:"
-
-#~ msgid "You can also transfer directly to a lot number (%d through %d) and if that lot is empty, your call will be parked there"
-#~ msgstr "Usted puede también transferir directamente a un numero de lote (%d a %d) y si ese lote esta vacío, su llamada será aparcada ahí"
-
-#~ msgid "You can transfer a call to the Parking Lot Extension (%d by default), the call will then be placed into a lot (%d-%d by default) and the lot number will be announced to you"
-#~ msgstr "Usted puede transferir la llamada a una extensión de aparcamiento (%d por defecto), la llamada será entonces colocada en un lote (%d - %d por defecto) y el nuemro del lote le será anunciado"
-
-#~ msgid "You must install and enable the \"Systems Recordings\" Module to edit this option"
-#~ msgstr "Usted debe instalar y habilitar el módulo \"Grabaciones Sistema\" para editar esta opción"
-
 #~ msgid "*270:"
 #~ msgstr "*270:"
 
@@ -442,6 +394,9 @@ msgstr ""
 
 #~ msgid "Attended transfer to lot 75"
 #~ msgstr "Transferencia Atendida al lote 75"
+
+#~ msgid "Auto CallerID Prepend:"
+#~ msgstr "ID de llamada Automático prefijado:"
 
 #~ msgid "BLF Capabilities:"
 #~ msgstr "Capacidades de BLF:"
@@ -491,8 +446,53 @@ msgstr ""
 #~ msgid "Park Yourself into lot 75"
 #~ msgstr "Parquee usted mismo en lote 75"
 
+#~ msgid "Parked Music Class:"
+#~ msgstr "Música Aparcamiento:"
+
+#~ msgid "Parking Alert-Info:"
+#~ msgstr "Info-Alert Aparcamiento:"
+
+#~ msgid "Parking Lot Extension:"
+#~ msgstr "Extensión de Aparcamiento:"
+
+#~ msgid "Parking Lot Name:"
+#~ msgstr "Nombre del Parqueadero:"
+
+#~ msgid "Parking Lot Options"
+#~ msgstr "Opciones de Aparcamiento"
+
+#~ msgid "Parking Lot Starting Position:"
+#~ msgstr "Posición inicial del Parqueadero:"
+
+#~ msgid "Parking Timeout (seconds):"
+#~ msgstr "Aparcamiento Tiempo de espera (segundos):"
+
+#~ msgid "Pickup Courtesy Tone:"
+#~ msgstr "Tono de Cortesía en Captura:"
+
+#~ msgid "Re-Parking Capability:"
+#~ msgstr "Capacidad Re-Aparcar:"
+
+#~ msgid "Submit Changes"
+#~ msgstr "Aplicar Cambios"
+
+#~ msgid "The starting postion of the parking lot"
+#~ msgstr "Posición inicial del Aparcamiento"
+
 #~ msgid "There are also different levels of Parking. To see what level you have and to see options and features you'd get from other modules please see the chart below"
 #~ msgstr "Existen también diferentes niveles de aparcamiento. Para ver que nivel usted tiene y que opciones y funciones usted obtendrá de otros módulos, por favor vea el esquema abajo"
+
+#~ msgid "Transfer Capability:"
+#~ msgstr "Capacidad de Transferir:"
+
+#~ msgid "You can also transfer directly to a lot number (%d through %d) and if that lot is empty, your call will be parked there"
+#~ msgstr "Usted puede también transferir directamente a un numero de lote (%d a %d) y si ese lote esta vacío, su llamada será aparcada ahí"
+
+#~ msgid "You can transfer a call to the Parking Lot Extension (%d by default), the call will then be placed into a lot (%d-%d by default) and the lot number will be announced to you"
+#~ msgstr "Usted puede transferir la llamada a una extensión de aparcamiento (%d por defecto), la llamada será entonces colocada en un lote (%d - %d por defecto) y el nuemro del lote le será anunciado"
+
+#~ msgid "You must install and enable the \"Systems Recordings\" Module to edit this option"
+#~ msgstr "Usted debe instalar y habilitar el módulo \"Grabaciones Sistema\" para editar esta opción"
 
 #~ msgid "nn:"
 #~ msgstr "nn:"

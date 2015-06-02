@@ -261,6 +261,7 @@ function parking_generate_parked_call() {
 	$pc = 'macro-parked-call';
 	$exten = 's';
 
+	$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
 	//hack for asterisk 12!
 	$ext->add($pc, $exten, '', new ext_noop('PARKRETURNTO: ${SHARED(PARKRETURNTO,${CHANNEL})}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${SHARED(PARKRETURNTO,${CHANNEL})})} > 0]','backtosender'));
@@ -273,7 +274,6 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
 	$ext->add($pc, $exten, '', new ext_set('CDR(recordingfile)','${CALLFILENAME}.${MON_FMT}'));
 	$ext->add($pc, $exten, 'next', new ext_set('CCSS_SETUP','TRUE'));
-	$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(${IF($["${ARG2}" = "default"]?parkedcalls:${ARG2})},${ARG1},1)} = 1]','pcall')); //fails here when ${ARG2} defined in ext_parkedcall
 	$ext->add($pc, $exten, '', new ext_resetcdr(''));
 	$ext->add($pc, $exten, '', new ext_nocdr(''));
