@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-14 22:02-0400\n"
+"POT-Creation-Date: 2015-06-01 23:47-0400\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -54,8 +54,11 @@ msgid "%s no longer supported"
 msgstr "%sは現在、サポートされていません。"
 
 #: views/lot.php:389
-msgid "Alert-Info to add to the call prior to sending back to the Originator or to the Alternate Destination."
-msgstr "初めに応答した人や、代わりの宛先に送り戻す前にコールに追加するアラート情報。"
+msgid ""
+"Alert-Info to add to the call prior to sending back to the Originator or to "
+"the Alternate Destination."
+msgstr ""
+"初めに応答した人や、代わりの宛先に送り戻す前にコールに追加するアラート情報。"
 
 #: views/lot.php:452
 msgid "Alternate Destination"
@@ -65,24 +68,30 @@ msgstr "代わりの宛先："
 msgid "Announcement"
 msgstr ""
 
-#: parking.i18n.php:6 parking.i18n.php:12
-msgid "Applications"
-msgstr "アプリケーション"
-
 #: views/lot.php:365
-msgid "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when picking up a parked call."
-msgstr "Asteris： parkedcallreparking。パークされたコールをピックアップする際にDTMFベースでパーキングする機能を有効にするか無効にするか。"
+msgid ""
+"Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
+"picking up a parked call."
+msgstr ""
+"Asteris： parkedcallreparking。パークされたコールをピックアップする際にDTMF"
+"ベースでパーキングする機能を有効にするか無効にするか。"
 
 #: views/lot.php:334
-msgid "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when picking up a parked call."
-msgstr "Asterisk： パークコール転送。 パークコールをピックアップした際に、DTMFベースの転送を有効にするか無効にするか。"
+msgid ""
+"Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
+"picking up a parked call."
+msgstr ""
+"Asterisk： パークコール転送。 パークコールをピックアップした際に、DTMFベース"
+"の転送を有効にするか無効にするか。"
 
 #: views/overview.php:25
 msgid "Attended Transfer call into Park lot nn"
 msgstr ""
 
 #: views/overview.php:17
-msgid "Attended Transfer call to the Parking Lot Extension. The lot number will be announced to the parker"
+msgid ""
+"Attended Transfer call to the Parking Lot Extension. The lot number will be "
+"announced to the parker"
 msgstr ""
 
 #: views/overview.php:21
@@ -112,6 +121,10 @@ msgstr ""
 
 #: views/lot.php:462
 msgid "Come Back to Origin"
+msgstr ""
+
+#: install.php:79
+msgid "Default Lot"
 msgstr ""
 
 #: install.php:9
@@ -170,10 +183,6 @@ msgstr "使用中"
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
-#: parking.i18n.php:8
-msgid "Manages parking lot extensions and other options.\tParking is a way of putting calls "
-msgstr "パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
-
 #: views/lot.php:436
 msgid "Name"
 msgstr "名前"
@@ -187,8 +196,13 @@ msgid "Next"
 msgstr "次"
 
 #: views/lot.php:267
-msgid "Next: If you want the parking lot to seek the next sequential parking slot relative to the the last parked call instead of seeking the first available slot. First: Use the first parking lot slot available"
-msgstr "次：最初に使用できるロットを探させる代わりに、最後にパークしたロットを探す。　最初:利用可能な最初のパーキングロットを探す"
+msgid ""
+"Next: If you want the parking lot to seek the next sequential parking slot "
+"relative to the the last parked call instead of seeking the first available "
+"slot. First: Use the first parking lot slot available"
+msgstr ""
+"次：最初に使用できるロットを探させる代わりに、最後にパークしたロットを探す。"
+"　最初:利用可能な最初のパーキングロットを探す"
 
 #: views/lot.php:232 views/lot.php:469
 msgid "No"
@@ -203,8 +217,12 @@ msgid "Number of Slots"
 msgstr ""
 
 #: views/lot.php:49
-msgid "Optional message to be played to the call prior to sending back to the Originator or the Alternate Destination."
-msgstr "初めに応答した人や、代わりの宛先に送り戻す前にコールに再生される追加のメッセージ。"
+msgid ""
+"Optional message to be played to the call prior to sending back to the "
+"Originator or the Alternate Destination."
+msgstr ""
+"初めに応答した人や、代わりの宛先に送り戻す前にコールに再生される追加のメッ"
+"セージ。"
 
 #: views/bootnav.php:2
 msgid "Overview"
@@ -245,15 +263,11 @@ msgstr "パーク中"
 msgid "Parked Music Class"
 msgstr ""
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr "パーキング"
-
 #: views/lot.php:377
 msgid "Parking Alert-Info"
 msgstr ""
 
-#: parking.i18n.php:4 views/header.php:7
+#: views/header.php:7
 msgid "Parking Lot"
 msgstr "パーキングロット"
 
@@ -311,36 +325,66 @@ msgid "Slot"
 msgstr "スロット"
 
 #: views/lot.php:413
-msgid "String to prepend to the current Caller ID associated with the parked call prior to sending back to the Originator or the Alternate Destination."
-msgstr "初めに応答した人や、代わりの宛先に送り戻す前に、パークされたコールに付与された現在のCaller ID文字列。"
+msgid ""
+"String to prepend to the current Caller ID associated with the parked call "
+"prior to sending back to the Originator or the Alternate Destination."
+msgstr ""
+"初めに応答した人や、代わりの宛先に送り戻す前に、パークされたコールに付与され"
+"た現在のCaller ID文字列。"
 
 #: Parking.class.php:132
 msgid "Submit"
 msgstr ""
 
 #: views/overview.php:3
-msgid "The Parking Lot Extension and lot numbers can be changed using this module"
+msgid ""
+"The Parking Lot Extension and lot numbers can be changed using this module"
 msgstr ""
 
 #: views/lot.php:187
-msgid "The timeout period in seconds that a parked call will attempt to ring back the original parker if not answered"
-msgstr "応答が無い場合、パーク中の呼を、パークした者に戻すまでのタイムアウト（秒）"
+msgid ""
+"The timeout period in seconds that a parked call will attempt to ring back "
+"the original parker if not answered"
+msgstr ""
+"応答が無い場合、パーク中の呼を、パークした者に戻すまでのタイムアウト（秒）"
 
 #: views/lot.php:163
-msgid "The total number of parking lot spaces to configure. Example, if 70 is the extension and 8 slots are configured, the parking slots will be 71-78. Users can transfer a call directly into a parking slot."
+msgid ""
+"The total number of parking lot spaces to configure. Example, if 70 is the "
+"extension and 8 slots are configured, the parking slots will be 71-78. Users "
+"can transfer a call directly into a parking slot."
 msgstr ""
 
 #: views/lot.php:444
-msgid "These options will be appended after CallerID Prepend if set. Otherwise they will appear first. The automatic options are as follows:<ul><li><strong>None:</strong> No Automatic Prepend</li><li><strong>Slot:</strong> Parking lot they were parked on</li><li><strong>Extension:</strong> The extension number that parked the call</li><li><strong>Name:</strong> The user who parked the call</li></ul>"
-msgstr "設定した場合、これらのオプションはCaller IDを前に付与した後、追加します。設定しない場合は先に表示されます。自動オプションは次のとおりです：<ul><li><strong>なし：</strong> 自動付与しない</li><li><strong>スロット：</strong> パーキングされたパーキングロット</li><li><strong>内線：</strong> パーキングされた内線</li><li><strong>名前：</strong> パーキングしたユーザー</li></ul>"
+msgid ""
+"These options will be appended after CallerID Prepend if set. Otherwise they "
+"will appear first. The automatic options are as follows:<ul><li><strong>None:"
+"</strong> No Automatic Prepend</li><li><strong>Slot:</strong> Parking lot "
+"they were parked on</li><li><strong>Extension:</strong> The extension number "
+"that parked the call</li><li><strong>Name:</strong> The user who parked the "
+"call</li></ul>"
+msgstr ""
+"設定した場合、これらのオプションはCaller IDを前に付与した後、追加します。設定"
+"しない場合は先に表示されます。自動オプションは次のとおりです："
+"<ul><li><strong>なし：</strong> 自動付与しない</li><li><strong>スロット：</"
+"strong> パーキングされたパーキングロット</li><li><strong>内線：</strong> パー"
+"キングされた内線</li><li><strong>名前：</strong> パーキングしたユーザー</"
+"li></ul>"
 
 #: views/lot.php:88
 msgid "This is the extension where you will transfer a call to park it"
 msgstr "呼をパーク保留するための内線番号"
 
 #: views/lot.php:213
-msgid "This is the music class that will be played to a parked call while in the parking lot UNLESS the call flow prior to parking the call explicitly set a different music class, such as if the call came in through a queue or ring group."
-msgstr "これは、コールパーキングより前のコールフローが明示的に異なる音楽クラスに設定されていない時に、パーク中のコールに再生される音楽クラスです、例えば、コールがキューやリンググループ経由で入ってきたような場合です。"
+msgid ""
+"This is the music class that will be played to a parked call while in the "
+"parking lot UNLESS the call flow prior to parking the call explicitly set a "
+"different music class, such as if the call came in through a queue or ring "
+"group."
+msgstr ""
+"これは、コールパーキングより前のコールフローが明示的に異なる音楽クラスに設定"
+"されていない時に、パーク中のコールに再生される音楽クラスです、例えば、コール"
+"がキューやリンググループ経由で入ってきたような場合です。"
 
 #: views/header.php:14
 msgid "This module is used to configure Parking Lot(s)"
@@ -351,23 +395,37 @@ msgid "Transfer Capability"
 msgstr ""
 
 #: views/lot.php:477
-msgid "Where to send a parked call that has timed out. If set to yes then the parked call will be sent back to the originating device that sent the call to this parking lot. If the origin is busy then we will send the call to the Destination selected below. If set to no then we will send the call directly to the destination selected below"
-msgstr "パーク保留でタイムアウトした呼の転送先。「はい」に設定すると、このコールをパーク保留した内線に戻します。もしパーク保留元が通話中の場合、次で選択した宛先に転送します。「いいえ」に設定すると、次の宛先に直接転送します"
+msgid ""
+"Where to send a parked call that has timed out. If set to yes then the "
+"parked call will be sent back to the originating device that sent the call "
+"to this parking lot. If the origin is busy then we will send the call to the "
+"Destination selected below. If set to no then we will send the call directly "
+"to the destination selected below"
+msgstr ""
+"パーク保留でタイムアウトした呼の転送先。「はい」に設定すると、このコールを"
+"パーク保留した内線に戻します。もしパーク保留元が通話中の場合、次で選択した宛"
+"先に転送します。「いいえ」に設定すると、次の宛先に直接転送します"
 
 #: views/lot.php:303
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
-msgstr "パークされたコールが取得された時に誰に対して\"ピー\"という音を再生するか。"
+msgstr ""
+"パークされたコールが取得された時に誰に対して\"ピー\"という音を再生するか。"
 
 #: views/lot.php:230 views/lot.php:467
 msgid "Yes"
 msgstr "はい"
 
 #: views/header.php:16
-msgid "You can also transfer directly to a lot number (71 through 78) and if that lot is empty, your call will be parked there"
+msgid ""
+"You can also transfer directly to a lot number (71 through 78) and if that "
+"lot is empty, your call will be parked there"
 msgstr ""
 
 #: views/header.php:15
-msgid "You can transfer a call to the Parking Lot Extension (70 by default), the call will then be placed into a lot (71-78 by default) and the lot number will be announced to you"
+msgid ""
+"You can transfer a call to the Parking Lot Extension (70 by default), the "
+"call will then be placed into a lot (71-78 by default) and the lot number "
+"will be announced to you"
 msgstr ""
 
 #: install.php:49
@@ -399,31 +457,17 @@ msgstr "旧parkinglotのデータを移行中…"
 msgid "nn"
 msgstr ""
 
-#: install.php:79
-msgid "Default Lot"
-msgstr ""
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
 
-#: views/lot.php:63
-msgid "Disable"
-msgstr ""
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
 
-#: views/lot.php:62
-msgid "Enable"
-msgstr ""
-
-#: views/overview.php:11
-msgid "Example usage"
-msgstr ""
-
-#: views/overview.php:6
-#, php-format
-msgid "You can also transfer directly to a lot number (%d through %d) and if that lot is empty, your call will be parked there"
-msgstr ""
-
-#: views/overview.php:4
-#, php-format
-msgid "You can transfer a call to the Parking Lot Extension (%d by default), the call will then be placed into a lot (%d-%d by default) and the lot number will be announced to you"
-msgstr ""
+#~ msgid "Parking"
+#~ msgstr "パーキング"
 
 #~ msgid ", and then picking them up from any extension."
 #~ msgstr "にし、好きな内線からピックアップする機能です。"
@@ -431,17 +475,32 @@ msgstr ""
 #~ msgid "Actions for Timed-Out Orphans"
 #~ msgstr "タイムアウトした孤立したコールへのアクション"
 
-#~ msgid "Alert-Info to put in channel before going to defined destination below. This can create distinct rings on some SIP phones and can serve to alert the recipients that the call is from an Orphaned parked call"
-#~ msgstr "以下に定義された宛先に到達する前にチャネルに付与するアラート情報。これはいくつかのSIP電話に対して厳密な着信音を作成することができ、受信者に対してコールが孤立したパークコールからであることを警告する機能を提供することができます。"
+#~ msgid ""
+#~ "Alert-Info to put in channel before going to defined destination below. "
+#~ "This can create distinct rings on some SIP phones and can serve to alert "
+#~ "the recipients that the call is from an Orphaned parked call"
+#~ msgstr ""
+#~ "以下に定義された宛先に到達する前にチャネルに付与するアラート情報。これはい"
+#~ "くつかのSIP電話に対して厳密な着信音を作成することができ、受信者に対して"
+#~ "コールが孤立したパークコールからであることを警告する機能を提供することがで"
+#~ "きます。"
 
 #~ msgid "Announcement:"
 #~ msgstr "アナウンス："
 
-#~ msgid "Asterisk: parkedcallhangup. Enables or disables DTMF based hangups when picking up a parked call."
-#~ msgstr "Asterisk: parkedcallhangup.パークされたコールをピックアップする際にDTMFベースで電話を切る機能を有効にするか無効にするか。"
+#~ msgid ""
+#~ "Asterisk: parkedcallhangup. Enables or disables DTMF based hangups when "
+#~ "picking up a parked call."
+#~ msgstr ""
+#~ "Asterisk: parkedcallhangup.パークされたコールをピックアップする際にDTMF"
+#~ "ベースで電話を切る機能を有効にするか無効にするか。"
 
-#~ msgid "Asterisk: parkedcallrecording. Enables or disables DTMF based one-touch recording when picking up a parked call."
-#~ msgstr "Asterisk: parkedcallrecording.パークされたコールをピックアップする際にDTMFベースでワンタッチ録音を有効にするか無効にするか。"
+#~ msgid ""
+#~ "Asterisk: parkedcallrecording. Enables or disables DTMF based one-touch "
+#~ "recording when picking up a parked call."
+#~ msgstr ""
+#~ "Asterisk: parkedcallrecording.パークされたコールをピックアップする際にDTMF"
+#~ "ベースでワンタッチ録音を有効にするか無効にするか。"
 
 #~ msgid "Auto CallerID Prepend:"
 #~ msgstr "CallerID自動付与："
@@ -452,11 +511,18 @@ msgstr ""
 #~ msgid "CallerID Prepend:"
 #~ msgstr "CallerID付与："
 
-#~ msgid "Check this box if you are using ADSI enabled analog phones and want to have ADSI parking announcements sent to the phones. Other adsi.conf configurations may be necessary for this to work."
-#~ msgstr "もしあなたがADIS機能が有効なアナログ電話を使用していて、電話機にADSIパーキングアナウンスを送信したい場合はこのボックスをチェックします。この機能を動作させるには、おそらくそれ以外のadsi.confの設定も必要となります。"
+#~ msgid ""
+#~ "Check this box if you are using ADSI enabled analog phones and want to "
+#~ "have ADSI parking announcements sent to the phones. Other adsi.conf "
+#~ "configurations may be necessary for this to work."
+#~ msgstr ""
+#~ "もしあなたがADIS機能が有効なアナログ電話を使用していて、電話機にADSIパーキ"
+#~ "ングアナウンスを送信したい場合はこのボックスをチェックします。この機能を動"
+#~ "作させるには、おそらくそれ以外のadsi.confの設定も必要となります。"
 
 #~ msgid "Check this box to enable the parking feature"
-#~ msgstr "パーキング機能を有効にする場合はチェックボックスをオンにしてください。"
+#~ msgstr ""
+#~ "パーキング機能を有効にする場合はチェックボックスをオンにしてください。"
 
 #~ msgid "Come Back to Origin:"
 #~ msgstr "発信元に戻る"
@@ -485,8 +551,14 @@ msgstr ""
 #~ msgid "One Touch Recording Capability:"
 #~ msgstr "ワンタッチ録音機能："
 
-#~ msgid "Optional message to be played to the orphaned caller prior to going on the to supplied destination below.<br><br>To add additional recordings please use the \"System Recordings\" MENU to the left"
-#~ msgstr "以下に提供された宛先に到達する前に、孤立した発信者に対して再生される追加のメッセージ。<br><br>録音を追加する場合は、左側メニューにある\"システム録音\"を使用してください。"
+#~ msgid ""
+#~ "Optional message to be played to the orphaned caller prior to going on "
+#~ "the to supplied destination below.<br><br>To add additional recordings "
+#~ "please use the \"System Recordings\" MENU to the left"
+#~ msgstr ""
+#~ "以下に提供された宛先に到達する前に、孤立した発信者に対して再生される追加の"
+#~ "メッセージ。<br><br>録音を追加する場合は、左側メニューにある\"システム録音"
+#~ "\"を使用してください。"
 
 #~ msgid "Originator"
 #~ msgstr "初めに応答した人"
@@ -548,17 +620,39 @@ msgstr ""
 #~ msgid "Return Destination Behavior:"
 #~ msgstr "タイムアウト時の挙動："
 
-#~ msgid "Set to generate some additional dialplan if using a particular patch that was available in Asterisk 1.2 and 1.4 to add behavior to parking like adding Alert Info and CID prepends to timed out parked calls. This patch is mostly obsoleted and the setting will probably go away at some point when Asterisk 1.6+ parking enhacements are added to the module."
-#~ msgstr "パーキングに対して、タイムアウトしたパークコールに対するアラート情報や発信者番号偽装を追加するような挙動が追加Asterisk 1.2と1.4で利用可能な特別なパッチを使用している場合、いくつかの追加ダイヤルプランを生成するための設定を行います。Asterisk 1.6+のパーキング機能強化がモジュールに追加された時点でこのパッチはほとんど廃止され、いつかのタイミングで設定はなくなります。"
+#~ msgid ""
+#~ "Set to generate some additional dialplan if using a particular patch that "
+#~ "was available in Asterisk 1.2 and 1.4 to add behavior to parking like "
+#~ "adding Alert Info and CID prepends to timed out parked calls. This patch "
+#~ "is mostly obsoleted and the setting will probably go away at some point "
+#~ "when Asterisk 1.6+ parking enhacements are added to the module."
+#~ msgstr ""
+#~ "パーキングに対して、タイムアウトしたパークコールに対するアラート情報や発信"
+#~ "者番号偽装を追加するような挙動が追加Asterisk 1.2と1.4で利用可能な特別な"
+#~ "パッチを使用している場合、いくつかの追加ダイヤルプランを生成するための設定"
+#~ "を行います。Asterisk 1.6+のパーキング機能強化がモジュールに追加された時点"
+#~ "でこのパッチはほとんど廃止され、いつかのタイミングで設定はなくなります。"
 
 #~ msgid "Settings"
 #~ msgstr "設定"
 
-#~ msgid "Simply transfer the call to said parking lot extension. Asterisk will then read back the parking lot number the call has been placed in. To retrieve the call simply dial that number back."
-#~ msgstr "パーキングロット用内線番号を言わせる為に呼を転送します。Asteriskは、コールがパーク保留されたロット番号を読み上げます。呼を再取得するには、その番号に発信します。"
+#~ msgid ""
+#~ "Simply transfer the call to said parking lot extension. Asterisk will "
+#~ "then read back the parking lot number the call has been placed in. To "
+#~ "retrieve the call simply dial that number back."
+#~ msgstr ""
+#~ "パーキングロット用内線番号を言わせる為に呼を転送します。Asteriskは、コール"
+#~ "がパーク保留されたロット番号を読み上げます。呼を再取得するには、その番号に"
+#~ "発信します。"
 
-#~ msgid "String to prepend to the current CallerID associated with this call (if any), before going to defined destination below. This can serve to alert the recipients that the call is from an Orphaned parked call"
-#~ msgstr "以下に定義された宛先に到達する前にこのコールに関連づけされた現在の発信者情報を装う文字列。受信者に対してコールが孤立したパークコールからであることを警告する機能を提供することができます。"
+#~ msgid ""
+#~ "String to prepend to the current CallerID associated with this call (if "
+#~ "any), before going to defined destination below. This can serve to alert "
+#~ "the recipients that the call is from an Orphaned parked call"
+#~ msgstr ""
+#~ "以下に定義された宛先に到達する前にこのコールに関連づけされた現在の発信者情"
+#~ "報を装う文字列。受信者に対してコールが孤立したパークコールからであることを"
+#~ "警告する機能を提供することができます。"
 
 #~ msgid "Submit Changes"
 #~ msgstr "変更を適用"
@@ -569,14 +663,29 @@ msgstr ""
 #~ msgid "The starting postion of the parking lot"
 #~ msgstr "パーキングロットの開始位置"
 
-#~ msgid "The total number of parking lot spaces to configure. Example, if 70 is the extension and 8 slots are configured, the parking slots will be 71-78"
-#~ msgstr "パーキングロットスペースの合計数の設定。例：パーキングロット内線特番に70を指定して、スロット数を8スロットとした場合、パーキングスロットは71-78になります。"
+#~ msgid ""
+#~ "The total number of parking lot spaces to configure. Example, if 70 is "
+#~ "the extension and 8 slots are configured, the parking slots will be 71-78"
+#~ msgstr ""
+#~ "パーキングロットスペースの合計数の設定。例：パーキングロット内線特番に70を"
+#~ "指定して、スロット数を8スロットとした場合、パーキングスロットは71-78になり"
+#~ "ます。"
 
-#~ msgid "There are also different levels of Parking. To see what level you have and to see options and features you'd get from other modules please see the chart below"
-#~ msgstr "パーキングには、様々なレベルがあります。利用可能レベルや、他のモジュールを利用した場合に利用できるようになる機能を確認するには、以下の表をご覧ください"
+#~ msgid ""
+#~ "There are also different levels of Parking. To see what level you have "
+#~ "and to see options and features you'd get from other modules please see "
+#~ "the chart below"
+#~ msgstr ""
+#~ "パーキングには、様々なレベルがあります。利用可能レベルや、他のモジュールを"
+#~ "利用した場合に利用できるようになる機能を確認するには、以下の表をご覧くださ"
+#~ "い"
 
-#~ msgid "This is the parking lot context. You should not change it from the default unless you know what you are doing."
-#~ msgstr "パーキングロットコンテキスト。この機能について何をしているのかわからない場合はデフォルトから変えないでください。"
+#~ msgid ""
+#~ "This is the parking lot context. You should not change it from the "
+#~ "default unless you know what you are doing."
+#~ msgstr ""
+#~ "パーキングロットコンテキスト。この機能について何をしているのかわからない場"
+#~ "合はデフォルトから変えないでください。"
 
 #~ msgid "This module is used to configure Parking Lot(s) in Asterisk."
 #~ msgstr "このモジュールでは、Asteriskのパーキングロットの設定使用します。"
@@ -590,11 +699,26 @@ msgstr ""
 #~ msgid "Use Old Parking Patch"
 #~ msgstr "古いパーキングパッチを使用する"
 
-#~ msgid "Where to send a parked call that has timed out. The call can be sent back to the original device that parked the call, or it can be sent back to the alternate destination. In both cases, any configured Alert-Info, Caller ID prepend, or announcement will be applied to the call. If configured to send back to the Originator and they are not available (phone is offline), the alternate destination will be used."
-#~ msgstr "タイムアウトしたパークコールを送る宛先。コールをパークした最初のデバイスへコールを戻すことができます、またはその代わりの宛先に戻すこともできます。いづれにおいても、なんらか設定済みのアラート情報、発信者ID偽装やアナウンスがコールに適用されます。もし初めに応答した人に戻すように設定されていて、その人が利用不可だった場合(電話がオフライン)、代わりの宛先が使用されます。"
+#~ msgid ""
+#~ "Where to send a parked call that has timed out. The call can be sent back "
+#~ "to the original device that parked the call, or it can be sent back to "
+#~ "the alternate destination. In both cases, any configured Alert-Info, "
+#~ "Caller ID prepend, or announcement will be applied to the call. If "
+#~ "configured to send back to the Originator and they are not available "
+#~ "(phone is offline), the alternate destination will be used."
+#~ msgstr ""
+#~ "タイムアウトしたパークコールを送る宛先。コールをパークした最初のデバイスへ"
+#~ "コールを戻すことができます、またはその代わりの宛先に戻すこともできます。い"
+#~ "づれにおいても、なんらか設定済みのアラート情報、発信者ID偽装やアナウンスが"
+#~ "コールに適用されます。もし初めに応答した人に戻すように設定されていて、その"
+#~ "人が利用不可だった場合(電話がオフライン)、代わりの宛先が使用されます。"
 
-#~ msgid "You must install and enable the \"Systems Recordings\" Module to edit this option"
-#~ msgstr "このオプションを編集にするには、\"システム録音\"モジュールをインストールし有効にする必要があります。"
+#~ msgid ""
+#~ "You must install and enable the \"Systems Recordings\" Module to edit "
+#~ "this option"
+#~ msgstr ""
+#~ "このオプションを編集にするには、\"システム録音\"モジュールをインストールし"
+#~ "有効にする必要があります。"
 
 #~ msgid "day"
 #~ msgstr "日"
