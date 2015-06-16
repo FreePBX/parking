@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-01 23:47-0400\n"
+"POT-Creation-Date: 2015-06-15 21:09-0400\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -102,6 +102,10 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
+#: Parking.class.php:89
+msgid "Conference"
+msgstr ""
+
 #: install.php:79
 msgid "Default Lot"
 msgstr ""
@@ -110,7 +114,7 @@ msgstr ""
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr ""
 
-#: Parking.class.php:122
+#: Parking.class.php:141
 msgid "Delete"
 msgstr ""
 
@@ -289,7 +293,7 @@ msgstr "Наименование за тази Група за Паркиран�
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:127
+#: Parking.class.php:146
 msgid "Reset"
 msgstr ""
 
@@ -307,7 +311,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:132
+#: Parking.class.php:151
 msgid "Submit"
 msgstr ""
 

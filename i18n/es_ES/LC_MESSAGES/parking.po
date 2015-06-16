@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-01 23:47-0400\n"
+"POT-Creation-Date: 2015-06-15 21:09-0400\n"
 "PO-Revision-Date: 2015-03-11 19:42-0400\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -97,6 +97,10 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
+#: Parking.class.php:89
+msgid "Conference"
+msgstr ""
+
 #: install.php:79
 msgid "Default Lot"
 msgstr "Lote Por defecto"
@@ -105,7 +109,7 @@ msgstr "Lote Por defecto"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "Define el Código de Función a usar para Tomado de Llamada Directo"
 
-#: Parking.class.php:122
+#: Parking.class.php:141
 msgid "Delete"
 msgstr ""
 
@@ -290,7 +294,7 @@ msgstr "Provea un Titulo descriptivo para este Aparcamiento"
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:127
+#: Parking.class.php:146
 msgid "Reset"
 msgstr ""
 
@@ -311,7 +315,7 @@ msgstr ""
 "relacionado con la llamada aparcada antes de enviarla de nuevo al emisor o "
 "al destino alternativo."
 
-#: Parking.class.php:132
+#: Parking.class.php:151
 msgid "Submit"
 msgstr ""
 
