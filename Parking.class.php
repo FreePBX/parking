@@ -79,6 +79,25 @@ class Parking implements BMO {
 			break;
 		}
 	}
+	public function search($query, &$results) {
+		if(!ctype_digit($query)) {
+			$sql = "SELECT * FROM meetme WHERE description LIKE ?";
+			$sth = $this->db->prepare($sql);
+			$sth->execute(array("%".$query."%"));
+			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
+			foreach($rows as $row) {
+				$results[] = array("text" => _("Conference")." ".$row['exten'], "type" => "get", "dest" => "?display=queues&view=form&extdisplay=".$row['exten']);
+			}
+		} else {
+			$sql = "SELECT * FROM meetme WHERE exten LIKE ?";
+			$sth = $this->db->prepare($sql);
+			$sth->execute(array("%".$query."%"));
+			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
+			foreach($rows as $row) {
+				$results[] = array("text" => $row['description'] . " (".$row['exten'].")", "type" => "get", "dest" => "?display=queues&view=form&extdisplay=".$row['exten']);
+			}
+		}
+	}
 	public function genConfig() {
 		global $version;
 
