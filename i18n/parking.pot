@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-15 21:09-0400\n"
+"POT-Creation-Date: 2015-06-15 21:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,10 +89,6 @@ msgstr ""
 
 #: views/lot.php:462
 msgid "Come Back to Origin"
-msgstr ""
-
-#: Parking.class.php:89
-msgid "Conference"
 msgstr ""
 
 #: install.php:79
@@ -266,6 +262,10 @@ msgstr ""
 
 #: views/lot.php:175
 msgid "Parking Timeout (seconds)"
+msgstr ""
+
+#: Parking.class.php:89
+msgid "ParkingLot"
 msgstr ""
 
 #: views/lot.php:284
