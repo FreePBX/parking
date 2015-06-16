@@ -81,20 +81,20 @@ class Parking implements BMO {
 	}
 	public function search($query, &$results) {
 		if(!ctype_digit($query)) {
-			$sql = "SELECT * FROM meetme WHERE description LIKE ?";
+			$sql = "SELECT * FROM parkplus WHERE parkext LIKE ?";
 			$sth = $this->db->prepare($sql);
 			$sth->execute(array("%".$query."%"));
 			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
 			foreach($rows as $row) {
-				$results[] = array("text" => _("Conference")." ".$row['exten'], "type" => "get", "dest" => "?display=queues&view=form&extdisplay=".$row['exten']);
+				$results[] = array("text" => _("ParkingLot")." ".$row['parkext'], "type" => "get", "dest" => "?display=parking&action=modify&id=".$row['id']);
 			}
 		} else {
-			$sql = "SELECT * FROM meetme WHERE exten LIKE ?";
+			$sql = "SELECT * FROM parkplus WHERE name LIKE ?";
 			$sth = $this->db->prepare($sql);
 			$sth->execute(array("%".$query."%"));
 			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
 			foreach($rows as $row) {
-				$results[] = array("text" => $row['description'] . " (".$row['exten'].")", "type" => "get", "dest" => "?display=queues&view=form&extdisplay=".$row['exten']);
+				$results[] = array("text" => $row['name'] . " (".$row['parkext'].")", "type" => "get", "dest" => "?display=parking&action=modify&id=".$row['id']);
 			}
 		}
 	}
