@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>13.0.1alpha6</version>
+	<version>13.0.2</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
+		*13.0.2* Version bump Beta
 		*13.0.1alpha5* FREEPBX-9467 Update search hooks
 		*13.0.1alpha4* No device null error
 		*13.0.1alpha3* Restructure translations
@@ -56,6 +57,6 @@
 	<supported>
 		<version>13.0</version>
 	</supported>
-	<location></location>
-	<md5sum></md5sum>
+	<location />
+	<md5sum />
 </module>
