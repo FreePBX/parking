@@ -1,5 +1,5 @@
-<?php 
-if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }        
+<?php
+if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 //  License for all code of this FreePBX module can be found in the license file inside the module directory
 //  Copyright 2015 Sangoma Technologies.
 //
@@ -56,12 +56,12 @@ switch ($_REQUEST['action']) {
 
 ?>
 <div class="container-fluid">
-	<h1><?php echo $heading ?></h1>
 	<div class = "display full-border">
 		<div class="row">
 			<div class="col-sm-9">
 				<div class="fpbx-container">
-					<div class="display full-border">
+					<div class="display no-border">
+						<?php echo $heading ?>
 						<?php echo $content ?>
 					</div>
 				</div>
