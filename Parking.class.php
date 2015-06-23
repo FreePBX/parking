@@ -57,7 +57,7 @@ class Parking implements BMO {
 				}
 				if(!empty($vars)) {
 					$vars['dest'] = (isset($_REQUEST['goto0']) && isset($_REQUEST[$_REQUEST['goto0'].'0'])) ? $_REQUEST[$_REQUEST['goto0'].'0'] : '';
-					if($action == 'update') {
+					if($_REQUEST['action'] == 'update') {
 						$vars['id'] = $_REQUEST['id'];
 					}
 					$id = parking_save($vars);
