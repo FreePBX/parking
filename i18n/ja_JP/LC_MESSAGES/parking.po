@@ -38,7 +38,7 @@ msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-20 13:20-0400\n"
-"PO-Revision-Date: 2015-07-27 09:07+0200\n"
+"PO-Revision-Date: 2015-07-27 09:08+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese "
 "<http://weblate.freepbx.org/projects/freepbx/parking/ja_JP/>\n"
@@ -97,7 +97,7 @@ msgstr "パーキングロット nn への取次転送"
 msgid ""
 "Attended Transfer call to the Parking Lot Extension. The lot number will be "
 "announced to the parker"
-msgstr "パーキングロット内線への取次転送。ロット番号は、パークしたユーザーにアナウンスされます"
+msgstr "パーキングロット内線への取次転送。ロット番号は、パークしたユーザーにアナウンスされます。"
 
 #: views/overview.php:19
 #, php-format
@@ -134,7 +134,7 @@ msgstr "デフォルトロット"
 
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr "ダイレクトコールピックアップに使う機能コードを定義します"
+msgstr "ダイレクトコールピックアップに使う機能コードを定義します。"
 
 #: views/lot.php:176
 msgid "Destination:"
@@ -347,7 +347,7 @@ msgstr "変更を適用"
 #: views/overview.php:38
 msgid ""
 "The Parking Lot Extension and lot numbers can be changed using this module"
-msgstr "パークの内線番号とロット番号をこのモジュールから変更できます"
+msgstr "パークの内線番号とロット番号をこのモジュールから変更できます。"
 
 #: views/lot.php:19
 msgid "The starting postion of the parking lot"
@@ -442,7 +442,7 @@ msgid ""
 "You can transfer a call to the Parking Lot Extension (%d by default), the "
 "call will then be placed into a lot (%d-%d by default) and the lot number "
 "will be announced to you"
-msgstr "パーキングの内線 (デフォルト %d) に通話を転送すると、その通話を自動的にロットに保留して、パークした内線番号があなたに再生されます"
+msgstr "パーキングの内線 (デフォルト %d) に通話を転送すると、その通話を自動的にロットに保留して、パークした内線番号があなたに再生されます。"
 
 #: views/lot.php:156
 msgid ""
