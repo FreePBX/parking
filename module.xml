@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>13.0.3</version>
+	<version>13.0.4</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
+		*13.0.4* Remove duplicated numeric checker which is bad
 		*13.0.3* FREEPBX-9542 Editing a Parking Lot Creates New Lot Instead
 		*13.0.2* Version bump Beta
 		*13.0.1alpha5* FREEPBX-9467 Update search hooks

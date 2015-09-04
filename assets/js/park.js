@@ -1,11 +1,6 @@
 $(function() {
     if($("#parkext").length != 0) {
-		
-        $("#parkext").numeric();
-        $("#parkpos").numeric();
-        $("#parkingtime").numeric();
-    	$("#numslots").numeric();
-		
+
         var parkext = Number($('#parkext').val());
         delete extmap[parkext]
         var parkpos = Number($('#parkpos').val());
@@ -23,7 +18,7 @@ $(function() {
                 $('#slotslist').html('('+$('#parkpos').val()+')')
             }
         }
-        
+
         $('#parkform').submit(function() {
             if(!$('#parkext').val()) {
                 alert('Parking Lot Extension can not be blank!');
@@ -37,18 +32,18 @@ $(function() {
                 alert('Parking Lot Starting Position can not be blank!');
                 return false;
             }
-			
+
 			if(!$('#goto0').val()) {
 				alert('You must select a valid destination')
 				return false;
 			}
         });
     }
-    
+
     $('input[type=text][name=parkext],input[type=text][name=parkpos],input[type=number][name=numslots]')
     .after(" <span style='display:none'><a href='#'><img src='images/notify_critical.png'/></a></span>").bind("keyup change", function(){
         //Recalc
-        var new_parkext = Number($('#parkext').val());        
+        var new_parkext = Number($('#parkext').val());
         var new_parkpos = Number($('#parkpos').val());
         var new_numslots = Number($('#numslots').val());
         var new_parkend = (new_parkpos + new_numslots - 1)
@@ -69,7 +64,7 @@ $(function() {
                 default:
                     break;
             }
-            
+
             if(!reset) {
                 break;
             }
@@ -93,7 +88,7 @@ $(function() {
             default:
                 break;
         }
-        
+
         if(reset) {
             $(this).removeClass('duplicate-exten').next('span').hide();
             $("#parksubmit").off("click")
@@ -103,18 +98,18 @@ $(function() {
                 return false;
             });
         }
-    }).each(function(){ 
-        /* we automatically add a data-extdisplay data tag to the element if it is not already there and set the value that was 
-        * loaded at page load time. This allows modules who are trying to guess at an extension value to preset so we don't 
-        * pre-determine a value is safe when the generating code may be flawed, such as ringgroups and vmblast groups. 
-        */ 
-        if (typeof $(this).data('extdisplay') == "undefined") { 
-            $(this).data('extdisplay', this.value); 
-        } else if (typeof extmap[this.value] != "undefined") { 
-            this.value++; 
-            while (typeof extmap[this.value] != "undefined") { 
-                this.value++; 
-            } 
-        } 
+    }).each(function(){
+        /* we automatically add a data-extdisplay data tag to the element if it is not already there and set the value that was
+        * loaded at page load time. This allows modules who are trying to guess at an extension value to preset so we don't
+        * pre-determine a value is safe when the generating code may be flawed, such as ringgroups and vmblast groups.
+        */
+        if (typeof $(this).data('extdisplay') == "undefined") {
+            $(this).data('extdisplay', this.value);
+        } else if (typeof extmap[this.value] != "undefined") {
+            this.value++;
+            while (typeof extmap[this.value] != "undefined") {
+                this.value++;
+            }
+        }
     });
 })
