@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 13:20-0400\n"
+"POT-Creation-Date: 2015-09-04 16:40-0700\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -50,10 +50,6 @@ msgstr ""
 #: views/lot.php:139 views/lot.php:156
 msgid "Announcement:"
 msgstr ""
-
-#: parking.i18n.php:6 parking.i18n.php:12
-msgid "Applications"
-msgstr "Приложения"
 
 #: views/lot.php:104
 msgid ""
@@ -160,14 +156,6 @@ msgstr "ИЗПОЛЗВА СЕ"
 msgid "Initializing default parkinglot.."
 msgstr "Инициализиране на parkinglot по-подразбиране.."
 
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
-"putting calls "
-msgstr ""
-"Управление на вътрешните линии за паркиране на разговор и други опции."
-"\tПаркирането поставя обаждането "
-
 #: views/lot.php:133
 msgid "Name"
 msgstr ""
@@ -244,15 +232,11 @@ msgstr ""
 msgid "Parked Music Class:"
 msgstr "Категория на Музика при Паркиране:"
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr "Паркиране"
-
 #: views/lot.php:115
 msgid "Parking Alert-Info:"
 msgstr ""
 
-#: parking.i18n.php:4 views/header.php:12
+#: views/header.php:12
 msgid "Parking Lot"
 msgstr "Група за Паркиране"
 
@@ -435,6 +419,19 @@ msgstr "преместване на стари данни на parkinglot"
 #: views/overview.php:22 views/overview.php:34
 msgid "nn"
 msgstr ""
+
+#~ msgid "Applications"
+#~ msgstr "Приложения"
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "Управление на вътрешните линии за паркиране на разговор и други опции."
+#~ "\tПаркирането поставя обаждането "
+
+#~ msgid "Parking"
+#~ msgstr "Паркиране"
 
 #~ msgid ""
 #~ "The total number of parking lot spaces to configure. Example, if 70 is "

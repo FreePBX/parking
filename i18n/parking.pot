@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 13:20-0400\n"
+"POT-Creation-Date: 2015-09-04 16:40-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,11 +35,6 @@ msgstr ""
 #: views/lot.php:139
 #: views/lot.php:156
 msgid "Announcement:"
-msgstr ""
-
-#: parking.i18n.php:6
-#: parking.i18n.php:12
-msgid "Applications"
 msgstr ""
 
 #: views/lot.php:104
@@ -150,12 +145,6 @@ msgstr ""
 msgid "Initializing default parkinglot.."
 msgstr ""
 
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
-"putting calls "
-msgstr ""
-
 #: views/lot.php:133
 msgid "Name"
 msgstr ""
@@ -238,15 +227,10 @@ msgstr ""
 msgid "Parked Music Class:"
 msgstr ""
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr ""
-
 #: views/lot.php:115
 msgid "Parking Alert-Info:"
 msgstr ""
 
-#: parking.i18n.php:4
 #: views/header.php:12
 msgid "Parking Lot"
 msgstr ""

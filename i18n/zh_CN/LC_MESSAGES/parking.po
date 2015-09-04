@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 13:20-0400\n"
+"POT-Creation-Date: 2015-09-04 16:40-0700\n"
 "PO-Revision-Date: 2015-02-20 19:45-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -36,10 +36,6 @@ msgstr "可选目的地"
 #: views/lot.php:139 views/lot.php:156
 msgid "Announcement:"
 msgstr "公告："
-
-#: parking.i18n.php:6 parking.i18n.php:12
-msgid "Applications"
-msgstr ""
 
 #: views/lot.php:104
 msgid ""
@@ -144,12 +140,6 @@ msgstr ""
 msgid "Initializing default parkinglot.."
 msgstr ""
 
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
-"putting calls "
-msgstr ""
-
 #: views/lot.php:133
 msgid "Name"
 msgstr ""
@@ -226,15 +216,11 @@ msgstr ""
 msgid "Parked Music Class:"
 msgstr "驻留背景音乐"
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr ""
-
 #: views/lot.php:115
 msgid "Parking Alert-Info:"
 msgstr "驻留警告信息："
 
-#: parking.i18n.php:4 views/header.php:12
+#: views/header.php:12
 msgid "Parking Lot"
 msgstr "驻留区"
 

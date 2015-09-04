@@ -37,15 +37,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 13:20-0400\n"
+"POT-Creation-Date: 2015-09-04 16:40-0700\n"
 "PO-Revision-Date: 2015-07-27 09:08+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
-"Language-Team: Japanese "
-"<http://weblate.freepbx.org/projects/freepbx/parking/ja_JP/>\n"
-"Language: ja_JP\n"
+"Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/parking/"
+"ja_JP/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
@@ -68,10 +68,6 @@ msgstr "代わりの宛先："
 #: views/lot.php:139 views/lot.php:156
 msgid "Announcement:"
 msgstr "アナウンス："
-
-#: parking.i18n.php:6 parking.i18n.php:12
-msgid "Applications"
-msgstr "アプリケーション"
 
 #: views/lot.php:104
 msgid ""
@@ -97,7 +93,9 @@ msgstr "パーキングロット nn への取次転送"
 msgid ""
 "Attended Transfer call to the Parking Lot Extension. The lot number will be "
 "announced to the parker"
-msgstr "パーキングロット内線への取次転送。ロット番号は、パークしたユーザーにアナウンスされます。"
+msgstr ""
+"パーキングロット内線への取次転送。ロット番号は、パークしたユーザーにアナウン"
+"スされます。"
 
 #: views/overview.php:19
 #, php-format
@@ -180,13 +178,6 @@ msgstr "使用中"
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
-"putting calls "
-msgstr ""
-"パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
-
 #: views/lot.php:133
 msgid "Name"
 msgstr "名前"
@@ -267,15 +258,11 @@ msgstr "パーク中"
 msgid "Parked Music Class:"
 msgstr "パーク音楽クラス："
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr "パーキング"
-
 #: views/lot.php:115
 msgid "Parking Alert-Info:"
 msgstr "パーキングアラート情報："
 
-#: parking.i18n.php:4 views/header.php:12
+#: views/header.php:12
 msgid "Parking Lot"
 msgstr "パーキングロット"
 
@@ -366,8 +353,9 @@ msgid ""
 "extension and 8 slots are configured, the parking slots will be 71-78. Users "
 "can transfer a call directly into a parking slot."
 msgstr ""
-"設定するパーキングロットの総数。例えば、70がパーキングの内線だとして、8つのロットを設定すると、パーキングロットは 71〜78 "
-"になります。特定のパーキングロットへの転送も可能です。"
+"設定するパーキングロットの総数。例えば、70がパーキングの内線だとして、8つの"
+"ロットを設定すると、パーキングロットは 71〜78 になります。特定のパーキング"
+"ロットへの転送も可能です。"
 
 #: views/lot.php:127
 msgid ""
@@ -434,7 +422,9 @@ msgstr "はい"
 msgid ""
 "You can also transfer directly to a lot number (%d through %d) and if that "
 "lot is empty, your call will be parked there"
-msgstr "特定のロット番号 (%d から %d まで) への転送も可能です。そのロットが空いていれば、通話がそこに保留されます。"
+msgstr ""
+"特定のロット番号 (%d から %d まで) への転送も可能です。そのロットが空いていれ"
+"ば、通話がそこに保留されます。"
 
 #: views/overview.php:4
 #, php-format
@@ -442,7 +432,9 @@ msgid ""
 "You can transfer a call to the Parking Lot Extension (%d by default), the "
 "call will then be placed into a lot (%d-%d by default) and the lot number "
 "will be announced to you"
-msgstr "パーキングの内線 (デフォルト %d) に通話を転送すると、その通話を自動的にロットに保留して、パークした内線番号があなたに再生されます。"
+msgstr ""
+"パーキングの内線 (デフォルト %d) に通話を転送すると、その通話を自動的にロット"
+"に保留して、パークした内線番号があなたに再生されます。"
 
 #: views/lot.php:156
 msgid ""
@@ -476,6 +468,18 @@ msgstr "旧parkinglotのデータを移行中…"
 #: views/overview.php:22 views/overview.php:34
 msgid "nn"
 msgstr "nn"
+
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
+
+#~ msgid "Parking"
+#~ msgstr "パーキング"
 
 #~ msgid "Paging"
 #~ msgstr "ページング"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 13:20-0400\n"
+"POT-Creation-Date: 2015-09-04 16:40-0700\n"
 "PO-Revision-Date: 2015-04-23 06:33+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -41,10 +41,6 @@ msgstr "Destino Alternativo"
 #: views/lot.php:139 views/lot.php:156
 msgid "Announcement:"
 msgstr "Anuncio:"
-
-#: parking.i18n.php:6 parking.i18n.php:12
-msgid "Applications"
-msgstr "Aplicaciones"
 
 #: views/lot.php:104
 msgid ""
@@ -158,14 +154,6 @@ msgstr "EN USO"
 msgid "Initializing default parkinglot.."
 msgstr "Iniciando el Aparcamiento por defecto.."
 
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
-"putting calls "
-msgstr ""
-"Maneja los Aparcamientos de extensiones y otras opciones.\t Los "
-"Aparcamientos son una forma fácil de retener las llamadas "
-
 #: views/lot.php:133
 msgid "Name"
 msgstr "Nombre"
@@ -247,15 +235,11 @@ msgstr "Aparcado"
 msgid "Parked Music Class:"
 msgstr "Música Aparcamiento:"
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr "Aparcamiento"
-
 #: views/lot.php:115
 msgid "Parking Alert-Info:"
 msgstr "Info-Alert Aparcamiento:"
 
-#: parking.i18n.php:4 views/header.php:12
+#: views/header.php:12
 msgid "Parking Lot"
 msgstr "Aparcamiento"
 
@@ -473,6 +457,19 @@ msgstr "migrando datos de vieja tabla de aparcamiento"
 #: views/overview.php:22 views/overview.php:34
 msgid "nn"
 msgstr "nn"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicaciones"
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "Maneja los Aparcamientos de extensiones y otras opciones.\t Los "
+#~ "Aparcamientos son una forma fácil de retener las llamadas "
+
+#~ msgid "Parking"
+#~ msgstr "Aparcamiento"
 
 #~ msgid "*270:"
 #~ msgstr "*270:"
