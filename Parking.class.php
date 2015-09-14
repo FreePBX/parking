@@ -154,7 +154,7 @@ class Parking implements BMO {
 				if (empty($request['id']) || !function_exists('parkpro_view')) {
 					unset($buttons['delete']);
 				}
-				if(!isset($request['action'])){
+				if(!isset($request['action']) && function_exists('parkpro_view')){
 					$buttons = array();
 				}
 			break;

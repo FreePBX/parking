@@ -1,16 +1,9 @@
 <?php
-$extendedhelp = '<div class="well well-default">';
-$extendedhelp .= _("The Parking Lot Extension and lot numbers can be changed using this module");
-$extendedhelp .= '</div>';
+$extendedhelp = '';
 if(function_exists('parking_overview_display')) {
     $extendedhelp .= parking_overview_display();
 }
-$extendedhelp .= '
-    <div class="panel panel-default" id="extendedhelp">
-        <div class="panel-heading">
-            '._("Example Usage").'
-        </div>
-        <div class="panel-body">
+$extendedhelp .= show_help('
             <table class="table table-stripped">
                 <tr>
                     <td>*270:</td>
@@ -37,7 +30,18 @@ $extendedhelp .= '
                     <td>'. _("Park Yourself into lot nn") .'</td>
                 </tr>
             </table>
-            ';
-$extendedhelp .='</div>';
-$extendedhelp .='</div>';
-echo $extendedhelp;
+            ',_("Example Usage"));
+?>
+<ul class="nav nav-tabs">
+  <li><a data-toggle="tab" class="active" href="#parksettings"><?php echo _("Parking Settings")?></a></li>
+  <li><a data-toggle="tab" href="#parkinfo"><?php echo _("Parking Help")?></a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="parkinfo" class="tab-pane fade">
+    <?php echo $extendedhelp?>
+  </div>
+  <div id="parksettings" class="tab-pane fade in active">
+    <?php echo parking_views('lot',parking_get('default'));?>
+  </div>
+</div>
