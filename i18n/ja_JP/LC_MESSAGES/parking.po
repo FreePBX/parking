@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 12:46-0700\n"
+"POT-Creation-Date: 2015-09-29 10:08-0700\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -48,7 +48,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 1.8\n"
 
-#: install.php:148
+#: install.php:146
 #, php-format
 msgid "%s no longer supported"
 msgstr "%sは現在、サポートされていません。"
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:79
+#: install.php:77
 msgid "Default Lot"
 msgstr "デフォルトロット"
 
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:62
+#: install.php:60
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "エラー：デフォルトlotは多すぎるため、削除・再初期化します… "
 
@@ -181,7 +181,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "使用中"
 
-#: install.php:78
+#: install.php:76
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
@@ -440,7 +440,7 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: install.php:49
+#: install.php:47
 #, php-format
 msgid "creating table %s if needed"
 msgstr "必要に応じてテーブル%sを作成"
@@ -449,7 +449,7 @@ msgstr "必要に応じてテーブル%sを作成"
 msgid "default"
 msgstr "デフォルト"
 
-#: install.php:81
+#: install.php:79
 msgid "done"
 msgstr "完了"
 
@@ -457,11 +457,11 @@ msgstr "完了"
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:158
+#: install.php:156
 msgid "migrated ... dropping old table parkinglot"
 msgstr "移行しました… 旧テーブルのparkinglotを無効にしている"
 
-#: install.php:87
+#: install.php:85
 msgid "migrating old parkinglot data"
 msgstr "旧parkinglotのデータを移行中…"
 

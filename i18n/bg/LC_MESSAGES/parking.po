@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 12:46-0700\n"
+"POT-Creation-Date: 2015-09-29 10:08-0700\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -32,7 +32,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.10-dev\n"
 
-#: install.php:148
+#: install.php:146
 #, php-format
 msgid "%s no longer supported"
 msgstr "%s вече не се поддържа"
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:79
+#: install.php:77
 msgid "Default Lot"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:62
+#: install.php:60
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ГРЕШКА: открити са много паркирания по подразбиране, изтриване и "
@@ -160,7 +160,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
-#: install.php:78
+#: install.php:76
 msgid "Initializing default parkinglot.."
 msgstr "Инициализиране на parkinglot по-подразбиране.."
 
@@ -398,7 +398,7 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: install.php:49
+#: install.php:47
 #, php-format
 msgid "creating table %s if needed"
 msgstr "създаване на таблица %s ако е необходимо"
@@ -407,7 +407,7 @@ msgstr "създаване на таблица %s ако е необходимо
 msgid "default"
 msgstr "по-подразбиране"
 
-#: install.php:81
+#: install.php:79
 msgid "done"
 msgstr "Изпълнено"
 
@@ -415,11 +415,11 @@ msgstr "Изпълнено"
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:158
+#: install.php:156
 msgid "migrated ... dropping old table parkinglot"
 msgstr "преместване ... премахване на стара таблица parkinglot"
 
-#: install.php:87
+#: install.php:85
 msgid "migrating old parkinglot data"
 msgstr "преместване на стари данни на parkinglot"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 12:46-0700\n"
+"POT-Creation-Date: 2015-09-29 10:08-0700\n"
 "PO-Revision-Date: 2015-03-11 19:42-0400\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: install.php:148
+#: install.php:146
 #, php-format
 msgid "%s no longer supported"
 msgstr "%s ya no es soportado"
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:79
+#: install.php:77
 msgid "Default Lot"
 msgstr "Lote Por defecto"
 
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:62
+#: install.php:60
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ERROR: Demasiados Lotes por defecto detectados, borrando y reinicializando"
@@ -156,7 +156,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "EN USO"
 
-#: install.php:78
+#: install.php:76
 msgid "Initializing default parkinglot.."
 msgstr "Iniciando el Aparcamiento por defecto.."
 
@@ -427,7 +427,7 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: install.php:49
+#: install.php:47
 #, php-format
 msgid "creating table %s if needed"
 msgstr "Creando tabla %s si es necesario"
@@ -436,7 +436,7 @@ msgstr "Creando tabla %s si es necesario"
 msgid "default"
 msgstr "por defecto"
 
-#: install.php:81
+#: install.php:79
 msgid "done"
 msgstr "hecho"
 
@@ -444,11 +444,11 @@ msgstr "hecho"
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:158
+#: install.php:156
 msgid "migrated ... dropping old table parkinglot"
 msgstr "migrado ... Descartando vieja tabla de aparcamiento"
 
-#: install.php:87
+#: install.php:85
 msgid "migrating old parkinglot data"
 msgstr "migrando datos de vieja tabla de aparcamiento"
 

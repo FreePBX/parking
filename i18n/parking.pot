@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 12:46-0700\n"
+"POT-Creation-Date: 2015-09-29 10:08-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: install.php:148
+#: install.php:146
 #, php-format
 msgid "%s no longer supported"
 msgstr ""
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:79
+#: install.php:77
 msgid "Default Lot"
 msgstr ""
 
@@ -107,7 +107,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:62
+#: install.php:60
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 
@@ -148,7 +148,7 @@ msgstr ""
 msgid "INUSE"
 msgstr ""
 
-#: install.php:78
+#: install.php:76
 msgid "Initializing default parkinglot.."
 msgstr ""
 
@@ -392,7 +392,7 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: install.php:49
+#: install.php:47
 #, php-format
 msgid "creating table %s if needed"
 msgstr ""
@@ -401,7 +401,7 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: install.php:81
+#: install.php:79
 msgid "done"
 msgstr ""
 
@@ -409,11 +409,11 @@ msgstr ""
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:158
+#: install.php:156
 msgid "migrated ... dropping old table parkinglot"
 msgstr ""
 
-#: install.php:87
+#: install.php:85
 msgid "migrating old parkinglot data"
 msgstr ""
 
