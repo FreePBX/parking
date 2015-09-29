@@ -1,6 +1,6 @@
 <?php
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
-
+global $db;
 //for translation only
 if (false) {
   _("Pickup ParkedCall Any");
@@ -17,11 +17,9 @@ $fcc->setProvideDest();
 $fcc->update();
 unset($fcc);
 
-$autoincrement = (($amp_conf["AMPDBENGINE"] == "sqlite") || ($amp_conf["AMPDBENGINE"] == "sqlite3")) ? "AUTOINCREMENT":"AUTO_INCREMENT";
-
 $sql['parkplus'] = "
 	CREATE TABLE IF NOT EXISTS parkplus (
-		id INTEGER NOT NULL $autoincrement,
+		id BIGINT(20) NOT NULL AUTO_INCREMENT,
 		defaultlot VARCHAR(10) NOT NULL DEFAULT 'no',
 		type VARCHAR(10) NOT NULL DEFAULT 'public',
 		name VARCHAR(40) NOT NULL DEFAULT '',
@@ -159,5 +157,14 @@ if (count($default_lot) == 0) {
 		sql('DROP TABLE IF EXISTS parkinglot');
 		unset($var);
 		unset($results);
+	}
+}
+
+$info = $db->getRow('SHOW COLUMNS FROM parkplus WHERE FIELD = "id"', DB_FETCHMODE_ASSOC);
+if($info['type'] !== "bigint(20)") {
+	$sql = "ALTER TABLE `parkplus` CHANGE COLUMN `id` `id` BIGINT NOT NULL";
+	$result = $db->query($sql);
+	if (DB::IsError($result)) {
+		die_freepbx($result->getDebugInfo());
 	}
 }
