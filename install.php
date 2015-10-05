@@ -54,7 +54,7 @@ foreach ($sql as $t => $s) {
 }
 
 $sql = "SELECT * FROM parkplus WHERE defaultlot = 'yes'";
-$default_lot = sql($sql,"getAll");
+$default_lot = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
 
 // There should never be more than a single default lot so just blow them
 // all away if we or esomeone did something dumb.
