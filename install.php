@@ -161,7 +161,7 @@ if (count($default_lot) == 0) {
 }
 
 $info = $db->getRow('SHOW COLUMNS FROM parkplus WHERE FIELD = "id"', DB_FETCHMODE_ASSOC);
-if($info['type'] !== "bigint(20)") {
+if($info['Type'] !== "bigint(20)") {
 	$sql = "ALTER TABLE `parkplus` CHANGE COLUMN `id` `id` BIGINT NOT NULL";
 	$result = $db->query($sql);
 	if (DB::IsError($result)) {
