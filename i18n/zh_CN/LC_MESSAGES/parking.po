@@ -10,18 +10,21 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-29 10:08-0700\n"
-"PO-Revision-Date: 2015-02-20 19:45-0500\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2015-10-19 15:00+0200\n"
+"Last-Translator: james <zhulizhong@gmail.com>\n"
+"Language-Team: Simplified Chinese "
+"<http://weblate.freepbx.org/projects/freepbx/parking/zh_CN/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: install.php:146
 #, php-format
 msgid "%s no longer supported"
-msgstr ""
+msgstr "不再%s"
 
 #: views/lot.php:389
 msgid ""
@@ -35,7 +38,7 @@ msgstr "可选目的地"
 
 #: views/lot.php:35
 msgid "Announcement"
-msgstr ""
+msgstr "语音播报"
 
 #: views/lot.php:365
 msgid ""
@@ -62,15 +65,15 @@ msgstr ""
 #: views/overview.php:14
 #, php-format
 msgid "Attended transfer to lot %d"
-msgstr ""
+msgstr "询转呼叫到 %d"
 
 #: views/lot.php:425
 msgid "Auto CallerID Prepend"
-msgstr ""
+msgstr "自动CallerID 添加"
 
 #: views/lot.php:225
 msgid "BLF Capabilities"
-msgstr ""
+msgstr "BLF功能支持"
 
 #: views/lot.php:293 views/lot.php:324 views/lot.php:355
 msgid "Both"
@@ -82,75 +85,75 @@ msgstr ""
 
 #: views/lot.php:401
 msgid "CallerID Prepend"
-msgstr ""
+msgstr "CallerID 添加"
 
 #: views/lot.php:462
 msgid "Come Back to Origin"
-msgstr ""
+msgstr "回到原状态"
 
 #: install.php:77
 msgid "Default Lot"
-msgstr ""
+msgstr "默认驻留地址"
 
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr ""
+msgstr "定义功能热键支持 Direct Call Pickup"
 
 #: Parking.class.php:141
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: views/lot.php:489
 msgid "Destination"
-msgstr ""
+msgstr "目的地"
 
 #: install.php:60
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
-msgstr ""
+msgstr "错误：太多默认的驻留地址，删除，正在重新设置"
 
 #: views/lot.php:64
 msgid "Edit: "
-msgstr ""
+msgstr "编辑: "
 
 #: views/lot.php:240
 msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
-msgstr ""
+msgstr "开启此功能，使用BLF 按键支持 Asterisk 'hints'。"
 
 #: views/overview.php:33
 msgid "Example Usage"
-msgstr ""
+msgstr "使用举例"
 
 #: views/lot.php:434
 msgid "Extension"
-msgstr ""
+msgstr "分机"
 
 #: views/lot.php:501
 msgid "Failover Destination."
-msgstr ""
+msgstr "逃生目的地。"
 
 #: views/lot.php:252
 msgid "Find Slot"
-msgstr ""
+msgstr "找驻留地址"
 
 #: views/lot.php:259
 msgid "First"
-msgstr ""
+msgstr "第一个"
 
 #: views/lot.php:66
 msgid "General Settings"
-msgstr ""
+msgstr "基本设置"
 
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
-msgstr ""
+msgstr "在使用状态"
 
 #: install.php:76
 msgid "Initializing default parkinglot.."
-msgstr ""
+msgstr "初始化默认驻留空间。。"
 
 #: views/lot.php:436
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: views/lot.php:326 views/lot.php:357
 msgid "Neither"
@@ -158,7 +161,7 @@ msgstr ""
 
 #: views/lot.php:257
 msgid "Next"
-msgstr ""
+msgstr "下一个"
 
 #: views/lot.php:267
 msgid ""
@@ -177,7 +180,7 @@ msgstr "无"
 
 #: views/lot.php:148
 msgid "Number of Slots"
-msgstr ""
+msgstr "驻留空间号码"
 
 #: views/lot.php:49
 msgid ""
@@ -191,16 +194,16 @@ msgstr "总览"
 
 #: install.php:7
 msgid "Park Prefix"
-msgstr ""
+msgstr "驻留前缀"
 
 #: views/overview.php:26
 #, php-format
 msgid "Park Yourself into lot %d"
-msgstr ""
+msgstr "驻留本机到%d"
 
 #: views/overview.php:30
 msgid "Park Yourself into lot nn"
-msgstr ""
+msgstr "驻留本机到nn"
 
 #: views/overview.php:22
 msgid "Park Yourself. The lot number will be announced to you"
@@ -218,19 +221,19 @@ msgstr ""
 
 #: views/lot.php:291 views/lot.php:322 views/lot.php:353
 msgid "Parked"
-msgstr ""
+msgstr "已驻留的呼叫"
 
 #: views/lot.php:199
 msgid "Parked Music Class"
-msgstr ""
+msgstr "驻留音乐类别"
 
 #: views/lot.php:377
 msgid "Parking Alert-Info"
-msgstr ""
+msgstr "驻留Alert-Info"
 
 #: views/overview.php:37
 msgid "Parking Help"
-msgstr ""
+msgstr "驻留帮助"
 
 #: views/header.php:7
 msgid "Parking Lot"
@@ -238,15 +241,15 @@ msgstr "驻留区"
 
 #: views/lot.php:76
 msgid "Parking Lot Extension"
-msgstr ""
+msgstr "驻留地址分机"
 
 #: views/lot.php:100
 msgid "Parking Lot Name"
-msgstr ""
+msgstr "驻留名称"
 
 #: views/lot.php:124
 msgid "Parking Lot Starting Position"
-msgstr ""
+msgstr "驻留地址起始位置"
 
 #: functions.inc/registries.php:59 functions.inc/registries.php:94
 #, php-format
