@@ -161,4 +161,9 @@ class Parking implements BMO {
 		}
 		return $buttons;
 	}
+	public function getRightNav($request) {
+		if(function_exists('parkpro_view')){
+			return \FreePBX::Parkpro()->getRightNav($request);
+		}
+	}
 }

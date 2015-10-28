@@ -58,17 +58,12 @@ switch ($_REQUEST['action']) {
 <div class="container-fluid">
 	<div class = "display full-border">
 		<div class="row">
-			<div class="col-sm-<?php echo isset($_REQUEST['action'])?'9':'12'?>">
+			<div class="col-sm-12">
 				<div class="fpbx-container">
 					<div class="display no-border">
 						<?php echo $heading ?>
 						<?php echo $content ?>
 					</div>
-				</div>
-			</div>
-			<div class="col-sm-3 bootnav <?php echo isset($_REQUEST['action'])?'':'hidden'?>">
-				<div class="list-group">
-					<?php echo parking_views('bootnav',$all_pl);?>
 				</div>
 			</div>
 		</div>
