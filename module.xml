@@ -59,7 +59,7 @@
 	</menuitems>
 	<depends>
 		<module>callrecording ge 12.0.1</module>
-		<version>13.0.6</version
+		<version>13.0.6</version>
 	</depends>
 	<supported>
 		<version>13.0</version>
