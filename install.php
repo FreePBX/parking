@@ -162,9 +162,17 @@ if (count($default_lot) == 0) {
 
 $info = $db->getRow('SHOW COLUMNS FROM parkplus WHERE FIELD = "id"', DB_FETCHMODE_ASSOC);
 if($info['Type'] !== "bigint(20)") {
-	$sql = "ALTER TABLE `parkplus` CHANGE COLUMN `id` `id` BIGINT NOT NULL";
+	$sql = "ALTER TABLE `parkplus` CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT";
 	$result = $db->query($sql);
 	if (DB::IsError($result)) {
 		die_freepbx($result->getDebugInfo());
 	}
+}
+//FREEPBX-10657 The above alter was removing auto_increment so we need to add it back. 
+if($info['Extra'] !== "auto_increment") {
+  $sql = "ALTER TABLE `parkplus` CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT";
+  $result = $db->query($sql);
+  if (DB::IsError($result)) {
+    die_freepbx($result->getDebugInfo());
+  }
 }
