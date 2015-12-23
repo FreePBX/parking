@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 10:08-0700\n"
+"POT-Creation-Date: 2015-12-22 18:53-0800\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -50,6 +50,10 @@ msgstr ""
 #: views/lot.php:35
 msgid "Announcement"
 msgstr ""
+
+#: parking.i18n.php:6 parking.i18n.php:12
+msgid "Applications"
+msgstr "Приложения"
 
 #: views/lot.php:365
 msgid ""
@@ -164,6 +168,14 @@ msgstr "ИЗПОЛЗВА СЕ"
 msgid "Initializing default parkinglot.."
 msgstr "Инициализиране на parkinglot по-подразбиране.."
 
+#: parking.i18n.php:8
+msgid ""
+"Manages parking lot extensions and other options.\tParking is a way of "
+"putting calls "
+msgstr ""
+"Управление на вътрешните линии за паркиране на разговор и други опции."
+"\tПаркирането поставя обаждането "
+
 #: views/lot.php:436
 msgid "Name"
 msgstr ""
@@ -240,6 +252,10 @@ msgstr ""
 msgid "Parked Music Class"
 msgstr ""
 
+#: parking.i18n.php:10
+msgid "Parking"
+msgstr "Паркиране"
+
 #: views/lot.php:377
 msgid "Parking Alert-Info"
 msgstr ""
@@ -248,7 +264,7 @@ msgstr ""
 msgid "Parking Help"
 msgstr ""
 
-#: views/header.php:7
+#: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
 msgstr "Група за Паркиране"
 
@@ -427,24 +443,11 @@ msgstr "преместване на стари данни на parkinglot"
 msgid "nn"
 msgstr ""
 
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "Управление на вътрешните линии за паркиране на разговор и други опции."
-#~ "\tПаркирането поставя обаждането "
-
 #~ msgid "Number of Slots:"
 #~ msgstr "Брой Слотове:"
 
 #~ msgid "Parked Music Class:"
 #~ msgstr "Категория на Музика при Паркиране:"
-
-#~ msgid "Parking"
-#~ msgstr "Паркиране"
 
 #~ msgid "Parking Lot Extension:"
 #~ msgstr "Вътрешен Номер на Група за Паркиране:"

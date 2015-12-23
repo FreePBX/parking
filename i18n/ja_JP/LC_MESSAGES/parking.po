@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 10:08-0700\n"
+"POT-Creation-Date: 2015-12-22 18:53-0800\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -67,6 +67,10 @@ msgstr "代わりの宛先："
 #: views/lot.php:35
 msgid "Announcement"
 msgstr ""
+
+#: parking.i18n.php:6 parking.i18n.php:12
+msgid "Applications"
+msgstr "アプリケーション"
 
 #: views/lot.php:365
 msgid ""
@@ -185,6 +189,13 @@ msgstr "使用中"
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
+#: parking.i18n.php:8
+msgid ""
+"Manages parking lot extensions and other options.\tParking is a way of "
+"putting calls "
+msgstr ""
+"パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
+
 #: views/lot.php:436
 msgid "Name"
 msgstr "名前"
@@ -265,6 +276,10 @@ msgstr "パーク中"
 msgid "Parked Music Class"
 msgstr ""
 
+#: parking.i18n.php:10
+msgid "Parking"
+msgstr "パーキング"
+
 #: views/lot.php:377
 msgid "Parking Alert-Info"
 msgstr ""
@@ -273,7 +288,7 @@ msgstr ""
 msgid "Parking Help"
 msgstr ""
 
-#: views/header.php:7
+#: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
 msgstr "パーキングロット"
 
@@ -495,9 +510,6 @@ msgstr "nn"
 #~ msgid "Announcement:"
 #~ msgstr "アナウンス："
 
-#~ msgid "Applications"
-#~ msgstr "アプリケーション"
-
 #~ msgid ""
 #~ "Asterisk: parkedcallhangup. Enables or disables DTMF based hangups when "
 #~ "picking up a parked call."
@@ -564,12 +576,6 @@ msgstr "nn"
 #~ msgid "Find Slot:"
 #~ msgstr "スロット検索："
 
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
-
 #~ msgid "Number of Slots:"
 #~ msgstr "スロット数"
 
@@ -608,9 +614,6 @@ msgstr "nn"
 
 #~ msgid "Parked Music Class:"
 #~ msgstr "パーク音楽クラス："
-
-#~ msgid "Parking"
-#~ msgstr "パーキング"
 
 #~ msgid "Parking Lot Configuration"
 #~ msgstr "パーキングロット設定"

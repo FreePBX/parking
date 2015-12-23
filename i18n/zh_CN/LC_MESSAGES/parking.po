@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 10:08-0700\n"
+"POT-Creation-Date: 2015-12-22 18:53-0800\n"
 "PO-Revision-Date: 2015-10-19 15:00+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -39,6 +39,10 @@ msgstr "可选目的地"
 #: views/lot.php:35
 msgid "Announcement"
 msgstr "语音播报"
+
+#: parking.i18n.php:6 parking.i18n.php:12
+msgid "Applications"
+msgstr ""
 
 #: views/lot.php:365
 msgid ""
@@ -151,6 +155,12 @@ msgstr "在使用状态"
 msgid "Initializing default parkinglot.."
 msgstr "初始化默认驻留空间。。"
 
+#: parking.i18n.php:8
+msgid ""
+"Manages parking lot extensions and other options.\tParking is a way of "
+"putting calls "
+msgstr ""
+
 #: views/lot.php:436
 msgid "Name"
 msgstr "名称"
@@ -227,6 +237,10 @@ msgstr "已驻留的呼叫"
 msgid "Parked Music Class"
 msgstr "驻留音乐类别"
 
+#: parking.i18n.php:10
+msgid "Parking"
+msgstr ""
+
 #: views/lot.php:377
 msgid "Parking Alert-Info"
 msgstr "驻留Alert-Info"
@@ -235,7 +249,7 @@ msgstr "驻留Alert-Info"
 msgid "Parking Help"
 msgstr "驻留帮助"
 
-#: views/header.php:7
+#: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
 msgstr "驻留区"
 

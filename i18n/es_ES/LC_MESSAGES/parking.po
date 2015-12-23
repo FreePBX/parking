@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 10:08-0700\n"
+"POT-Creation-Date: 2015-12-22 18:53-0800\n"
 "PO-Revision-Date: 2015-03-11 19:42-0400\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -39,6 +39,10 @@ msgstr "Destino Alternativo"
 #: views/lot.php:35
 msgid "Announcement"
 msgstr ""
+
+#: parking.i18n.php:6 parking.i18n.php:12
+msgid "Applications"
+msgstr "Aplicaciones"
 
 #: views/lot.php:365
 msgid ""
@@ -160,6 +164,14 @@ msgstr "EN USO"
 msgid "Initializing default parkinglot.."
 msgstr "Iniciando el Aparcamiento por defecto.."
 
+#: parking.i18n.php:8
+msgid ""
+"Manages parking lot extensions and other options.\tParking is a way of "
+"putting calls "
+msgstr ""
+"Maneja los Aparcamientos de extensiones y otras opciones.\t Los "
+"Aparcamientos son una forma fácil de retener las llamadas "
+
 #: views/lot.php:436
 msgid "Name"
 msgstr "Nombre"
@@ -241,6 +253,10 @@ msgstr "Aparcado"
 msgid "Parked Music Class"
 msgstr ""
 
+#: parking.i18n.php:10
+msgid "Parking"
+msgstr "Aparcamiento"
+
 #: views/lot.php:377
 msgid "Parking Alert-Info"
 msgstr ""
@@ -249,7 +265,7 @@ msgstr ""
 msgid "Parking Help"
 msgstr ""
 
-#: views/header.php:7
+#: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
 msgstr "Aparcamiento"
 
@@ -483,9 +499,6 @@ msgstr "nn"
 #~ msgid "Announcement:"
 #~ msgstr "Anuncio:"
 
-#~ msgid "Applications"
-#~ msgstr "Aplicaciones"
-
 #~ msgid "Attended transfer to lot 75"
 #~ msgstr "Transferencia Atendida al lote 75"
 
@@ -516,13 +529,6 @@ msgstr "nn"
 #~ msgid "Find Slot:"
 #~ msgstr "Encontrar espacio:"
 
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "Maneja los Aparcamientos de extensiones y otras opciones.\t Los "
-#~ "Aparcamientos son una forma fácil de retener las llamadas "
-
 #~ msgid "Number of Slots:"
 #~ msgstr "Cantidad de aparcamientos:"
 
@@ -549,9 +555,6 @@ msgstr "nn"
 
 #~ msgid "Parked Music Class:"
 #~ msgstr "Música Aparcamiento:"
-
-#~ msgid "Parking"
-#~ msgstr "Aparcamiento"
 
 #~ msgid "Parking Lot Extension:"
 #~ msgstr "Extensión de Aparcamiento:"
