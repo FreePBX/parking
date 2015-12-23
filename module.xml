@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>13.0.9</version>
+	<version>13.0.10</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
+		*13.0.10* FREEPBX-10450
 		*13.0.9* FREEPBX-10657 Make id auto_increment
 		*13.0.8* Adjust layout to allow slideout menus
 		*13.0.7* FREEPBX-10447 Stop reverting destinations in parking lots
@@ -59,6 +60,7 @@
 		<parking>Parking</parking>
 	</menuitems>
 	<depends>
+		<module>core ge 13.0.22</module>
 		<module>callrecording ge 12.0.1</module>
 		<version>13.0.6</version>
 	</depends>

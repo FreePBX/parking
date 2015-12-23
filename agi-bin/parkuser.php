@@ -10,8 +10,9 @@ $AGI = new AGI();
 
 $ampmgruser  = get_var( $AGI, "AMPMGRUSER" );
 $ampmgrpass  = get_var( $AGI, "AMPMGRPASS" );
+$astmgrhost  = get_var( $AGI, "ASTMANAGERHOST" );
 $astman = $AGI->new_AsteriskManager();
-if (!$astman->connect("127.0.0.1", $ampmgruser , $ampmgrpass,'off')) {
+if (!$astman->connect(!empty($astmgrhost) ? $astmgrhost : "127.0.0.1", $ampmgruser , $ampmgrpass,'off')) {
 	exit (1);
 }
 
@@ -57,7 +58,7 @@ $AGI->set_variable('UNAME',$uname);
 
 function get_var( $agi, $value) {
 	$r = $agi->get_variable( $value );
-	
+
 	if ($r['result'] == 1) {
 		$result = $r['data'];
 		return $result;
