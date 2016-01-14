@@ -44,6 +44,10 @@ function parking_get_config($engine) {
 		$parkfetch_code = $fcc->getCodeActive();
 		unset($fcc);
 
+		$fcc = new featurecode('parking', 'parkto');
+		$parkto_code = $fcc->getCodeActive();
+		unset($fcc);
+
 		// Need to setup featurecode.conf configuration for the parking lot:
 		//
 		$parkpos1	= $lot['parkpos'];
@@ -130,6 +134,11 @@ function parking_get_config($engine) {
 					}
 				}
 			}
+		}
+		if($parkto_code != '') {
+			$id = 'app-parking';
+			$ext->addInclude('from-internal-additional', $id); // Add the include to from-internal
+			$ext->add($id, $parkto_code, '', new \ext_goto('1', $lot['parkext'], 'from-internal'));
 		}
 
 		if ($lot['autocidpp'] == 'exten' || $lot['autocidpp'] == 'name') {

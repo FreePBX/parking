@@ -7,12 +7,21 @@ if (false) {
   _("Park Prefix");
   _("Pickup ParkedCall Prefix");
   _("Defines the Feature Code to use for Direct Call Pickup");
+  _('Parks to your Assigned Lot if using Park Pro. If using standard parking this parks to the default lot');
 }
 
 $fcc = new featurecode('parking', 'parkedcall');
 $fcc->setDescription('Pickup ParkedCall Prefix');
 $fcc->setHelpText('Defines the Feature Code to use for Direct Call Pickup');
 $fcc->setDefault('*85');
+$fcc->setProvideDest();
+$fcc->update();
+unset($fcc);
+
+$fcc = new featurecode('parking', 'parkto');
+$fcc->setDescription(_('Park to your Assigned Lot'));
+$fcc->setHelpText('Parks to your Assigned Lot if using Park Pro. If using standard parking this parks to the default lot');
+$fcc->setDefault('*88');
 $fcc->setProvideDest();
 $fcc->update();
 unset($fcc);
@@ -168,7 +177,7 @@ if($info['Type'] !== "bigint(20)") {
 		die_freepbx($result->getDebugInfo());
 	}
 }
-//FREEPBX-10657 The above alter was removing auto_increment so we need to add it back. 
+//FREEPBX-10657 The above alter was removing auto_increment so we need to add it back.
 if($info['Extra'] !== "auto_increment") {
   $sql = "ALTER TABLE `parkplus` CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT";
   $result = $db->query($sql);
