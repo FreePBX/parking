@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-22 18:53-0800\n"
+"POT-Creation-Date: 2016-01-14 14:14-0800\n"
 "PO-Revision-Date: 2015-12-08 23:19+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -20,7 +20,7 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: install.php:146
+#: install.php:155
 #, php-format
 msgid "%s no longer supported"
 msgstr "%s более не поддерживается"
@@ -102,7 +102,7 @@ msgstr "Добавление CallerID"
 msgid "Come Back to Origin"
 msgstr "Возврат к источнику"
 
-#: install.php:77
+#: install.php:86
 msgid "Default Lot"
 msgstr "Лот по умолчанию"
 
@@ -119,7 +119,7 @@ msgstr "Удалить"
 msgid "Destination"
 msgstr "Назначение"
 
-#: install.php:60
+#: install.php:69
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "Ошибка: обнаружено слишком много лотов по умолчанию, удаление и "
@@ -163,7 +163,7 @@ msgstr "Общие настройки"
 msgid "INUSE"
 msgstr "Используется"
 
-#: install.php:76
+#: install.php:85
 msgid "Initializing default parkinglot.."
 msgstr "Инициализация паркующего лота по умолчанию."
 
@@ -237,6 +237,10 @@ msgstr "Припарковать себя на лот nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "Припаркуйте себя: Номер парковочного лота , сообщаемого Вам"
 
+#: install.php:22
+msgid "Park to your Assigned Lot"
+msgstr ""
+
 #: functions.inc/registries.php:22
 #, php-format
 msgid "ParkPlus: ParkCall %s"
@@ -299,6 +303,12 @@ msgstr "Таймаут парковки(в секундах)"
 #: Parking.class.php:89
 msgid "ParkingLot"
 msgstr "Паркующтй лот"
+
+#: install.php:10
+msgid ""
+"Parks to your Assigned Lot if using Park Pro. If using standard parking this "
+"parks to the default lot"
+msgstr ""
 
 #: views/lot.php:284
 msgid "Pickup Courtesy Tone"
@@ -446,7 +456,7 @@ msgstr ""
 "будет припаркован на лот (71 -78 по умолчанию) ,  номер лота будет вам "
 "сообщен."
 
-#: install.php:47
+#: install.php:56
 #, php-format
 msgid "creating table %s if needed"
 msgstr "создание таблицы %s если нужно"
@@ -455,7 +465,7 @@ msgstr "создание таблицы %s если нужно"
 msgid "default"
 msgstr "по умолчанию"
 
-#: install.php:79
+#: install.php:88
 msgid "done"
 msgstr "выполнено"
 
@@ -463,11 +473,11 @@ msgstr "выполнено"
 msgid "he starting postion of the parking lot"
 msgstr "Начальная позиция паркового лота"
 
-#: install.php:156
+#: install.php:165
 msgid "migrated ... dropping old table parkinglot"
 msgstr "смигрировано... разбивка старой таблицы парковочного лота"
 
-#: install.php:85
+#: install.php:94
 msgid "migrating old parkinglot data"
 msgstr "миграция старых данных о парковочном лоте"
 

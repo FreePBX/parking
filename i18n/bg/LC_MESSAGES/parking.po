@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-22 18:53-0800\n"
+"POT-Creation-Date: 2016-01-14 14:14-0800\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -32,7 +32,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.10-dev\n"
 
-#: install.php:146
+#: install.php:155
 #, php-format
 msgid "%s no longer supported"
 msgstr "%s вече не се поддържа"
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:77
+#: install.php:86
 msgid "Default Lot"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:60
+#: install.php:69
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ГРЕШКА: открити са много паркирания по подразбиране, изтриване и "
@@ -164,7 +164,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
-#: install.php:76
+#: install.php:85
 msgid "Initializing default parkinglot.."
 msgstr "Инициализиране на parkinglot по-подразбиране.."
 
@@ -234,6 +234,10 @@ msgstr ""
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
+#: install.php:22
+msgid "Park to your Assigned Lot"
+msgstr ""
+
 #: functions.inc/registries.php:22
 #, php-format
 msgid "ParkPlus: ParkCall %s"
@@ -295,6 +299,12 @@ msgstr ""
 
 #: Parking.class.php:89
 msgid "ParkingLot"
+msgstr ""
+
+#: install.php:10
+msgid ""
+"Parks to your Assigned Lot if using Park Pro. If using standard parking this "
+"parks to the default lot"
 msgstr ""
 
 #: views/lot.php:284
@@ -414,7 +424,7 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: install.php:47
+#: install.php:56
 #, php-format
 msgid "creating table %s if needed"
 msgstr "създаване на таблица %s ако е необходимо"
@@ -423,7 +433,7 @@ msgstr "създаване на таблица %s ако е необходимо
 msgid "default"
 msgstr "по-подразбиране"
 
-#: install.php:79
+#: install.php:88
 msgid "done"
 msgstr "Изпълнено"
 
@@ -431,11 +441,11 @@ msgstr "Изпълнено"
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:156
+#: install.php:165
 msgid "migrated ... dropping old table parkinglot"
 msgstr "преместване ... премахване на стара таблица parkinglot"
 
-#: install.php:85
+#: install.php:94
 msgid "migrating old parkinglot data"
 msgstr "преместване на стари данни на parkinglot"
 

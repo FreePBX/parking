@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-04 12:06-0800\n"
+"POT-Creation-Date: 2016-01-14 14:14-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: install.php:146
+#: install.php:155
 #, php-format
 msgid "%s no longer supported"
 msgstr ""
@@ -96,7 +96,7 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:77
+#: install.php:86
 msgid "Default Lot"
 msgstr ""
 
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:60
+#: install.php:69
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 
@@ -153,7 +153,7 @@ msgstr ""
 msgid "INUSE"
 msgstr ""
 
-#: install.php:76
+#: install.php:85
 msgid "Initializing default parkinglot.."
 msgstr ""
 
@@ -225,6 +225,10 @@ msgstr ""
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
+#: install.php:22
+msgid "Park to your Assigned Lot"
+msgstr ""
+
 #: functions.inc/registries.php:22
 #, php-format
 msgid "ParkPlus: ParkCall %s"
@@ -290,6 +294,12 @@ msgstr ""
 
 #: Parking.class.php:89
 msgid "ParkingLot"
+msgstr ""
+
+#: install.php:10
+msgid ""
+"Parks to your Assigned Lot if using Park Pro. If using standard parking this "
+"parks to the default lot"
 msgstr ""
 
 #: views/lot.php:284
@@ -408,7 +418,7 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: install.php:47
+#: install.php:56
 #, php-format
 msgid "creating table %s if needed"
 msgstr ""
@@ -417,7 +427,7 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: install.php:79
+#: install.php:88
 msgid "done"
 msgstr ""
 
@@ -425,11 +435,11 @@ msgstr ""
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:156
+#: install.php:165
 msgid "migrated ... dropping old table parkinglot"
 msgstr ""
 
-#: install.php:85
+#: install.php:94
 msgid "migrating old parkinglot data"
 msgstr ""
 

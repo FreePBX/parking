@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-22 18:53-0800\n"
+"POT-Creation-Date: 2016-01-14 14:14-0800\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -48,7 +48,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 1.8\n"
 
-#: install.php:146
+#: install.php:155
 #, php-format
 msgid "%s no longer supported"
 msgstr "%sは現在、サポートされていません。"
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:77
+#: install.php:86
 msgid "Default Lot"
 msgstr "デフォルトロット"
 
@@ -145,7 +145,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:60
+#: install.php:69
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "エラー：デフォルトlotは多すぎるため、削除・再初期化します… "
 
@@ -185,7 +185,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "使用中"
 
-#: install.php:76
+#: install.php:85
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
@@ -258,6 +258,10 @@ msgstr "自分をロット nn にパークします"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "自分をパークします。ロット番号はあなたにアナウンスされます。"
 
+#: install.php:22
+msgid "Park to your Assigned Lot"
+msgstr ""
+
 #: functions.inc/registries.php:22
 #, php-format
 msgid "ParkPlus: ParkCall %s"
@@ -319,6 +323,12 @@ msgstr ""
 
 #: Parking.class.php:89
 msgid "ParkingLot"
+msgstr ""
+
+#: install.php:10
+msgid ""
+"Parks to your Assigned Lot if using Park Pro. If using standard parking this "
+"parks to the default lot"
 msgstr ""
 
 #: views/lot.php:284
@@ -455,7 +465,7 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: install.php:47
+#: install.php:56
 #, php-format
 msgid "creating table %s if needed"
 msgstr "必要に応じてテーブル%sを作成"
@@ -464,7 +474,7 @@ msgstr "必要に応じてテーブル%sを作成"
 msgid "default"
 msgstr "デフォルト"
 
-#: install.php:79
+#: install.php:88
 msgid "done"
 msgstr "完了"
 
@@ -472,11 +482,11 @@ msgstr "完了"
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:156
+#: install.php:165
 msgid "migrated ... dropping old table parkinglot"
 msgstr "移行しました… 旧テーブルのparkinglotを無効にしている"
 
-#: install.php:85
+#: install.php:94
 msgid "migrating old parkinglot data"
 msgstr "旧parkinglotのデータを移行中…"
 
