@@ -272,8 +272,8 @@ function parking_generate_parked_call() {
 
 	$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
 	//hack for asterisk 12!
-	$ext->add($pc, $exten, '', new ext_noop('PARKRETURNTO: ${SHARED(PARKRETURNTO,${CHANNEL})}'));
-	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${SHARED(PARKRETURNTO,${CHANNEL})})} > 0]','backtosender'));
+	$ext->add($pc, $exten, '', new ext_noop('PARKRETURNTO: ${SHARED(PARKRETURNTO,"${CHANNEL}")}'));
+	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${SHARED(PARKRETURNTO,"${CHANNEL}")})} > 0]','backtosender'));
 	//$ext->add($pc, $exten, '', new ext_gotoif('$[${ISNULL(${PARKRETURNTO})} == 0 & ${LEN(${PARKRETURNTO})} > 0]','backtosender'));
 	//We can accept both blind and attended (But attended only in asterisk 12!)
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${BLINDTRANSFER})} > 0 | ${LEN(${ATTENDEDTRANSFER})} > 0]','attemptpark'));
@@ -293,7 +293,7 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_hangup(''));
 	$ext->add($pc, $exten, 'pcall', new ext_noop('User: ${CALLERID(all)} attempting to pick up Parked Call Slot ${ARG1}'));
 	$ext->add($pc, $exten, '', new ext_noop('PARKIE: ${PARKIE}'));
-	$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${PARKIE})',''));
+	$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,"${PARKIE}")',''));
 	$ext->add($pc, $exten, '', new ext_set('PARKOWNER','1'));
 
 	// ParkedCalls can't handle picking up the default lot as 'parkedcalls' context, it wants 'default'
@@ -312,8 +312,8 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${PARKOWNER})} = 0]','parkit'));
 	$ext->add($pc, $exten, '', new ext_macro('hangupcall'));
 	$ext->add($pc, $exten, 'parkit', new ext_set('PARKINGEXTEN','${ARG1}'));
-	$ext->add($pc, $exten, '', new ext_execif('$[${LEN(${BLINDTRANSFER})} > 0]','Set','SHARED(PARKRETURNTO,${CHANNEL})=${CUT(BLINDTRANSFER,-,1)}','Set','SHARED(PARKRETURNTO,${CHANNEL})=${CUT(ATTENDEDTRANSFER,-,1)}'));
-	$ext->add($pc, $exten, '', new ext_noop('PARKRETURNTO: ${SHARED(PARKRETURNTO,${CHANNEL})}'));
+	$ext->add($pc, $exten, '', new ext_execif('$[${LEN(${BLINDTRANSFER})} > 0]','Set','SHARED(PARKRETURNTO,"${CHANNEL}")=${CUT(BLINDTRANSFER,-,1)}','Set','SHARED(PARKRETURNTO,"${CHANNEL}")=${CUT(ATTENDEDTRANSFER,-,1)}'));
+	$ext->add($pc, $exten, '', new ext_noop('PARKRETURNTO: ${SHARED(PARKRETURNTO,"${CHANNEL}")}'));
 
 	if(version_compare($version, '12', 'ge')) {
 		$ext->add($pc, $exten, '', new ext_park('${ARG2},sc(${CONTEXT},s,200)'));
@@ -337,11 +337,11 @@ function parking_generate_parked_call() {
 	 */
 	if(version_compare($version, '13.2', 'ge')) {
 		$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${PARKER}'));
-		$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${CHANNEL})',''));
+		$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,"${CHANNEL}")',''));
 		$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${PARKINGSLOT},1'));
 	} else {
-		$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${SHARED(PARKRETURNTO,${CHANNEL})}'));
-		$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${CHANNEL})',''));
+		$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${SHARED(PARKRETURNTO,"${CHANNEL}")}'));
+		$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,"${CHANNEL}")',''));
 		$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${ARG1},1'));
 	}
 }

@@ -51,7 +51,7 @@ if(preg_match('/no such command/i',$r['data'])) {
 // Grab the Recording channel variables that we need to keep track of.
 $vars = array('MIXMON_DIR', 'YEAR', 'MONTH', 'DAY', 'CALLFILENAME', 'MIXMON_FORMAT', 'MIXMON_POST', 'MON_FMT', 'MIXMON_ID', 'REC_STATUS', 'REC_POLICY_MODE', 'RECORD_ID');
 foreach ($vars as $v) {
-	$tmpvar = get_var("IMPORT($channel,$v)");
+	$tmpvar = get_var('IMPORT("'.$channel.'",'.$v.')');
 	if (!empty($tmpvar)) {
 		$agi->set_variable($v, $tmpvar);
 	}
