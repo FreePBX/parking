@@ -56,14 +56,12 @@ switch ($_REQUEST['action']) {
 
 ?>
 <div class="container-fluid">
-	<div class = "display full-border">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="fpbx-container">
-					<div class="display no-border">
-						<?php echo $heading ?>
-						<?php echo $content ?>
-					</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="fpbx-container">
+				<div class="display no-border">
+					<?php echo $heading ?>
+					<?php echo $content ?>
 				</div>
 			</div>
 		</div>
