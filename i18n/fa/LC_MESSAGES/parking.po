@@ -10,12 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-14 14:14-0800\n"
-"PO-Revision-Date: 2016-01-14 14:14-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-03-15 23:18+0200\n"
+"Last-Translator: Media <mousavi.media@gmail.com>\n"
+"Language-Team: Persian "
+"<http://weblate.freepbx.org/projects/freepbx/parking/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: install.php:155
 #, php-format
@@ -30,15 +34,15 @@ msgstr ""
 
 #: views/lot.php:452
 msgid "Alternate Destination"
-msgstr ""
+msgstr "داخلی جایگزین"
 
 #: views/lot.php:35
 msgid "Announcement"
-msgstr ""
+msgstr "اعلان"
 
 #: parking.i18n.php:6 parking.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "برنامه‌ ها"
 
 #: views/lot.php:365
 msgid ""
@@ -73,15 +77,15 @@ msgstr ""
 
 #: views/lot.php:225
 msgid "BLF Capabilities"
-msgstr ""
+msgstr "قابلیت های BLF"
 
 #: views/lot.php:293 views/lot.php:324 views/lot.php:355
 msgid "Both"
-msgstr ""
+msgstr "هردو"
 
 #: views/lot.php:289 views/lot.php:320 views/lot.php:351
 msgid "Caller"
-msgstr ""
+msgstr "تماس گیرنده"
 
 #: views/lot.php:401
 msgid "CallerID Prepend"
@@ -89,11 +93,11 @@ msgstr ""
 
 #: views/lot.php:462
 msgid "Come Back to Origin"
-msgstr ""
+msgstr "برگشت به اصل"
 
 #: install.php:86
 msgid "Default Lot"
-msgstr ""
+msgstr "پیشفرض"
 
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
@@ -101,11 +105,11 @@ msgstr ""
 
 #: Parking.class.php:141
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: views/lot.php:489
 msgid "Destination"
-msgstr ""
+msgstr "داخلی"
 
 #: install.php:69
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
@@ -113,7 +117,7 @@ msgstr ""
 
 #: views/lot.php:64
 msgid "Edit: "
-msgstr ""
+msgstr "ویرایش： "
 
 #: views/lot.php:240
 msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
@@ -121,11 +125,11 @@ msgstr ""
 
 #: views/overview.php:33
 msgid "Example Usage"
-msgstr ""
+msgstr "مثال طریقه استفاده"
 
 #: views/lot.php:434
 msgid "Extension"
-msgstr ""
+msgstr "داخلی"
 
 #: views/lot.php:501
 msgid "Failover Destination."
@@ -133,19 +137,19 @@ msgstr ""
 
 #: views/lot.php:252
 msgid "Find Slot"
-msgstr ""
+msgstr "یافتن Slot"
 
 #: views/lot.php:259
 msgid "First"
-msgstr ""
+msgstr "اولین"
 
 #: views/lot.php:66
 msgid "General Settings"
-msgstr ""
+msgstr "تنظیمات عمومی"
 
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
-msgstr ""
+msgstr "درحال استفاده"
 
 #: install.php:85
 msgid "Initializing default parkinglot.."
@@ -159,15 +163,15 @@ msgstr ""
 
 #: views/lot.php:436
 msgid "Name"
-msgstr ""
+msgstr "نام"
 
 #: views/lot.php:326 views/lot.php:357
 msgid "Neither"
-msgstr ""
+msgstr "هیچکدام"
 
 #: views/lot.php:257
 msgid "Next"
-msgstr ""
+msgstr "بعدی"
 
 #: views/lot.php:267
 msgid ""
@@ -178,11 +182,11 @@ msgstr ""
 
 #: views/lot.php:232 views/lot.php:469
 msgid "No"
-msgstr ""
+msgstr "خیر"
 
 #: views/lot.php:21 views/lot.php:295 views/lot.php:430
 msgid "None"
-msgstr ""
+msgstr "هیچ"
 
 #: views/lot.php:148
 msgid "Number of Slots"
@@ -196,11 +200,11 @@ msgstr ""
 
 #: views/bootnav.php:2
 msgid "Overview"
-msgstr ""
+msgstr "بازبینی"
 
 #: install.php:7
 msgid "Park Prefix"
-msgstr ""
+msgstr "پیشوند پارک شده"
 
 #: views/overview.php:26
 #, php-format
@@ -217,7 +221,7 @@ msgstr ""
 
 #: install.php:22
 msgid "Park to your Assigned Lot"
-msgstr ""
+msgstr "در Lot خود پارک کنید"
 
 #: functions.inc/registries.php:22
 #, php-format
@@ -231,27 +235,27 @@ msgstr ""
 
 #: views/lot.php:291 views/lot.php:322 views/lot.php:353
 msgid "Parked"
-msgstr ""
+msgstr "پارک شده"
 
 #: views/lot.php:199
 msgid "Parked Music Class"
-msgstr ""
+msgstr "کلاس آهنگ پارک شده"
 
 #: parking.i18n.php:10
 msgid "Parking"
-msgstr ""
+msgstr "در حال پارک"
 
 #: views/lot.php:377
 msgid "Parking Alert-Info"
-msgstr ""
+msgstr "اطلاعات هشدار پارکینگ"
 
 #: views/overview.php:37
 msgid "Parking Help"
-msgstr ""
+msgstr "راهنمای پارک کردن"
 
 #: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
-msgstr ""
+msgstr "Lot پارک کردن"
 
 #: views/lot.php:76
 msgid "Parking Lot Extension"
@@ -259,11 +263,11 @@ msgstr ""
 
 #: views/lot.php:100
 msgid "Parking Lot Name"
-msgstr ""
+msgstr "نام Lot پارک کردن"
 
 #: views/lot.php:124
 msgid "Parking Lot Starting Position"
-msgstr ""
+msgstr "موقعیت Lot شروع پارک کردن"
 
 #: functions.inc/registries.php:59 functions.inc/registries.php:94
 #, php-format
@@ -272,15 +276,15 @@ msgstr ""
 
 #: views/overview.php:36
 msgid "Parking Settings"
-msgstr ""
+msgstr "تنظیمات پارک کردن"
 
 #: views/lot.php:175
 msgid "Parking Timeout (seconds)"
-msgstr ""
+msgstr "وقفه پارک کردن (ثانیه)"
 
 #: Parking.class.php:89
 msgid "ParkingLot"
-msgstr ""
+msgstr "Lot پارک کردن"
 
 #: install.php:10
 msgid ""
@@ -310,7 +314,7 @@ msgstr ""
 
 #: Parking.class.php:146
 msgid "Reset"
-msgstr ""
+msgstr "بازنشانی"
 
 #: views/lot.php:274
 msgid "Returned Call Behavior"
@@ -328,7 +332,7 @@ msgstr ""
 
 #: Parking.class.php:151
 msgid "Submit"
-msgstr ""
+msgstr "ارسال"
 
 #: views/lot.php:187
 msgid ""
@@ -371,7 +375,7 @@ msgstr ""
 
 #: views/lot.php:315
 msgid "Transfer Capability"
-msgstr ""
+msgstr "قابلیت انتقال"
 
 #: views/lot.php:477
 msgid ""
@@ -388,7 +392,7 @@ msgstr ""
 
 #: views/lot.php:230 views/lot.php:467
 msgid "Yes"
-msgstr ""
+msgstr "بله"
 
 #: views/header.php:16
 msgid ""
@@ -410,11 +414,11 @@ msgstr ""
 
 #: views/lot.php:15
 msgid "default"
-msgstr ""
+msgstr "پیشفرض"
 
 #: install.php:88
 msgid "done"
-msgstr ""
+msgstr "انجام شده"
 
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
