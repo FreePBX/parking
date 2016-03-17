@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-14 14:14-0800\n"
-"PO-Revision-Date: 2016-03-15 23:18+0200\n"
+"PO-Revision-Date: 2016-03-16 23:59+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian "
 "<http://weblate.freepbx.org/projects/freepbx/parking/fa/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: install.php:155
 #, php-format
 msgid "%s no longer supported"
-msgstr ""
+msgstr "%s دیگر پشتیبانی نمیشود"
 
 #: views/lot.php:389
 msgid ""
