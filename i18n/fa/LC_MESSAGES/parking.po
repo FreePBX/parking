@@ -10,164 +10,179 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-14 14:14-0800\n"
-"PO-Revision-Date: 2016-01-14 14:14-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-03-17 00:42+0200\n"
+"Last-Translator: Media <mousavi.media@gmail.com>\n"
+"Language-Team: Persian "
+"<http://weblate.freepbx.org/projects/freepbx/parking/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: install.php:155
 #, php-format
 msgid "%s no longer supported"
-msgstr ""
+msgstr "%s دیگر پشتیبانی نمیشود"
 
 #: views/lot.php:389
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
+"Alert-Info to add to the call prior to sending back to the Originator or to "
+"the Alternate Destination ."
 
 #: views/lot.php:452
 msgid "Alternate Destination"
-msgstr ""
+msgstr "داخلی جایگزین"
 
 #: views/lot.php:35
 msgid "Announcement"
-msgstr ""
+msgstr "اعلان"
 
 #: parking.i18n.php:6 parking.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "برنامه‌ ها"
 
 #: views/lot.php:365
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
 msgstr ""
+"Asterisk : parkedcallreparking. Enables or disables DTMF based parking when "
+"picking up a parked call."
 
 #: views/lot.php:334
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
 msgstr ""
+"Asterisk : parkedcalltransfers. Enables or disables DTMF based transfers "
+"when picking up a parked call."
 
 #: views/overview.php:18
 msgid "Attended Transfer call into Park lot nn"
-msgstr ""
+msgstr "انتقال تماس در لات پارک nn"
 
 #: views/overview.php:10
 msgid ""
 "Attended Transfer call to the Parking Lot Extension. The lot number will be "
 "announced to the parker"
 msgstr ""
+"Attended Transfer call to the Parking Lot Extension . The lot number will be "
+"announced to the parker"
 
 #: views/overview.php:14
 #, php-format
 msgid "Attended transfer to lot %d"
-msgstr ""
+msgstr "انتقال به لات %d"
 
 #: views/lot.php:425
 msgid "Auto CallerID Prepend"
-msgstr ""
+msgstr "تهیه شناسه تماس گیرنده خودکار"
 
 #: views/lot.php:225
 msgid "BLF Capabilities"
-msgstr ""
+msgstr "قابلیت های BLF"
 
 #: views/lot.php:293 views/lot.php:324 views/lot.php:355
 msgid "Both"
-msgstr ""
+msgstr "هردو"
 
 #: views/lot.php:289 views/lot.php:320 views/lot.php:351
 msgid "Caller"
-msgstr ""
+msgstr "تماس گیرنده"
 
 #: views/lot.php:401
 msgid "CallerID Prepend"
-msgstr ""
+msgstr "تهیه شناسه تماس گیرنده"
 
 #: views/lot.php:462
 msgid "Come Back to Origin"
-msgstr ""
+msgstr "برگشت به اصل"
 
 #: install.php:86
 msgid "Default Lot"
-msgstr ""
+msgstr "پیشفرض"
 
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr ""
+msgstr "تشخیص کد ویژه برای قطع تماس مستقیم کاربر"
 
 #: Parking.class.php:141
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: views/lot.php:489
 msgid "Destination"
-msgstr ""
+msgstr "داخلی"
 
 #: install.php:69
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
-msgstr ""
+msgstr "خطا： تعداد زیاد لات پیشفرض تشخیص داده شد"
 
 #: views/lot.php:64
 msgid "Edit: "
-msgstr ""
+msgstr "ویرایش： "
 
 #: views/lot.php:240
 msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
 msgstr ""
+"Enable this to have Asterisk 'hints' generated to use with BLF buttons ."
 
 #: views/overview.php:33
 msgid "Example Usage"
-msgstr ""
+msgstr "مثال طریقه استفاده"
 
 #: views/lot.php:434
 msgid "Extension"
-msgstr ""
+msgstr "داخلی"
 
 #: views/lot.php:501
 msgid "Failover Destination."
-msgstr ""
+msgstr "عدم موفقیت داخلی."
 
 #: views/lot.php:252
 msgid "Find Slot"
-msgstr ""
+msgstr "یافتن Slot"
 
 #: views/lot.php:259
 msgid "First"
-msgstr ""
+msgstr "اولین"
 
 #: views/lot.php:66
 msgid "General Settings"
-msgstr ""
+msgstr "تنظیمات عمومی"
 
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
-msgstr ""
+msgstr "درحال استفاده"
 
 #: install.php:85
 msgid "Initializing default parkinglot.."
-msgstr ""
+msgstr "تشخیص لات پارک پیشفرض.."
 
 #: parking.i18n.php:8
 msgid ""
 "Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
+"Manages parking lot extensions and other options .\tParking is a way of "
+"putting calls "
 
 #: views/lot.php:436
 msgid "Name"
-msgstr ""
+msgstr "نام"
 
 #: views/lot.php:326 views/lot.php:357
 msgid "Neither"
-msgstr ""
+msgstr "هیچکدام"
 
 #: views/lot.php:257
 msgid "Next"
-msgstr ""
+msgstr "بعدی"
 
 #: views/lot.php:267
 msgid ""
@@ -175,166 +190,175 @@ msgid ""
 "relative to the the last parked call instead of seeking the first available "
 "slot. First: Use the first parking lot slot available"
 msgstr ""
+"Next : If you want the parking lot to seek the next sequential parking slot "
+"relative to the the last parked call instead of seeking the first available "
+"slot. First: Use the first parking lot slot available"
 
 #: views/lot.php:232 views/lot.php:469
 msgid "No"
-msgstr ""
+msgstr "خیر"
 
 #: views/lot.php:21 views/lot.php:295 views/lot.php:430
 msgid "None"
-msgstr ""
+msgstr "هیچ"
 
 #: views/lot.php:148
 msgid "Number of Slots"
-msgstr ""
+msgstr "تعداد Slotها"
 
 #: views/lot.php:49
 msgid ""
 "Optional message to be played to the call prior to sending back to the "
 "Originator or the Alternate Destination."
-msgstr ""
+msgstr "پیام اختیاری که زمانی پخش میشود که تماس به داخلی جایگزین منتقل شود."
 
 #: views/bootnav.php:2
 msgid "Overview"
-msgstr ""
+msgstr "بازبینی"
 
 #: install.php:7
 msgid "Park Prefix"
-msgstr ""
+msgstr "پیشوند پارک شده"
 
 #: views/overview.php:26
 #, php-format
 msgid "Park Yourself into lot %d"
-msgstr ""
+msgstr "خود را پارک کنید در لات %d"
 
 #: views/overview.php:30
 msgid "Park Yourself into lot nn"
-msgstr ""
+msgstr "پارک کنید خود را در لات nn"
 
 #: views/overview.php:22
 msgid "Park Yourself. The lot number will be announced to you"
-msgstr ""
+msgstr "شماره لات به شما اعلام میشود"
 
 #: install.php:22
 msgid "Park to your Assigned Lot"
-msgstr ""
+msgstr "در Lot خود پارک کنید"
 
 #: functions.inc/registries.php:22
 #, php-format
 msgid "ParkPlus: ParkCall %s"
-msgstr ""
+msgstr "ParkPlus : ParkCall %s"
 
 #: functions.inc/registries.php:31
 #, php-format
 msgid "ParkPlus: PickupSlot %s"
-msgstr ""
+msgstr "ParkPlus : PickupSlot %s"
 
 #: views/lot.php:291 views/lot.php:322 views/lot.php:353
 msgid "Parked"
-msgstr ""
+msgstr "پارک شده"
 
 #: views/lot.php:199
 msgid "Parked Music Class"
-msgstr ""
+msgstr "کلاس آهنگ پارک شده"
 
 #: parking.i18n.php:10
 msgid "Parking"
-msgstr ""
+msgstr "در حال پارک"
 
 #: views/lot.php:377
 msgid "Parking Alert-Info"
-msgstr ""
+msgstr "اطلاعات هشدار پارکینگ"
 
 #: views/overview.php:37
 msgid "Parking Help"
-msgstr ""
+msgstr "راهنمای پارک کردن"
 
 #: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
-msgstr ""
+msgstr "Lot پارک کردن"
 
 #: views/lot.php:76
 msgid "Parking Lot Extension"
-msgstr ""
+msgstr "داخلی لات پارک شده"
 
 #: views/lot.php:100
 msgid "Parking Lot Name"
-msgstr ""
+msgstr "نام Lot پارک کردن"
 
 #: views/lot.php:124
 msgid "Parking Lot Starting Position"
-msgstr ""
+msgstr "موقعیت Lot شروع پارک کردن"
 
 #: functions.inc/registries.php:59 functions.inc/registries.php:94
 #, php-format
 msgid "Parking Lot: %s (%s)"
-msgstr ""
+msgstr "Parking Lot : %s (%s)"
 
 #: views/overview.php:36
 msgid "Parking Settings"
-msgstr ""
+msgstr "تنظیمات پارک کردن"
 
 #: views/lot.php:175
 msgid "Parking Timeout (seconds)"
-msgstr ""
+msgstr "وقفه پارک کردن (ثانیه)"
 
 #: Parking.class.php:89
 msgid "ParkingLot"
-msgstr ""
+msgstr "Lot پارک کردن"
 
 #: install.php:10
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
 msgstr ""
+"پارک در لات مختص شما. اگر از پارک استاندارد استفاده کنید این لات ها پیشفرض "
+"هستند"
 
 #: views/lot.php:284
 msgid "Pickup Courtesy Tone"
-msgstr ""
+msgstr "تن قطع کردن"
 
 #: install.php:6
 msgid "Pickup ParkedCall Any"
-msgstr ""
+msgstr "قطع هر تماس پارک شده"
 
 #: install.php:8
 msgid "Pickup ParkedCall Prefix"
-msgstr ""
+msgstr "قطع پیشوند تماس پارک شده"
 
 #: views/lot.php:112
 msgid "Provide a Descriptive Title for this Parking Lot"
-msgstr ""
+msgstr "ایجاد عنوان برای این لات"
 
 #: views/lot.php:346
 msgid "Re-Parking Capability"
-msgstr ""
+msgstr "قابلیت پارک کردن مجدد"
 
 #: Parking.class.php:146
 msgid "Reset"
-msgstr ""
+msgstr "بازنشانی"
 
 #: views/lot.php:274
 msgid "Returned Call Behavior"
-msgstr ""
+msgstr "رفتار تماس بازگشت"
 
 #: views/lot.php:432
 msgid "Slot"
-msgstr ""
+msgstr "Slot"
 
 #: views/lot.php:413
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
+"String to prepend to the current Caller ID associated with the parked call "
+"prior to sending back to the Originator or the Alternate Destination ."
 
 #: Parking.class.php:151
 msgid "Submit"
-msgstr ""
+msgstr "ارسال"
 
 #: views/lot.php:187
 msgid ""
 "The timeout period in seconds that a parked call will attempt to ring back "
 "the original parker if not answered"
 msgstr ""
+"The  timeout period in seconds that a parked call will attempt to ring back "
+"the original parker if not answered"
 
 #: views/lot.php:163
 msgid ""
@@ -342,6 +366,9 @@ msgid ""
 "extension and 8 slots are configured, the parking slots will be 71-78. Users "
 "can transfer a call directly into a parking slot."
 msgstr ""
+"The total number of parking lot spaces to configure. Example, if 70 is the "
+"extension and 8 slots are configured, the parking slots will be 71-78. Users "
+"can transfer a call directly into a parking slot ."
 
 #: views/lot.php:444
 msgid ""
@@ -352,10 +379,16 @@ msgid ""
 "that parked the call</li><li><strong>Name:</strong> The user who parked the "
 "call</li></ul>"
 msgstr ""
+"These options will be appended after CallerID Prepend if set. Otherwise they "
+"will appear first. The automatic options are as follows: "
+"<ul><li><strong>None:</strong> No Automatic "
+"Prepend</li><li><strong>Slot:</strong> Parking lot they were parked "
+"on</li><li><strong>Extension:</strong> The extension number that parked the "
+"call</li><li><strong>Name:</strong> The user who parked the call</li></ul>"
 
 #: views/lot.php:88
 msgid "This is the extension where you will transfer a call to park it"
-msgstr ""
+msgstr "این داخلی است که تماس برای پارک به آن منتقل میشود"
 
 #: views/lot.php:213
 msgid ""
@@ -364,14 +397,18 @@ msgid ""
 "different music class, such as if the call came in through a queue or ring "
 "group."
 msgstr ""
+"This is the music class that will be played to a parked call while in the "
+"parking lot UNLESS the call flow prior to parking the call explicitly set a "
+"different music class, such as if the call came in through a queue or ring "
+"group ."
 
 #: views/header.php:14
 msgid "This module is used to configure Parking Lot(s)"
-msgstr ""
+msgstr "این ماژول برای تنظیم لات(ها) پارک شده استفاده میشود"
 
 #: views/lot.php:315
 msgid "Transfer Capability"
-msgstr ""
+msgstr "قابلیت انتقال"
 
 #: views/lot.php:477
 msgid ""
@@ -381,53 +418,58 @@ msgid ""
 "Destination selected below. If set to no then we will send the call directly "
 "to the destination selected below"
 msgstr ""
+"Where to send a parked call that has timed out . If set to yes then the "
+"parked call will be sent back to the originating device that sent the call "
+"to this parking lot. If the origin is busy then we will send the call to the "
+"Destination selected below. If set to no then we will send the call directly "
+"to the destination selected below"
 
 #: views/lot.php:303
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
-msgstr ""
+msgstr "Whom to play the courtesy tone to when a parked call is retrieved ."
 
 #: views/lot.php:230 views/lot.php:467
 msgid "Yes"
-msgstr ""
+msgstr "بله"
 
 #: views/header.php:16
 msgid ""
 "You can also transfer directly to a lot number (71 through 78) and if that "
 "lot is empty, your call will be parked there"
-msgstr ""
+msgstr "شما میتوانید به شماره لات مستقیم (۷۱ تا ۷۸)منتقل شوید"
 
 #: views/header.php:15
 msgid ""
 "You can transfer a call to the Parking Lot Extension (70 by default), the "
 "call will then be placed into a lot (71-78 by default) and the lot number "
 "will be announced to you."
-msgstr ""
+msgstr "شما میتوانید یک تماس را به داخلی لات پارک شده منتقل کنید(پیشفرض ۷۰)."
 
 #: install.php:56
 #, php-format
 msgid "creating table %s if needed"
-msgstr ""
+msgstr "ایجاد جدول %s در صورت نیاز"
 
 #: views/lot.php:15
 msgid "default"
-msgstr ""
+msgstr "پیشفرض"
 
 #: install.php:88
 msgid "done"
-msgstr ""
+msgstr "انجام شده"
 
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
-msgstr ""
+msgstr "او پست کردن لات پارک را شروع کرده"
 
 #: install.php:165
 msgid "migrated ... dropping old table parkinglot"
-msgstr ""
+msgstr "منتقل شده... انداختن جدول قدیمی"
 
 #: install.php:94
 msgid "migrating old parkinglot data"
-msgstr ""
+msgstr "انتقال دیتا قدیمی لات پارک شده"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
-msgstr ""
+msgstr "nn"
