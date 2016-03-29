@@ -127,7 +127,7 @@ function parking_get_config($engine) {
 				$device_list = core_devices_list("all", 'full', true);
 				if(!empty($device_list) && is_array($device_list)) {
 					foreach ($device_list as $device) {
-						if ($device['tech'] == 'sip' || $device['tech'] == 'iax2') {
+						if ($device['tech'] == 'sip' || $device['tech'] == 'iax2' || $device['tech'] == 'pjsip') {
 							$ext->add($ph, $parkfetch_code.$device['id'], '', new ext_macro('parked-call', ',' . $park_context));
 							$ext->addHint($ph, $parkfetch_code.$device['id'], "Custom:PARK".$device['id']);
 						}
