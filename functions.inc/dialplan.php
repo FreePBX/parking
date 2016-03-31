@@ -124,15 +124,9 @@ function parking_get_config($engine) {
 			}
 
 			if ($amp_conf['USEDEVSTATE']) {
-				$device_list = core_devices_list("all", 'full', true);
-				if(!empty($device_list) && is_array($device_list)) {
-					foreach ($device_list as $device) {
-						if ($device['tech'] == 'sip' || $device['tech'] == 'iax2' || $device['tech'] == 'pjsip') {
-							$ext->add($ph, $parkfetch_code.$device['id'], '', new ext_macro('parked-call', ',' . $park_context));
-							$ext->addHint($ph, $parkfetch_code.$device['id'], "Custom:PARK".$device['id']);
-						}
-					}
-				}
+				$len = strlen($parkfetch_code);
+				$ext->add($ph, '_'.$parkfetch_code.'X.', '', new ext_macro('parked-call', ',' . $park_context));
+				$ext->addHint($ph, '_'.$parkfetch_code.'X.', 'Custom:PARK${EXTEN:'.$len.'}');
 			}
 		}
 		if($parkto_code != '') {
