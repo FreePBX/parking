@@ -104,6 +104,7 @@ function parking_get_config($engine) {
 		// we do not use the dynamic generated ParkedCall()
 		//
 		$hv_all = '';
+		$finalh = array();
 		for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
 
 			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $park_context : '${CHANNEL(parkinglot)}')));
@@ -112,8 +113,10 @@ function parking_get_config($engine) {
 				$hv = "park:$slot@$hint_context";
 				$hv_all .= $hv.'&';
 				$ext->addHint($ph, $slot, $hv);
+				$finalh[] = "park:".$slot."@".$hint_context;
 			}
 		}
+
 		$hv_all = rtrim($hv_all,'&');
 		if ($parkfetch_code != '') {
 			$ext->add($ph, $parkfetch_code, '', new ext_macro('parked-call', ',' . $park_context));
@@ -121,14 +124,13 @@ function parking_get_config($engine) {
 			if ($lot['generatehints'] == 'yes') {
 				$ext->addHint($ph, $parkfetch_code, $hv_all);
 				$ext->addHint($ph, $parkfetch_code.$lot['parkext'], $hv_all);
-			}
-
-			if ($amp_conf['USEDEVSTATE']) {
-				$len = strlen($parkfetch_code);
-				$ext->add($ph, '_'.$parkfetch_code.'X.', '', new ext_macro('parked-call', ',' . $park_context));
-				$ext->addHint($ph, '_'.$parkfetch_code.'X.', 'Custom:PARK${EXTEN:'.$len.'}');
+				if(!empty($finalh)) {
+					$ext->add($ph, '_'.$parkfetch_code.'X.', '', new ext_macro('parked-call', ',' . $park_context));
+					$ext->addHint($ph, '_'.$parkfetch_code.'X.', implode("&",$finalh));
+				}
 			}
 		}
+
 		if($parkto_code != '') {
 			$id = 'app-parking';
 			$ext->addInclude('from-internal-additional', $id); // Add the include to from-internal
