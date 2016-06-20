@@ -299,6 +299,7 @@ function parking_generate_parked_call() {
 	} else {
 		$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1},${ARG2}'));
 	}
+	$ext->add($pc, $exten, '', new ext_hangup('')); //prevent going into other contexts?
 	$ext->add($pc, 'h', '', new ext_macro('hangupcall'));
 
 	//Direct Slot Parking
