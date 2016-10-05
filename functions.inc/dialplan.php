@@ -279,14 +279,6 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
 	$ext->add($pc, $exten, '', new ext_set('CDR(recordingfile)','${CALLFILENAME}.${MON_FMT}'));
 	$ext->add($pc, $exten, 'next', new ext_set('CCSS_SETUP','TRUE'));
-	$ext->add($pc, $exten, '', new ext_gotoif('$["${ARG1}" = "" | ${DIALPLAN_EXISTS(${IF($["${ARG2}" = "default"]?parkedcalls:${ARG2})},${ARG1},1)} = 1]','pcall')); //fails here when ${ARG2} defined in ext_parkedcall
-	$ext->add($pc, $exten, '', new ext_resetcdr(''));
-	$ext->add($pc, $exten, '', new ext_nocdr(''));
-	$ext->add($pc, $exten, '', new ext_wait('1'));
-	$ext->add($pc, $exten, '', new ext_noop_trace('User: ${CALLERID(all)} tried to pickup non-existent Parked Call Slot ${ARG1}'));
-	$ext->add($pc, $exten, '', new ext_playback('pbx-invalidpark'));
-	$ext->add($pc, $exten, '', new ext_wait('1'));
-	$ext->add($pc, $exten, '', new ext_hangup(''));
 	$ext->add($pc, $exten, 'pcall', new ext_noop('User: ${CALLERID(all)} attempting to pick up Parked Call Slot ${ARG1}'));
 	$ext->add($pc, $exten, '', new ext_noop('PARKIE: ${PARKIE}'));
 	$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${PARKIE})',''));
