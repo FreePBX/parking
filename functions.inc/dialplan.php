@@ -89,10 +89,10 @@ function parking_get_config($engine) {
 			if (!$lot['dest']) {
 				$ext->add($por, $lot['parkext'], '', new ext_noop('ERROR: No Alternate Destination Available for Orphaned Call'));
 				$ext->add($por, $lot['parkext'], '', new ext_playback('sorry&an-error-has-occured'));
-                $ext->add($por, $lot['parkext'], '', new ext_hangup(''));
-            } else {
-                $ext->add($por, $lot['parkext'], '', new ext_goto($lot['dest']));
-            }
+				$ext->add($por, $lot['parkext'], '', new ext_hangup(''));
+			} else {
+				$ext->add($por, $lot['parkext'], '', new ext_goto($lot['dest']));
+			}
 		}
 
 		// Setup the specific items to do in the park-return-routing context for each lot, we will deal
@@ -116,6 +116,7 @@ function parking_get_config($engine) {
 				$finalh[] = "park:".$slot."@".$hint_context;
 			}
 		}
+		$ext->addHint($ph, $lot['parkext'], implode('&',$finalh));
 
 		$hv_all = rtrim($hv_all,'&');
 		if ($parkfetch_code != '') {
@@ -279,6 +280,14 @@ function parking_generate_parked_call() {
 	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
 	$ext->add($pc, $exten, '', new ext_set('CDR(recordingfile)','${CALLFILENAME}.${MON_FMT}'));
 	$ext->add($pc, $exten, 'next', new ext_set('CCSS_SETUP','TRUE'));
+	$ext->add($pc, $exten, '', new ext_gotoif('$["${PARKIE}" != ""]','pcall'));
+	$ext->add($pc, $exten, '', new ext_resetcdr(''));
+	$ext->add($pc, $exten, '', new ext_nocdr(''));
+	$ext->add($pc, $exten, '', new ext_wait('1'));
+	$ext->add($pc, $exten, '', new ext_noop_trace('User: ${CALLERID(all)} tried to pickup non-existent Parked Call Slot ${ARG1}'));
+	$ext->add($pc, $exten, '', new ext_playback('pbx-invalidpark'));
+	$ext->add($pc, $exten, '', new ext_wait('1'));
+	$ext->add($pc, $exten, '', new ext_hangup(''));
 	$ext->add($pc, $exten, 'pcall', new ext_noop('User: ${CALLERID(all)} attempting to pick up Parked Call Slot ${ARG1}'));
 	$ext->add($pc, $exten, '', new ext_noop('PARKIE: ${PARKIE}'));
 	$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${PARKIE})',''));

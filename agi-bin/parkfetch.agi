@@ -48,15 +48,22 @@ if(preg_match('/no such command/i',$r['data'])) {
 	}
 }
 
-// Grab the Recording channel variables that we need to keep track of.
-$vars = array('MIXMON_DIR', 'YEAR', 'MONTH', 'DAY', 'CALLFILENAME', 'MIXMON_FORMAT', 'MIXMON_POST', 'MON_FMT', 'MIXMON_ID', 'REC_STATUS', 'REC_POLICY_MODE', 'RECORD_ID');
-foreach ($vars as $v) {
-	$tmpvar = get_var('IMPORT("'.$channel.'",'.$v.')');
-	if (!empty($tmpvar)) {
-		$agi->set_variable($v, $tmpvar);
+if(empty($channel)) {
+	$agi->verbose("No channel found. No one is parked on this slot [".$argv[1]."]");
+} else {
+	$agi->verbose("Found slot full with channel [".$channel."]");
+	// Grab the Recording channel variables that we need to keep track of.
+	$vars = array('MIXMON_DIR', 'YEAR', 'MONTH', 'DAY', 'CALLFILENAME', 'MIXMON_FORMAT', 'MIXMON_POST', 'MON_FMT', 'MIXMON_ID', 'REC_STATUS', 'REC_POLICY_MODE', 'RECORD_ID');
+	foreach ($vars as $v) {
+		$tmpvar = get_var('IMPORT("'.$channel.'",'.$v.')');
+		if (!empty($tmpvar)) {
+			$agi->set_variable($v, $tmpvar);
+		}
 	}
 	$agi->set_variable("PARKIE", $channel);
 }
+
+
 
 function get_var($value) {
 	global $agi;
