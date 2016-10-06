@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-14 14:14-0800\n"
+"POT-Creation-Date: 2016-10-06 12:22-0700\n"
 "PO-Revision-Date: 2015-03-11 19:42-0400\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -108,6 +108,15 @@ msgstr "Lote Por defecto"
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "Define el Código de Función a usar para Tomado de Llamada Directo"
+
+#: install.php:15
+msgid ""
+"Defines the Feature Code to use to force pickup a call that is parked in a "
+"private lot that the extension picking up the call does not have permissions "
+"for.  Example if a caller is parked in slot 81 and extension 8001 does not "
+"have permission to that private lot they could dial *8581 to pickup the "
+"parked call."
+msgstr ""
 
 #: Parking.class.php:141
 msgid "Delete"
@@ -302,7 +311,7 @@ msgstr ""
 msgid "ParkingLot"
 msgstr ""
 
-#: install.php:10
+#: install.php:10 install.php:23
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
