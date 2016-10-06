@@ -103,39 +103,28 @@ function parking_get_config($engine) {
 		// Now we have to create the hints and the specific parking slots for picking up the calls since
 		// we do not use the dynamic generated ParkedCall()
 		//
-		$hv_all = '';
 		$finalh = array();
 		for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
 
 			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $park_context : '${CHANNEL(parkinglot)}')));
 
-			if ($lot['generatehints'] == 'yes') {
-				$hv = "park:$slot@$hint_context";
-				$hv_all .= $hv.'&';
-				$ext->addHint($ph, $slot, $hv);
-				$finalh[] = "park:".$slot."@".$hint_context;
+			$hv = "park:$slot@$hint_context";
+			$finalh[] = $hv;
+			$ext->addHint($ph, $slot, $hv);
+
+			if ($parkfetch_code != '' && $lot['generatefc'] == 'yes') {
+				$ext->add($ph, $parkfetch_code.$slot, '', new ext_set('FORCEPICKUP',$park_context));
+				$ext->add($ph, $parkfetch_code.$slot, '', new ext_macro('parked-call',$slot . ',' . $park_context));
+				$ext->addHint($ph, $parkfetch_code.$slot, $hv);
 			}
+
 		}
 		$ext->addHint($ph, $lot['parkext'], implode('&',$finalh));
-
-		$hv_all = rtrim($hv_all,'&');
-		if ($parkfetch_code != '') {
-			$ext->add($ph, $parkfetch_code, '', new ext_macro('parked-call', ',' . $park_context));
-			$ext->add($ph, $parkfetch_code.$lot['parkext'], '', new ext_macro('parked-call', ',' . $park_context));
-			if ($lot['generatehints'] == 'yes') {
-				$ext->addHint($ph, $parkfetch_code, $hv_all);
-				$ext->addHint($ph, $parkfetch_code.$lot['parkext'], $hv_all);
-				if(!empty($finalh)) {
-					$ext->add($ph, '_'.$parkfetch_code.'X.', '', new ext_macro('parked-call', ',' . $park_context));
-					$ext->addHint($ph, '_'.$parkfetch_code.'X.', implode("&",$finalh));
-				}
-			}
-		}
 
 		if($parkto_code != '') {
 			$id = 'app-parking';
 			$ext->addInclude('from-internal-additional', $id); // Add the include to from-internal
-			$ext->add($id, $parkto_code, '', new \ext_goto('1', $lot['parkext'], 'from-internal'));
+			$ext->add($id, $parkto_code, '', new \ext_park());
 		}
 
 		if ($lot['autocidpp'] == 'exten' || $lot['autocidpp'] == 'name') {
