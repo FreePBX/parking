@@ -43,7 +43,8 @@ class Parking implements BMO {
 			"autocidpp" => "",
 			"announcement_id" => null,
 			"comebacktoorigin" => "yes",
-			"dest" => ""
+			"dest" => "",
+			"rvolume" => ""
 		);
 
 		$data = array();

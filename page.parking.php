@@ -23,7 +23,8 @@ $parking_defaults = array(
 	"autocidpp" => "",
 	"announcement_id" => null,
 	"comebacktoorigin" => "yes",
-	"dest" => ""
+	"dest" => "",
+	"rvolume" => ""
 );
 $all_pl['lots'] = parking_get('all');
 $heading = parking_views('header',$all_pl);
