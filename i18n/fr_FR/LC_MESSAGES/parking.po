@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-06 12:22-0700\n"
+"POT-Creation-Date: 2016-10-14 20:40-0700\n"
 "PO-Revision-Date: 2016-02-01 03:10+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -21,18 +21,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: install.php:155
-#, php-format
-msgid "%s no longer supported"
-msgstr "%s n'est plus supporté"
-
 #: views/lot.php:389
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
 
-#: views/lot.php:452
+#: views/lot.php:479
 msgid "Alternate Destination"
 msgstr ""
 
@@ -71,7 +66,7 @@ msgstr ""
 msgid "Attended transfer to lot %d"
 msgstr ""
 
-#: views/lot.php:425
+#: views/lot.php:452
 msgid "Auto CallerID Prepend"
 msgstr ""
 
@@ -87,16 +82,12 @@ msgstr ""
 msgid "Caller"
 msgstr ""
 
-#: views/lot.php:401
+#: views/lot.php:428
 msgid "CallerID Prepend"
 msgstr ""
 
-#: views/lot.php:462
+#: views/lot.php:489
 msgid "Come Back to Origin"
-msgstr ""
-
-#: install.php:86
-msgid "Default Lot"
 msgstr ""
 
 #: install.php:9
@@ -112,17 +103,13 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:141
+#: Parking.class.php:142
 msgid "Delete"
 msgstr "Supprimer"
 
-#: views/lot.php:489
+#: views/lot.php:516
 msgid "Destination"
 msgstr "Destination"
-
-#: install.php:69
-msgid "ERROR: too many default lots detected, deleting and reinitializing"
-msgstr ""
 
 #: views/lot.php:64
 msgid "Edit: "
@@ -136,11 +123,11 @@ msgstr ""
 msgid "Example Usage"
 msgstr ""
 
-#: views/lot.php:434
+#: views/lot.php:461
 msgid "Extension"
 msgstr "Poste"
 
-#: views/lot.php:501
+#: views/lot.php:528
 msgid "Failover Destination."
 msgstr ""
 
@@ -160,17 +147,13 @@ msgstr "Paramètres généraux"
 msgid "INUSE"
 msgstr "UTILISÉ"
 
-#: install.php:85
-msgid "Initializing default parkinglot.."
-msgstr ""
-
 #: parking.i18n.php:8
 msgid ""
 "Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
 
-#: views/lot.php:436
+#: views/lot.php:463
 msgid "Name"
 msgstr "Nom"
 
@@ -189,11 +172,11 @@ msgid ""
 "slot. First: Use the first parking lot slot available"
 msgstr ""
 
-#: views/lot.php:232 views/lot.php:469
+#: views/lot.php:232 views/lot.php:496
 msgid "No"
 msgstr ""
 
-#: views/lot.php:21 views/lot.php:295 views/lot.php:430
+#: views/lot.php:21 views/lot.php:295 views/lot.php:405 views/lot.php:457
 msgid "None"
 msgstr ""
 
@@ -205,6 +188,13 @@ msgstr ""
 msgid ""
 "Optional message to be played to the call prior to sending back to the "
 "Originator or the Alternate Destination."
+msgstr ""
+
+#: views/lot.php:417
+#, php-format
+msgid ""
+"Override the ringer volume. Note: This is only valid for %s phones at this "
+"time"
 msgstr ""
 
 #: views/bootnav.php:2
@@ -291,7 +281,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:89
+#: Parking.class.php:90
 msgid "ParkingLot"
 msgstr ""
 
@@ -321,7 +311,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:146
+#: Parking.class.php:147
 msgid "Reset"
 msgstr ""
 
@@ -329,17 +319,21 @@ msgstr ""
 msgid "Returned Call Behavior"
 msgstr ""
 
-#: views/lot.php:432
+#: views/lot.php:400
+msgid "Ringer Volume Override"
+msgstr ""
+
+#: views/lot.php:459
 msgid "Slot"
 msgstr ""
 
-#: views/lot.php:413
+#: views/lot.php:440
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:151
+#: Parking.class.php:152
 msgid "Submit"
 msgstr ""
 
@@ -356,7 +350,7 @@ msgid ""
 "can transfer a call directly into a parking slot."
 msgstr ""
 
-#: views/lot.php:444
+#: views/lot.php:471
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -386,7 +380,7 @@ msgstr ""
 msgid "Transfer Capability"
 msgstr ""
 
-#: views/lot.php:477
+#: views/lot.php:504
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -399,7 +393,7 @@ msgstr ""
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 
-#: views/lot.php:230 views/lot.php:467
+#: views/lot.php:230 views/lot.php:494
 msgid "Yes"
 msgstr ""
 
@@ -416,31 +410,17 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: install.php:56
-#, php-format
-msgid "creating table %s if needed"
-msgstr ""
-
 #: views/lot.php:15
 msgid "default"
-msgstr ""
-
-#: install.php:88
-msgid "done"
 msgstr ""
 
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:165
-msgid "migrated ... dropping old table parkinglot"
-msgstr ""
-
-#: install.php:94
-msgid "migrating old parkinglot data"
-msgstr ""
-
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#~ msgid "%s no longer supported"
+#~ msgstr "%s n'est plus supporté"

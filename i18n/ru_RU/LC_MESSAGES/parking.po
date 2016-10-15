@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-06 12:22-0700\n"
+"POT-Creation-Date: 2016-10-14 20:40-0700\n"
 "PO-Revision-Date: 2015-12-08 23:19+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -20,11 +20,6 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: install.php:155
-#, php-format
-msgid "%s no longer supported"
-msgstr "%s более не поддерживается"
-
 #: views/lot.php:389
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
@@ -33,7 +28,7 @@ msgstr ""
 "Добаляемое перед посылкой вызова оригинатору или по альтернативному "
 "назначению уведомление Alert-Info."
 
-#: views/lot.php:452
+#: views/lot.php:479
 msgid "Alternate Destination"
 msgstr "Альтернативное назначение"
 
@@ -78,7 +73,7 @@ msgstr ""
 msgid "Attended transfer to lot %d"
 msgstr "Перевод с консультацией на лот %d"
 
-#: views/lot.php:425
+#: views/lot.php:452
 msgid "Auto CallerID Prepend"
 msgstr "Автоматическое добавление  CallerID"
 
@@ -94,17 +89,13 @@ msgstr "Оба"
 msgid "Caller"
 msgstr "Вызывающий"
 
-#: views/lot.php:401
+#: views/lot.php:428
 msgid "CallerID Prepend"
 msgstr "Добавление CallerID"
 
-#: views/lot.php:462
+#: views/lot.php:489
 msgid "Come Back to Origin"
 msgstr "Возврат к источнику"
-
-#: install.php:86
-msgid "Default Lot"
-msgstr "Лот по умолчанию"
 
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
@@ -120,19 +111,13 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:141
+#: Parking.class.php:142
 msgid "Delete"
 msgstr "Удалить"
 
-#: views/lot.php:489
+#: views/lot.php:516
 msgid "Destination"
 msgstr "Назначение"
-
-#: install.php:69
-msgid "ERROR: too many default lots detected, deleting and reinitializing"
-msgstr ""
-"Ошибка: обнаружено слишком много лотов по умолчанию, удаление и "
-"переинициализация"
 
 #: views/lot.php:64
 msgid "Edit: "
@@ -148,11 +133,11 @@ msgstr ""
 msgid "Example Usage"
 msgstr "Пример использования"
 
-#: views/lot.php:434
+#: views/lot.php:461
 msgid "Extension"
 msgstr "Внутренний номер"
 
-#: views/lot.php:501
+#: views/lot.php:528
 msgid "Failover Destination."
 msgstr "Назначение при ошибке."
 
@@ -172,10 +157,6 @@ msgstr "Общие настройки"
 msgid "INUSE"
 msgstr "Используется"
 
-#: install.php:85
-msgid "Initializing default parkinglot.."
-msgstr "Инициализация паркующего лота по умолчанию."
-
 #: parking.i18n.php:8
 msgid ""
 "Manages parking lot extensions and other options.\tParking is a way of "
@@ -184,7 +165,7 @@ msgstr ""
 "Управление лотом парковки внутренних номеров и другие опции.\t\tПарковка - "
 "один из способов отложить звонки "
 
-#: views/lot.php:436
+#: views/lot.php:463
 msgid "Name"
 msgstr "Имя"
 
@@ -205,11 +186,11 @@ msgstr ""
 "Следующий:Если Вы хотите выбрать следующий лот в последовательности вместо "
 "первого доступного. Первый:Использовать первый доступный лот"
 
-#: views/lot.php:232 views/lot.php:469
+#: views/lot.php:232 views/lot.php:496
 msgid "No"
 msgstr "Нет"
 
-#: views/lot.php:21 views/lot.php:295 views/lot.php:430
+#: views/lot.php:21 views/lot.php:295 views/lot.php:405 views/lot.php:457
 msgid "None"
 msgstr "Нет"
 
@@ -224,6 +205,13 @@ msgid ""
 msgstr ""
 "Опционально - голосовое сообщение, которое воспроизводится прежде чем "
 "отправить его назад оригинатору ил по альтернативному назначению."
+
+#: views/lot.php:417
+#, php-format
+msgid ""
+"Override the ringer volume. Note: This is only valid for %s phones at this "
+"time"
+msgstr ""
 
 #: views/bootnav.php:2
 msgid "Overview"
@@ -309,7 +297,7 @@ msgstr "Настройки парковки"
 msgid "Parking Timeout (seconds)"
 msgstr "Таймаут парковки(в секундах)"
 
-#: Parking.class.php:89
+#: Parking.class.php:90
 msgid "ParkingLot"
 msgstr "Паркующтй лот"
 
@@ -339,7 +327,7 @@ msgstr "Укажите описание для этого парковочног
 msgid "Re-Parking Capability"
 msgstr "Возможности перепарковки"
 
-#: Parking.class.php:146
+#: Parking.class.php:147
 msgid "Reset"
 msgstr "Сброс"
 
@@ -347,11 +335,15 @@ msgstr "Сброс"
 msgid "Returned Call Behavior"
 msgstr "Поведение вернувшегося  вызова"
 
-#: views/lot.php:432
+#: views/lot.php:400
+msgid "Ringer Volume Override"
+msgstr ""
+
+#: views/lot.php:459
 msgid "Slot"
 msgstr "Слот"
 
-#: views/lot.php:413
+#: views/lot.php:440
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
@@ -360,7 +352,7 @@ msgstr ""
 "запаркованным, прежде чем отправить его назад оригинатору или по "
 "альтернативному назначению."
 
-#: Parking.class.php:151
+#: Parking.class.php:152
 msgid "Submit"
 msgstr "Подтвердить"
 
@@ -382,7 +374,7 @@ msgstr ""
 "это внутренний номер и сконфигурировано 8 слотов , то номера парковочных "
 "слотов будут 71-78. Пользователи могут напрямую звонить на парковочный слот."
 
-#: views/lot.php:444
+#: views/lot.php:471
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -423,7 +415,7 @@ msgstr "Этот модуль используется для конфигури
 msgid "Transfer Capability"
 msgstr "Возможности перевода"
 
-#: views/lot.php:477
+#: views/lot.php:504
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -443,7 +435,7 @@ msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 "Кому воспроизвести звуковой сигнал если запаркованный вызов вернулся обратно."
 
-#: views/lot.php:230 views/lot.php:467
+#: views/lot.php:230 views/lot.php:494
 msgid "Yes"
 msgstr "Да"
 
@@ -465,34 +457,43 @@ msgstr ""
 "будет припаркован на лот (71 -78 по умолчанию) ,  номер лота будет вам "
 "сообщен."
 
-#: install.php:56
-#, php-format
-msgid "creating table %s if needed"
-msgstr "создание таблицы %s если нужно"
-
 #: views/lot.php:15
 msgid "default"
 msgstr "по умолчанию"
-
-#: install.php:88
-msgid "done"
-msgstr "выполнено"
 
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
 msgstr "Начальная позиция паркового лота"
 
-#: install.php:165
-msgid "migrated ... dropping old table parkinglot"
-msgstr "смигрировано... разбивка старой таблицы парковочного лота"
-
-#: install.php:94
-msgid "migrating old parkinglot data"
-msgstr "миграция старых данных о парковочном лоте"
-
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#~ msgid "%s no longer supported"
+#~ msgstr "%s более не поддерживается"
+
+#~ msgid "Default Lot"
+#~ msgstr "Лот по умолчанию"
+
+#~ msgid "ERROR: too many default lots detected, deleting and reinitializing"
+#~ msgstr ""
+#~ "Ошибка: обнаружено слишком много лотов по умолчанию, удаление и "
+#~ "переинициализация"
+
+#~ msgid "Initializing default parkinglot.."
+#~ msgstr "Инициализация паркующего лота по умолчанию."
+
+#~ msgid "creating table %s if needed"
+#~ msgstr "создание таблицы %s если нужно"
+
+#~ msgid "done"
+#~ msgstr "выполнено"
+
+#~ msgid "migrated ... dropping old table parkinglot"
+#~ msgstr "смигрировано... разбивка старой таблицы парковочного лота"
+
+#~ msgid "migrating old parkinglot data"
+#~ msgstr "миграция старых данных о парковочном лоте"
 
 #~ msgid "Parking Alert-Info:"
 #~ msgstr "Специальная информация:"
