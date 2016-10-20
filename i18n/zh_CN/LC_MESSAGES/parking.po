@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-14 20:40-0700\n"
+"POT-Creation-Date: 2016-10-20 10:55-0700\n"
 "PO-Revision-Date: 2015-10-19 15:00+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -20,6 +20,11 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
+
+#: assets/js/park.js:103
+#, perl-format
+msgid "%s already in use by: %s"
+msgstr ""
 
 #: views/lot.php:389
 msgid ""
@@ -260,13 +265,46 @@ msgstr "驻留区"
 msgid "Parking Lot Extension"
 msgstr "驻留地址分机"
 
+#: assets/js/park.js:87
+msgid "Parking Lot Extension and Starting Position can not be the same!"
+msgstr ""
+
+#: assets/js/park.js:24
+msgid "Parking Lot Extension can not be blank!"
+msgstr ""
+
+#: assets/js/park.js:28
+msgid "Parking Lot Extension can not be larger than 2147483647!"
+msgstr ""
+
+#: assets/js/park.js:32
+msgid "Parking Lot Extension can not start with a leading 0!"
+msgstr ""
+
+#: assets/js/park.js:97
+#, perl-format
+msgid "Parking Lot Extension: %s"
+msgstr ""
+
 #: views/lot.php:100
 msgid "Parking Lot Name"
 msgstr "驻留名称"
 
+#: assets/js/park.js:36
+msgid "Parking Lot Name can not be blank!"
+msgstr ""
+
 #: views/lot.php:124
 msgid "Parking Lot Starting Position"
 msgstr "驻留地址起始位置"
+
+#: assets/js/park.js:40
+msgid "Parking Lot Starting Position can not be blank!"
+msgstr ""
+
+#: assets/js/park.js:48
+msgid "Parking Lot Starting Position can not start with a leading 0!"
+msgstr ""
 
 #: functions.inc/registries.php:59 functions.inc/registries.php:94
 #, php-format
@@ -275,6 +313,19 @@ msgstr ""
 
 #: views/overview.php:36
 msgid "Parking Settings"
+msgstr ""
+
+#: assets/js/park.js:97
+#, perl-format
+msgid "Parking Slot: %s"
+msgstr ""
+
+#: assets/js/park.js:44
+msgid "Parking Starting Position can not be larger than 2147483647!"
+msgstr ""
+
+#: assets/js/park.js:108
+msgid "Parking Starting Position/Slots can not be larger than 2147483647!"
 msgstr ""
 
 #: views/lot.php:175
@@ -408,6 +459,14 @@ msgid ""
 "You can transfer a call to the Parking Lot Extension (70 by default), the "
 "call will then be placed into a lot (71-78 by default) and the lot number "
 "will be announced to you."
+msgstr ""
+
+#: assets/js/park.js:57
+msgid "You have errors on the form. Please correct them before continuing"
+msgstr ""
+
+#: assets/js/park.js:52
+msgid "You must select a valid destination"
 msgstr ""
 
 #: views/lot.php:15

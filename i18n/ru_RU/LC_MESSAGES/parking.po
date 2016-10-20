@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-14 20:40-0700\n"
+"POT-Creation-Date: 2016-10-20 10:55-0700\n"
 "PO-Revision-Date: 2015-12-08 23:19+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -19,6 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
+
+#: assets/js/park.js:103
+#, perl-format
+msgid "%s already in use by: %s"
+msgstr ""
 
 #: views/lot.php:389
 msgid ""
@@ -276,13 +281,46 @@ msgstr "Парковка"
 msgid "Parking Lot Extension"
 msgstr "Внутренний номер парковочного лота"
 
+#: assets/js/park.js:87
+msgid "Parking Lot Extension and Starting Position can not be the same!"
+msgstr ""
+
+#: assets/js/park.js:24
+msgid "Parking Lot Extension can not be blank!"
+msgstr ""
+
+#: assets/js/park.js:28
+msgid "Parking Lot Extension can not be larger than 2147483647!"
+msgstr ""
+
+#: assets/js/park.js:32
+msgid "Parking Lot Extension can not start with a leading 0!"
+msgstr ""
+
+#: assets/js/park.js:97
+#, perl-format
+msgid "Parking Lot Extension: %s"
+msgstr ""
+
 #: views/lot.php:100
 msgid "Parking Lot Name"
 msgstr "Имя парковочного лота"
 
+#: assets/js/park.js:36
+msgid "Parking Lot Name can not be blank!"
+msgstr ""
+
 #: views/lot.php:124
 msgid "Parking Lot Starting Position"
 msgstr "Стартовая позиция парковочного лота"
+
+#: assets/js/park.js:40
+msgid "Parking Lot Starting Position can not be blank!"
+msgstr ""
+
+#: assets/js/park.js:48
+msgid "Parking Lot Starting Position can not start with a leading 0!"
+msgstr ""
 
 #: functions.inc/registries.php:59 functions.inc/registries.php:94
 #, php-format
@@ -292,6 +330,19 @@ msgstr "Парковочный лот: %s(%s)"
 #: views/overview.php:36
 msgid "Parking Settings"
 msgstr "Настройки парковки"
+
+#: assets/js/park.js:97
+#, perl-format
+msgid "Parking Slot: %s"
+msgstr ""
+
+#: assets/js/park.js:44
+msgid "Parking Starting Position can not be larger than 2147483647!"
+msgstr ""
+
+#: assets/js/park.js:108
+msgid "Parking Starting Position/Slots can not be larger than 2147483647!"
+msgstr ""
 
 #: views/lot.php:175
 msgid "Parking Timeout (seconds)"
@@ -456,6 +507,14 @@ msgstr ""
 "Вы можете перевести вызов на парковочный экстеншен (70 по умолчанию) , вызов "
 "будет припаркован на лот (71 -78 по умолчанию) ,  номер лота будет вам "
 "сообщен."
+
+#: assets/js/park.js:57
+msgid "You have errors on the form. Please correct them before continuing"
+msgstr ""
+
+#: assets/js/park.js:52
+msgid "You must select a valid destination"
+msgstr ""
 
 #: views/lot.php:15
 msgid "default"
