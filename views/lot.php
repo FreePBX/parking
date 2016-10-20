@@ -77,7 +77,7 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkext"></i>
 						</div>
 						<div class="col-md-9">
-							<input type="text" class="form-control" id="parkext" name="parkext" value="<?php echo $parkext?>">
+							<input type="text" class="form-control extdisplay" id="parkext" name="parkext" value="<?php echo $parkext?>">
 						</div>
 					</div>
 				</div>
@@ -125,7 +125,7 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkpos"></i>
 						</div>
 						<div class="col-md-9">
-							<input type="text" class="form-control" id="parkpos" name="parkpos" value="<?php echo $parkpos?>">
+							<input type="text" class="form-control extdisplay" id="parkpos" name="parkpos" value="<?php echo $parkpos?>">
 						</div>
 					</div>
 				</div>

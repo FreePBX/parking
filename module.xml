@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>13.0.19</version>
+	<version>13.0.19.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
+		*13.0.19.1* FREEPBX-13333 validate all input into the form correctly
 		*13.0.19* FREEPBX-13364 Ability to set ringer volumes
 		*13.0.18.1* FREEPBX-13294 more cleanup and testing
 		*13.0.18* FREEPBX-13294 cleanup in detecting empty slots
