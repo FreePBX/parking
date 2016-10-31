@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 10:55-0700\n"
+"POT-Creation-Date: 2016-10-31 16:50-0700\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -48,19 +48,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 1.8\n"
 
-#: assets/js/park.js:103
+#: assets/js/park.js:96
 #, perl-format
 msgid "%s already in use by: %s"
 msgstr ""
 
-#: views/lot.php:389
+#: views/lot.php:411
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前にコールに追加するアラート情報。"
 
-#: views/lot.php:479
+#: views/lot.php:501
 msgid "Alternate Destination"
 msgstr "代わりの宛先："
 
@@ -72,7 +72,7 @@ msgstr ""
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: views/lot.php:365
+#: views/lot.php:387
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
@@ -80,7 +80,7 @@ msgstr ""
 "Asteris： parkedcallreparking。パークされたコールをピックアップする際にDTMF"
 "ベースでパーキングする機能を有効にするか無効にするか。"
 
-#: views/lot.php:334
+#: views/lot.php:356
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
@@ -105,27 +105,27 @@ msgstr ""
 msgid "Attended transfer to lot %d"
 msgstr "ロット %d への取次転送"
 
-#: views/lot.php:452
+#: views/lot.php:474
 msgid "Auto CallerID Prepend"
 msgstr ""
 
-#: views/lot.php:225
+#: views/lot.php:247
 msgid "BLF Capabilities"
 msgstr ""
 
-#: views/lot.php:293 views/lot.php:324 views/lot.php:355
+#: views/lot.php:315 views/lot.php:346 views/lot.php:377
 msgid "Both"
 msgstr "両方"
 
-#: views/lot.php:289 views/lot.php:320 views/lot.php:351
+#: views/lot.php:311 views/lot.php:342 views/lot.php:373
 msgid "Caller"
 msgstr "発信者"
 
-#: views/lot.php:428
+#: views/lot.php:450
 msgid "CallerID Prepend"
 msgstr ""
 
-#: views/lot.php:489
+#: views/lot.php:511
 msgid "Come Back to Origin"
 msgstr ""
 
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: views/lot.php:516
+#: views/lot.php:538
 msgid "Destination"
 msgstr ""
 
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Edit: "
 msgstr ""
 
-#: views/lot.php:240
+#: views/lot.php:262
 msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
 msgstr "BLFボタンで使用するために生成されたAsteriskの'ヒント'を有効にする。"
 
@@ -162,19 +162,19 @@ msgstr "BLFボタンで使用するために生成されたAsteriskの'ヒント
 msgid "Example Usage"
 msgstr ""
 
-#: views/lot.php:461
+#: views/lot.php:483
 msgid "Extension"
 msgstr "内線"
 
-#: views/lot.php:528
+#: views/lot.php:550
 msgid "Failover Destination."
 msgstr ""
 
-#: views/lot.php:252
+#: views/lot.php:274
 msgid "Find Slot"
 msgstr ""
 
-#: views/lot.php:259
+#: views/lot.php:281
 msgid "First"
 msgstr "最初"
 
@@ -193,19 +193,19 @@ msgid ""
 msgstr ""
 "パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
 
-#: views/lot.php:463
+#: views/lot.php:485
 msgid "Name"
 msgstr "名前"
 
-#: views/lot.php:326 views/lot.php:357
+#: views/lot.php:348 views/lot.php:379
 msgid "Neither"
 msgstr "両方なし"
 
-#: views/lot.php:257
+#: views/lot.php:279
 msgid "Next"
 msgstr "次"
 
-#: views/lot.php:267
+#: views/lot.php:289
 msgid ""
 "Next: If you want the parking lot to seek the next sequential parking slot "
 "relative to the the last parked call instead of seeking the first available "
@@ -214,11 +214,11 @@ msgstr ""
 "次：最初に使用できるロットを探させる代わりに、最後にパークしたロットを探す。"
 "　最初:利用可能な最初のパーキングロットを探す"
 
-#: views/lot.php:232 views/lot.php:496
+#: views/lot.php:254 views/lot.php:518
 msgid "No"
 msgstr "いいえ"
 
-#: views/lot.php:21 views/lot.php:295 views/lot.php:405 views/lot.php:457
+#: views/lot.php:21 views/lot.php:317 views/lot.php:427 views/lot.php:479
 msgid "None"
 msgstr "なし"
 
@@ -234,7 +234,7 @@ msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前にコールに再生される追加のメッ"
 "セージ。"
 
-#: views/lot.php:417
+#: views/lot.php:439
 #, php-format
 msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
@@ -276,11 +276,11 @@ msgstr "ParkPlus: ParkCall %s"
 msgid "ParkPlus: PickupSlot %s"
 msgstr "ParkPlus: PickupSlot %s"
 
-#: views/lot.php:291 views/lot.php:322 views/lot.php:353
+#: views/lot.php:313 views/lot.php:344 views/lot.php:375
 msgid "Parked"
 msgstr "パーク中"
 
-#: views/lot.php:199
+#: views/lot.php:221
 msgid "Parked Music Class"
 msgstr ""
 
@@ -288,7 +288,7 @@ msgstr ""
 msgid "Parking"
 msgstr "パーキング"
 
-#: views/lot.php:377
+#: views/lot.php:399
 msgid "Parking Alert-Info"
 msgstr ""
 
@@ -304,23 +304,23 @@ msgstr "パーキングロット"
 msgid "Parking Lot Extension"
 msgstr ""
 
-#: assets/js/park.js:87
+#: assets/js/park.js:79
 msgid "Parking Lot Extension and Starting Position can not be the same!"
 msgstr ""
 
-#: assets/js/park.js:24
+#: assets/js/park.js:16
 msgid "Parking Lot Extension can not be blank!"
 msgstr ""
 
-#: assets/js/park.js:28
+#: assets/js/park.js:20
 msgid "Parking Lot Extension can not be larger than 2147483647!"
 msgstr ""
 
-#: assets/js/park.js:32
+#: assets/js/park.js:24
 msgid "Parking Lot Extension can not start with a leading 0!"
 msgstr ""
 
-#: assets/js/park.js:97
+#: assets/js/park.js:90
 #, perl-format
 msgid "Parking Lot Extension: %s"
 msgstr ""
@@ -329,7 +329,7 @@ msgstr ""
 msgid "Parking Lot Name"
 msgstr ""
 
-#: assets/js/park.js:36
+#: assets/js/park.js:28
 msgid "Parking Lot Name can not be blank!"
 msgstr ""
 
@@ -337,11 +337,11 @@ msgstr ""
 msgid "Parking Lot Starting Position"
 msgstr ""
 
-#: assets/js/park.js:40
+#: assets/js/park.js:32
 msgid "Parking Lot Starting Position can not be blank!"
 msgstr ""
 
-#: assets/js/park.js:48
+#: assets/js/park.js:40
 msgid "Parking Lot Starting Position can not start with a leading 0!"
 msgstr ""
 
@@ -354,20 +354,20 @@ msgstr "パーキングロット: %s (%s)"
 msgid "Parking Settings"
 msgstr ""
 
-#: assets/js/park.js:97
+#: assets/js/park.js:90
 #, perl-format
 msgid "Parking Slot: %s"
 msgstr ""
 
-#: assets/js/park.js:44
+#: assets/js/park.js:36
 msgid "Parking Starting Position can not be larger than 2147483647!"
 msgstr ""
 
-#: assets/js/park.js:108
+#: assets/js/park.js:101
 msgid "Parking Starting Position/Slots can not be larger than 2147483647!"
 msgstr ""
 
-#: views/lot.php:175
+#: views/lot.php:197
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
@@ -381,7 +381,7 @@ msgid ""
 "parks to the default lot"
 msgstr ""
 
-#: views/lot.php:284
+#: views/lot.php:306
 msgid "Pickup Courtesy Tone"
 msgstr ""
 
@@ -397,7 +397,7 @@ msgstr "パーク中通話のピックアッププレフィックス"
 msgid "Provide a Descriptive Title for this Parking Lot"
 msgstr "このパーキングロットに詳細な名称を与える"
 
-#: views/lot.php:346
+#: views/lot.php:368
 msgid "Re-Parking Capability"
 msgstr ""
 
@@ -405,19 +405,23 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/lot.php:274
+#: views/lot.php:296
 msgid "Returned Call Behavior"
 msgstr "呼の戻り時の挙動"
 
-#: views/lot.php:400
+#: views/lot.php:422
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: views/lot.php:459
+#: views/lot.php:481
 msgid "Slot"
 msgstr "スロット"
 
-#: views/lot.php:440
+#: views/lot.php:174
+msgid "Slot Range"
+msgstr ""
+
+#: views/lot.php:462
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
@@ -429,7 +433,11 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: views/lot.php:187
+#: views/lot.php:186
+msgid "The generated slot range"
+msgstr ""
+
+#: views/lot.php:209
 msgid ""
 "The timeout period in seconds that a parked call will attempt to ring back "
 "the original parker if not answered"
@@ -446,7 +454,7 @@ msgstr ""
 "ロットを設定すると、パーキングロットは 71〜78 になります。特定のパーキング"
 "ロットへの転送も可能です。"
 
-#: views/lot.php:471
+#: views/lot.php:493
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -466,7 +474,7 @@ msgstr ""
 msgid "This is the extension where you will transfer a call to park it"
 msgstr "呼をパーク保留するための内線番号"
 
-#: views/lot.php:213
+#: views/lot.php:235
 msgid ""
 "This is the music class that will be played to a parked call while in the "
 "parking lot UNLESS the call flow prior to parking the call explicitly set a "
@@ -481,11 +489,11 @@ msgstr ""
 msgid "This module is used to configure Parking Lot(s)"
 msgstr "パーキングロットを設定するためのモジュール"
 
-#: views/lot.php:315
+#: views/lot.php:337
 msgid "Transfer Capability"
 msgstr ""
 
-#: views/lot.php:504
+#: views/lot.php:526
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -497,12 +505,12 @@ msgstr ""
 "パーク保留した内線に戻します。もしパーク保留元が通話中の場合、次で選択した宛"
 "先に転送します。「いいえ」に設定すると、次の宛先に直接転送します"
 
-#: views/lot.php:303
+#: views/lot.php:325
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 "パークされたコールが取得された時に誰に対して\"ピー\"という音を再生するか。"
 
-#: views/lot.php:230 views/lot.php:494
+#: views/lot.php:252 views/lot.php:516
 msgid "Yes"
 msgstr "はい"
 
@@ -519,11 +527,11 @@ msgid ""
 "will be announced to you."
 msgstr ""
 
-#: assets/js/park.js:57
+#: assets/js/park.js:49
 msgid "You have errors on the form. Please correct them before continuing"
 msgstr ""
 
-#: assets/js/park.js:52
+#: assets/js/park.js:44
 msgid "You must select a valid destination"
 msgstr ""
 
