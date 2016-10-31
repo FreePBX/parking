@@ -125,7 +125,7 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkpos"></i>
 						</div>
 						<div class="col-md-9">
-							<input type="text" class="form-control extdisplay" id="parkpos" name="parkpos" value="<?php echo $parkpos?>">
+							<input type="number" min="0" class="form-control extdisplay" id="parkpos" name="parkpos" value="<?php echo $parkpos?>">
 						</div>
 					</div>
 				</div>
@@ -165,6 +165,28 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 		</div>
 	</div>
 	<!--END Number of Slots-->
+	<div class="element-container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="form-group">
+						<div class="col-md-3">
+							<label class="control-label" for="slotrange"><?php echo _("Slot Range") ?></label>
+							<i class="fa fa-question-circle fpbx-help-icon" data-for="slotrange"></i>
+						</div>
+						<div class="col-md-9">
+							<span id="slotrange"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span id="slotrange-help" class="help-block fpbx-help-block"><?php echo _("The generated slot range")?></span>
+			</div>
+		</div>
+	</div>
 	<!--Parking Timeout (seconds)-->
 	<div class="element-container">
 		<div class="row">

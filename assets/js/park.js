@@ -1,6 +1,4 @@
 if($("#parkext").length) {
-	parking_check_inputs();
-
 	var parkext = Number($('#parkext').val());
 	delete extmap[parkext]
 	var parkpos = Number($('#parkpos').val());
@@ -11,13 +9,7 @@ if($("#parkext").length) {
 		usedslots[i] = i;
 		delete extmap[i]
 	}
-	if($('#parkpos').val() && $('#parkext').val()) {
-		if(Number($('#parkpos').val()) != parkend) {
-			$('#slotslist').html('('+$('#parkpos').val()+'-'+parkend+')')
-		} else {
-			$('#slotslist').html('('+$('#parkpos').val()+')')
-		}
-	}
+	parking_check_inputs();
 
 	$('#parkform').submit(function() {
 		if(!$('#parkext').val()) {
@@ -75,7 +67,7 @@ function parking_check_inputs(self) {
 	var new_parkpos = Number($('#parkpos').val());
 	var new_numslots = Number($('#numslots').val());
 	var new_parkend = (new_parkpos + new_numslots - 1);
-	var style = (id=="numslots") ? 'style="right: '+(Number($("#numslots").parents(".input-group").width()) - Number($("#numslots").width()))+'px; z-index: 3;"' : '';
+	var style = '';
 	stop = false;
 
 	$('#parkpos').removeClass("duplicate-exten").parents(".form-group").removeClass("has-warning").find(".input-warn").remove();
@@ -91,6 +83,7 @@ function parking_check_inputs(self) {
 		return;
 	}
 
+	var range = new_parkpos+"-"+new_parkend;
 	for(var i=new_parkpos;i<=new_parkend;i++) {
 		switch(true) {
 			case new_parkext == i:
@@ -99,7 +92,7 @@ function parking_check_inputs(self) {
 				self.parents(".form-group").find(".input-warn").tooltip();
 				stop = true;
 			break;
-			case (typeof extmap[i] != "undefined"):
+			case (typeof extmap[i] !== "undefined"):
 				self.addClass("duplicate-exten").before('<i class="fa fa-exclamation-triangle input-warn" data-toggle="tooltip" data-placement="left" title="'+sprintf(_("%s already in use by: %s"),i,extmap[i])+'" '+style+'></i>').parents(".form-group").addClass("has-warning");
 				self.parents(".form-group").find(".input-warn").tooltip();
 				stop = true;
@@ -114,6 +107,7 @@ function parking_check_inputs(self) {
 			break;
 		}
 	}
+	$("#slotrange").text(range);
 
 	if($('#parkpos').val() && $('#parkext').val()) {
 		if(Number($('#parkpos').val()) != new_parkend) {
