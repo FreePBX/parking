@@ -14,7 +14,7 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
  */
 function parking_get($id='default') {
 	global $db;
-
+	$results = array();
 	if (function_exists('parkpro_get')) {
 		return parkpro_get($id);
 	}
