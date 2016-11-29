@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-31 16:50-0700\n"
+"POT-Creation-Date: 2016-11-29 11:00-0800\n"
 "PO-Revision-Date: 2016-03-17 00:42+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -25,6 +25,11 @@ msgstr ""
 #, perl-format
 msgid "%s already in use by: %s"
 msgstr ""
+
+#: install.php:261
+#, php-format
+msgid "%s no longer supported"
+msgstr "%s دیگر پشتیبانی نمیشود"
 
 #: views/lot.php:411
 msgid ""
@@ -103,6 +108,10 @@ msgstr "تهیه شناسه تماس گیرنده"
 msgid "Come Back to Origin"
 msgstr "برگشت به اصل"
 
+#: install.php:192
+msgid "Default Lot"
+msgstr "پیشفرض"
+
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "تشخیص کد ویژه برای قطع تماس مستقیم کاربر"
@@ -123,6 +132,10 @@ msgstr "حذف"
 #: views/lot.php:538
 msgid "Destination"
 msgstr "داخلی"
+
+#: install.php:175
+msgid "ERROR: too many default lots detected, deleting and reinitializing"
+msgstr "خطا： تعداد زیاد لات پیشفرض تشخیص داده شد"
 
 #: views/lot.php:64
 msgid "Edit: "
@@ -160,6 +173,10 @@ msgstr "تنظیمات عمومی"
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
 msgstr "درحال استفاده"
+
+#: install.php:191
+msgid "Initializing default parkinglot.."
+msgstr "تشخیص لات پارک پیشفرض.."
 
 #: parking.i18n.php:8
 msgid ""
@@ -519,34 +536,25 @@ msgstr ""
 msgid "default"
 msgstr "پیشفرض"
 
+#: install.php:194
+msgid "done"
+msgstr "انجام شده"
+
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
 msgstr "او پست کردن لات پارک را شروع کرده"
+
+#: install.php:271
+msgid "migrated ... dropping old table parkinglot"
+msgstr "منتقل شده... انداختن جدول قدیمی"
+
+#: install.php:200
+msgid "migrating old parkinglot data"
+msgstr "انتقال دیتا قدیمی لات پارک شده"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
 
-#~ msgid "%s no longer supported"
-#~ msgstr "%s دیگر پشتیبانی نمیشود"
-
-#~ msgid "Default Lot"
-#~ msgstr "پیشفرض"
-
-#~ msgid "ERROR: too many default lots detected, deleting and reinitializing"
-#~ msgstr "خطا： تعداد زیاد لات پیشفرض تشخیص داده شد"
-
-#~ msgid "Initializing default parkinglot.."
-#~ msgstr "تشخیص لات پارک پیشفرض.."
-
 #~ msgid "creating table %s if needed"
 #~ msgstr "ایجاد جدول %s در صورت نیاز"
-
-#~ msgid "done"
-#~ msgstr "انجام شده"
-
-#~ msgid "migrated ... dropping old table parkinglot"
-#~ msgstr "منتقل شده... انداختن جدول قدیمی"
-
-#~ msgid "migrating old parkinglot data"
-#~ msgstr "انتقال دیتا قدیمی لات پارک شده"

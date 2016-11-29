@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-31 16:50-0700\n"
+"POT-Creation-Date: 2016-11-29 11:00-0800\n"
 "PO-Revision-Date: 2015-03-11 19:42-0400\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -23,6 +23,11 @@ msgstr ""
 #, perl-format
 msgid "%s already in use by: %s"
 msgstr ""
+
+#: install.php:261
+#, php-format
+msgid "%s no longer supported"
+msgstr "%s ya no es soportado"
 
 #: views/lot.php:411
 msgid ""
@@ -101,6 +106,10 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
+#: install.php:192
+msgid "Default Lot"
+msgstr "Lote Por defecto"
+
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "Define el Código de Función a usar para Tomado de Llamada Directo"
@@ -121,6 +130,11 @@ msgstr ""
 #: views/lot.php:538
 msgid "Destination"
 msgstr ""
+
+#: install.php:175
+msgid "ERROR: too many default lots detected, deleting and reinitializing"
+msgstr ""
+"ERROR: Demasiados Lotes por defecto detectados, borrando y reinicializando"
 
 #: views/lot.php:64
 msgid "Edit: "
@@ -159,6 +173,10 @@ msgstr ""
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
 msgstr "EN USO"
+
+#: install.php:191
+msgid "Initializing default parkinglot.."
+msgstr "Iniciando el Aparcamiento por defecto.."
 
 #: parking.i18n.php:8
 msgid ""
@@ -526,38 +544,28 @@ msgstr ""
 msgid "default"
 msgstr "por defecto"
 
+#: install.php:194
+msgid "done"
+msgstr "hecho"
+
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
 msgstr ""
+
+#: install.php:271
+msgid "migrated ... dropping old table parkinglot"
+msgstr "migrado ... Descartando vieja tabla de aparcamiento"
+
+#: install.php:200
+msgid "migrating old parkinglot data"
+msgstr "migrando datos de vieja tabla de aparcamiento"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
 
-#~ msgid "%s no longer supported"
-#~ msgstr "%s ya no es soportado"
-
-#~ msgid "Default Lot"
-#~ msgstr "Lote Por defecto"
-
-#~ msgid "ERROR: too many default lots detected, deleting and reinitializing"
-#~ msgstr ""
-#~ "ERROR: Demasiados Lotes por defecto detectados, borrando y reinicializando"
-
-#~ msgid "Initializing default parkinglot.."
-#~ msgstr "Iniciando el Aparcamiento por defecto.."
-
 #~ msgid "creating table %s if needed"
 #~ msgstr "Creando tabla %s si es necesario"
-
-#~ msgid "done"
-#~ msgstr "hecho"
-
-#~ msgid "migrated ... dropping old table parkinglot"
-#~ msgstr "migrado ... Descartando vieja tabla de aparcamiento"
-
-#~ msgid "migrating old parkinglot data"
-#~ msgstr "migrando datos de vieja tabla de aparcamiento"
 
 #~ msgid ""
 #~ "The Parking Lot Extension and lot numbers can be changed using this module"

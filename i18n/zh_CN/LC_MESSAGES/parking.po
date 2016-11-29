@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-31 16:50-0700\n"
+"POT-Creation-Date: 2016-11-29 11:00-0800\n"
 "PO-Revision-Date: 2015-10-19 15:00+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -25,6 +25,11 @@ msgstr ""
 #, perl-format
 msgid "%s already in use by: %s"
 msgstr ""
+
+#: install.php:261
+#, php-format
+msgid "%s no longer supported"
+msgstr "不再%s"
 
 #: views/lot.php:411
 msgid ""
@@ -95,6 +100,10 @@ msgstr "CallerID 添加"
 msgid "Come Back to Origin"
 msgstr "回到原状态"
 
+#: install.php:192
+msgid "Default Lot"
+msgstr "默认驻留地址"
+
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "定义功能热键支持 Direct Call Pickup"
@@ -115,6 +124,10 @@ msgstr "删除"
 #: views/lot.php:538
 msgid "Destination"
 msgstr "目的地"
+
+#: install.php:175
+msgid "ERROR: too many default lots detected, deleting and reinitializing"
+msgstr "错误：太多默认的驻留地址，删除，正在重新设置"
 
 #: views/lot.php:64
 msgid "Edit: "
@@ -151,6 +164,10 @@ msgstr "基本设置"
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
 msgstr "在使用状态"
+
+#: install.php:191
+msgid "Initializing default parkinglot.."
+msgstr "初始化默认驻留空间。。"
 
 #: parking.i18n.php:8
 msgid ""
@@ -481,25 +498,25 @@ msgstr ""
 msgid "default"
 msgstr ""
 
+#: install.php:194
+msgid "done"
+msgstr ""
+
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
+msgstr ""
+
+#: install.php:271
+msgid "migrated ... dropping old table parkinglot"
+msgstr ""
+
+#: install.php:200
+msgid "migrating old parkinglot data"
 msgstr ""
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
-
-#~ msgid "%s no longer supported"
-#~ msgstr "不再%s"
-
-#~ msgid "Default Lot"
-#~ msgstr "默认驻留地址"
-
-#~ msgid "ERROR: too many default lots detected, deleting and reinitializing"
-#~ msgstr "错误：太多默认的驻留地址，删除，正在重新设置"
-
-#~ msgid "Initializing default parkinglot.."
-#~ msgstr "初始化默认驻留空间。。"
 
 #~ msgid "Parking Alert-Info:"
 #~ msgstr "驻留警告信息："

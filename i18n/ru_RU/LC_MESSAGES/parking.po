@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-31 16:50-0700\n"
+"POT-Creation-Date: 2016-11-29 11:00-0800\n"
 "PO-Revision-Date: 2015-12-08 23:19+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -24,6 +24,11 @@ msgstr ""
 #, perl-format
 msgid "%s already in use by: %s"
 msgstr ""
+
+#: install.php:261
+#, php-format
+msgid "%s no longer supported"
+msgstr "%s более не поддерживается"
 
 #: views/lot.php:411
 msgid ""
@@ -102,6 +107,10 @@ msgstr "Добавление CallerID"
 msgid "Come Back to Origin"
 msgstr "Возврат к источнику"
 
+#: install.php:192
+msgid "Default Lot"
+msgstr "Лот по умолчанию"
+
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr ""
@@ -123,6 +132,12 @@ msgstr "Удалить"
 #: views/lot.php:538
 msgid "Destination"
 msgstr "Назначение"
+
+#: install.php:175
+msgid "ERROR: too many default lots detected, deleting and reinitializing"
+msgstr ""
+"Ошибка: обнаружено слишком много лотов по умолчанию, удаление и "
+"переинициализация"
 
 #: views/lot.php:64
 msgid "Edit: "
@@ -161,6 +176,10 @@ msgstr "Общие настройки"
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
 msgstr "Используется"
+
+#: install.php:191
+msgid "Initializing default parkinglot.."
+msgstr "Инициализация паркующего лота по умолчанию."
 
 #: parking.i18n.php:8
 msgid ""
@@ -528,39 +547,28 @@ msgstr ""
 msgid "default"
 msgstr "по умолчанию"
 
+#: install.php:194
+msgid "done"
+msgstr "выполнено"
+
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
 msgstr "Начальная позиция паркового лота"
+
+#: install.php:271
+msgid "migrated ... dropping old table parkinglot"
+msgstr "смигрировано... разбивка старой таблицы парковочного лота"
+
+#: install.php:200
+msgid "migrating old parkinglot data"
+msgstr "миграция старых данных о парковочном лоте"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
 
-#~ msgid "%s no longer supported"
-#~ msgstr "%s более не поддерживается"
-
-#~ msgid "Default Lot"
-#~ msgstr "Лот по умолчанию"
-
-#~ msgid "ERROR: too many default lots detected, deleting and reinitializing"
-#~ msgstr ""
-#~ "Ошибка: обнаружено слишком много лотов по умолчанию, удаление и "
-#~ "переинициализация"
-
-#~ msgid "Initializing default parkinglot.."
-#~ msgstr "Инициализация паркующего лота по умолчанию."
-
 #~ msgid "creating table %s if needed"
 #~ msgstr "создание таблицы %s если нужно"
-
-#~ msgid "done"
-#~ msgstr "выполнено"
-
-#~ msgid "migrated ... dropping old table parkinglot"
-#~ msgstr "смигрировано... разбивка старой таблицы парковочного лота"
-
-#~ msgid "migrating old parkinglot data"
-#~ msgstr "миграция старых данных о парковочном лоте"
 
 #~ msgid "Parking Alert-Info:"
 #~ msgstr "Специальная информация:"
