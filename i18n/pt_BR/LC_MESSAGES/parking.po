@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 11:00-0800\n"
-"PO-Revision-Date: 2016-12-15 00:28+0200\n"
+"PO-Revision-Date: 2016-12-15 00:56+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) "
 "<http://weblate.freepbx.org/projects/freepbx/parking/pt_BR/>\n"
@@ -82,7 +82,7 @@ msgstr ""
 #: views/overview.php:14
 #, php-format
 msgid "Attended transfer to lot %d"
-msgstr "Transferência atendida para vaga %d"
+msgstr "Transferência atendida para %d"
 
 #: views/lot.php:474
 msgid "Auto CallerID Prepend"
@@ -181,7 +181,7 @@ msgstr "EM USO"
 
 #: install.php:191
 msgid "Initializing default parkinglot.."
-msgstr "Inicializando estacionamento padrão..."
+msgstr "Inicializando  estacionamento padrão..."
 
 #: parking.i18n.php:8
 msgid ""
@@ -211,8 +211,8 @@ msgid ""
 msgstr ""
 "Próximo: Se você quiser que o estacionamento procure sequencialmente a "
 "próxima vaga de estacionamento em relação à última chamada estacionada em "
-"vez de procurar a primeira vaga disponível. Primeiro: Use a primeira vaga de "
-"estacionamento disponível"
+"vez de procurar a primeira vaga disponível. Primeiro: Use a primeira vaga "
+"disponível"
 
 #: views/lot.php:254 views/lot.php:518
 msgid "No"
@@ -458,8 +458,8 @@ msgid ""
 "can transfer a call directly into a parking slot."
 msgstr ""
 "O número total de vagas de estacionamento para configurar. Exemplo, se 70 é "
-"a extensão e 8 vagas configuradas, as vagas de estacionamento serão 71-78. "
-"Os usuários podem transferir uma chamada diretamente para uma vaga de "
+"o ramal e 8 vagas configuradas, as vagas de estacionamento serão 71-78. Os "
+"usuários podem transferir uma chamada diretamente para uma vaga de "
 "estacionamento."
 
 #: views/lot.php:493
@@ -491,9 +491,9 @@ msgid ""
 "group."
 msgstr ""
 "Esta é a classe de música que será reproduzida para uma chamada estacionada, "
-"enquanto estiver no estacionamento, a menos que o fluxo de chamadas, antes "
-"de estacionar explicitamente, definir uma classe de música diferente, como "
-"se a chamada viesse através de uma fila ou grupo de toque."
+"enquanto estiver no estacionamento,A MENOS QUE o fluxo de chamadas, antes de "
+"estacionar explicitamente, definir uma classe de música diferente, como se a "
+"chamada viesse através de uma fila ou grupo de toque."
 
 #: views/header.php:14
 msgid "This module is used to configure Parking Lot(s)"
