@@ -10,47 +10,54 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 11:00-0800\n"
-"PO-Revision-Date: 2016-11-29 11:00-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-12-14 21:59+0200\n"
+"Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
+"Language-Team: Portuguese (Brazil) "
+"<http://weblate.freepbx.org/projects/freepbx/parking/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: assets/js/park.js:96
 #, perl-format
 msgid "%s already in use by: %s"
-msgstr ""
+msgstr "%s já em uso por: %s"
 
 #: install.php:261
 #, php-format
 msgid "%s no longer supported"
-msgstr ""
+msgstr "%s já não é mais suportado"
 
 #: views/lot.php:411
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
+"Informação de Alerta para adicionar à chamada antes de enviar de volta ao "
+"Originador ou ao Destino Alternativo."
 
 #: views/lot.php:501
 msgid "Alternate Destination"
-msgstr ""
+msgstr "Destino Alternativo"
 
 #: views/lot.php:35
 msgid "Announcement"
-msgstr ""
+msgstr "Anúncio"
 
 #: parking.i18n.php:6 parking.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "Aplicações"
 
 #: views/lot.php:387
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
 msgstr ""
+"Asterisk: parkedcallreparking. Habilita ou desabilita o estacionamento com "
+"base em DTMF ao atender uma chamada estacionada."
 
 #: views/lot.php:356
 msgid ""
