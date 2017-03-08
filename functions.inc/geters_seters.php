@@ -57,7 +57,6 @@ function parking_save($parms=array()) {
 	$var['numslots'] = 4;
 	$var['parkingtime'] = 45;
 	$var['parkedmusicclass'] = 'default';
-	$var['generatehints'] = 'yes';
 	$var['generatefc'] = 'yes';
 	$var['findslot'] = 'first';
 	$var['parkedplay'] = 'both';
@@ -79,9 +78,9 @@ function parking_save($parms=array()) {
 	}
 	$var['defaultlot'] = isset($var['id']) && $var['id'] == 1 ? 'yes' : 'no';
 
-	$fields = "name, type, parkext, parkpos, numslots, parkingtime, parkedmusicclass, generatehints, generatefc, findslot, parkedplay,
+	$fields = "name, type, parkext, parkpos, numslots, parkingtime, parkedmusicclass, generatefc, findslot, parkedplay,
 		parkedcalltransfers, parkedcallreparking, alertinfo, cidpp, autocidpp, announcement_id, comebacktoorigin, dest, defaultlot, rvolume";
-	$holders = "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, ?";
+	$holders = "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?";
 
 	if (empty($var['id'])) {
 		$sql = "INSERT INTO parkplus ($fields) VALUES ($holders)";

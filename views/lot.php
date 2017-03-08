@@ -237,33 +237,6 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 		</div>
 	</div>
 	<!--END Parked Music Class-->
-	<!--BLF Capabilities-->
-	<div class="element-container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
-						<div class="col-md-3">
-							<label class="control-label" for="generatehints"><?php echo _("BLF Capabilities") ?></label>
-							<i class="fa fa-question-circle fpbx-help-icon" data-for="generatehints"></i>
-						</div>
-						<div class="col-md-9 radioset">
-							<input type="radio" name="generatehints" value="yes" id="parkinghints_enable" <?php echo ($generatehints == 'yes' ? 'checked' : '')?>>
-							<label for="parkinghints_enable"><?php echo _("Yes") ?></label>
-							<input type="radio" name="generatehints" value="no" id="parkinghints_disable" <?php echo ($generatehints == 'no' ? 'checked' : '')?>>
-							<label for="parkinghints_disable"><?php echo _("No") ?></label>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<span id="generatehints-help" class="help-block fpbx-help-block"><?php echo _("Enable this to have Asterisk 'hints' generated to use with BLF buttons.")?></span>
-			</div>
-		</div>
-	</div>
-	<!--END BLF Capabilities-->
 	<!--Find Slot-->
 	<div class="element-container">
 		<div class="row">

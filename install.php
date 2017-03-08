@@ -87,12 +87,6 @@ $cols = array (
     'length' => '10',
     'default' => 'yes',
   ),
-  'generatehints' =>
-  array (
-    'type' => 'string',
-    'length' => '10',
-    'default' => 'yes',
-  ),
   'findslot' =>
   array (
     'type' => 'string',
