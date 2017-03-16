@@ -10,19 +10,21 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 11:00-0800\n"
-"PO-Revision-Date: 2015-03-11 19:42-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-12-11 06:01+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/parking/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: assets/js/park.js:96
 #, perl-format
 msgid "%s already in use by: %s"
-msgstr ""
+msgstr "%s ya en uso por: %s"
 
 #: install.php:261
 #, php-format
@@ -43,7 +45,7 @@ msgstr "Destino Alternativo"
 
 #: views/lot.php:35
 msgid "Announcement"
-msgstr ""
+msgstr "Anuncio"
 
 #: parking.i18n.php:6 parking.i18n.php:12
 msgid "Applications"
@@ -74,8 +76,8 @@ msgid ""
 "Attended Transfer call to the Parking Lot Extension. The lot number will be "
 "announced to the parker"
 msgstr ""
-"Transferencia Atendida de llamada la Extensión de Aparcamiento. El numero "
-"del lote será anunciado al Parqueador"
+"Transferencia Atendida de llamada a la Extensión de Aparcamiento. El numero "
+"del lote será anunciado a quien transfiere"
 
 #: views/overview.php:14
 #, php-format
@@ -84,11 +86,11 @@ msgstr "Transferencia atendida a lote %d"
 
 #: views/lot.php:474
 msgid "Auto CallerID Prepend"
-msgstr ""
+msgstr "Ante-puesta de CallerID Automática"
 
 #: views/lot.php:247
 msgid "BLF Capabilities"
-msgstr ""
+msgstr "Capacidades BLF"
 
 #: views/lot.php:315 views/lot.php:346 views/lot.php:377
 msgid "Both"
@@ -100,11 +102,11 @@ msgstr "Llamante"
 
 #: views/lot.php:450
 msgid "CallerID Prepend"
-msgstr ""
+msgstr "Anteponer CallerID"
 
 #: views/lot.php:511
 msgid "Come Back to Origin"
-msgstr ""
+msgstr "Regreso al Origen"
 
 #: install.php:192
 msgid "Default Lot"
@@ -122,14 +124,19 @@ msgid ""
 "have permission to that private lot they could dial *8581 to pickup the "
 "parked call."
 msgstr ""
+"Define el Código de Característica que se utilizará para forzar la captura "
+"de una llamada que está estacionada en un lote privado si la extensión que "
+"tomara la llamada no tiene permisos. Ejemplo: si un llamante está "
+"estacionado en la ranura 81 y la extensión 8001 no tiene permiso para ese "
+"lote privado podrían marcar * 8581 para recoger la llamada estacionada."
 
 #: Parking.class.php:142
 msgid "Delete"
-msgstr ""
+msgstr "Borrar"
 
 #: views/lot.php:538
 msgid "Destination"
-msgstr ""
+msgstr "Destino"
 
 #: install.php:175
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
@@ -138,7 +145,7 @@ msgstr ""
 
 #: views/lot.php:64
 msgid "Edit: "
-msgstr ""
+msgstr "Editar: "
 
 #: views/lot.php:262
 msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
@@ -148,7 +155,7 @@ msgstr ""
 
 #: views/overview.php:33
 msgid "Example Usage"
-msgstr ""
+msgstr "Ejemplo de Uso"
 
 #: views/lot.php:483
 msgid "Extension"
@@ -156,11 +163,11 @@ msgstr "Extensión"
 
 #: views/lot.php:550
 msgid "Failover Destination."
-msgstr ""
+msgstr "Destino Alternativo en Falla."
 
 #: views/lot.php:274
 msgid "Find Slot"
-msgstr ""
+msgstr "Encontrar un puesto"
 
 #: views/lot.php:281
 msgid "First"
@@ -168,7 +175,7 @@ msgstr "Primero"
 
 #: views/lot.php:66
 msgid "General Settings"
-msgstr ""
+msgstr "Configuración General"
 
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
@@ -218,7 +225,7 @@ msgstr "Ninguno"
 
 #: views/lot.php:148
 msgid "Number of Slots"
-msgstr ""
+msgstr "Numero de puestos"
 
 #: views/lot.php:49
 msgid ""
@@ -234,6 +241,8 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"Anular el volumen del timbre. Nota: esto sólo es válido para los teléfonos %"
+"s en este momento"
 
 #: views/bootnav.php:2
 msgid "Overview"
@@ -258,7 +267,7 @@ msgstr "Parquee usted mismo. El número del lote le será anunciado"
 
 #: install.php:22
 msgid "Park to your Assigned Lot"
-msgstr ""
+msgstr "Estacionar a su Lote asignado"
 
 #: functions.inc/registries.php:22
 #, php-format
@@ -276,7 +285,7 @@ msgstr "Aparcado"
 
 #: views/lot.php:221
 msgid "Parked Music Class"
-msgstr ""
+msgstr "Clase de Música de Estacionamiento"
 
 #: parking.i18n.php:10
 msgid "Parking"
@@ -284,11 +293,11 @@ msgstr "Aparcamiento"
 
 #: views/lot.php:399
 msgid "Parking Alert-Info"
-msgstr ""
+msgstr "Alert-Info Estacionamiento"
 
 #: views/overview.php:37
 msgid "Parking Help"
-msgstr ""
+msgstr "Ayuda Estacionamiento"
 
 #: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
@@ -296,48 +305,50 @@ msgstr "Aparcamiento"
 
 #: views/lot.php:76
 msgid "Parking Lot Extension"
-msgstr ""
+msgstr "Extensión del Estacionamiento"
 
 #: assets/js/park.js:79
 msgid "Parking Lot Extension and Starting Position can not be the same!"
 msgstr ""
+"¡La extensión del estacionamiento y la posición inicial no pueden ser "
+"iguales!"
 
 #: assets/js/park.js:16
 msgid "Parking Lot Extension can not be blank!"
-msgstr ""
+msgstr "¡La extensión del estacionamiento no puede estar en blanco!"
 
 #: assets/js/park.js:20
 msgid "Parking Lot Extension can not be larger than 2147483647!"
-msgstr ""
+msgstr "La extensión del estacionamiento no puede ser mayor que 2147483647 !"
 
 #: assets/js/park.js:24
 msgid "Parking Lot Extension can not start with a leading 0!"
-msgstr ""
+msgstr "La extensión del aparcamiento no puede comenzar con un delante 0!"
 
 #: assets/js/park.js:90
 #, perl-format
 msgid "Parking Lot Extension: %s"
-msgstr ""
+msgstr "Extensión del Estacionamiento: %s"
 
 #: views/lot.php:100
 msgid "Parking Lot Name"
-msgstr ""
+msgstr "Nombre del Estacionamiento"
 
 #: assets/js/park.js:28
 msgid "Parking Lot Name can not be blank!"
-msgstr ""
+msgstr "El Nombre del Estacionamiento no puede estar en Blanco!"
 
 #: views/lot.php:124
 msgid "Parking Lot Starting Position"
-msgstr ""
+msgstr "Posición Inicial del Estacionamiento"
 
 #: assets/js/park.js:32
 msgid "Parking Lot Starting Position can not be blank!"
-msgstr ""
+msgstr "La Posición Inicial del Estacionamiento no puede estar en blanco!"
 
 #: assets/js/park.js:40
 msgid "Parking Lot Starting Position can not start with a leading 0!"
-msgstr ""
+msgstr "Estacionamiento Posición inicial no puede comenzar con un 0!"
 
 #: functions.inc/registries.php:59 functions.inc/registries.php:94
 #, php-format
@@ -346,38 +357,42 @@ msgstr "Parqueadero: %s (%s)"
 
 #: views/overview.php:36
 msgid "Parking Settings"
-msgstr ""
+msgstr "Configuración Estacionamiento"
 
 #: assets/js/park.js:90
 #, perl-format
 msgid "Parking Slot: %s"
-msgstr ""
+msgstr "Puesto Estacionamiento: %s"
 
 #: assets/js/park.js:36
 msgid "Parking Starting Position can not be larger than 2147483647!"
 msgstr ""
+"La posición inicial de estacionamiento no puede ser mayor que 2147483647!"
 
 #: assets/js/park.js:101
 msgid "Parking Starting Position/Slots can not be larger than 2147483647!"
 msgstr ""
+"Estacionamiento Posición inicial/puestos no puede ser mayor que 2147483647!"
 
 #: views/lot.php:197
 msgid "Parking Timeout (seconds)"
-msgstr ""
+msgstr "Tiempo de espera de estacionamiento (segundos)"
 
 #: Parking.class.php:90
 msgid "ParkingLot"
-msgstr ""
+msgstr "Estacionamiento"
 
 #: install.php:10 install.php:23
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
 msgstr ""
+"Estaciona en su Lote asignado si usa Park-Pro. Si está usando el "
+"estacionamiento estándar esta estaciona al lote predeterminado"
 
 #: views/lot.php:306
 msgid "Pickup Courtesy Tone"
-msgstr ""
+msgstr "Tono de cortesía de tomada de llamada"
 
 #: install.php:6
 msgid "Pickup ParkedCall Any"
@@ -393,11 +408,11 @@ msgstr "Provea un Titulo descriptivo para este Aparcamiento"
 
 #: views/lot.php:368
 msgid "Re-Parking Capability"
-msgstr ""
+msgstr "Capacidad de Re-estacionamiento"
 
 #: Parking.class.php:147
 msgid "Reset"
-msgstr ""
+msgstr "Reinicio"
 
 #: views/lot.php:296
 msgid "Returned Call Behavior"
@@ -405,7 +420,7 @@ msgstr "Comportamiento Llamada Retornada"
 
 #: views/lot.php:422
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "Anulación del volumen del timbre"
 
 #: views/lot.php:481
 msgid "Slot"
@@ -413,7 +428,7 @@ msgstr "Plaza"
 
 #: views/lot.php:174
 msgid "Slot Range"
-msgstr ""
+msgstr "Rango de puestos"
 
 #: views/lot.php:462
 msgid ""
@@ -426,11 +441,11 @@ msgstr ""
 
 #: Parking.class.php:152
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: views/lot.php:186
 msgid "The generated slot range"
-msgstr ""
+msgstr "El rango de puestos generado"
 
 #: views/lot.php:209
 msgid ""
@@ -491,7 +506,7 @@ msgstr "Este modulo es usado para configurar Aparcamientos"
 
 #: views/lot.php:337
 msgid "Transfer Capability"
-msgstr ""
+msgstr "Capacidad de Transferencia"
 
 #: views/lot.php:526
 msgid ""
@@ -531,14 +546,17 @@ msgid ""
 "call will then be placed into a lot (71-78 by default) and the lot number "
 "will be announced to you."
 msgstr ""
+"Puede transferir una llamada a la extensión de estacionamiento (70 por "
+"defecto), la llamada será colocada en un puesto (71-78 por defecto) y el "
+"número de puesto será anunciado."
 
 #: assets/js/park.js:49
 msgid "You have errors on the form. Please correct them before continuing"
-msgstr ""
+msgstr "Tiene errores en el formulario. Corregirlos antes de continuar"
 
 #: assets/js/park.js:44
 msgid "You must select a valid destination"
-msgstr ""
+msgstr "Debe seleccionar un destino valido"
 
 #: views/lot.php:15
 msgid "default"
@@ -550,7 +568,7 @@ msgstr "hecho"
 
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
-msgstr ""
+msgstr "La posición inicial del estacionamiento"
 
 #: install.php:271
 msgid "migrated ... dropping old table parkinglot"
