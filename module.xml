@@ -11,7 +11,7 @@
 	Parking is a way of putting calls "on hold", and then picking them up from any extension.
 	</description>
 	<changelog>
-		*13.0.19.5* FREEPBX-14300 hints are always generated regardless
+		*13.0.19.4* FREEPBX-14300 hints are always generated regardless
 		*13.0.19.3* FREEPBX-13470 fwconsole reload failure
 		*13.0.19.2* FREEPBX-13333 show slot range
 		*13.0.19.1* FREEPBX-13333 validate all input into the form correctly

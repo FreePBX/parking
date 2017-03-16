@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 11:00-0800\n"
+"POT-Creation-Date: 2017-03-16 13:25-0700\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -53,19 +53,19 @@ msgstr ""
 msgid "%s already in use by: %s"
 msgstr ""
 
-#: install.php:261
+#: install.php:255
 #, php-format
 msgid "%s no longer supported"
 msgstr "%sは現在、サポートされていません。"
 
-#: views/lot.php:411
+#: views/lot.php:384
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前にコールに追加するアラート情報。"
 
-#: views/lot.php:501
+#: views/lot.php:474
 msgid "Alternate Destination"
 msgstr "代わりの宛先："
 
@@ -73,11 +73,11 @@ msgstr "代わりの宛先："
 msgid "Announcement"
 msgstr ""
 
-#: parking.i18n.php:6 parking.i18n.php:12
+#: parking.i18n.php:6
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: views/lot.php:387
+#: views/lot.php:360
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
@@ -85,7 +85,7 @@ msgstr ""
 "Asteris： parkedcallreparking。パークされたコールをピックアップする際にDTMF"
 "ベースでパーキングする機能を有効にするか無効にするか。"
 
-#: views/lot.php:356
+#: views/lot.php:329
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
@@ -110,31 +110,27 @@ msgstr ""
 msgid "Attended transfer to lot %d"
 msgstr "ロット %d への取次転送"
 
-#: views/lot.php:474
+#: views/lot.php:447
 msgid "Auto CallerID Prepend"
 msgstr ""
 
-#: views/lot.php:247
-msgid "BLF Capabilities"
-msgstr ""
-
-#: views/lot.php:315 views/lot.php:346 views/lot.php:377
+#: views/lot.php:288 views/lot.php:319 views/lot.php:350
 msgid "Both"
 msgstr "両方"
 
-#: views/lot.php:311 views/lot.php:342 views/lot.php:373
+#: views/lot.php:284 views/lot.php:315 views/lot.php:346
 msgid "Caller"
 msgstr "発信者"
 
-#: views/lot.php:450
+#: views/lot.php:423
 msgid "CallerID Prepend"
 msgstr ""
 
-#: views/lot.php:511
+#: views/lot.php:484
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:192
+#: install.php:186
 msgid "Default Lot"
 msgstr "デフォルトロット"
 
@@ -142,7 +138,7 @@ msgstr "デフォルトロット"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "ダイレクトコールピックアップに使う機能コードを定義します。"
 
-#: install.php:15
+#: install.php:15 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -155,11 +151,11 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: views/lot.php:538
+#: views/lot.php:511
 msgid "Destination"
 msgstr ""
 
-#: install.php:175
+#: install.php:169
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "エラー：デフォルトlotは多すぎるため、削除・再初期化します… "
 
@@ -167,27 +163,23 @@ msgstr "エラー：デフォルトlotは多すぎるため、削除・再初期
 msgid "Edit: "
 msgstr ""
 
-#: views/lot.php:262
-msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
-msgstr "BLFボタンで使用するために生成されたAsteriskの'ヒント'を有効にする。"
-
 #: views/overview.php:33
 msgid "Example Usage"
 msgstr ""
 
-#: views/lot.php:483
+#: views/lot.php:456
 msgid "Extension"
 msgstr "内線"
 
-#: views/lot.php:550
+#: views/lot.php:523
 msgid "Failover Destination."
 msgstr ""
 
-#: views/lot.php:274
+#: views/lot.php:247
 msgid "Find Slot"
 msgstr ""
 
-#: views/lot.php:281
+#: views/lot.php:254
 msgid "First"
 msgstr "最初"
 
@@ -199,7 +191,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "使用中"
 
-#: install.php:191
+#: install.php:185
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
@@ -210,19 +202,19 @@ msgid ""
 msgstr ""
 "パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
 
-#: views/lot.php:485
+#: views/lot.php:458
 msgid "Name"
 msgstr "名前"
 
-#: views/lot.php:348 views/lot.php:379
+#: views/lot.php:321 views/lot.php:352
 msgid "Neither"
 msgstr "両方なし"
 
-#: views/lot.php:279
+#: views/lot.php:252
 msgid "Next"
 msgstr "次"
 
-#: views/lot.php:289
+#: views/lot.php:262
 msgid ""
 "Next: If you want the parking lot to seek the next sequential parking slot "
 "relative to the the last parked call instead of seeking the first available "
@@ -231,11 +223,11 @@ msgstr ""
 "次：最初に使用できるロットを探させる代わりに、最後にパークしたロットを探す。"
 "　最初:利用可能な最初のパーキングロットを探す"
 
-#: views/lot.php:254 views/lot.php:518
+#: views/lot.php:491
 msgid "No"
 msgstr "いいえ"
 
-#: views/lot.php:21 views/lot.php:317 views/lot.php:427 views/lot.php:479
+#: views/lot.php:21 views/lot.php:290 views/lot.php:400 views/lot.php:452
 msgid "None"
 msgstr "なし"
 
@@ -251,7 +243,7 @@ msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前にコールに再生される追加のメッ"
 "セージ。"
 
-#: views/lot.php:439
+#: views/lot.php:412
 #, php-format
 msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
@@ -279,7 +271,7 @@ msgstr "自分をロット nn にパークします"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "自分をパークします。ロット番号はあなたにアナウンスされます。"
 
-#: install.php:22
+#: install.php:22 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -293,7 +285,7 @@ msgstr "ParkPlus: ParkCall %s"
 msgid "ParkPlus: PickupSlot %s"
 msgstr "ParkPlus: PickupSlot %s"
 
-#: views/lot.php:313 views/lot.php:344 views/lot.php:375
+#: views/lot.php:286 views/lot.php:317 views/lot.php:348
 msgid "Parked"
 msgstr "パーク中"
 
@@ -305,7 +297,7 @@ msgstr ""
 msgid "Parking"
 msgstr "パーキング"
 
-#: views/lot.php:399
+#: views/lot.php:372
 msgid "Parking Alert-Info"
 msgstr ""
 
@@ -392,13 +384,13 @@ msgstr ""
 msgid "ParkingLot"
 msgstr ""
 
-#: install.php:10 install.php:23
+#: install.php:10 install.php:23 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
 msgstr ""
 
-#: views/lot.php:306
+#: views/lot.php:279
 msgid "Pickup Courtesy Tone"
 msgstr ""
 
@@ -406,7 +398,7 @@ msgstr ""
 msgid "Pickup ParkedCall Any"
 msgstr "パークされたコールを全てピックアップする"
 
-#: install.php:8
+#: install.php:8 parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr "パーク中通話のピックアッププレフィックス"
 
@@ -414,7 +406,7 @@ msgstr "パーク中通話のピックアッププレフィックス"
 msgid "Provide a Descriptive Title for this Parking Lot"
 msgstr "このパーキングロットに詳細な名称を与える"
 
-#: views/lot.php:368
+#: views/lot.php:341
 msgid "Re-Parking Capability"
 msgstr ""
 
@@ -422,15 +414,15 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/lot.php:296
+#: views/lot.php:269
 msgid "Returned Call Behavior"
 msgstr "呼の戻り時の挙動"
 
-#: views/lot.php:422
+#: views/lot.php:395
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: views/lot.php:481
+#: views/lot.php:454
 msgid "Slot"
 msgstr "スロット"
 
@@ -438,7 +430,7 @@ msgstr "スロット"
 msgid "Slot Range"
 msgstr ""
 
-#: views/lot.php:462
+#: views/lot.php:435
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
@@ -471,7 +463,7 @@ msgstr ""
 "ロットを設定すると、パーキングロットは 71〜78 になります。特定のパーキング"
 "ロットへの転送も可能です。"
 
-#: views/lot.php:493
+#: views/lot.php:466
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -506,11 +498,11 @@ msgstr ""
 msgid "This module is used to configure Parking Lot(s)"
 msgstr "パーキングロットを設定するためのモジュール"
 
-#: views/lot.php:337
+#: views/lot.php:310
 msgid "Transfer Capability"
 msgstr ""
 
-#: views/lot.php:526
+#: views/lot.php:499
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -522,12 +514,12 @@ msgstr ""
 "パーク保留した内線に戻します。もしパーク保留元が通話中の場合、次で選択した宛"
 "先に転送します。「いいえ」に設定すると、次の宛先に直接転送します"
 
-#: views/lot.php:325
+#: views/lot.php:298
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 "パークされたコールが取得された時に誰に対して\"ピー\"という音を再生するか。"
 
-#: views/lot.php:252 views/lot.php:516
+#: views/lot.php:489
 msgid "Yes"
 msgstr "はい"
 
@@ -556,7 +548,7 @@ msgstr ""
 msgid "default"
 msgstr "デフォルト"
 
-#: install.php:194
+#: install.php:188
 msgid "done"
 msgstr "完了"
 
@@ -564,17 +556,21 @@ msgstr "完了"
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:271
+#: install.php:265
 msgid "migrated ... dropping old table parkinglot"
 msgstr "移行しました… 旧テーブルのparkinglotを無効にしている"
 
-#: install.php:200
+#: install.php:194
 msgid "migrating old parkinglot data"
 msgstr "旧parkinglotのデータを移行中…"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#~ msgid ""
+#~ "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
+#~ msgstr "BLFボタンで使用するために生成されたAsteriskの'ヒント'を有効にする。"
 
 #~ msgid "creating table %s if needed"
 #~ msgstr "必要に応じてテーブル%sを作成"

@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 11:00-0800\n"
+"POT-Creation-Date: 2017-03-16 13:25-0700\n"
 "PO-Revision-Date: 2016-12-15 00:56+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
-"Language-Team: Portuguese (Brazil) "
-"<http://weblate.freepbx.org/projects/freepbx/parking/pt_BR/>\n"
-"Language: pt_BR\n"
+"Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
+"freepbx/parking/pt_BR/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -26,12 +26,12 @@ msgstr ""
 msgid "%s already in use by: %s"
 msgstr "%s já em uso por: %s"
 
-#: install.php:261
+#: install.php:255
 #, php-format
 msgid "%s no longer supported"
 msgstr "%s já não é mais suportado"
 
-#: views/lot.php:411
+#: views/lot.php:384
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
@@ -39,7 +39,7 @@ msgstr ""
 "Informação de Alerta para adicionar à chamada antes de enviar de volta ao "
 "Originador ou ao Destino Alternativo."
 
-#: views/lot.php:501
+#: views/lot.php:474
 msgid "Alternate Destination"
 msgstr "Destino Alternativo"
 
@@ -47,11 +47,11 @@ msgstr "Destino Alternativo"
 msgid "Announcement"
 msgstr "Anúncio"
 
-#: parking.i18n.php:6 parking.i18n.php:12
+#: parking.i18n.php:6
 msgid "Applications"
 msgstr "Aplicações"
 
-#: views/lot.php:387
+#: views/lot.php:360
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
@@ -59,7 +59,7 @@ msgstr ""
 "Asterisk: parkedcallreparking. Habilita ou desabilita o estacionamento com "
 "base em DTMF ao atender uma chamada estacionada."
 
-#: views/lot.php:356
+#: views/lot.php:329
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
@@ -84,39 +84,36 @@ msgstr ""
 msgid "Attended transfer to lot %d"
 msgstr "Transferência atendida para %d"
 
-#: views/lot.php:474
+#: views/lot.php:447
 msgid "Auto CallerID Prepend"
 msgstr "Prefixo de ID Chamador Automático"
 
-#: views/lot.php:247
-msgid "BLF Capabilities"
-msgstr "Capacidades BLF"
-
-#: views/lot.php:315 views/lot.php:346 views/lot.php:377
+#: views/lot.php:288 views/lot.php:319 views/lot.php:350
 msgid "Both"
 msgstr "Ambos"
 
-#: views/lot.php:311 views/lot.php:342 views/lot.php:373
+#: views/lot.php:284 views/lot.php:315 views/lot.php:346
 msgid "Caller"
 msgstr "Chamador"
 
-#: views/lot.php:450
+#: views/lot.php:423
 msgid "CallerID Prepend"
 msgstr "Prefixar ID Chamador"
 
-#: views/lot.php:511
+#: views/lot.php:484
 msgid "Come Back to Origin"
 msgstr "Voltar à Origem"
 
-#: install.php:192
+#: install.php:186
 msgid "Default Lot"
 msgstr "Estacionamento Padrão"
 
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr "Define o código de recurso a ser usado para a Captura de Chamada Direta"
+msgstr ""
+"Define o código de recurso a ser usado para a Captura de Chamada Direta"
 
-#: install.php:15
+#: install.php:15 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -134,11 +131,11 @@ msgstr ""
 msgid "Delete"
 msgstr "Apagar"
 
-#: views/lot.php:538
+#: views/lot.php:511
 msgid "Destination"
 msgstr "Destino"
 
-#: install.php:175
+#: install.php:169
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ERRO: muitos estacionamentos padrão detectados, excluindo e reinicializando"
@@ -147,27 +144,23 @@ msgstr ""
 msgid "Edit: "
 msgstr "Editar: "
 
-#: views/lot.php:262
-msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
-msgstr "Permite obter 'dicas' geradas pelo Asterisk para usar com botões BLF."
-
 #: views/overview.php:33
 msgid "Example Usage"
 msgstr "Exemplo de Uso"
 
-#: views/lot.php:483
+#: views/lot.php:456
 msgid "Extension"
 msgstr "Ramal"
 
-#: views/lot.php:550
+#: views/lot.php:523
 msgid "Failover Destination."
 msgstr "Destino Alternativo em Caso de Falha."
 
-#: views/lot.php:274
+#: views/lot.php:247
 msgid "Find Slot"
 msgstr "Encontrar Vaga"
 
-#: views/lot.php:281
+#: views/lot.php:254
 msgid "First"
 msgstr "Primeiro"
 
@@ -179,7 +172,7 @@ msgstr "Configurações Gerais"
 msgid "INUSE"
 msgstr "EM USO"
 
-#: install.php:191
+#: install.php:185
 msgid "Initializing default parkinglot.."
 msgstr "Inicializando  estacionamento padrão..."
 
@@ -191,19 +184,19 @@ msgstr ""
 "Gerencia os ramais dos estacionamentos e outras opções. \tO estacionamento é "
 "uma forma de reter chamadas "
 
-#: views/lot.php:485
+#: views/lot.php:458
 msgid "Name"
 msgstr "Nome"
 
-#: views/lot.php:348 views/lot.php:379
+#: views/lot.php:321 views/lot.php:352
 msgid "Neither"
 msgstr "Nenhum"
 
-#: views/lot.php:279
+#: views/lot.php:252
 msgid "Next"
 msgstr "Próximo"
 
-#: views/lot.php:289
+#: views/lot.php:262
 msgid ""
 "Next: If you want the parking lot to seek the next sequential parking slot "
 "relative to the the last parked call instead of seeking the first available "
@@ -214,11 +207,11 @@ msgstr ""
 "vez de procurar a primeira vaga disponível. Primeiro: Use a primeira vaga "
 "disponível"
 
-#: views/lot.php:254 views/lot.php:518
+#: views/lot.php:491
 msgid "No"
 msgstr "Não"
 
-#: views/lot.php:21 views/lot.php:317 views/lot.php:427 views/lot.php:479
+#: views/lot.php:21 views/lot.php:290 views/lot.php:400 views/lot.php:452
 msgid "None"
 msgstr "Nenhum"
 
@@ -234,7 +227,7 @@ msgstr ""
 "Mensagem opcional a ser reproduzida para a chamada antes de enviar de volta "
 "ao Originador ou ao Destino Alternativo."
 
-#: views/lot.php:439
+#: views/lot.php:412
 #, php-format
 msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
@@ -265,7 +258,7 @@ msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 "Estacionar você mesmo. O número do estacionamento será anunciado para você"
 
-#: install.php:22
+#: install.php:22 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr "Estacionar em seu Estacionamento Atribuído"
 
@@ -279,7 +272,7 @@ msgstr "ParkPlus: ParkCall %s"
 msgid "ParkPlus: PickupSlot %s"
 msgstr "ParkPlus: PickupSlot %s"
 
-#: views/lot.php:313 views/lot.php:344 views/lot.php:375
+#: views/lot.php:286 views/lot.php:317 views/lot.php:348
 msgid "Parked"
 msgstr "Estacionado"
 
@@ -291,7 +284,7 @@ msgstr "Classe de Música de Estacionamento"
 msgid "Parking"
 msgstr "Estacionamento"
 
-#: views/lot.php:399
+#: views/lot.php:372
 msgid "Parking Alert-Info"
 msgstr "Informação de Alerta de Estacionamento"
 
@@ -379,7 +372,7 @@ msgstr "Tempo de Espera de Estacionamento (segundos)"
 msgid "ParkingLot"
 msgstr "Estacionamento"
 
-#: install.php:10 install.php:23
+#: install.php:10 install.php:23 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -387,7 +380,7 @@ msgstr ""
 "Estaciona em seu Estacionamento Atribuído se estiver usando o Park-Pro. Se "
 "estiver usando estacionamento padrão, irá para o padrão"
 
-#: views/lot.php:306
+#: views/lot.php:279
 msgid "Pickup Courtesy Tone"
 msgstr "Tom de Cortesia do tomador da chamada"
 
@@ -395,7 +388,7 @@ msgstr "Tom de Cortesia do tomador da chamada"
 msgid "Pickup ParkedCall Any"
 msgstr "Capturar Qualquer Chamada Estacionada"
 
-#: install.php:8
+#: install.php:8 parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr "Prefixo da Captura da Chamada Estacionada"
 
@@ -403,7 +396,7 @@ msgstr "Prefixo da Captura da Chamada Estacionada"
 msgid "Provide a Descriptive Title for this Parking Lot"
 msgstr "Forneça um Título Descritivo para este Estacionamento"
 
-#: views/lot.php:368
+#: views/lot.php:341
 msgid "Re-Parking Capability"
 msgstr "Capacidade de Re-Estacionamento"
 
@@ -411,15 +404,15 @@ msgstr "Capacidade de Re-Estacionamento"
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: views/lot.php:296
+#: views/lot.php:269
 msgid "Returned Call Behavior"
 msgstr "Comportamento da Chamada Retornada"
 
-#: views/lot.php:422
+#: views/lot.php:395
 msgid "Ringer Volume Override"
 msgstr "Substituição do Volume de Toque"
 
-#: views/lot.php:481
+#: views/lot.php:454
 msgid "Slot"
 msgstr "Vaga"
 
@@ -427,7 +420,7 @@ msgstr "Vaga"
 msgid "Slot Range"
 msgstr "Faixa de Vagas"
 
-#: views/lot.php:462
+#: views/lot.php:435
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
@@ -462,7 +455,7 @@ msgstr ""
 "usuários podem transferir uma chamada diretamente para uma vaga de "
 "estacionamento."
 
-#: views/lot.php:493
+#: views/lot.php:466
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -473,9 +466,9 @@ msgid ""
 msgstr ""
 "Essas opções serão inseridas após Prefixo ID Chamador caso seja definido. "
 "Caso contrário, eles aparecerão primeiro. As opções automáticas são as "
-"seguintes: <ul><li><strong> Nenhum: </strong> Sem Preenchimento Automático "
-"</li> <li> <strong> Vaga: </strong> Estacionado em </li> <li> <strong> Ramal:"
-" </strong> O número do ramal que estacionou a chamada </li><li> <strong> "
+"seguintes: <ul><li><strong> Nenhum: </strong> Sem Preenchimento Automático </"
+"li> <li> <strong> Vaga: </strong> Estacionado em </li> <li> <strong> Ramal: "
+"</strong> O número do ramal que estacionou a chamada </li><li> <strong> "
 "Nome: </strong>Usuário que estacionou a chamada</li></ul>"
 
 #: views/lot.php:88
@@ -499,11 +492,11 @@ msgstr ""
 msgid "This module is used to configure Parking Lot(s)"
 msgstr "Este módulo é utilizado para configurar Estacionamento(s)"
 
-#: views/lot.php:337
+#: views/lot.php:310
 msgid "Transfer Capability"
 msgstr "Capacidade de Transferência"
 
-#: views/lot.php:526
+#: views/lot.php:499
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -517,13 +510,13 @@ msgstr ""
 "chamada para o Destino selecionado abaixo. Se definido como \"Não\", então "
 "enviaremos a chamada diretamente para o destino selecionado abaixo"
 
-#: views/lot.php:325
+#: views/lot.php:298
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 "Para quem reproduzir o tom de cortesia quando uma chamada estacionada é "
 "recuperada."
 
-#: views/lot.php:252 views/lot.php:516
+#: views/lot.php:489
 msgid "Yes"
 msgstr "Sim"
 
@@ -557,7 +550,7 @@ msgstr "Você deve selecionar um destino válido"
 msgid "default"
 msgstr "padrão"
 
-#: install.php:194
+#: install.php:188
 msgid "done"
 msgstr "terminado"
 
@@ -565,14 +558,22 @@ msgstr "terminado"
 msgid "he starting postion of the parking lot"
 msgstr "Posição inicial do estacionamento"
 
-#: install.php:271
+#: install.php:265
 msgid "migrated ... dropping old table parkinglot"
 msgstr "migrado...descartando a antiga tabela parkinglot"
 
-#: install.php:200
+#: install.php:194
 msgid "migrating old parkinglot data"
 msgstr "migrando dados da antiga tabela parkinglot"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#~ msgid "BLF Capabilities"
+#~ msgstr "Capacidades BLF"
+
+#~ msgid ""
+#~ "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
+#~ msgstr ""
+#~ "Permite obter 'dicas' geradas pelo Asterisk para usar com botões BLF."

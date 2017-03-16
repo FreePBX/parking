@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 11:00-0800\n"
+"POT-Creation-Date: 2017-03-16 13:25-0700\n"
 "PO-Revision-Date: 2015-10-19 15:00+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -26,18 +26,18 @@ msgstr ""
 msgid "%s already in use by: %s"
 msgstr ""
 
-#: install.php:261
+#: install.php:255
 #, php-format
 msgid "%s no longer supported"
 msgstr "不再%s"
 
-#: views/lot.php:411
+#: views/lot.php:384
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
 
-#: views/lot.php:501
+#: views/lot.php:474
 msgid "Alternate Destination"
 msgstr "可选目的地"
 
@@ -45,17 +45,17 @@ msgstr "可选目的地"
 msgid "Announcement"
 msgstr "语音播报"
 
-#: parking.i18n.php:6 parking.i18n.php:12
+#: parking.i18n.php:6
 msgid "Applications"
 msgstr ""
 
-#: views/lot.php:387
+#: views/lot.php:360
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
 msgstr ""
 
-#: views/lot.php:356
+#: views/lot.php:329
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
@@ -76,31 +76,27 @@ msgstr ""
 msgid "Attended transfer to lot %d"
 msgstr "询转呼叫到 %d"
 
-#: views/lot.php:474
+#: views/lot.php:447
 msgid "Auto CallerID Prepend"
 msgstr "自动CallerID 添加"
 
-#: views/lot.php:247
-msgid "BLF Capabilities"
-msgstr "BLF功能支持"
-
-#: views/lot.php:315 views/lot.php:346 views/lot.php:377
+#: views/lot.php:288 views/lot.php:319 views/lot.php:350
 msgid "Both"
 msgstr ""
 
-#: views/lot.php:311 views/lot.php:342 views/lot.php:373
+#: views/lot.php:284 views/lot.php:315 views/lot.php:346
 msgid "Caller"
 msgstr ""
 
-#: views/lot.php:450
+#: views/lot.php:423
 msgid "CallerID Prepend"
 msgstr "CallerID 添加"
 
-#: views/lot.php:511
+#: views/lot.php:484
 msgid "Come Back to Origin"
 msgstr "回到原状态"
 
-#: install.php:192
+#: install.php:186
 msgid "Default Lot"
 msgstr "默认驻留地址"
 
@@ -108,7 +104,7 @@ msgstr "默认驻留地址"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "定义功能热键支持 Direct Call Pickup"
 
-#: install.php:15
+#: install.php:15 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -121,11 +117,11 @@ msgstr ""
 msgid "Delete"
 msgstr "删除"
 
-#: views/lot.php:538
+#: views/lot.php:511
 msgid "Destination"
 msgstr "目的地"
 
-#: install.php:175
+#: install.php:169
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "错误：太多默认的驻留地址，删除，正在重新设置"
 
@@ -133,27 +129,23 @@ msgstr "错误：太多默认的驻留地址，删除，正在重新设置"
 msgid "Edit: "
 msgstr "编辑: "
 
-#: views/lot.php:262
-msgid "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
-msgstr "开启此功能，使用BLF 按键支持 Asterisk 'hints'。"
-
 #: views/overview.php:33
 msgid "Example Usage"
 msgstr "使用举例"
 
-#: views/lot.php:483
+#: views/lot.php:456
 msgid "Extension"
 msgstr "分机"
 
-#: views/lot.php:550
+#: views/lot.php:523
 msgid "Failover Destination."
 msgstr "逃生目的地。"
 
-#: views/lot.php:274
+#: views/lot.php:247
 msgid "Find Slot"
 msgstr "找驻留地址"
 
-#: views/lot.php:281
+#: views/lot.php:254
 msgid "First"
 msgstr "第一个"
 
@@ -165,7 +157,7 @@ msgstr "基本设置"
 msgid "INUSE"
 msgstr "在使用状态"
 
-#: install.php:191
+#: install.php:185
 msgid "Initializing default parkinglot.."
 msgstr "初始化默认驻留空间。。"
 
@@ -175,30 +167,30 @@ msgid ""
 "putting calls "
 msgstr ""
 
-#: views/lot.php:485
+#: views/lot.php:458
 msgid "Name"
 msgstr "名称"
 
-#: views/lot.php:348 views/lot.php:379
+#: views/lot.php:321 views/lot.php:352
 msgid "Neither"
 msgstr ""
 
-#: views/lot.php:279
+#: views/lot.php:252
 msgid "Next"
 msgstr "下一个"
 
-#: views/lot.php:289
+#: views/lot.php:262
 msgid ""
 "Next: If you want the parking lot to seek the next sequential parking slot "
 "relative to the the last parked call instead of seeking the first available "
 "slot. First: Use the first parking lot slot available"
 msgstr ""
 
-#: views/lot.php:254 views/lot.php:518
+#: views/lot.php:491
 msgid "No"
 msgstr ""
 
-#: views/lot.php:21 views/lot.php:317 views/lot.php:427 views/lot.php:479
+#: views/lot.php:21 views/lot.php:290 views/lot.php:400 views/lot.php:452
 msgid "None"
 msgstr "无"
 
@@ -212,7 +204,7 @@ msgid ""
 "Originator or the Alternate Destination."
 msgstr ""
 
-#: views/lot.php:439
+#: views/lot.php:412
 #, php-format
 msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
@@ -240,7 +232,7 @@ msgstr "驻留本机到nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
-#: install.php:22
+#: install.php:22 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -254,7 +246,7 @@ msgstr ""
 msgid "ParkPlus: PickupSlot %s"
 msgstr ""
 
-#: views/lot.php:313 views/lot.php:344 views/lot.php:375
+#: views/lot.php:286 views/lot.php:317 views/lot.php:348
 msgid "Parked"
 msgstr "已驻留的呼叫"
 
@@ -266,7 +258,7 @@ msgstr "驻留音乐类别"
 msgid "Parking"
 msgstr ""
 
-#: views/lot.php:399
+#: views/lot.php:372
 msgid "Parking Alert-Info"
 msgstr "驻留Alert-Info"
 
@@ -353,13 +345,13 @@ msgstr ""
 msgid "ParkingLot"
 msgstr ""
 
-#: install.php:10 install.php:23
+#: install.php:10 install.php:23 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
 msgstr ""
 
-#: views/lot.php:306
+#: views/lot.php:279
 msgid "Pickup Courtesy Tone"
 msgstr ""
 
@@ -367,7 +359,7 @@ msgstr ""
 msgid "Pickup ParkedCall Any"
 msgstr ""
 
-#: install.php:8
+#: install.php:8 parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr ""
 
@@ -375,7 +367,7 @@ msgstr ""
 msgid "Provide a Descriptive Title for this Parking Lot"
 msgstr ""
 
-#: views/lot.php:368
+#: views/lot.php:341
 msgid "Re-Parking Capability"
 msgstr ""
 
@@ -383,15 +375,15 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/lot.php:296
+#: views/lot.php:269
 msgid "Returned Call Behavior"
 msgstr "返回的通话行为"
 
-#: views/lot.php:422
+#: views/lot.php:395
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: views/lot.php:481
+#: views/lot.php:454
 msgid "Slot"
 msgstr ""
 
@@ -399,7 +391,7 @@ msgstr ""
 msgid "Slot Range"
 msgstr ""
 
-#: views/lot.php:462
+#: views/lot.php:435
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
@@ -426,7 +418,7 @@ msgid ""
 "can transfer a call directly into a parking slot."
 msgstr ""
 
-#: views/lot.php:493
+#: views/lot.php:466
 msgid ""
 "These options will be appended after CallerID Prepend if set. Otherwise they "
 "will appear first. The automatic options are as follows:<ul><li><strong>None:"
@@ -452,11 +444,11 @@ msgstr ""
 msgid "This module is used to configure Parking Lot(s)"
 msgstr ""
 
-#: views/lot.php:337
+#: views/lot.php:310
 msgid "Transfer Capability"
 msgstr ""
 
-#: views/lot.php:526
+#: views/lot.php:499
 msgid ""
 "Where to send a parked call that has timed out. If set to yes then the "
 "parked call will be sent back to the originating device that sent the call "
@@ -465,11 +457,11 @@ msgid ""
 "to the destination selected below"
 msgstr ""
 
-#: views/lot.php:325
+#: views/lot.php:298
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
 msgstr ""
 
-#: views/lot.php:252 views/lot.php:516
+#: views/lot.php:489
 msgid "Yes"
 msgstr ""
 
@@ -498,7 +490,7 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: install.php:194
+#: install.php:188
 msgid "done"
 msgstr ""
 
@@ -506,17 +498,24 @@ msgstr ""
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:271
+#: install.php:265
 msgid "migrated ... dropping old table parkinglot"
 msgstr ""
 
-#: install.php:200
+#: install.php:194
 msgid "migrating old parkinglot data"
 msgstr ""
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#~ msgid "BLF Capabilities"
+#~ msgstr "BLF功能支持"
+
+#~ msgid ""
+#~ "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
+#~ msgstr "开启此功能，使用BLF 按键支持 Asterisk 'hints'。"
 
 #~ msgid "Parking Alert-Info:"
 #~ msgstr "驻留警告信息："
