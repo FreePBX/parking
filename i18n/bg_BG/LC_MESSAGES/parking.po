@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-16 13:25-0700\n"
+"POT-Creation-Date: 2017-04-27 11:37-0400\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -124,7 +124,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:142
+#: Parking.class.php:143
 msgid "Delete"
 msgstr ""
 
@@ -386,7 +386,7 @@ msgstr "Наименование за тази Група за Паркиран�
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:147
+#: Parking.class.php:148
 msgid "Reset"
 msgstr ""
 
@@ -412,7 +412,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:152
+#: Parking.class.php:153
 msgid "Submit"
 msgstr ""
 
