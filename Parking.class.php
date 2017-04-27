@@ -125,6 +125,7 @@ class Parking implements BMO {
 				'parkedmusicclass' => $lot['parkedmusicclass'],
 				'findslot' => $lot['findslot']
 			);
+			$conf['res_parking.conf'][][] = "#include res_parking_custom.conf";
 			return $conf;
 		}
 	}
