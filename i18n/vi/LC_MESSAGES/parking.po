@@ -10,80 +10,91 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-27 11:37-0400\n"
-"PO-Revision-Date: 2017-04-27 11:37-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-07-11 10:49+0200\n"
+"Last-Translator: PETER <ftek@ymail.com>\n"
+"Language-Team: Vietnamese "
+"<http://weblate.freepbx.org/projects/freepbx/parking/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: assets/js/park.js:96
 #, perl-format
 msgid "%s already in use by: %s"
-msgstr ""
+msgstr "%s đang được dùng bởi: %s"
 
 #: install.php:255
 #, php-format
 msgid "%s no longer supported"
-msgstr ""
+msgstr "%s không được hỗ trợ nữa"
 
 #: views/lot.php:384
 msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
+"Thông tin cảnh báo được thêm vào cuộc gọi trước gửi đến trình khởi tạo hoặc "
+"tới điểm đích thay thế."
 
 #: views/lot.php:474
 msgid "Alternate Destination"
-msgstr ""
+msgstr "Điểm đích thay thế"
 
 #: views/lot.php:35
 msgid "Announcement"
-msgstr ""
+msgstr "Thông báo"
 
 #: parking.i18n.php:6
 msgid "Applications"
-msgstr ""
+msgstr "Các ứng dụng"
 
 #: views/lot.php:360
 msgid ""
 "Asterisk: parkedcallreparking. Enables or disables DTMF based parking when "
 "picking up a parked call."
 msgstr ""
+"Asterisk:parkedcallreparking. Kích hoạt hoặc vô hiệu tinh năng parking ( "
+"chuyển cuộc gọi có quản lý) dựa trên DTMF khi nghe một cuộc gọi được chuyển."
 
 #: views/lot.php:329
 msgid ""
 "Asterisk: parkedcalltransfers. Enables or disables DTMF based transfers when "
 "picking up a parked call."
 msgstr ""
+"Asterisk: parkedcalltransfers. Kích hoạt hoặc vô hiệu việc truyền cuộc gọi "
+"dựa trên DTMF khi nghe máy một cuộc goi được chuyển."
 
 #: views/overview.php:18
 msgid "Attended Transfer call into Park lot nn"
-msgstr ""
+msgstr "Truyền cuộc gọi có hỏi trước vào Park Lot nn"
 
 #: views/overview.php:10
 msgid ""
 "Attended Transfer call to the Parking Lot Extension. The lot number will be "
 "announced to the parker"
 msgstr ""
+"Truyền cuộc gọi có hỏi trước tới máy nhánh Parking Lot. Số Lot sẽ được thông "
+"báo đến parker"
 
 #: views/overview.php:14
 #, php-format
 msgid "Attended transfer to lot %d"
-msgstr ""
+msgstr "Truyền cuộc gọi có hỏi trước tới lot %d"
 
 #: views/lot.php:447
 msgid "Auto CallerID Prepend"
-msgstr ""
+msgstr "Tự ộng chèn trước CallerID"
 
 #: views/lot.php:288 views/lot.php:319 views/lot.php:350
 msgid "Both"
-msgstr ""
+msgstr "Cả hai"
 
 #: views/lot.php:284 views/lot.php:315 views/lot.php:346
 msgid "Caller"
-msgstr ""
+msgstr "Người gọi"
 
 #: views/lot.php:423
 msgid "CallerID Prepend"
@@ -91,11 +102,11 @@ msgstr ""
 
 #: views/lot.php:484
 msgid "Come Back to Origin"
-msgstr ""
+msgstr "Trở lại điểm ban đầu"
 
 #: install.php:186
 msgid "Default Lot"
-msgstr ""
+msgstr "Mặc định Lot"
 
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
