@@ -43,7 +43,7 @@
 		*13.0.1alpha1* Fix saving in 13 with PDO
 	</changelog>
 	<menuitems>
-		<parking>Parking</parking>
+		<parking needsenginedb="yes">Parking</parking>
 	</menuitems>
 	<depends>
 		<module>core ge 13.0.114</module>
