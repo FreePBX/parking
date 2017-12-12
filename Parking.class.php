@@ -127,7 +127,8 @@ class Parking implements BMO {
 			$parkpos2	= $parkpos1 + $lot['numslots'] - 1;
 			$park_context = 'default';
 			$hint_context = 'parkedcalls';
-			$conf['res_parking.conf'][$park_context] = array(
+			$conf['res_parking.conf'][] = "#include res_parking_additional.conf\n#include res_parking_custom.conf";
+			$conf['res_parking_additional.conf'][$park_context] = array(
 				'parkext' => $lot['parkext'],
 				'parkpos' => $parkpos1."-".$parkpos2,
 				'context' => $hint_context,
@@ -140,7 +141,6 @@ class Parking implements BMO {
 				'parkedmusicclass' => $lot['parkedmusicclass'],
 				'findslot' => $lot['findslot']
 			);
-			$conf['res_parking.conf'][][] = "#include res_parking_custom.conf";
 			return $conf;
 		}
 	}
