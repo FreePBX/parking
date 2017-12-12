@@ -99,6 +99,21 @@ class Parking implements BMO {
 			}
 		}
 	}
+
+	public function getAllParkingLots() {
+		$sql = "SELECT * FROM parkplus";
+		$sth = $this->db->prepare($sql);
+		$sth->execute();
+		return $sth->fetchAll(\PDO::FETCH_ASSOC);
+	}
+
+	public function getParkingLotByID($id='default') {
+		$sql = "SELECT * FROM parkplus WHERE id = ?";
+		$sth = $this->db->prepare($sql);
+		$sth->execute(array($id));
+		return $sth->fetch(\PDO::FETCH_ASSOC);
+	}
+
 	public function genConfig() {
 		global $version;
 
