@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-27 11:37-0400\n"
+"POT-Creation-Date: 2018-03-14 14:02-0400\n"
 "PO-Revision-Date: 2016-12-15 00:56+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
 "freepbx/parking/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -113,7 +113,15 @@ msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr ""
 "Define o código de recurso a ser usado para a Captura de Chamada Direta"
 
-#: install.php:15 parking.i18n.php:14
+#: parking.i18n.php:14
+msgid ""
+"Defines the Feature Code to use to force pickup a call that is parked in a "
+"private lot that the extension picking up the call does not have permissions "
+"for.  Example if a caller is parked in slot 81 and extension 8001 does not "
+"have permission to that"
+msgstr ""
+
+#: install.php:15
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -127,7 +135,7 @@ msgstr ""
 "81 e o ramal 8001 não tem permissão para este estacionamento privado, ele "
 "poderia discar *8581 para capturar a chamada estacionada."
 
-#: Parking.class.php:143
+#: Parking.class.php:158
 msgid "Delete"
 msgstr "Apagar"
 
@@ -400,7 +408,7 @@ msgstr "Forneça um Título Descritivo para este Estacionamento"
 msgid "Re-Parking Capability"
 msgstr "Capacidade de Re-Estacionamento"
 
-#: Parking.class.php:148
+#: Parking.class.php:163
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -428,7 +436,7 @@ msgstr ""
 "String para prefixar ao atual ID Chamador relacionado à chamada estacionada "
 "antes de enviar de volta para o Originador ou Destino Alternativo."
 
-#: Parking.class.php:153
+#: Parking.class.php:168
 msgid "Submit"
 msgstr "Enviar"
 

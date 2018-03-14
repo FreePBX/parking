@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-27 11:37-0400\n"
+"POT-Creation-Date: 2018-03-14 14:02-0400\n"
 "PO-Revision-Date: 2016-12-11 06:01+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/parking/"
 "es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -112,7 +112,15 @@ msgstr "Lote Por defecto"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "Define el Código de Función a usar para Tomado de Llamada Directo"
 
-#: install.php:15 parking.i18n.php:14
+#: parking.i18n.php:14
+msgid ""
+"Defines the Feature Code to use to force pickup a call that is parked in a "
+"private lot that the extension picking up the call does not have permissions "
+"for.  Example if a caller is parked in slot 81 and extension 8001 does not "
+"have permission to that"
+msgstr ""
+
+#: install.php:15
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -126,7 +134,7 @@ msgstr ""
 "estacionado en la ranura 81 y la extensión 8001 no tiene permiso para ese "
 "lote privado podrían marcar * 8581 para recoger la llamada estacionada."
 
-#: Parking.class.php:143
+#: Parking.class.php:158
 msgid "Delete"
 msgstr "Borrar"
 
@@ -231,8 +239,8 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
-"Anular el volumen del timbre. Nota: esto sólo es válido para los teléfonos %"
-"s en este momento"
+"Anular el volumen del timbre. Nota: esto sólo es válido para los teléfonos "
+"%s en este momento"
 
 #: views/bootnav.php:2
 msgid "Overview"
@@ -400,7 +408,7 @@ msgstr "Provea un Titulo descriptivo para este Aparcamiento"
 msgid "Re-Parking Capability"
 msgstr "Capacidad de Re-estacionamiento"
 
-#: Parking.class.php:148
+#: Parking.class.php:163
 msgid "Reset"
 msgstr "Reinicio"
 
@@ -429,7 +437,7 @@ msgstr ""
 "relacionado con la llamada aparcada antes de enviarla de nuevo al emisor o "
 "al destino alternativo."
 
-#: Parking.class.php:153
+#: Parking.class.php:168
 msgid "Submit"
 msgstr "Enviar"
 

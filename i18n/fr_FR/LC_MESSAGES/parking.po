@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-27 11:37-0400\n"
+"POT-Creation-Date: 2018-03-14 14:02-0400\n"
 "PO-Revision-Date: 2016-02-01 03:10+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/parking/"
 "fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
@@ -104,7 +104,15 @@ msgstr ""
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr ""
 
-#: install.php:15 parking.i18n.php:14
+#: parking.i18n.php:14
+msgid ""
+"Defines the Feature Code to use to force pickup a call that is parked in a "
+"private lot that the extension picking up the call does not have permissions "
+"for.  Example if a caller is parked in slot 81 and extension 8001 does not "
+"have permission to that"
+msgstr ""
+
+#: install.php:15
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -113,7 +121,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:143
+#: Parking.class.php:158
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -371,7 +379,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:148
+#: Parking.class.php:163
 msgid "Reset"
 msgstr ""
 
@@ -397,7 +405,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:153
+#: Parking.class.php:168
 msgid "Submit"
 msgstr ""
 
