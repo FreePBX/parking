@@ -151,7 +151,7 @@ function parking_generate_sub_park_user() {
 		$ext->add($spu, $exten, '', new ext_set('UNAME', 'UNKNOWN'));
 		$ext->add($spu, $exten, '', new ext_set('DEVS', '${DB_KEYS(DEVICE)}'));
 		$ext->add($spu, $exten, '', new ext_while('$["${SET(DEV=${POP(DEVS)})}" != ""]'));
-		$ext->add($spu, $exten, '', new ext_gotoif('$["${DB(DEVICE/${DEV}/dial)}" = "${CUT(CHANNEL(name),-,1)}"]','found'));
+		$ext->add($spu, $exten, '', new ext_gotoif('$["${DB(DEVICE/${DEV}/dial)}" = "${PARKER}"]','found'));
 		$ext->add($spu, $exten, '', new ext_endwhile(''));
 		$ext->add($spu, $exten, '', new ext_return(''));
 		$ext->add($spu, $exten, 'found', new ext_execif('$[${LEN(${DB(DEVICE/${DEV}/user)})} > 0]','Set','UEXTEN=${DB(DEVICE/${DEV}/user)}'));
