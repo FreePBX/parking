@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-14 14:02-0400\n"
-"PO-Revision-Date: 2018-06-15 10:19+0000\n"
-"Last-Translator: Nils Heckenkamp <nheckenkamp@sangoma.com>\n"
+"PO-Revision-Date: 2018-07-18 19:13+0000\n"
+"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: assets/js/park.js:96
 #, perl-format
 msgid "%s already in use by: %s"
-msgstr "% s 1 wird bereits verwendet von:% s 2"
+msgstr "%s wird bereits verwendet von:%s"
 
 #: install.php:255
 #, php-format
@@ -158,7 +158,7 @@ msgstr ""
 
 #: views/lot.php:66
 msgid "General Settings"
-msgstr ""
+msgstr "Allgemeine Einstellungen"
 
 #: functions.inc/registries.php:23 functions.inc/registries.php:32
 msgid "INUSE"
@@ -195,7 +195,7 @@ msgstr ""
 
 #: views/lot.php:491
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
 #: views/lot.php:21 views/lot.php:290 views/lot.php:400 views/lot.php:452
 msgid "None"
@@ -217,6 +217,8 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"Überschreiben Sie die Ruftonlautstärke. Hinweis: Dies gilt nur für Telefone "
+"von %s zu diesem Zeitpunkt"
 
 #: views/bootnav.php:2
 msgid "Overview"
@@ -388,7 +390,7 @@ msgstr ""
 
 #: views/lot.php:395
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "Ruftonlautstärke überschreiben"
 
 #: views/lot.php:454
 msgid "Slot"
