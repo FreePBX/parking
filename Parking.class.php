@@ -16,12 +16,7 @@ class Parking implements BMO {
 	public function uninstall() {
 
 	}
-	public function backup(){
 
-	}
-	public function restore($backup){
-
-	}
 	public function doConfigPageInit($page){
 		$id = isset($_REQUEST['id']) ? $_REQUEST['id'] : '';
 		$parking_defaults = array(
@@ -47,7 +42,6 @@ class Parking implements BMO {
 			"rvolume" => ""
 		);
 
-		$data = array();
 		switch ($_REQUEST['action']) {
 			case 'add':
 			case 'update':
@@ -61,7 +55,7 @@ class Parking implements BMO {
 					if($_REQUEST['action'] == 'update') {
 						$vars['id'] = $_REQUEST['id'];
 					}
-					$id = parking_save($vars);
+					$id = $this->save($vars);
 					if($id !== false){
 						$_REQUEST['action'] = 'modify';
 						$_REQUEST['id'] = $id;
@@ -85,7 +79,7 @@ class Parking implements BMO {
 			$sql = "SELECT * FROM parkplus WHERE parkext LIKE ?";
 			$sth = $this->db->prepare($sql);
 			$sth->execute(array("%".$query."%"));
-			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
+			$rows = $sth->fetchAll(PDO::FETCH_ASSOC);
 			foreach($rows as $row) {
 				$results[] = array("text" => _("ParkingLot")." ".$row['parkext'], "type" => "get", "dest" => "?display=parking&action=modify&id=".$row['id']);
 			}
@@ -93,7 +87,7 @@ class Parking implements BMO {
 			$sql = "SELECT * FROM parkplus WHERE name LIKE ?";
 			$sth = $this->db->prepare($sql);
 			$sth->execute(array("%".$query."%"));
-			$rows = $sth->fetchAll(\PDO::FETCH_ASSOC);
+			$rows = $sth->fetchAll(PDO::FETCH_ASSOC);
 			foreach($rows as $row) {
 				$results[] = array("text" => $row['name'] . " (".$row['parkext'].")", "type" => "get", "dest" => "?display=parking&action=modify&id=".$row['id']);
 			}
@@ -104,15 +98,71 @@ class Parking implements BMO {
 		$sql = "SELECT * FROM parkplus";
 		$sth = $this->db->prepare($sql);
 		$sth->execute();
-		return $sth->fetchAll(\PDO::FETCH_ASSOC);
+		return $sth->fetchAll(PDO::FETCH_ASSOC);
 	}
 
 	public function getParkingLotByID($id='default') {
 		$sql = "SELECT * FROM parkplus WHERE id = ?";
 		$sth = $this->db->prepare($sql);
 		$sth->execute(array($id));
-		return $sth->fetch(\PDO::FETCH_ASSOC);
-	}
+		return $sth->fetch(PDO::FETCH_ASSOC);
+    }
+
+    static function getDefaults(){
+        return [
+            'name' => 'Parking Lot',
+            'type' => 'public',
+            'parkext' => '',
+            'parkpos' => '',
+            'numslots' => 4,
+            'parkingtime' => 45,
+            'parkedmusicclass' => 'default',
+            'generatefc' => 'yes',
+            'findslot' => 'first',
+            'parkedplay' => 'both',
+            'parkedcalltransfers' => 'caller',
+            'parkedcallreparking' => 'caller',
+            'alertinfo' => '',
+            'cidpp' => '',
+            'autocidpp' => 'none',
+            'announcement_id' => null,
+            'comebacktoorigin' => 'yes',
+            'dest' => '',
+            'defaultlot' => 'yes',
+            'rvolume' => '',
+        ];
+    }
+    
+    public function save($params = []){
+        if(isset($params['id'])){
+            $var['id'] = $params['id'];
+        }
+
+        if (!function_exists('parkpro_get')) {
+            $var[':id'] = 1;
+        }
+
+        foreach ($this->getDefaults() as $k => $v) {
+            if (isset($params[$k])) {
+                $var[$k] = $params[$k];
+            }
+        }
+        $var['defaultlot'] = isset($var['id']) && $var['id'] == 1 ? 'yes' : 'no';
+
+        $fields = "name, type, parkext, parkpos, numslots, parkingtime, parkedmusicclass, generatefc, findslot, parkedplay,
+		parkedcalltransfers, parkedcallreparking, alertinfo, cidpp, autocidpp, announcement_id, comebacktoorigin, dest, defaultlot, rvolume";
+        $holders = "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?";
+
+        if (empty($var['id'])) {
+            $sql = "INSERT INTO parkplus ($fields) VALUES ($holders)";
+        } else {
+            $sql = "REPLACE INTO parkplus (id, $fields) VALUES (?,$holders)";
+        }
+        $this->FreePBX->Database->prepare($sql)->execute(array_values($var));
+        $id = $this->FreePBX->Database->lastInsertId('id');
+        needreload();
+        return $id;
+    }
 
 	public function genConfig() {
 		global $version;
@@ -180,7 +230,7 @@ class Parking implements BMO {
 	}
 	public function getRightNav($request) {
 		if(function_exists('parkpro_view')){
-			return \FreePBX::Parkpro()->getRightNav($request);
+			return $this->FreePBX->Parkpro->getRightNav($request);
 		}
 	}
 }
