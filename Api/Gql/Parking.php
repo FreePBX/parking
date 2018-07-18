@@ -6,6 +6,17 @@ use GraphQL\Type\Definition\Type;
 use FreePBX\modules\Api\Gql\Base;
 
 class Parking extends Base {
+	protected $module = 'parking';
+
+	public function queryCallback() {
+		if($this->checkAllReadScope()) {
+			return function() {
+				return [
+				];
+			};
+		}
+	}
+	/*
 	public function constructQuery() {
 		return [
 			'parkinglots' => [
@@ -101,4 +112,5 @@ class Parking extends Base {
 			]
 		]);
 	}
+	*/
 }
