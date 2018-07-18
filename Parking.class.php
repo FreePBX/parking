@@ -139,26 +139,29 @@ class Parking implements BMO {
         }
 
         if (!function_exists('parkpro_get')) {
-            $var[':id'] = 1;
+            $var['id'] = 1;
         }
 
         foreach ($this->getDefaults() as $k => $v) {
             if (isset($params[$k])) {
                 $var[$k] = $params[$k];
+                continue;
             }
+            $var[$k] = '';
         }
         $var['defaultlot'] = isset($var['id']) && $var['id'] == 1 ? 'yes' : 'no';
-
         $fields = "name, type, parkext, parkpos, numslots, parkingtime, parkedmusicclass, generatefc, findslot, parkedplay,
 		parkedcalltransfers, parkedcallreparking, alertinfo, cidpp, autocidpp, announcement_id, comebacktoorigin, dest, defaultlot, rvolume";
         $holders = "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?";
+        $holders = ':name,  :type,  :parkext,  :parkpos,  :numslots,  :parkingtime,  :parkedmusicclass,  :generatefc,  :findslot,  :parkedplay, 
+		:parkedcalltransfers,  :parkedcallreparking,  :alertinfo,  :cidpp,  :autocidpp,  :announcement_id,  :comebacktoorigin,  :dest,  :defaultlot,  :rvolume';
 
-        if (empty($var['id'])) {
-            $sql = "INSERT INTO parkplus ($fields) VALUES ($holders)";
-        } else {
-            $sql = "REPLACE INTO parkplus (id, $fields) VALUES (?,$holders)";
+        if (!empty($var['id'])) {
+            $fields = 'id, '.$fields;
+            $holders = ':id, '.$holders;
         }
-        $this->FreePBX->Database->prepare($sql)->execute(array_values($var));
+        $sql = "REPLACE INTO parkplus ($fields) VALUES ($holders)";
+        $this->FreePBX->Database->prepare($sql)->execute($var);
         $id = $this->FreePBX->Database->lastInsertId('id');
         needreload();
         return $id;
