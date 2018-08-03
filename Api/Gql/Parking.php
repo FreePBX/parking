@@ -16,6 +16,19 @@ class Parking extends Base {
 			};
 		}
 	}
+
+	public function initializeTypes() {
+		$user = $this->typeContainer->create('parkinglot');
+		$user->setDescription('');
+
+		$user->addInterfaceCallback(function() {
+			return [$this->getNodeDefinition()['nodeInterface']];
+		});
+
+		$user->setGetNodeCallback(function($id) {
+			return $this->getSingleData($id);
+		});
+	}
 	/*
 	public function constructQuery() {
 		return [
