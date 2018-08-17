@@ -16,7 +16,15 @@ class Parking implements BMO {
 	public function uninstall() {
 
 	}
-
+	public function setDatabase($pdo){
+	$this->db = $pdo;
+	return $this;
+	}
+	
+	public function resetDatabase(){
+		$this->db = $this->FreePBX->Database;
+	return $this;
+	}
 	public function doConfigPageInit($page){
 		$id = isset($_REQUEST['id']) ? $_REQUEST['id'] : '';
 		$parking_defaults = array(
