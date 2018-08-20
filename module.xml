@@ -2,7 +2,7 @@
     <rawname>parking</rawname>
     <repo>standard</repo>
     <name>Parking Lot</name>
-    <version>15.0.1</version>
+    <version>15.0.2</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,34 +11,35 @@
         up from any extension.
     </description>
     <changelog>
+		*15.0.2* Packaging of ver 15.0.2
         *15.0.1* Backup 15.0
-    </changelog>
+	</changelog>
     <menuitems>
         <parking needsenginedb="yes">Parking</parking>
     </menuitems>
     <database>
         <table name="parkplus">
-            <field name="id" type="bigint" primarykey="true" autoincrement="true" />
-            <field name="defaultlot" type="string" length="10" default="no" />
-            <field name="type" type="string" length="10" default="public" />
-            <field name="name" type="string" length="40" default="" />
-            <field name="parkext" type="string" length="40" default="" />
-            <field name="parkpos" type="string" length="40" default="" />
-            <field name="numslots" type="integer" default="4" />
-            <field name="parkingtime" type="integer" default="45" />
-            <field name="parkedmusicclass" type="string" length="100" default="default" notnull="false" />
-            <field name="generatefc" type="string" length="10" default="yes" />
-            <field name="findslot" type="string" length="10" default="first" />
-            <field name="parkedplay" type="string" length="10" default="both" />
-            <field name="parkedcalltransfers" type="string" length="10" default="caller" />
-            <field name="parkedcallreparking" type="string" length="10" default="caller" />
-            <field name="alertinfo" type="string" length="254" default="" />
-            <field name="rvolume" type="string" length="2" default="" />
-            <field name="cidpp" type="string" length="100" default="" />
-            <field name="autocidpp" type="string" length="10" default="none" />
-            <field name="announcement_id" type="integer" notnull="false" />
-            <field name="comebacktoorigin" type="string" length="10" default="yes" />
-            <field name="dest" type="string" length="100" default="app-blackhole,hangup,1" />
+            <field name="id" type="bigint" primarykey="true" autoincrement="true"/>
+            <field name="defaultlot" type="string" length="10" default="no"/>
+            <field name="type" type="string" length="10" default="public"/>
+            <field name="name" type="string" length="40" default=""/>
+            <field name="parkext" type="string" length="40" default=""/>
+            <field name="parkpos" type="string" length="40" default=""/>
+            <field name="numslots" type="integer" default="4"/>
+            <field name="parkingtime" type="integer" default="45"/>
+            <field name="parkedmusicclass" type="string" length="100" default="default" notnull="false"/>
+            <field name="generatefc" type="string" length="10" default="yes"/>
+            <field name="findslot" type="string" length="10" default="first"/>
+            <field name="parkedplay" type="string" length="10" default="both"/>
+            <field name="parkedcalltransfers" type="string" length="10" default="caller"/>
+            <field name="parkedcallreparking" type="string" length="10" default="caller"/>
+            <field name="alertinfo" type="string" length="254" default=""/>
+            <field name="rvolume" type="string" length="2" default=""/>
+            <field name="cidpp" type="string" length="100" default=""/>
+            <field name="autocidpp" type="string" length="10" default="none"/>
+            <field name="announcement_id" type="integer" notnull="false"/>
+            <field name="comebacktoorigin" type="string" length="10" default="yes"/>
+            <field name="dest" type="string" length="100" default="app-blackhole,hangup,1"/>
         </table>
     </database>
     <depends>

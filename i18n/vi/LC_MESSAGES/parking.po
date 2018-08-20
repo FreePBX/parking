@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 14:02-0400\n"
+"POT-Creation-Date: 2018-08-20 12:51-0400\n"
 "PO-Revision-Date: 2017-07-19 15:57+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "%s already in use by: %s"
 msgstr "%s đang được dùng bởi: %s"
 
-#: install.php:255
+#: install.php:121
 #, php-format
 msgid "%s no longer supported"
 msgstr "%s không được hỗ trợ nữa"
@@ -104,7 +104,7 @@ msgstr "Caller ID Prepend"
 msgid "Come Back to Origin"
 msgstr "Trở lại điểm ban đầu"
 
-#: install.php:186
+#: install.php:52
 msgid "Default Lot"
 msgstr "Mặc định Lot"
 
@@ -130,7 +130,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:158
+#: Parking.class.php:219
 msgid "Delete"
 msgstr "Xóa"
 
@@ -138,7 +138,7 @@ msgstr "Xóa"
 msgid "Destination"
 msgstr "Điểm đích"
 
-#: install.php:169
+#: install.php:35
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 
@@ -174,17 +174,15 @@ msgstr "Cai đặt chung"
 msgid "INUSE"
 msgstr "INUSE"
 
-#: install.php:185
+#: install.php:51
 msgid "Initializing default parkinglot.."
 msgstr "Đang khởi tạo parkinglot mặc định.."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
+"Manages parking lot extensions and other options. Parking is a way of "
 "putting calls "
 msgstr ""
-"Quản lý parking lot các máy nhánh và các tùy chọn khác. Parking là một "
-"phương thức thực hiện cuộc gọi "
 
 #: views/lot.php:458
 msgid "Name"
@@ -364,7 +362,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:90
+#: Parking.class.php:92
 msgid "ParkingLot"
 msgstr ""
 
@@ -394,7 +392,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:163
+#: Parking.class.php:224
 msgid "Reset"
 msgstr ""
 
@@ -422,7 +420,7 @@ msgstr ""
 "Chuỗi để bạn thêm vào trước Caller ID hiện tại liên quan tới parked call "
 "trước khi gửi trở lại trạm gốc hoặc điểm đích thay thế."
 
-#: Parking.class.php:168
+#: Parking.class.php:229
 msgid "Submit"
 msgstr ""
 
@@ -521,7 +519,7 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: install.php:188
+#: install.php:54
 msgid "done"
 msgstr ""
 
@@ -529,14 +527,21 @@ msgstr ""
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:265
+#: install.php:131
 msgid "migrated ... dropping old table parkinglot"
 msgstr ""
 
-#: install.php:194
+#: install.php:60
 msgid "migrating old parkinglot data"
 msgstr ""
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "Quản lý parking lot các máy nhánh và các tùy chọn khác. Parking là một "
+#~ "phương thức thực hiện cuộc gọi "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 14:02-0400\n"
+"POT-Creation-Date: 2018-08-20 12:51-0400\n"
 "PO-Revision-Date: 2016-12-15 00:56+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "%s already in use by: %s"
 msgstr "%s já em uso por: %s"
 
-#: install.php:255
+#: install.php:121
 #, php-format
 msgid "%s no longer supported"
 msgstr "%s já não é mais suportado"
@@ -104,7 +104,7 @@ msgstr "Prefixar ID Chamador"
 msgid "Come Back to Origin"
 msgstr "Voltar à Origem"
 
-#: install.php:186
+#: install.php:52
 msgid "Default Lot"
 msgstr "Estacionamento Padrão"
 
@@ -135,7 +135,7 @@ msgstr ""
 "81 e o ramal 8001 não tem permissão para este estacionamento privado, ele "
 "poderia discar *8581 para capturar a chamada estacionada."
 
-#: Parking.class.php:158
+#: Parking.class.php:219
 msgid "Delete"
 msgstr "Apagar"
 
@@ -143,7 +143,7 @@ msgstr "Apagar"
 msgid "Destination"
 msgstr "Destino"
 
-#: install.php:169
+#: install.php:35
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ERRO: muitos estacionamentos padrão detectados, excluindo e reinicializando"
@@ -180,17 +180,15 @@ msgstr "Configurações Gerais"
 msgid "INUSE"
 msgstr "EM USO"
 
-#: install.php:185
+#: install.php:51
 msgid "Initializing default parkinglot.."
 msgstr "Inicializando  estacionamento padrão..."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
+"Manages parking lot extensions and other options. Parking is a way of "
 "putting calls "
 msgstr ""
-"Gerencia os ramais dos estacionamentos e outras opções. \tO estacionamento é "
-"uma forma de reter chamadas "
 
 #: views/lot.php:458
 msgid "Name"
@@ -376,7 +374,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "Tempo de Espera de Estacionamento (segundos)"
 
-#: Parking.class.php:90
+#: Parking.class.php:92
 msgid "ParkingLot"
 msgstr "Estacionamento"
 
@@ -408,7 +406,7 @@ msgstr "Forneça um Título Descritivo para este Estacionamento"
 msgid "Re-Parking Capability"
 msgstr "Capacidade de Re-Estacionamento"
 
-#: Parking.class.php:163
+#: Parking.class.php:224
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -436,7 +434,7 @@ msgstr ""
 "String para prefixar ao atual ID Chamador relacionado à chamada estacionada "
 "antes de enviar de volta para o Originador ou Destino Alternativo."
 
-#: Parking.class.php:168
+#: Parking.class.php:229
 msgid "Submit"
 msgstr "Enviar"
 
@@ -558,7 +556,7 @@ msgstr "Você deve selecionar um destino válido"
 msgid "default"
 msgstr "padrão"
 
-#: install.php:188
+#: install.php:54
 msgid "done"
 msgstr "terminado"
 
@@ -566,17 +564,24 @@ msgstr "terminado"
 msgid "he starting postion of the parking lot"
 msgstr "Posição inicial do estacionamento"
 
-#: install.php:265
+#: install.php:131
 msgid "migrated ... dropping old table parkinglot"
 msgstr "migrado...descartando a antiga tabela parkinglot"
 
-#: install.php:194
+#: install.php:60
 msgid "migrating old parkinglot data"
 msgstr "migrando dados da antiga tabela parkinglot"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "Gerencia os ramais dos estacionamentos e outras opções. \tO "
+#~ "estacionamento é uma forma de reter chamadas "
 
 #~ msgid "BLF Capabilities"
 #~ msgstr "Capacidades BLF"

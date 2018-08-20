@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 14:02-0400\n"
+"POT-Creation-Date: 2018-08-20 12:51-0400\n"
 "PO-Revision-Date: 2015-10-19 15:00+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "%s already in use by: %s"
 msgstr ""
 
-#: install.php:255
+#: install.php:121
 #, php-format
 msgid "%s no longer supported"
 msgstr "不再%s"
@@ -96,7 +96,7 @@ msgstr "CallerID 添加"
 msgid "Come Back to Origin"
 msgstr "回到原状态"
 
-#: install.php:186
+#: install.php:52
 msgid "Default Lot"
 msgstr "默认驻留地址"
 
@@ -121,7 +121,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:158
+#: Parking.class.php:219
 msgid "Delete"
 msgstr "删除"
 
@@ -129,7 +129,7 @@ msgstr "删除"
 msgid "Destination"
 msgstr "目的地"
 
-#: install.php:169
+#: install.php:35
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "错误：太多默认的驻留地址，删除，正在重新设置"
 
@@ -165,13 +165,13 @@ msgstr "基本设置"
 msgid "INUSE"
 msgstr "在使用状态"
 
-#: install.php:185
+#: install.php:51
 msgid "Initializing default parkinglot.."
 msgstr "初始化默认驻留空间。。"
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
+"Manages parking lot extensions and other options. Parking is a way of "
 "putting calls "
 msgstr ""
 
@@ -349,7 +349,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:90
+#: Parking.class.php:92
 msgid "ParkingLot"
 msgstr ""
 
@@ -379,7 +379,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:163
+#: Parking.class.php:224
 msgid "Reset"
 msgstr ""
 
@@ -405,7 +405,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:168
+#: Parking.class.php:229
 msgid "Submit"
 msgstr ""
 
@@ -498,7 +498,7 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: install.php:188
+#: install.php:54
 msgid "done"
 msgstr ""
 
@@ -506,11 +506,11 @@ msgstr ""
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:265
+#: install.php:131
 msgid "migrated ... dropping old table parkinglot"
 msgstr ""
 
-#: install.php:194
+#: install.php:60
 msgid "migrating old parkinglot data"
 msgstr ""
 

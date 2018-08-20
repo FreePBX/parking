@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 14:02-0400\n"
+"POT-Creation-Date: 2018-08-20 12:51-0400\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "%s already in use by: %s"
 msgstr ""
 
-#: install.php:255
+#: install.php:121
 #, php-format
 msgid "%s no longer supported"
 msgstr "%sは現在、サポートされていません。"
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:186
+#: install.php:52
 msgid "Default Lot"
 msgstr "デフォルトロット"
 
@@ -155,7 +155,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:158
+#: Parking.class.php:219
 msgid "Delete"
 msgstr ""
 
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:169
+#: install.php:35
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "エラー：デフォルトlotは多すぎるため、削除・再初期化します… "
 
@@ -199,16 +199,15 @@ msgstr ""
 msgid "INUSE"
 msgstr "使用中"
 
-#: install.php:185
+#: install.php:51
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
+"Manages parking lot extensions and other options. Parking is a way of "
 "putting calls "
 msgstr ""
-"パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
 
 #: views/lot.php:458
 msgid "Name"
@@ -388,7 +387,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:90
+#: Parking.class.php:92
 msgid "ParkingLot"
 msgstr ""
 
@@ -418,7 +417,7 @@ msgstr "このパーキングロットに詳細な名称を与える"
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:163
+#: Parking.class.php:224
 msgid "Reset"
 msgstr ""
 
@@ -446,7 +445,7 @@ msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前に、パークされたコールに付与され"
 "た現在のCaller ID文字列。"
 
-#: Parking.class.php:168
+#: Parking.class.php:229
 msgid "Submit"
 msgstr ""
 
@@ -556,7 +555,7 @@ msgstr ""
 msgid "default"
 msgstr "デフォルト"
 
-#: install.php:188
+#: install.php:54
 msgid "done"
 msgstr "完了"
 
@@ -564,17 +563,23 @@ msgstr "完了"
 msgid "he starting postion of the parking lot"
 msgstr ""
 
-#: install.php:265
+#: install.php:131
 msgid "migrated ... dropping old table parkinglot"
 msgstr "移行しました… 旧テーブルのparkinglotを無効にしている"
 
-#: install.php:194
+#: install.php:60
 msgid "migrating old parkinglot data"
 msgstr "旧parkinglotのデータを移行中…"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
 
 #~ msgid ""
 #~ "Enable this to have Asterisk 'hints' generated to use with BLF buttons."
