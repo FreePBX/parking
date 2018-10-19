@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-14 14:02-0400\n"
-"PO-Revision-Date: 2018-10-19 13:00+0000\n"
+"PO-Revision-Date: 2018-10-21 16:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
 "Language: de_DE\n"
@@ -35,6 +35,8 @@ msgid ""
 "Alert-Info to add to the call prior to sending back to the Originator or to "
 "the Alternate Destination."
 msgstr ""
+"Alarm-Info, die dem Anruf hinzugefügt werden soll, bevor er zurück zum "
+"Ursprung oder an das alternative Ziel geschickt wird."
 
 #: views/lot.php:474
 msgid "Alternate Destination"
@@ -66,7 +68,7 @@ msgstr ""
 
 #: views/overview.php:18
 msgid "Attended Transfer call into Park lot nn"
-msgstr ""
+msgstr "Begleitete Übergabe an Parkplatz nn"
 
 #: views/overview.php:10
 msgid ""
@@ -163,7 +165,7 @@ msgstr "Nebenstelle"
 
 #: views/lot.php:523
 msgid "Failover Destination."
-msgstr ""
+msgstr "Ausweichziel."
 
 #: views/lot.php:247
 msgid "Find Slot"
@@ -171,7 +173,7 @@ msgstr "Parkposition finden"
 
 #: views/lot.php:254
 msgid "First"
-msgstr ""
+msgstr "Erster"
 
 #: views/lot.php:66
 msgid "General Settings"
@@ -231,6 +233,8 @@ msgid ""
 "Optional message to be played to the call prior to sending back to the "
 "Originator or the Alternate Destination."
 msgstr ""
+"Optionale Nachricht, die dem Anrufer vorgespielt werden soll, bevor er "
+"zurück zum Ursprung oder an das alternative Ziel geschickt wird."
 
 #: views/lot.php:412
 #, php-format
@@ -247,7 +251,7 @@ msgstr "Übersicht"
 
 #: install.php:7
 msgid "Park Prefix"
-msgstr ""
+msgstr "Park-Präfix"
 
 #: views/overview.php:26
 #, php-format
@@ -282,7 +286,7 @@ msgstr "Geparkt"
 
 #: views/lot.php:221
 msgid "Parked Music Class"
-msgstr ""
+msgstr "Musik im Parkplatz"
 
 #: parking.i18n.php:10
 msgid "Parking"
@@ -290,11 +294,11 @@ msgstr "Parken"
 
 #: views/lot.php:372
 msgid "Parking Alert-Info"
-msgstr ""
+msgstr "Park-Alarm-Info"
 
 #: views/overview.php:37
 msgid "Parking Help"
-msgstr ""
+msgstr "Hilfe zum Parken"
 
 #: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
@@ -385,6 +389,8 @@ msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
 msgstr ""
+"Parkt Sie in dem Ihnen zugewiesenen Platz, wenn Sie ParkPro verwenden; "
+"ansonsten werden Sie auf dem Standardplatz geparkt"
 
 #: views/lot.php:279
 msgid "Pickup Courtesy Tone"
@@ -400,11 +406,11 @@ msgstr ""
 
 #: views/lot.php:112
 msgid "Provide a Descriptive Title for this Parking Lot"
-msgstr ""
+msgstr "Geben Sie einen aussagekräftigen Titel für diesen Parkplatz an"
 
 #: views/lot.php:341
 msgid "Re-Parking Capability"
-msgstr ""
+msgstr "Möglichkeit zum Wieder-parken"
 
 #: Parking.class.php:163
 msgid "Reset"
@@ -420,17 +426,20 @@ msgstr "Ruftonlautstärke überschreiben"
 
 #: views/lot.php:454
 msgid "Slot"
-msgstr ""
+msgstr "Parkposition"
 
 #: views/lot.php:174
 msgid "Slot Range"
-msgstr ""
+msgstr "Verfügbare Parkpositionen"
 
 #: views/lot.php:435
 msgid ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
+"Zeichenkette, die der aktuell mit dem geparkten Anruf verbundenen "
+"Anruferkennung vorangestellt werden soll, bevor der Anruf zurück zum "
+"Ursprung oder zum Ausweichziel geleitet wird."
 
 #: Parking.class.php:168
 msgid "Submit"
