@@ -271,7 +271,9 @@ function parking_generate_parked_call() {
 	// Retrieve all previous recording variables, and set the CDR for this leg of the call
 	$ext->add($pc, $exten, '', new ext_agi('parkfetch.agi,${ARG1},${ARG2}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
-	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
+	if(version_compare($version, "12.0", "lt")) {
+		$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
+	}
 	$ext->add($pc, $exten, '', new ext_set('CDR(recordingfile)','${CALLFILENAME}.${MON_FMT}'));
 	$ext->add($pc, $exten, 'next', new ext_set('CCSS_SETUP','TRUE'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${PARKIE}" != ""]','pcall'));
@@ -340,6 +342,7 @@ function parking_generate_parked_call() {
 
 function parking_generate_parkedcallstimeout() {
 	global $ext;
+	global $version;
 
 	// parkedcallstimeout:
 	// All timedout parked calls come here regardless of the lot, we thus use this context to route the call to their properly
@@ -352,7 +355,9 @@ function parking_generate_parkedcallstimeout() {
 	//$ext->add($pc, $exten, '', new ext_set('PARK_TARGET','${EXTEN}'));
 	$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${REPLACE(EXTEN,_,/)}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
-	$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
+	if(version_compare($version, "12.0", "lt")) {
+		$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
+	}
 	$ext->add($pc, $exten, '', new ext_mixmonitor('${MIXMON_DIR}${YEAR}/${MONTH}/${DAY}/${CALLFILENAME}.${MIXMON_FORMAT}','a','${MIXMON_POST}'));
 	$ext->add($pc, $exten, 'next', new ext_goto('1','${PARKINGSLOT}','park-return-routing'));
 }
