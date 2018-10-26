@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-05 22:46-0400\n"
+"POT-Creation-Date: 2018-10-26 13:46-0400\n"
 "PO-Revision-Date: 2016-12-15 00:56+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -112,6 +112,14 @@ msgstr "Estacionamento Padrão"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr ""
 "Define o código de recurso a ser usado para a Captura de Chamada Direta"
+
+#: parking.i18n.php:14
+msgid ""
+"Defines the Feature Code to use to force pickup a call that is parked in a "
+"private lot that the extension picking up the call does not have permissions "
+"for.  Example if a caller is parked in slot 81 and extension 8001 does not "
+"have permission to that"
+msgstr ""
 
 #: install.php:15
 msgid ""
@@ -256,7 +264,7 @@ msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 "Estacionar você mesmo. O número do estacionamento será anunciado para você"
 
-#: install.php:22 parking.i18n.php:14
+#: install.php:22 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr "Estacionar em seu Estacionamento Atribuído"
 
@@ -370,7 +378,7 @@ msgstr "Tempo de Espera de Estacionamento (segundos)"
 msgid "ParkingLot"
 msgstr "Estacionamento"
 
-#: install.php:10 install.php:23
+#: install.php:10 install.php:23 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
