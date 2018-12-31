@@ -2,7 +2,7 @@
     <rawname>parking</rawname>
     <repo>standard</repo>
     <name>Parking Lot</name>
-    <version>15.0.4</version>
+    <version>15.0.5</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
         up from any extension.
     </description>
     <changelog>
+		*15.0.5* FREEPBX-18833 Parking Lot module allows to create duplicate entries with same Parking Lot Name 
 		*15.0.4* FREEPBX-17846 Function AUDIOHOOK_INHERIT not registered 
 		*15.0.3* Rest Api 
 		*15.0.2* Packaging of ver 15.0.2

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 13:46-0400\n"
+"POT-Creation-Date: 2018-12-31 11:30+0530\n"
 "PO-Revision-Date: 2016-03-17 00:42+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -21,9 +21,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: assets/js/park.js:96
+#: assets/js/park.js:100
 #, perl-format
 msgid "%s already in use by: %s"
+msgstr ""
+
+#: assets/js/park.js:32
+#, perl-format
+msgid "%s already used, please use a different name."
 msgstr ""
 
 #: install.php:121
@@ -293,7 +298,7 @@ msgstr "Lot پارک کردن"
 msgid "Parking Lot Extension"
 msgstr "داخلی لات پارک شده"
 
-#: assets/js/park.js:79
+#: assets/js/park.js:83
 msgid "Parking Lot Extension and Starting Position can not be the same!"
 msgstr ""
 
@@ -309,7 +314,7 @@ msgstr ""
 msgid "Parking Lot Extension can not start with a leading 0!"
 msgstr ""
 
-#: assets/js/park.js:90
+#: assets/js/park.js:94
 #, perl-format
 msgid "Parking Lot Extension: %s"
 msgstr ""
@@ -326,11 +331,11 @@ msgstr ""
 msgid "Parking Lot Starting Position"
 msgstr "موقعیت Lot شروع پارک کردن"
 
-#: assets/js/park.js:32
+#: assets/js/park.js:36
 msgid "Parking Lot Starting Position can not be blank!"
 msgstr ""
 
-#: assets/js/park.js:40
+#: assets/js/park.js:44
 msgid "Parking Lot Starting Position can not start with a leading 0!"
 msgstr ""
 
@@ -343,16 +348,16 @@ msgstr "Parking Lot : %s (%s)"
 msgid "Parking Settings"
 msgstr "تنظیمات پارک کردن"
 
-#: assets/js/park.js:90
+#: assets/js/park.js:94
 #, perl-format
 msgid "Parking Slot: %s"
 msgstr ""
 
-#: assets/js/park.js:36
+#: assets/js/park.js:40
 msgid "Parking Starting Position can not be larger than 2147483647!"
 msgstr ""
 
-#: assets/js/park.js:101
+#: assets/js/park.js:105
 msgid "Parking Starting Position/Slots can not be larger than 2147483647!"
 msgstr ""
 
@@ -521,11 +526,11 @@ msgid ""
 "will be announced to you."
 msgstr "شما میتوانید یک تماس را به داخلی لات پارک شده منتقل کنید(پیشفرض ۷۰)."
 
-#: assets/js/park.js:49
+#: assets/js/park.js:53
 msgid "You have errors on the form. Please correct them before continuing"
 msgstr ""
 
-#: assets/js/park.js:44
+#: assets/js/park.js:48
 msgid "You must select a valid destination"
 msgstr ""
 
