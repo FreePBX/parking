@@ -8,7 +8,7 @@ class Restore Extends Base\RestoreBase{
 				$this->FreePBX->Parking->save($lot);
 			}
 	}
-	public function processLegacy($pdo, $data, $tables, $unknownTables, $tmpfiledir){
+	public function processLegacy($pdo, $data, $tables, $unknownTables){
 		$this->restoreLegacyDatabase($pdo);
 	}
 }
