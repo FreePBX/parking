@@ -68,6 +68,9 @@ class Parking implements BMO {
 						$_REQUEST['action'] = 'modify';
 						$_REQUEST['id'] = $id;
 					}
+					if($this->FreePBX->Modules->checkStatus('parkpro')) {
+						unset($_REQUEST['action']);
+					}
 				}
 			break;
 			case 'delete':
