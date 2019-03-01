@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-31 11:30+0530\n"
+"POT-Creation-Date: 2019-03-01 16:43+0530\n"
 "PO-Revision-Date: 2017-07-19 15:57+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -135,7 +135,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:219
+#: Parking.class.php:222
 msgid "Delete"
 msgstr "Xóa"
 
@@ -367,7 +367,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:92
+#: Parking.class.php:95
 msgid "ParkingLot"
 msgstr ""
 
@@ -397,7 +397,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:224
+#: Parking.class.php:227
 msgid "Reset"
 msgstr ""
 
@@ -425,7 +425,7 @@ msgstr ""
 "Chuỗi để bạn thêm vào trước Caller ID hiện tại liên quan tới parked call "
 "trước khi gửi trở lại trạm gốc hoặc điểm đích thay thế."
 
-#: Parking.class.php:229
+#: Parking.class.php:232
 msgid "Submit"
 msgstr ""
 
