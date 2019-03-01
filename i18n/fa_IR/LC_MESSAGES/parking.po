@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-31 11:26+0530\n"
+"POT-Creation-Date: 2019-03-01 16:41+0530\n"
 "PO-Revision-Date: 2019-01-25 14:57+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/parking/fa/>\n"
@@ -141,7 +141,7 @@ msgstr ""
 "نداشته باشد، آنها می توانند شماره * 8581 را با شماره گیری پارک شده تماس "
 "بگیرند."
 
-#: Parking.class.php:158
+#: Parking.class.php:161
 msgid "Delete"
 msgstr "حذف"
 
@@ -375,7 +375,7 @@ msgstr "پارکینگ شروع موقعیت / اسلات نمی تواند بز
 msgid "Parking Timeout (seconds)"
 msgstr "وقفه پارک کردن (ثانیه)"
 
-#: Parking.class.php:90
+#: Parking.class.php:93
 msgid "ParkingLot"
 msgstr "Lot پارک کردن"
 
@@ -407,7 +407,7 @@ msgstr "ایجاد عنوان برای این لات"
 msgid "Re-Parking Capability"
 msgstr "قابلیت پارک کردن مجدد"
 
-#: Parking.class.php:163
+#: Parking.class.php:166
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -435,7 +435,7 @@ msgstr ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination ."
 
-#: Parking.class.php:168
+#: Parking.class.php:171
 msgid "Submit"
 msgstr "ارسال"
 

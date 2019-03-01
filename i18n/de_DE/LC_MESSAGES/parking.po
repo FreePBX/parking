@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-31 11:26+0530\n"
+"POT-Creation-Date: 2019-03-01 16:41+0530\n"
 "PO-Revision-Date: 2018-10-21 16:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
@@ -144,7 +144,7 @@ msgstr ""
 "81 geparkt ist und die Nebenstelle 8001 keinen Zugriff auf diesen privaten "
 "Parkplatz hat, könnte man *8581 wählen, um den geparkten Anruf heranzuholen."
 
-#: Parking.class.php:158
+#: Parking.class.php:161
 msgid "Delete"
 msgstr "Löschen"
 
@@ -385,7 +385,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "Zeitüberschreitung (in Sekunden) für das Parken"
 
-#: Parking.class.php:90
+#: Parking.class.php:93
 msgid "ParkingLot"
 msgstr "Parkplatz"
 
@@ -417,7 +417,7 @@ msgstr "Geben Sie einen aussagekräftigen Titel für diesen Parkplatz an"
 msgid "Re-Parking Capability"
 msgstr "Möglichkeit zum Wieder-parken"
 
-#: Parking.class.php:163
+#: Parking.class.php:166
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -446,7 +446,7 @@ msgstr ""
 "Anruferkennung vorangestellt werden soll, bevor der Anruf zurück zum "
 "Ursprung oder zum Ausweichziel geleitet wird."
 
-#: Parking.class.php:168
+#: Parking.class.php:171
 msgid "Submit"
 msgstr "Absenden"
 
