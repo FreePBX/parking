@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-01 16:43+0530\n"
+"POT-Creation-Date: 2019-03-06 17:42-0500\n"
 "PO-Revision-Date: 2016-03-17 00:42+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -116,14 +116,6 @@ msgstr "پیشفرض"
 #: install.php:9
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "تشخیص کد ویژه برای قطع تماس مستقیم کاربر"
-
-#: parking.i18n.php:14
-msgid ""
-"Defines the Feature Code to use to force pickup a call that is parked in a "
-"private lot that the extension picking up the call does not have permissions "
-"for.  Example if a caller is parked in slot 81 and extension 8001 does not "
-"have permission to that"
-msgstr ""
 
 #: install.php:15
 msgid ""
@@ -256,7 +248,7 @@ msgstr "پارک کنید خود را در لات nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "شماره لات به شما اعلام میشود"
 
-#: install.php:22 parking.i18n.php:16
+#: install.php:22
 msgid "Park to your Assigned Lot"
 msgstr "در Lot خود پارک کنید"
 
@@ -369,7 +361,7 @@ msgstr "وقفه پارک کردن (ثانیه)"
 msgid "ParkingLot"
 msgstr "Lot پارک کردن"
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: install.php:10 install.php:23
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"

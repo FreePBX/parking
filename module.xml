@@ -2,7 +2,7 @@
     <rawname>parking</rawname>
     <repo>standard</repo>
     <name>Parking Lot</name>
-    <version>15.0.8</version>
+    <version>15.0.9</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,12 +11,12 @@
         up from any extension.
     </description>
     <changelog>
-		*15.0.8* FREEPBX-18832 After adding/editing a Parking Lot entry, page is not redirecting to list Parking Lot page. 
-		*15.0.7* fixing legacy restore 
-		*15.0.6* fixing legacy restore 
-		*15.0.5* FREEPBX-18833 Parking Lot module allows to create duplicate entries with same Parking Lot Name 
-		*15.0.4* FREEPBX-17846 Function AUDIOHOOK_INHERIT not registered 
-		*15.0.3* Rest Api 
+		*15.0.8* FREEPBX-18832 After adding/editing a Parking Lot entry, page is not redirecting to list Parking Lot page.
+		*15.0.7* fixing legacy restore
+		*15.0.6* fixing legacy restore
+		*15.0.5* FREEPBX-18833 Parking Lot module allows to create duplicate entries with same Parking Lot Name
+		*15.0.4* FREEPBX-17846 Function AUDIOHOOK_INHERIT not registered
+		*15.0.3* Rest Api
 		*15.0.2* Packaging of ver 15.0.2
         *15.0.1* Backup 15.0
 	</changelog>

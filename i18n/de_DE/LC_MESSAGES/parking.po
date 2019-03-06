@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-01 16:43+0530\n"
+"POT-Creation-Date: 2019-03-06 17:42-0500\n"
 "PO-Revision-Date: 2018-07-27 16:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
@@ -115,18 +115,6 @@ msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr ""
 "Legt den Funktionscode fest, der für das direkte Heranholen von Anrufen "
 "verwendet wird"
-
-#: parking.i18n.php:14
-msgid ""
-"Defines the Feature Code to use to force pickup a call that is parked in a "
-"private lot that the extension picking up the call does not have permissions "
-"for.  Example if a caller is parked in slot 81 and extension 8001 does not "
-"have permission to that"
-msgstr ""
-"Legt den Funktionscode fest, mit dem das Heranholen eines Anrufs erzwungen "
-"wird, der auf einem privaten Parkplatz geparkt ist, auf den die heranholende "
-"Nebenstelle keine Zugriffsrechte hat. Z.B. wenn ein Anrufer auf Parkposition "
-"81 geparkt ist und die Nebenstelle 8001 keinen Zugriff darauf hat"
 
 #: install.php:15
 msgid ""
@@ -267,7 +255,7 @@ msgstr "Parken Sie selbst auf Platz nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "Parken Sie selbst. Die Parkplatznummer wird Ihnen mitgeteilt"
 
-#: install.php:22 parking.i18n.php:16
+#: install.php:22
 msgid "Park to your Assigned Lot"
 msgstr "Parken Sie auf dem Ihnen zugewiesenen Parkplatz"
 
@@ -385,7 +373,7 @@ msgstr "Zeitüberschreitung (in Sekunden) für das Parken"
 msgid "ParkingLot"
 msgstr "Parkplatz"
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: install.php:10 install.php:23
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -549,3 +537,15 @@ msgstr ""
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#~ msgid ""
+#~ "Defines the Feature Code to use to force pickup a call that is parked in "
+#~ "a private lot that the extension picking up the call does not have "
+#~ "permissions for.  Example if a caller is parked in slot 81 and extension "
+#~ "8001 does not have permission to that"
+#~ msgstr ""
+#~ "Legt den Funktionscode fest, mit dem das Heranholen eines Anrufs "
+#~ "erzwungen wird, der auf einem privaten Parkplatz geparkt ist, auf den die "
+#~ "heranholende Nebenstelle keine Zugriffsrechte hat. Z.B. wenn ein Anrufer "
+#~ "auf Parkposition 81 geparkt ist und die Nebenstelle 8001 keinen Zugriff "
+#~ "darauf hat"
