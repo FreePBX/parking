@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 17:42-0500\n"
+"POT-Creation-Date: 2019-06-20 13:07+0530\n"
 "PO-Revision-Date: 2015-10-19 15:00+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -168,7 +168,7 @@ msgstr "初始化默认驻留空间。。"
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
+"Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
 
@@ -237,7 +237,7 @@ msgstr "驻留本机到nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
-#: install.php:22
+#: install.php:22 parking.i18n.php:14
 msgid "Park to your Assigned Lot"
 msgstr ""
 
