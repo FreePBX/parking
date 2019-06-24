@@ -2,7 +2,7 @@
     <rawname>parking</rawname>
     <repo>standard</repo>
     <name>Parking Lot</name>
-    <version>15.0.10</version>
+    <version>15.0.11</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
         up from any extension.
     </description>
     <changelog>
+		*15.0.11* FREEPBX-20090 Custom Parking Lot entries are not restored with backup restore 
 		*15.0.10* FREEPBX-20090 parking backup restore 
 		*15.0.8* FREEPBX-18832 After adding/editing a Parking Lot entry, page is not redirecting to list Parking Lot page.
 		*15.0.7* fixing legacy restore
