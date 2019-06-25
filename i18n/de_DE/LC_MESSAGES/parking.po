@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-01 16:41+0530\n"
-"PO-Revision-Date: 2018-10-21 16:00+0000\n"
+"PO-Revision-Date: 2019-06-26 14:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
 "Language: de_DE\n"
@@ -28,7 +28,7 @@ msgstr "%s wird bereits verwendet von:%s"
 #: assets/js/park.js:32
 #, perl-format
 msgid "%s already used, please use a different name."
-msgstr ""
+msgstr "%s wird bereits verwendet, bitte wählen Sie einen anderen Namen."
 
 #: install.php:255
 #, php-format
@@ -278,7 +278,7 @@ msgstr "Parken Sie auf dem Ihnen zugewiesenen Parkplatz"
 #: functions.inc/registries.php:22
 #, php-format
 msgid "ParkPlus: ParkCall %s"
-msgstr ""
+msgstr "ParkPlus: Anruf %s parken"
 
 #: functions.inc/registries.php:31
 #, php-format
@@ -537,11 +537,11 @@ msgstr ""
 
 #: views/lot.php:15
 msgid "default"
-msgstr ""
+msgstr "Standard"
 
 #: install.php:188
 msgid "done"
-msgstr ""
+msgstr "erledigt"
 
 #: views/lot.php:136
 msgid "he starting postion of the parking lot"
