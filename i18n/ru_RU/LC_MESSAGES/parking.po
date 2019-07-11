@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 13:07+0530\n"
+"POT-Creation-Date: 2019-07-11 17:55+0530\n"
 "PO-Revision-Date: 2015-12-08 23:19+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -126,7 +126,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:222
+#: Parking.class.php:223
 msgid "Delete"
 msgstr "Удалить"
 
@@ -392,7 +392,7 @@ msgstr "Укажите описание для этого парковочног
 msgid "Re-Parking Capability"
 msgstr "Возможности перепарковки"
 
-#: Parking.class.php:227
+#: Parking.class.php:228
 msgid "Reset"
 msgstr "Сброс"
 
@@ -421,7 +421,7 @@ msgstr ""
 "запаркованным, прежде чем отправить его назад оригинатору или по "
 "альтернативному назначению."
 
-#: Parking.class.php:232
+#: Parking.class.php:233
 msgid "Submit"
 msgstr "Подтвердить"
 

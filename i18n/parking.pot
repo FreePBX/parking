@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 16:46+0530\n"
+"POT-Creation-Date: 2019-07-11 17:55+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,7 +119,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:222
+#: Parking.class.php:223
 msgid "Delete"
 msgstr ""
 
@@ -389,7 +389,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:227
+#: Parking.class.php:228
 msgid "Reset"
 msgstr ""
 
@@ -415,7 +415,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:232
+#: Parking.class.php:233
 msgid "Submit"
 msgstr ""
 

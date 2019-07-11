@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 13:07+0530\n"
+"POT-Creation-Date: 2019-07-11 17:55+0530\n"
 "PO-Revision-Date: 2016-03-17 00:42+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -126,7 +126,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:222
+#: Parking.class.php:223
 msgid "Delete"
 msgstr "حذف"
 
@@ -391,7 +391,7 @@ msgstr "ایجاد عنوان برای این لات"
 msgid "Re-Parking Capability"
 msgstr "قابلیت پارک کردن مجدد"
 
-#: Parking.class.php:227
+#: Parking.class.php:228
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -419,7 +419,7 @@ msgstr ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination ."
 
-#: Parking.class.php:232
+#: Parking.class.php:233
 msgid "Submit"
 msgstr "ارسال"
 
