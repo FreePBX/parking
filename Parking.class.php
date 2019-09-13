@@ -154,17 +154,16 @@ class Parking implements BMO {
         }
 
         foreach ($this->getDefaults() as $k => $v) {
-            if (isset($params[$k])) {
+            if (!empty($params[$k])) {
                 $var[$k] = $params[$k];
-                continue;
-            }
-            $var[$k] = '';
+            } else {
+		    $var[$k] = $v;
+	    }
         }
         $var['defaultlot'] = isset($var['id']) && $var['id'] == 1 ? 'yes' : 'no';
         $var['type'] = isset($var['id']) && $var['id'] == 1 ? 'public' : $var['type'];
         $fields = "name, type, parkext, parkpos, numslots, parkingtime, parkedmusicclass, generatefc, findslot, parkedplay,
 		parkedcalltransfers, parkedcallreparking, alertinfo, cidpp, autocidpp, announcement_id, comebacktoorigin, dest, defaultlot, rvolume";
-        $holders = "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?";
         $holders = ':name,  :type,  :parkext,  :parkpos,  :numslots,  :parkingtime,  :parkedmusicclass,  :generatefc,  :findslot,  :parkedplay, 
 		:parkedcalltransfers,  :parkedcallreparking,  :alertinfo,  :cidpp,  :autocidpp,  :announcement_id,  :comebacktoorigin,  :dest,  :defaultlot,  :rvolume';
 
