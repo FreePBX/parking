@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-01 16:41+0530\n"
-"PO-Revision-Date: 2019-06-26 14:00+0000\n"
-"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
+"PO-Revision-Date: 2020-02-01 19:00+0000\n"
+"Last-Translator: hammer125 <auswertung@mariner.at>\n"
 "Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +106,7 @@ msgstr "Anruferkennung voranstellen"
 
 #: views/lot.php:484
 msgid "Come Back to Origin"
-msgstr ""
+msgstr "zur Herkunft zurückkommen"
 
 #: install.php:186
 msgid "Default Lot"
@@ -283,7 +283,7 @@ msgstr "ParkPlus: Anruf %s parken"
 #: functions.inc/registries.php:31
 #, php-format
 msgid "ParkPlus: PickupSlot %s"
-msgstr ""
+msgstr "ParkPlus: %s heranholen"
 
 #: views/lot.php:286 views/lot.php:317 views/lot.php:348
 msgid "Parked"
@@ -399,7 +399,7 @@ msgstr ""
 
 #: views/lot.php:279
 msgid "Pickup Courtesy Tone"
-msgstr ""
+msgstr "Herhol-Bestätigungston"
 
 #: install.php:6
 msgid "Pickup ParkedCall Any"
@@ -452,7 +452,7 @@ msgstr "Absenden"
 
 #: views/lot.php:186
 msgid "The generated slot range"
-msgstr ""
+msgstr "Die erzeugten Parkpositionen"
 
 #: views/lot.php:209
 msgid ""
@@ -479,7 +479,7 @@ msgstr ""
 
 #: views/lot.php:88
 msgid "This is the extension where you will transfer a call to park it"
-msgstr ""
+msgstr "Das ist die Durchwahl wo der Anruf zum Parken hingeschickt wird"
 
 #: views/lot.php:235
 msgid ""
