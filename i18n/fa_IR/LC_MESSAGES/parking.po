@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 12:09+0530\n"
+"POT-Creation-Date: 2020-03-26 15:17+0530\n"
 "PO-Revision-Date: 2016-03-17 00:42+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -117,7 +117,7 @@ msgstr "پیشفرض"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "تشخیص کد ویژه برای قطع تماس مستقیم کاربر"
 
-#: install.php:15
+#: install.php:15 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -176,9 +176,11 @@ msgstr "تشخیص لات پارک پیشفرض.."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
+"Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
+"Manages parking lot extensions and other options .\tParking is a way of "
+"putting calls "
 
 #: views/lot.php:458
 msgid "Name"
@@ -248,7 +250,7 @@ msgstr "پارک کنید خود را در لات nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "شماره لات به شما اعلام میشود"
 
-#: install.php:22 parking.i18n.php:14
+#: install.php:22 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr "در Lot خود پارک کنید"
 
@@ -361,7 +363,7 @@ msgstr "وقفه پارک کردن (ثانیه)"
 msgid "ParkingLot"
 msgstr "Lot پارک کردن"
 
-#: install.php:10 install.php:23
+#: install.php:10 install.php:23 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -549,13 +551,6 @@ msgstr "انتقال دیتا قدیمی لات پارک شده"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
-
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "Manages parking lot extensions and other options .\tParking is a way of "
-#~ "putting calls "
 
 #~ msgid "BLF Capabilities"
 #~ msgstr "قابلیت های BLF"

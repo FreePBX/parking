@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 12:09+0530\n"
+"POT-Creation-Date: 2020-03-26 15:17+0530\n"
 "PO-Revision-Date: 2016-12-11 06:01+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -117,7 +117,7 @@ msgstr "Lote Por defecto"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "Define el Código de Función a usar para Tomado de Llamada Directo"
 
-#: install.php:15
+#: install.php:15 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -182,9 +182,11 @@ msgstr "Iniciando el Aparcamiento por defecto.."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
+"Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
+"Maneja los Aparcamientos de extensiones y otras opciones.\t Los "
+"Aparcamientos son una forma fácil de retener las llamadas "
 
 #: views/lot.php:458
 msgid "Name"
@@ -258,7 +260,7 @@ msgstr "Parquee usted mismo en lote nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "Parquee usted mismo. El número del lote le será anunciado"
 
-#: install.php:22 parking.i18n.php:14
+#: install.php:22 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr "Estacionar a su Lote asignado"
 
@@ -375,7 +377,7 @@ msgstr "Tiempo de espera de estacionamiento (segundos)"
 msgid "ParkingLot"
 msgstr "Estacionamiento"
 
-#: install.php:10 install.php:23
+#: install.php:10 install.php:23 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -574,13 +576,6 @@ msgstr "migrando datos de vieja tabla de aparcamiento"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
-
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "Maneja los Aparcamientos de extensiones y otras opciones.\t Los "
-#~ "Aparcamientos son una forma fácil de retener las llamadas "
 
 #~ msgid "BLF Capabilities"
 #~ msgstr "Capacidades BLF"
