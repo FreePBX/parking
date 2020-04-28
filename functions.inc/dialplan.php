@@ -229,7 +229,11 @@ function parking_generate_sub_return_routing($lot, $pd) {
 				*/
 				$ext->add($prr, $pexten, '', new ext_execif('$["${ALERT_INFO}"!=""]', 'Set', 'HASH(__SIPHEADERS,Alert-Info)=${ALERT_INFO}'));
 				$ext->add($prr, $pexten, '', new ext_execif('$["${RVOL}"!=""]', 'Set', 'HASH(__SIPHEADERS,Alert-Info)=${ALERT_INFO}\;volume=${RVOL}'));
-				$ext->add($prr, $pexten, '', new ext_dial('${PARKCALLBACK},15,b(func-apply-sipheaders^s^1)'));
+				// if the parker was pjsip, update dial string to all contacts
+				$ext->add($prr, $pexten, '', new ext_gotoif('$["${PARKCALLBACK:0:5}"!="PJSIP"]','dial'));
+				$ext->add($prr, $pexten, '', new ext_noop('Debug: Found PJSIP Destination ${PARKCALLBACK}, updating with PJSIP_DIAL_CONTACTS from ${PARKER:6}'));
+				$ext->add($prr, $pexten, '', new ext_set('PARKCALLBACK','${PJSIP_DIAL_CONTACTS(${PARKER:6})}'));
+				$ext->add($prr, $pexten, 'dial', new ext_dial('${PARKCALLBACK},15,b(func-apply-sipheaders^s^1)'));
 				$ext->add($prr, $pexten, '', new ext_set('PARKCALLBACK',''));
 				//$ext->add($prr, $pexten, '', new ext_goto('next'));
     }
