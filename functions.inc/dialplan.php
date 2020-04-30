@@ -181,11 +181,11 @@ function parking_generate_sub_return_routing($lot, $pd) {
 		$ext->add($prr, $pexten, '', new ext_setvar("__RVOL", $lot['rvolume']));
 	}
 
-	// Prepend options are parkingslot they were parked on, or the extension number or user name of the user who parked them
+	// Prepend options are parking_space they were parked on, or the extension number or user name of the user who parked them
 	//
 	switch ($lot['autocidpp']) {
 	case 'slot':
-		$autopp = '${PARKINGSLOT}:';
+		$autopp = '${PARKING_SPACE}:';
 		break;
 	case 'exten':
 		$ext->add($prr, $pexten, '', new ext_gosub('1','s','sub-park-user'));
@@ -229,7 +229,11 @@ function parking_generate_sub_return_routing($lot, $pd) {
 				*/
 				$ext->add($prr, $pexten, '', new ext_execif('$["${ALERT_INFO}"!=""]', 'Set', 'HASH(__SIPHEADERS,Alert-Info)=${ALERT_INFO}'));
 				$ext->add($prr, $pexten, '', new ext_execif('$["${RVOL}"!=""]', 'Set', 'HASH(__SIPHEADERS,Alert-Info)=${ALERT_INFO}\;volume=${RVOL}'));
-				$ext->add($prr, $pexten, '', new ext_dial('${PARKCALLBACK},15,b(func-apply-sipheaders^s^1)'));
+				// if the parker was pjsip, update dial string to all contacts
+				$ext->add($prr, $pexten, '', new ext_gotoif('$["${PARKCALLBACK:0:5}"!="PJSIP"]','dial'));
+				$ext->add($prr, $pexten, '', new ext_noop('Debug: Found PJSIP Destination ${PARKCALLBACK}, updating with PJSIP_DIAL_CONTACTS from ${PARKER:6}'));
+				$ext->add($prr, $pexten, '', new ext_set('PARKCALLBACK','${PJSIP_DIAL_CONTACTS(${PARKER:6})}'));
+				$ext->add($prr, $pexten, 'dial', new ext_dial('${PARKCALLBACK},15,b(func-apply-sipheaders^s^1)'));
 				$ext->add($prr, $pexten, '', new ext_set('PARKCALLBACK',''));
 				//$ext->add($prr, $pexten, '', new ext_goto('next'));
     }
@@ -332,7 +336,7 @@ function parking_generate_parked_call() {
 	if(version_compare($version, '13.2', 'ge')) {
 		$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${PARKER}'));
 		$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${CHANNEL})',''));
-		$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${PARKINGSLOT},1'));
+		$ext->add($pc, $exten, '', new ext_goto('park-return-routing,${PARKING_SPACE},1'));
 	} else {
 		$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${SHARED(PARKRETURNTO,${CHANNEL})}'));
 		$ext->add($pc, $exten, '', new ext_set('SHARED(PARKRETURNTO,${CHANNEL})',''));
@@ -351,7 +355,7 @@ function parking_generate_parkedcallstimeout() {
 	$pc = 'parkedcallstimeout';
 	$exten = '_[0-9a-zA-Z*#].';
 
-	$ext->add($pc, $exten, '', new ext_noop_trace('Slot: ${PARKINGSLOT} returned directed at ${EXTEN}'));
+	$ext->add($pc, $exten, '', new ext_noop_trace('Slot: ${PARKING_SPACE} returned directed at ${EXTEN}'));
 	//$ext->add($pc, $exten, '', new ext_set('PARK_TARGET','${EXTEN}'));
 	$ext->add($pc, $exten, '', new ext_set('PARKCALLBACK','${REPLACE(EXTEN,_,/)}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
@@ -359,7 +363,7 @@ function parking_generate_parkedcallstimeout() {
 		$ext->add($pc, $exten, '', new ext_set('AUDIOHOOK_INHERIT(MixMonitor)','yes'));
 	}
 	$ext->add($pc, $exten, '', new ext_mixmonitor('${MIXMON_DIR}${YEAR}/${MONTH}/${DAY}/${CALLFILENAME}.${MIXMON_FORMAT}','a','${MIXMON_POST}'));
-	$ext->add($pc, $exten, 'next', new ext_goto('1','${PARKINGSLOT}','park-return-routing'));
+	$ext->add($pc, $exten, 'next', new ext_goto('1','${PARKING_SPACE}','park-return-routing'));
 }
 
 function parking_generate_park_dial($pd, $por, $lot) {
@@ -372,7 +376,7 @@ function parking_generate_park_dial($pd, $por, $lot) {
 	//
 	foreach (array('t', '_[0-9a-zA-Z*#].') as $exten) {
 		//$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
-		$ext->add($pd, $exten, '', new ext_noop('WARNING: PARKRETURN to: [${EXTEN}] failed with: [${DIALSTATUS}]. Trying Alternate Dest On Parking Lot ${PARKINGSLOT}'));
+		$ext->add($pd, $exten, '', new ext_noop('WARNING: PARKRETURN to: [${EXTEN}] failed with: [${DIALSTATUS}]. Trying Alternate Dest On Parking Lot ${PARKING_SPACE}'));
 		//$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
         $ext->add($pd, $exten, '', new ext_goto('1', $lot['parkext'], $por));
 	}
