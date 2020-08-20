@@ -2,7 +2,7 @@
     <rawname>parking</rawname>
     <repo>standard</repo>
     <name>Parking Lot</name>
-    <version>15.0.15.1</version>
+    <version>15.0.15.2</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -10,7 +10,9 @@
     <description>Manages parking lot extensions and other options. Parking is a way of putting calls "on hold", and then picking them
         up from any extension.
     </description>
+    <more-info>https://wiki.freepbx.org/display/F2/Parking+Module</more-info>
     <changelog>
+		*15.0.15.2* Packaging of ver 15.0.15.2
 		*15.0.15.1* FREEPBX-20576 park-return-routing does not handle multiple PJSIP AOR 
 		*15.0.15* FREEPBX-21339 Backup/Restore missing parking data 
 		*15.0.14* FREEPBX-20542 proposed patch fixes update logic 
