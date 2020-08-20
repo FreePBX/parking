@@ -2,7 +2,7 @@
 	<rawname>parking</rawname>
 	<repo>standard</repo>
 	<name>Parking Lot</name>
-	<version>13.0.19.11</version>
+	<version>13.0.19.12</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/F2/Parking+Module</more-info>
 	<changelog>
+		*13.0.19.12* Packaging of ver 13.0.19.12
 		*13.0.19.11* FREEPBX-18832 After adding/editing a Parking Lot entry, page is not redirecting to list Parking Lot page. 
 		*13.0.19.10* FREEPBX-18833 Parking Lot module allows to create duplicate entries with same Parking Lot Name 
 		*13.0.19.9* FREEPBX-17846 Function AUDIOHOOK_INHERIT not registered 
