@@ -188,10 +188,20 @@ class Parking implements BMO {
 		}
 	}
 	public function parkingGet($id = 'default') {
-		if(!function_exists('parking_get')) {
-			$this->FreePBX->Modules->loadFunctionsInc('parking');
+		$results = array();
+		if (function_exists('parkpro_get')) {
+			return parkpro_get($id);
 		}
-		return parking_get($id);
+		$sql = "SELECT * FROM parkplus WHERE defaultlot = 'yes' LIMIT 1";
+		if ($id == 'all' || $id == '') {
+			$res = sql($sql,'getAll',DB_FETCHMODE_ASSOC);
+			foreach($res as $vq) {
+				$results[$vq['id']] = $vq;
+			}
+		} else {
+			$results = sql($sql,'getRow',DB_FETCHMODE_ASSOC);
+		}
+		return $results;
 	}
 	public function getParkedCalls($id = '') {
 		// the $id param can be the desired lot's id number, but for the default
