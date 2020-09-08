@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 12:12+0530\n"
+"POT-Creation-Date: 2020-09-08 15:51+0000\n"
 "PO-Revision-Date: 2016-03-17 00:42+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -126,7 +126,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:222
+#: Parking.class.php:223
 msgid "Delete"
 msgstr "حذف"
 
@@ -176,9 +176,11 @@ msgstr "تشخیص لات پارک پیشفرض.."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
+"Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
+"Manages parking lot extensions and other options .\tParking is a way of "
+"putting calls "
 
 #: views/lot.php:458
 msgid "Name"
@@ -357,7 +359,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "وقفه پارک کردن (ثانیه)"
 
-#: Parking.class.php:95
+#: Parking.class.php:96
 msgid "ParkingLot"
 msgstr "Lot پارک کردن"
 
@@ -389,7 +391,7 @@ msgstr "ایجاد عنوان برای این لات"
 msgid "Re-Parking Capability"
 msgstr "قابلیت پارک کردن مجدد"
 
-#: Parking.class.php:227
+#: Parking.class.php:228
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -417,7 +419,7 @@ msgstr ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination ."
 
-#: Parking.class.php:232
+#: Parking.class.php:233
 msgid "Submit"
 msgstr "ارسال"
 
@@ -549,13 +551,6 @@ msgstr "انتقال دیتا قدیمی لات پارک شده"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
-
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "Manages parking lot extensions and other options .\tParking is a way of "
-#~ "putting calls "
 
 #~ msgid "BLF Capabilities"
 #~ msgstr "قابلیت های BLF"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 12:12+0530\n"
+"POT-Creation-Date: 2020-09-08 15:51+0000\n"
 "PO-Revision-Date: 2017-07-19 15:57+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -127,7 +127,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:222
+#: Parking.class.php:223
 msgid "Delete"
 msgstr "Xóa"
 
@@ -177,9 +177,11 @@ msgstr "Đang khởi tạo parkinglot mặc định.."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
+"Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
+"Quản lý parking lot các máy nhánh và các tùy chọn khác. Parking là một "
+"phương thức thực hiện cuộc gọi "
 
 #: views/lot.php:458
 msgid "Name"
@@ -359,7 +361,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:95
+#: Parking.class.php:96
 msgid "ParkingLot"
 msgstr ""
 
@@ -389,7 +391,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:227
+#: Parking.class.php:228
 msgid "Reset"
 msgstr ""
 
@@ -417,7 +419,7 @@ msgstr ""
 "Chuỗi để bạn thêm vào trước Caller ID hiện tại liên quan tới parked call "
 "trước khi gửi trở lại trạm gốc hoặc điểm đích thay thế."
 
-#: Parking.class.php:232
+#: Parking.class.php:233
 msgid "Submit"
 msgstr ""
 
@@ -535,10 +537,3 @@ msgstr ""
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
-
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "Quản lý parking lot các máy nhánh và các tùy chọn khác. Parking là một "
-#~ "phương thức thực hiện cuộc gọi "

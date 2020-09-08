@@ -2,7 +2,7 @@
     <rawname>parking</rawname>
     <repo>standard</repo>
     <name>Parking Lot</name>
-    <version>15.0.15.2</version>
+    <version>15.0.15.3</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
     </description>
     <more-info>https://wiki.freepbx.org/display/F2/Parking+Module</more-info>
     <changelog>
+		*15.0.15.3* FREEI-1995 - adding some methods to support unit tests from the dphoneAPI 
 		*15.0.15.2* Packaging of ver 15.0.15.2
 		*15.0.15.1* FREEPBX-20576 park-return-routing does not handle multiple PJSIP AOR 
 		*15.0.15* FREEPBX-21339 Backup/Restore missing parking data 

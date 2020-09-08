@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 12:12+0530\n"
+"POT-Creation-Date: 2020-09-08 15:51+0000\n"
 "PO-Revision-Date: 2016-12-15 00:56+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -132,7 +132,7 @@ msgstr ""
 "81 e o ramal 8001 não tem permissão para este estacionamento privado, ele "
 "poderia discar *8581 para capturar a chamada estacionada."
 
-#: Parking.class.php:222
+#: Parking.class.php:223
 msgid "Delete"
 msgstr "Apagar"
 
@@ -183,9 +183,11 @@ msgstr "Inicializando  estacionamento padrão..."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
+"Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
+"Gerencia os ramais dos estacionamentos e outras opções. \tO estacionamento é "
+"uma forma de reter chamadas "
 
 #: views/lot.php:458
 msgid "Name"
@@ -371,7 +373,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "Tempo de Espera de Estacionamento (segundos)"
 
-#: Parking.class.php:95
+#: Parking.class.php:96
 msgid "ParkingLot"
 msgstr "Estacionamento"
 
@@ -403,7 +405,7 @@ msgstr "Forneça um Título Descritivo para este Estacionamento"
 msgid "Re-Parking Capability"
 msgstr "Capacidade de Re-Estacionamento"
 
-#: Parking.class.php:227
+#: Parking.class.php:228
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -431,7 +433,7 @@ msgstr ""
 "String para prefixar ao atual ID Chamador relacionado à chamada estacionada "
 "antes de enviar de volta para o Originador ou Destino Alternativo."
 
-#: Parking.class.php:232
+#: Parking.class.php:233
 msgid "Submit"
 msgstr "Enviar"
 
@@ -572,13 +574,6 @@ msgstr "migrando dados da antiga tabela parkinglot"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
-
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "Gerencia os ramais dos estacionamentos e outras opções. \tO "
-#~ "estacionamento é uma forma de reter chamadas "
 
 #~ msgid "BLF Capabilities"
 #~ msgstr "Capacidades BLF"

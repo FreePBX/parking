@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 12:12+0530\n"
+"POT-Creation-Date: 2020-09-08 15:51+0000\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -152,7 +152,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:222
+#: Parking.class.php:223
 msgid "Delete"
 msgstr ""
 
@@ -202,9 +202,10 @@ msgstr "デフォルトparkinglotを初期化しています… "
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
+"Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
+"パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
 
 #: views/lot.php:458
 msgid "Name"
@@ -384,7 +385,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:95
+#: Parking.class.php:96
 msgid "ParkingLot"
 msgstr ""
 
@@ -414,7 +415,7 @@ msgstr "このパーキングロットに詳細な名称を与える"
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:227
+#: Parking.class.php:228
 msgid "Reset"
 msgstr ""
 
@@ -442,7 +443,7 @@ msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前に、パークされたコールに付与され"
 "た現在のCaller ID文字列。"
 
-#: Parking.class.php:232
+#: Parking.class.php:233
 msgid "Submit"
 msgstr ""
 
@@ -571,12 +572,6 @@ msgstr "旧parkinglotのデータを移行中…"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
-
-#~ msgid ""
-#~ "Manages parking lot extensions and other options.\tParking is a way of "
-#~ "putting calls "
-#~ msgstr ""
-#~ "パーキングロット内線特番やその他のオプションの管理。パーキングはコールを"
 
 #~ msgid ""
 #~ "Enable this to have Asterisk 'hints' generated to use with BLF buttons."

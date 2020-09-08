@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 03:43+0000\n"
+"POT-Creation-Date: 2020-09-08 15:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -120,7 +120,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:222
+#: Parking.class.php:223
 msgid "Delete"
 msgstr ""
 
@@ -171,7 +171,7 @@ msgstr ""
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
+"Manages parking lot extensions and other options.\tParking is a way of "
 "putting calls "
 msgstr ""
 
@@ -358,7 +358,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:95
+#: Parking.class.php:96
 msgid "ParkingLot"
 msgstr ""
 
@@ -391,7 +391,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:227
+#: Parking.class.php:228
 msgid "Reset"
 msgstr ""
 
@@ -417,7 +417,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:232
+#: Parking.class.php:233
 msgid "Submit"
 msgstr ""
 
