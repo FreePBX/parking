@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 03:42+0000\n"
+"POT-Creation-Date: 2020-09-08 15:51+0000\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -152,7 +152,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:161
+#: Parking.class.php:162
 msgid "Delete"
 msgstr ""
 
@@ -385,7 +385,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:93
+#: Parking.class.php:94
 msgid "ParkingLot"
 msgstr ""
 
@@ -415,7 +415,7 @@ msgstr "このパーキングロットに詳細な名称を与える"
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:166
+#: Parking.class.php:167
 msgid "Reset"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前に、パークされたコールに付与され"
 "た現在のCaller ID文字列。"
 
-#: Parking.class.php:171
+#: Parking.class.php:172
 msgid "Submit"
 msgstr ""
 

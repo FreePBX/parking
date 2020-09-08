@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 03:42+0000\n"
+"POT-Creation-Date: 2020-09-08 15:51+0000\n"
 "PO-Revision-Date: 2016-12-11 06:01+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -131,7 +131,7 @@ msgstr ""
 "estacionado en la ranura 81 y la extensión 8001 no tiene permiso para ese "
 "lote privado podrían marcar * 8581 para recoger la llamada estacionada."
 
-#: Parking.class.php:161
+#: Parking.class.php:162
 msgid "Delete"
 msgstr "Borrar"
 
@@ -373,7 +373,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "Tiempo de espera de estacionamiento (segundos)"
 
-#: Parking.class.php:93
+#: Parking.class.php:94
 msgid "ParkingLot"
 msgstr "Estacionamiento"
 
@@ -405,7 +405,7 @@ msgstr "Provea un Titulo descriptivo para este Aparcamiento"
 msgid "Re-Parking Capability"
 msgstr "Capacidad de Re-estacionamiento"
 
-#: Parking.class.php:166
+#: Parking.class.php:167
 msgid "Reset"
 msgstr "Reinicio"
 
@@ -434,7 +434,7 @@ msgstr ""
 "relacionado con la llamada aparcada antes de enviarla de nuevo al emisor o "
 "al destino alternativo."
 
-#: Parking.class.php:171
+#: Parking.class.php:172
 msgid "Submit"
 msgstr "Enviar"
 

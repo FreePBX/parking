@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 03:42+0000\n"
+"POT-Creation-Date: 2020-09-08 15:51+0000\n"
 "PO-Revision-Date: 2016-02-01 03:10+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -118,7 +118,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:161
+#: Parking.class.php:162
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -346,7 +346,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:93
+#: Parking.class.php:94
 msgid "ParkingLot"
 msgstr ""
 
@@ -376,7 +376,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:166
+#: Parking.class.php:167
 msgid "Reset"
 msgstr ""
 
@@ -402,7 +402,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:171
+#: Parking.class.php:172
 msgid "Submit"
 msgstr ""
 
