@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-08 15:51+0000\n"
+"POT-Creation-Date: 2020-11-25 05:22+0000\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -181,11 +181,9 @@ msgstr "Инициализиране на parkinglot по-подразбиран
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
+"Manages parking lot extensions and other options. Parking is a way of "
 "putting calls "
 msgstr ""
-"Управление на вътрешните линии за паркиране на разговор и други опции."
-"\tПаркирането поставя обаждането "
 
 #: views/lot.php:458
 msgid "Name"
@@ -531,6 +529,13 @@ msgstr "преместване на стари данни на parkinglot"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "Управление на вътрешните линии за паркиране на разговор и други опции."
+#~ "\tПаркирането поставя обаждането "
 
 #~ msgid "creating table %s if needed"
 #~ msgstr "създаване на таблица %s ако е необходимо"

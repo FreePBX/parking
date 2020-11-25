@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-08 15:51+0000\n"
+"POT-Creation-Date: 2020-11-25 05:22+0000\n"
 "PO-Revision-Date: 2016-12-11 06:01+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -182,11 +182,9 @@ msgstr "Iniciando el Aparcamiento por defecto.."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
+"Manages parking lot extensions and other options. Parking is a way of "
 "putting calls "
 msgstr ""
-"Maneja los Aparcamientos de extensiones y otras opciones.\t Los "
-"Aparcamientos son una forma fácil de retener las llamadas "
 
 #: views/lot.php:458
 msgid "Name"
@@ -576,6 +574,13 @@ msgstr "migrando datos de vieja tabla de aparcamiento"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "Maneja los Aparcamientos de extensiones y otras opciones.\t Los "
+#~ "Aparcamientos son una forma fácil de retener las llamadas "
 
 #~ msgid "BLF Capabilities"
 #~ msgstr "Capacidades BLF"
