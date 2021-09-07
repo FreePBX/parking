@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-08 15:51+0000\n"
+"POT-Creation-Date: 2021-09-07 04:02+0000\n"
 "PO-Revision-Date: 2017-07-19 15:57+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -177,11 +177,9 @@ msgstr "Đang khởi tạo parkinglot mặc định.."
 
 #: parking.i18n.php:8
 msgid ""
-"Manages parking lot extensions and other options.\tParking is a way of "
+"Manages parking lot extensions and other options. Parking is a way of "
 "putting calls "
 msgstr ""
-"Quản lý parking lot các máy nhánh và các tùy chọn khác. Parking là một "
-"phương thức thực hiện cuộc gọi "
 
 #: views/lot.php:458
 msgid "Name"
@@ -537,3 +535,10 @@ msgstr ""
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#~ msgid ""
+#~ "Manages parking lot extensions and other options.\tParking is a way of "
+#~ "putting calls "
+#~ msgstr ""
+#~ "Quản lý parking lot các máy nhánh và các tùy chọn khác. Parking là một "
+#~ "phương thức thực hiện cuộc gọi "
