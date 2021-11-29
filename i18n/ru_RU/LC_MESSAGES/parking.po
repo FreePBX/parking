@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-07 04:02+0000\n"
-"PO-Revision-Date: 2021-11-23 07:01+0000\n"
+"PO-Revision-Date: 2021-11-30 13:00+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/parking/"
 "ru/>\n"
@@ -229,6 +229,8 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"Переопределение громкости звонка. Примечание: В настоящее время это "
+"действует только для телефонов %s"
 
 #: views/bootnav.php:2
 msgid "Overview"
@@ -400,7 +402,7 @@ msgstr "Поведение вернувшегося  вызова"
 
 #: views/lot.php:395
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "Переопределение громкости звонка"
 
 #: views/lot.php:454
 msgid "Slot"
