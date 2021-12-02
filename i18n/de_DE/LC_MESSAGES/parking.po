@@ -10,9 +10,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-07 04:02+0000\n"
-"PO-Revision-Date: 2020-02-12 14:00+0000\n"
+"PO-Revision-Date: 2021-12-03 14:00+0000\n"
 "Last-Translator: florian alberts <alberts@ar-systems.de>\n"
-"Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
+"Language-Team: German <http://weblate.freepbx.org/projects/freepbx/parking/"
+"de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -181,10 +182,13 @@ msgid "Initializing default parkinglot.."
 msgstr "Initialisiere Standard-Parkplatz.."
 
 #: parking.i18n.php:8
+#, fuzzy
 msgid ""
 "Manages parking lot extensions and other options. Parking is a way of "
 "putting calls "
 msgstr ""
+"Verwaltet Parkplätze für Nebenstellen und andere Optionen. Parken ist eine "
+"Möglichkeit, Anrufe zu tätigen "
 
 #: views/lot.php:458
 msgid "Name"
