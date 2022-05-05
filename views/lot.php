@@ -29,8 +29,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="announcement_id">'. _("Announcement") .'</label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="announcement_id"></i>
@@ -70,8 +70,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="parkext"><?php echo _("Parking Lot Extension") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkext"></i>
@@ -94,8 +94,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="name"><?php echo _("Parking Lot Name") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="name"></i>
@@ -118,8 +118,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="parkpos"><?php echo _("Parking Lot Starting Position") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkpos"></i>
@@ -142,8 +142,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="numslots"><?php echo _("Number of Slots") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="numslots"></i>
@@ -168,8 +168,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="slotrange"><?php echo _("Slot Range") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="slotrange"></i>
@@ -191,8 +191,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="parkingtime"><?php echo _("Parking Timeout (seconds)") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkingtime"></i>
@@ -215,8 +215,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="parkedmusicclass"><?php echo _("Parked Music Class") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkedmusicclass"></i>
@@ -241,8 +241,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="findslot"><?php echo _("Find Slot") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="findslot"></i>
@@ -273,8 +273,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="parkedplay"><?php echo _("Pickup Courtesy Tone") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkedplay"></i>
@@ -304,8 +304,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="parkedcalltransfers"><?php echo _("Transfer Capability") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkedcalltransfers"></i>
@@ -335,8 +335,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="parkedcallreparking"><?php echo _("Re-Parking Capability") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="parkedcallreparking"></i>
@@ -366,8 +366,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="alertinfo"><?php echo _("Parking Alert-Info") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="alertinfo"></i>
@@ -389,8 +389,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="rvolume"><?php echo _("Ringer Volume Override") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="rvolume"></i>
@@ -417,8 +417,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="cidpp"><?php echo _("CallerID Prepend") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="cidpp"></i>
@@ -441,8 +441,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="autocidpp"><?php echo _("Auto CallerID Prepend") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="autocidpp"></i>
@@ -478,8 +478,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="comebacktoorigin"><?php echo _("Come Back to Origin") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="comebacktoorigin"></i>
@@ -505,8 +505,8 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="form-group">
+				<div class="">
+					<div class="row form-group">
 						<div class="col-md-3">
 							<label class="control-label" for="goto0"><?php echo _("Destination") ?></label>
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="goto0"></i>
