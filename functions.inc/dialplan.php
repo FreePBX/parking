@@ -106,7 +106,7 @@ function parking_get_config($engine) {
 		$finalh = array();
 		for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
 
-			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $park_context : '${CHANNEL(parkinglot)}')));
+			$ext->add($ph, $slot, '', new ext_gosub('1','s','sub-parked-call',$slot . ',' . ($lot['type'] == 'public' ? $park_context : '${CHANNEL(parkinglot)}')));
 
 			$hv = "park:$slot@$hint_context";
 			$finalh[] = $hv;
@@ -114,7 +114,7 @@ function parking_get_config($engine) {
 
 			if ($parkfetch_code != '' && $lot['generatefc'] == 'yes') {
 				$ext->add($ph, $parkfetch_code.$slot, '', new ext_set('FORCEPICKUP',$park_context));
-				$ext->add($ph, $parkfetch_code.$slot, '', new ext_macro('parked-call',$slot . ',' . $park_context));
+				$ext->add($ph, $parkfetch_code.$slot, '', new ext_gosub('1','s','sub-parked-call',$slot . ',' . $park_context));
 				$ext->addHint($ph, $parkfetch_code.$slot, $hv);
 			}
 
@@ -257,15 +257,15 @@ function parking_generate_parked_call() {
 	global $ext;
 	global $version;
 
-	// macro-parked-call
+	// sub-parked-call
 	// pickup a parked call from a specified slot
 	//
 	// NOTE: consider changing this to a subroutine
 	//
-	$pc = 'macro-parked-call';
+	$pc = 'sub-parked-call';
 	$exten = 's';
 
-	$ext->add($pc, $exten, '', new ext_macro('user-callerid'));
+	$ext->add($pc, $exten, '', new ext_gosub('1','s','sub-user-callerid'));
 	//hack for asterisk 12!
 	$ext->add($pc, $exten, '', new ext_noop('PARKRETURNTO: ${SHARED(PARKRETURNTO,${CHANNEL})}'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${SHARED(PARKRETURNTO,${CHANNEL})})} > 0]','backtosender'));
@@ -301,14 +301,14 @@ function parking_generate_parked_call() {
 		$ext->add($pc, $exten, '', new ext_parkedcall('${ARG1},${ARG2}'));
 	}
 	$ext->add($pc, $exten, '', new ext_hangup('')); //prevent going into other contexts?
-	$ext->add($pc, 'h', '', new ext_macro('hangupcall'));
+	$ext->add($pc, 'h', '', new ext_gosub('1','s','sub-hangupcall'));
 
 	//Direct Slot Parking
 	$ext->add($pc, $exten, 'attemptpark', new ext_noop('User: ${CALLERID(all)} attempting to Park into slot ${ARG1}'));
 	$ext->add($pc, $exten, '', new ext_noop('Blind Transfer: ${BLINDTRANSFER}, Attended Transfer: ${ATTENDEDTRANSFER}'));
 	$ext->add($pc, $exten, '', new ext_noop('$[${LEN(${PARKOWNER})} = 0]'));
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${PARKOWNER})} = 0]','parkit'));
-	$ext->add($pc, $exten, '', new ext_macro('hangupcall'));
+	$ext->add($pc, $exten, '', new ext_gosub('1','s','sub-hangupcall'));
 	$ext->add($pc, $exten, 'parkit', new ext_set('PARKINGEXTEN','${ARG1}'));
 	$ext->add($pc, $exten, '', new ext_execif('$[${LEN(${BLINDTRANSFER})} > 0]','Set','SHARED(PARKRETURNTO,${CHANNEL})=${CUT(BLINDTRANSFER,-,1)}','Set','SHARED(PARKRETURNTO,${CHANNEL})=${CUT(ATTENDEDTRANSFER,-,1)}'));
 	$ext->add($pc, $exten, '', new ext_noop('PARKRETURNTO: ${SHARED(PARKRETURNTO,${CHANNEL})}'));
