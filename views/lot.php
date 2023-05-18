@@ -5,6 +5,7 @@
 
 $tresults = music_list();
 $none = array_search('none',$tresults);
+$mohopts = '';
 if ($none !== false) {
 	unset($tresults[$none]);
 }
