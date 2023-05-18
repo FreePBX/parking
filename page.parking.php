@@ -28,8 +28,8 @@ $parking_defaults = array(
 );
 $all_pl['lots'] = parking_get('all');
 $heading = parking_views('header',$all_pl);
-
-switch ($_REQUEST['action']) {
+$data = array();
+switch ($_REQUEST['action'] ?? "") {
 	case 'modify':
 	case 'update':
 		$data = parking_get($_REQUEST['id'])? parking_get($_REQUEST['id']) : parking_get('default');
@@ -44,12 +44,14 @@ switch ($_REQUEST['action']) {
 		if(!$o) {
 			$m = "paging";
 			$d = $mc->getinfo($m);
-			$data['modules']['paging'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
-			$m = "pagingpro";
-			$data['modules']['pagingpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
-			$m = "parkpro";
-			$d = $mc->getinfo($m);
-			$data['modules']['parkpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+			if(isset($data['modules'])){
+				$data['modules']['paging'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+				$m = "pagingpro";
+				$data['modules']['pagingpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+				$m = "parkpro";
+				$d = $mc->getinfo($m);
+				$data['modules']['parkpro'] = $d[$m]['status'] == "2" ? TRUE : FALSE;
+			}
 		}
 		$content = parking_views('overview',$data);
 	break;

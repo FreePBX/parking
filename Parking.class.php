@@ -51,7 +51,7 @@ class Parking implements BMO {
 			"rvolume" => ""
 		);
 
-		switch ($_REQUEST['action']) {
+		switch ($_REQUEST['action'] ?? "") {
 			case 'add':
 			case 'update':
 				$vars = array();
