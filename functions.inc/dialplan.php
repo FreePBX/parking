@@ -98,12 +98,12 @@ function parking_get_config($engine) {
 		// Setup the specific items to do in the park-return-routing context for each lot, we will deal
 		// with the per slot routing to this extension in the per slot loop below
 		//
-		parking_generate_sub_return_routing($lot, $pd, $parkpos1, $parkpos2);
+		parking_generate_sub_return_routing($lot, $pd);
 
 		// Now we have to create the hints and the specific parking slots for picking up the calls since
 		// we do not use the dynamic generated ParkedCall()
 		//
-		$finalh = array();
+		$finalh = [];
 		for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
 
 			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $park_context : '${CHANNEL(parkinglot)}')));
@@ -128,7 +128,7 @@ function parking_get_config($engine) {
 		}
 
 		if ($lot['autocidpp'] == 'exten' || $lot['autocidpp'] == 'name') {
-			parking_generate_sub_park_user($lot);
+			parking_generate_sub_park_user();
 		}
 		break;
 	}
@@ -174,7 +174,7 @@ function parking_generate_sub_return_routing($lot, $pd) {
 
 	$ext->add($prr, $pexten, '', new ext_set('PLOT',$pexten));
 	if ($lot['alertinfo']) {
-		$ext->add($prr, $pexten, '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $lot['alertinfo'])));
+		$ext->add($prr, $pexten, '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', (string) $lot['alertinfo'])));
 	}
 
 	if (!empty($lot['rvolume'])) {
@@ -374,7 +374,7 @@ function parking_generate_park_dial($pd, $por, $lot) {
 	// then it will move on to priority 2 ... so we need to catch that and then route the call to the park-orphan-routing context to
 	// determine where their final destinaition lies.
 	//
-	foreach (array('t', '_[0-9a-zA-Z*#].') as $exten) {
+	foreach (['t', '_[0-9a-zA-Z*#].'] as $exten) {
 		//$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));
 		$ext->add($pd, $exten, '', new ext_noop('WARNING: PARKRETURN to: [${EXTEN}] failed with: [${DIALSTATUS}]. Trying Alternate Dest On Parking Lot ${PARKING_SPACE}'));
 		//$ext->add($pd, $exten, '', new ext_goto('1', '${PLOT}', $por));

@@ -7,7 +7,7 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 $heading = _("Parking Lot");
 switch ($_REQUEST['view'] ?? "") {
 	case 'form':
-		$content = load_view(__DIR__.'/form.php', array('request' => $_REQUEST));
+		$content = load_view(__DIR__.'/form.php', ['request' => $_REQUEST]);
 	break;
 	default:
 		$pageinfo = '<div class="well well-info">';

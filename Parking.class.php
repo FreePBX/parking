@@ -27,34 +27,13 @@ class Parking implements BMO {
 	return $this;
 	}
 	public function doConfigPageInit($page){
-		$id = isset($_REQUEST['id']) ? $_REQUEST['id'] : '';
-		$parking_defaults = array(
-			"name" => "Lot Name",
-			"type" => "public",
-			"parkext" => "",
-			"parkpos" => "",
-			"numslots" => 4,
-			"parkingtime" => 45,
-			"parkedmusicclass" => "default",
-			"generatehints" => "yes",
-			"generatefc" => "yes",
-			"findslot" => "first",
-			"parkedplay" => "both",
-			"parkedcalltransfers" => "caller",
-			"parkedcallreparking" => "caller",
-			"alertinfo" => "",
-			"cidpp" => "",
-			"autocidpp" => "",
-			"announcement_id" => null,
-			"comebacktoorigin" => "yes",
-			"dest" => "",
-			"rvolume" => ""
-		);
+		$id = $_REQUEST['id'] ?? '';
+		$parking_defaults = ["name" => "Lot Name", "type" => "public", "parkext" => "", "parkpos" => "", "numslots" => 4, "parkingtime" => 45, "parkedmusicclass" => "default", "generatehints" => "yes", "generatefc" => "yes", "findslot" => "first", "parkedplay" => "both", "parkedcalltransfers" => "caller", "parkedcallreparking" => "caller", "alertinfo" => "", "cidpp" => "", "autocidpp" => "", "announcement_id" => null, "comebacktoorigin" => "yes", "dest" => "", "rvolume" => ""];
 
 		switch ($_REQUEST['action'] ?? "") {
 			case 'add':
 			case 'update':
-				$vars = array();
+				$vars = [];
 				foreach(array_keys($parking_defaults) as $k) {
 					if(isset($_REQUEST[$k]))
 						$vars[$k] = $_REQUEST[$k];
@@ -87,21 +66,21 @@ class Parking implements BMO {
 		}
 	}
 	public function search($query, &$results) {
-		if(!ctype_digit($query)) {
+		if(!ctype_digit((string) $query)) {
 			$sql = "SELECT * FROM parkplus WHERE parkext LIKE ?";
 			$sth = $this->db->prepare($sql);
-			$sth->execute(array("%".$query."%"));
+			$sth->execute(["%".$query."%"]);
 			$rows = $sth->fetchAll(PDO::FETCH_ASSOC);
 			foreach($rows as $row) {
-				$results[] = array("text" => _("ParkingLot")." ".$row['parkext'], "type" => "get", "dest" => "?display=parking&action=modify&id=".$row['id']);
+				$results[] = ["text" => _("ParkingLot")." ".$row['parkext'], "type" => "get", "dest" => "?display=parking&action=modify&id=".$row['id']];
 			}
 		} else {
 			$sql = "SELECT * FROM parkplus WHERE name LIKE ?";
 			$sth = $this->db->prepare($sql);
-			$sth->execute(array("%".$query."%"));
+			$sth->execute(["%".$query."%"]);
 			$rows = $sth->fetchAll(PDO::FETCH_ASSOC);
 			foreach($rows as $row) {
-				$results[] = array("text" => $row['name'] . " (".$row['parkext'].")", "type" => "get", "dest" => "?display=parking&action=modify&id=".$row['id']);
+				$results[] = ["text" => $row['name'] . " (".$row['parkext'].")", "type" => "get", "dest" => "?display=parking&action=modify&id=".$row['id']];
 			}
 		}
 	}
@@ -116,7 +95,7 @@ class Parking implements BMO {
 	public function getParkingLotByID($id='default') {
 		$sql = "SELECT * FROM parkplus WHERE id = ?";
 		$sth = $this->db->prepare($sql);
-		$sth->execute(array($id));
+		$sth->execute([$id]);
 		return $sth->fetch(PDO::FETCH_ASSOC);
     }
 
@@ -146,6 +125,7 @@ class Parking implements BMO {
     }
     
     public function save($params = []){
+        $var = [];
         if(isset($params['id'])){
             $var['id'] = $params['id'];
         }
@@ -154,7 +134,7 @@ class Parking implements BMO {
             $var['id'] = 1;
         }
 
-        foreach ($this->getDefaults() as $k => $v) {
+        foreach (static::getDefaults() as $k => $v) {
             if (!empty($params[$k])) {
                 $var[$k] = $params[$k];
             } else {
@@ -180,7 +160,8 @@ class Parking implements BMO {
     }
 
 	public function genConfig() {
-		global $version;
+		$conf = [];
+  global $version;
 
 		if (function_exists('parkpro_get_config')) {
 			return null;
@@ -193,19 +174,7 @@ class Parking implements BMO {
 			$park_context = 'default';
 			$hint_context = 'parkedcalls';
 			$conf['res_parking.conf'][] = "#include res_parking_additional.conf\n#include res_parking_custom.conf";
-			$conf['res_parking_additional.conf'][$park_context] = array(
-				'parkext' => $lot['parkext'],
-				'parkpos' => $parkpos1."-".$parkpos2,
-				'context' => $hint_context,
-				'parkingtime' => $lot['parkingtime'],
-				'comebacktoorigin' => 'no',
-				'parkedplay' => $lot['parkedplay'],
-				'courtesytone' => 'beep',
-				'parkedcalltransfers' => $lot['parkedcalltransfers'],
-				'parkedcallreparking' => $lot['parkedcallreparking'],
-				'parkedmusicclass' => $lot['parkedmusicclass'],
-				'findslot' => $lot['findslot']
-			);
+			$conf['res_parking_additional.conf'][$park_context] = ['parkext' => $lot['parkext'], 'parkpos' => $parkpos1."-".$parkpos2, 'context' => $hint_context, 'parkingtime' => $lot['parkingtime'], 'comebacktoorigin' => 'no', 'parkedplay' => $lot['parkedplay'], 'courtesytone' => 'beep', 'parkedcalltransfers' => $lot['parkedcalltransfers'], 'parkedcallreparking' => $lot['parkedcallreparking'], 'parkedmusicclass' => $lot['parkedmusicclass'], 'findslot' => $lot['findslot']];
 			return $conf;
 		}
 	}
@@ -213,31 +182,15 @@ class Parking implements BMO {
 		$this->FreePBX->WriteConfig($conf);
 	}
 	public function getActionBar($request) {
-		$buttons = array();
+		$buttons = [];
 		switch($request['display']) {
 			case 'parking':
-				$buttons = array(
-					'delete' => array(
-						'name' => 'delete',
-						'id' => 'delete',
-						'value' => _("Delete")
-					),
-					'reset' => array(
-						'name' => 'reset',
-						'id' => 'reset',
-						'value' => _('Reset')
-					),
-					'submit' => array(
-						'name' => 'submit',
-						'id' => 'submit',
-						'value' => _('Submit')
-					)
-				);
+				$buttons = ['delete' => ['name' => 'delete', 'id' => 'delete', 'value' => _("Delete")], 'reset' => ['name' => 'reset', 'id' => 'reset', 'value' => _('Reset')], 'submit' => ['name' => 'submit', 'id' => 'submit', 'value' => _('Submit')]];
 				if (empty($request['id']) || !function_exists('parkpro_view')) {
 					unset($buttons['delete']);
 				}
 				if(!isset($request['action']) && function_exists('parkpro_view')){
-					$buttons = array();
+					$buttons = [];
 				}
 			break;
 		}
@@ -249,7 +202,7 @@ class Parking implements BMO {
 		}
 	}
 	public function parkingGet($id = 'default') {
-		$results = array();
+		$results = [];
 		if (function_exists('parkpro_get')) {
 			return parkpro_get($id);
 		}
@@ -269,12 +222,12 @@ class Parking implements BMO {
 		// lot, an id of 'default' must be used
 		$this->id = strval($id);
 		$actionId = 'getParkedCalls' . str_shuffle(strval(time()));
-		$this->parkedCalls = array();
+		$this->parkedCalls = [];
 		$this->astman->events("on");
 		$this->astman->add_event_handler(
 			"parkedcall",
 			function ($event, $data, $server, $port) {
-				$lotId = str_replace('parkinglot_', '', $data['Parkinglot']);
+				$lotId = str_replace('parkinglot_', '', (string) $data['Parkinglot']);
 				if (empty($this->id) || $this->id === $lotId) {
 					unset($data['Event']);
 					unset($data['ActionID']);

@@ -10,10 +10,8 @@ class Parking extends Base {
 
 	public function queryCallback() {
 		if($this->checkAllReadScope()) {
-			return function() {
-				return [
+			return fn() => [
 				];
-			};
 		}
 	}
 
@@ -21,13 +19,9 @@ class Parking extends Base {
 		$user = $this->typeContainer->create('parkinglot');
 		$user->setDescription('');
 
-		$user->addInterfaceCallback(function() {
-			return [$this->getNodeDefinition()['nodeInterface']];
-		});
+		$user->addInterfaceCallback(fn() => [$this->getNodeDefinition()['nodeInterface']]);
 
-		$user->setGetNodeCallback(function($id) {
-			return $this->getSingleData($id);
-		});
+		$user->setGetNodeCallback(fn($id) => $this->getSingleData($id));
 	}
 	/*
 	public function constructQuery() {

@@ -4,9 +4,9 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed');}
 //	Copyright 2013 Schmooze Com Inc.
 //
 
-	include_once(dirname(__FILE__) . '/functions.inc/registries.php');
-	include_once(dirname(__FILE__) . '/functions.inc/geters_seters.php');
-	include_once(dirname(__FILE__) . '/functions.inc/dialplan.php');
+	include_once(__DIR__ . '/functions.inc/registries.php');
+	include_once(__DIR__ . '/functions.inc/geters_seters.php');
+	include_once(__DIR__ . '/functions.inc/dialplan.php');
     
     function parking_views($view,$data) {
         if(function_exists('parkpro_view')) {
@@ -15,5 +15,5 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed');}
                 return $o;
             }
         }
-        return load_view(dirname(__FILE__).'/views/'.$view.'.php',$data);
+        return load_view(__DIR__.'/views/'.$view.'.php',$data);
     }

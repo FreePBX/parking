@@ -13,7 +13,7 @@ class Parking extends Base {
 			\FreePBX::Modules()->loadFunctionsInc('parking');
 			$lot = parking_get('default');
 
-			$lot = $lot ? $lot : false;
+			$lot = $lot ?: false;
 			return $response->withJson($lot);
 		})->add($this->checkAllReadScopeMiddleware());
 

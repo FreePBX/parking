@@ -4,35 +4,14 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 //  Copyright 2015 Sangoma Technologies.
 //
 
-$parking_defaults = array(
-	"name" => "Lot Name",
-	"type" => "public",
-	"parkext" => "",
-	"parkpos" => "",
-	"numslots" => 4,
-	"parkingtime" => 45,
-	"parkedmusicclass" => "default",
-	"generatehints" => "yes",
-	"generatefc" => "yes",
-	"findslot" => "first",
-	"parkedplay" => "both",
-	"parkedcalltransfers" => "caller",
-	"parkedcallreparking" => "caller",
-	"alertinfo" => "",
-	"cidpp" => "",
-	"autocidpp" => "",
-	"announcement_id" => null,
-	"comebacktoorigin" => "yes",
-	"dest" => "",
-	"rvolume" => ""
-);
+$parking_defaults = ["name" => "Lot Name", "type" => "public", "parkext" => "", "parkpos" => "", "numslots" => 4, "parkingtime" => 45, "parkedmusicclass" => "default", "generatehints" => "yes", "generatefc" => "yes", "findslot" => "first", "parkedplay" => "both", "parkedcalltransfers" => "caller", "parkedcallreparking" => "caller", "alertinfo" => "", "cidpp" => "", "autocidpp" => "", "announcement_id" => null, "comebacktoorigin" => "yes", "dest" => "", "rvolume" => ""];
 $all_pl['lots'] = parking_get('all');
 $heading = parking_views('header',$all_pl);
-$data = array();
+$data = [];
 switch ($_REQUEST['action'] ?? "") {
 	case 'modify':
 	case 'update':
-		$data = parking_get($_REQUEST['id'])? parking_get($_REQUEST['id']) : parking_get('default');
+		$data = parking_get($_REQUEST['id']) ?: parking_get('default');
 		$content = parking_views('lot',$data);
 	break;
 	case 'add':

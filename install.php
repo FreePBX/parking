@@ -31,7 +31,7 @@ $default_lot = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
 
 // There should never be more than a single default lot so just blow them
 // all away if we or esomeone did something dumb.
-if (count($default_lot) > 1) {
+if ((is_countable($default_lot) ? count($default_lot) : 0) > 1) {
 	out(_("ERROR: too many default lots detected, deleting and reinitializing"));
 	$sql = "DELETE FROM parkplus WHERE defaultlot = 'yes'";
 	sql($sql);
@@ -40,13 +40,13 @@ if (count($default_lot) > 1) {
 }
 
 //If we have a default parking lot and we are within the new verion then we should check to make sure destination isn't blank
-if(count($default_lot) == 1 && empty($default_lot[0]['dest'])) {
+if((is_countable($default_lot) ? count($default_lot) : 0) == 1 && empty($default_lot[0]['dest'])) {
 	$sql = "UPDATE parkplus SET dest = 'app-blackhole,hangup,1' WHERE defaultlot = 'yes'";
 	sql($sql);
 }
 
 //Add default parking lot or try to migrate the old one.
-if (count($default_lot) == 0) {
+if ((is_countable($default_lot) ? count($default_lot) : 0) == 0) {
 
 	outn(_("Initializing default parkinglot.."));
 	$sql = "INSERT INTO parkplus (id, defaultlot, name, parkext, parkpos, numslots) VALUES (1, 'yes', '"._('Default Lot')."', '70', '71', 8)";

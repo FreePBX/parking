@@ -3,16 +3,14 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
 /* Parking APIs
  */
-
 /** parking_get
  * Short get parking settings
  * Long get the parking lot settings
  *
  * @author Philippe Lindheimer
- * @param mixed $id
  * @return array
  */
-function parking_get($id = 'default') {
+function parking_get(mixed $id = 'default') {
     return \FreePBX::Parking()->parkingGet($id);
 }
 
@@ -27,7 +25,7 @@ function parking_get($id = 'default') {
  * @param array $parms
  * @return mixed
  */
-function parking_save($params=array()) {
+function parking_save($params=[]) {
     FreePBX::Modules()->deprecatedFunction();
     return FreePBX::Parking()->save($params);
 }

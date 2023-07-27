@@ -31,15 +31,15 @@ exten => s,n,Return()
 */
 
 $chan_full  = get_var( $AGI, "CHANNEL(name)" );
-$chan_arr = explode('-',$chan_full,2);
+$chan_arr = explode('-',(string) $chan_full,2);
 $channel = $chan_arr[0];
 
 $all_devices = $astman->database_show('DEVICE');
 foreach ($all_devices as $key => $dial) {
-	$myvar = explode('/',trim($key,'/'));
+	$myvar = explode('/',trim((string) $key,'/'));
 	if (!empty($myvar[2]) && $myvar[2] == 'dial') {
 		pu_verbose("checking " . $myvar[1], 6);
-		if (strcasecmp($dial, $channel) == 0) {
+		if (strcasecmp((string) $dial, $channel) == 0) {
 			// we found a DEVICE who's dialstring matches, hopefully they have a user assigned
 			$uexten = $astman->database_get("DEVICE/{$myvar[1]}", "user");
 			if ($uexten != '') {

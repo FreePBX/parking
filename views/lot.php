@@ -425,7 +425,7 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="cidpp"></i>
 						</div>
 						<div class="col-md-9">
-							<input type="text" class="form-control" id="cidpp" name="cidpp" value="<?php echo htmlspecialchars($cidpp)?>">
+							<input type="text" class="form-control" id="cidpp" name="cidpp" value="<?php echo htmlspecialchars((string) $cidpp)?>">
 						</div>
 					</div>
 				</div>
