@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:02+0000\n"
+"POT-Creation-Date: 2023-09-13 12:30+0000\n"
 "PO-Revision-Date: 2015-10-19 15:00+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -49,10 +49,6 @@ msgstr "可选目的地"
 #: views/lot.php:36
 msgid "Announcement"
 msgstr "语音播报"
-
-#: parking.i18n.php:6
-msgid "Applications"
-msgstr ""
 
 #: views/lot.php:361
 msgid ""
@@ -109,7 +105,7 @@ msgstr "默认驻留地址"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "定义功能热键支持 Direct Call Pickup"
 
-#: install.php:15 parking.i18n.php:14
+#: install.php:15
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -165,12 +161,6 @@ msgstr "在使用状态"
 #: install.php:51
 msgid "Initializing default parkinglot.."
 msgstr "初始化默认驻留空间。。"
-
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
-"putting calls "
-msgstr ""
 
 #: views/lot.php:459
 msgid "Name"
@@ -237,7 +227,7 @@ msgstr "驻留本机到nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
-#: install.php:22 parking.i18n.php:16
+#: install.php:22
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -259,10 +249,6 @@ msgstr "已驻留的呼叫"
 msgid "Parked Music Class"
 msgstr "驻留音乐类别"
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr ""
-
 #: views/lot.php:373
 msgid "Parking Alert-Info"
 msgstr "驻留Alert-Info"
@@ -271,7 +257,7 @@ msgstr "驻留Alert-Info"
 msgid "Parking Help"
 msgstr "驻留帮助"
 
-#: parking.i18n.php:4 views/header.php:7
+#: views/header.php:7
 msgid "Parking Lot"
 msgstr "驻留区"
 
@@ -350,7 +336,7 @@ msgstr ""
 msgid "ParkingLot"
 msgstr ""
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: install.php:10 install.php:23
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -364,7 +350,7 @@ msgstr ""
 msgid "Pickup ParkedCall Any"
 msgstr ""
 
-#: install.php:8 parking.i18n.php:12
+#: install.php:8
 msgid "Pickup ParkedCall Prefix"
 msgstr ""
 

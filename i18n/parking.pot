@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:02+0000\n"
+"POT-Creation-Date: 2023-09-13 12:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,10 +45,6 @@ msgstr ""
 
 #: views/lot.php:36
 msgid "Announcement"
-msgstr ""
-
-#: parking.i18n.php:6
-msgid "Applications"
 msgstr ""
 
 #: views/lot.php:361
@@ -111,7 +107,6 @@ msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr ""
 
 #: install.php:15
-#: parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -167,12 +162,6 @@ msgstr ""
 
 #: install.php:51
 msgid "Initializing default parkinglot.."
-msgstr ""
-
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
-"putting calls "
 msgstr ""
 
 #: views/lot.php:459
@@ -245,7 +234,6 @@ msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
 #: install.php:22
-#: parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -269,10 +257,6 @@ msgstr ""
 msgid "Parked Music Class"
 msgstr ""
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr ""
-
 #: views/lot.php:373
 msgid "Parking Alert-Info"
 msgstr ""
@@ -281,7 +265,6 @@ msgstr ""
 msgid "Parking Help"
 msgstr ""
 
-#: parking.i18n.php:4
 #: views/header.php:7
 msgid "Parking Lot"
 msgstr ""
@@ -364,7 +347,6 @@ msgstr ""
 
 #: install.php:10
 #: install.php:23
-#: parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -379,7 +361,6 @@ msgid "Pickup ParkedCall Any"
 msgstr ""
 
 #: install.php:8
-#: parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr ""
 

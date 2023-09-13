@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:02+0000\n"
+"POT-Creation-Date: 2023-09-13 12:30+0000\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -77,10 +77,6 @@ msgstr "代わりの宛先："
 #: views/lot.php:36
 msgid "Announcement"
 msgstr ""
-
-#: parking.i18n.php:6
-msgid "Applications"
-msgstr "アプリケーション"
 
 #: views/lot.php:361
 msgid ""
@@ -143,7 +139,7 @@ msgstr "デフォルトロット"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "ダイレクトコールピックアップに使う機能コードを定義します。"
 
-#: install.php:15 parking.i18n.php:14
+#: install.php:15
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -199,12 +195,6 @@ msgstr "使用中"
 #: install.php:51
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
-
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
-"putting calls "
-msgstr ""
 
 #: views/lot.php:459
 msgid "Name"
@@ -275,7 +265,7 @@ msgstr "自分をロット nn にパークします"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "自分をパークします。ロット番号はあなたにアナウンスされます。"
 
-#: install.php:22 parking.i18n.php:16
+#: install.php:22
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -297,10 +287,6 @@ msgstr "パーク中"
 msgid "Parked Music Class"
 msgstr ""
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr "パーキング"
-
 #: views/lot.php:373
 msgid "Parking Alert-Info"
 msgstr ""
@@ -309,7 +295,7 @@ msgstr ""
 msgid "Parking Help"
 msgstr ""
 
-#: parking.i18n.php:4 views/header.php:7
+#: views/header.php:7
 msgid "Parking Lot"
 msgstr "パーキングロット"
 
@@ -388,7 +374,7 @@ msgstr ""
 msgid "ParkingLot"
 msgstr ""
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: install.php:10 install.php:23
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -402,7 +388,7 @@ msgstr ""
 msgid "Pickup ParkedCall Any"
 msgstr "パークされたコールを全てピックアップする"
 
-#: install.php:8 parking.i18n.php:12
+#: install.php:8
 msgid "Pickup ParkedCall Prefix"
 msgstr "パーク中通話のピックアッププレフィックス"
 
@@ -571,6 +557,12 @@ msgstr "旧parkinglotのデータを移行中…"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
+
+#~ msgid "Parking"
+#~ msgstr "パーキング"
 
 #~ msgid ""
 #~ "Manages parking lot extensions and other options.\tParking is a way of "

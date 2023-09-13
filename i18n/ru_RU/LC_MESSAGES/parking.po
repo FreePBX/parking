@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-31 06:02+0000\n"
+"POT-Creation-Date: 2023-09-13 12:30+0000\n"
 "PO-Revision-Date: 2015-12-08 23:19+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -50,10 +50,6 @@ msgstr "Альтернативное назначение"
 #: views/lot.php:36
 msgid "Announcement"
 msgstr "Приветствие"
-
-#: parking.i18n.php:6
-msgid "Applications"
-msgstr ""
 
 #: views/lot.php:361
 msgid ""
@@ -117,7 +113,7 @@ msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr ""
 "Определяет сервисный код для использования в функции прямого перехвата вызова"
 
-#: install.php:15 parking.i18n.php:14
+#: install.php:15
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -175,12 +171,6 @@ msgstr "Используется"
 #: install.php:51
 msgid "Initializing default parkinglot.."
 msgstr "Инициализация паркующего лота по умолчанию."
-
-#: parking.i18n.php:8
-msgid ""
-"Manages parking lot extensions and other options. Parking is a way of "
-"putting calls "
-msgstr ""
 
 #: views/lot.php:459
 msgid "Name"
@@ -251,7 +241,7 @@ msgstr "Припарковать себя на лот nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "Припаркуйте себя: Номер парковочного лота , сообщаемого Вам"
 
-#: install.php:22 parking.i18n.php:16
+#: install.php:22
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -273,10 +263,6 @@ msgstr "Запаркованный"
 msgid "Parked Music Class"
 msgstr "Музыка при парковке"
 
-#: parking.i18n.php:10
-msgid "Parking"
-msgstr ""
-
 #: views/lot.php:373
 msgid "Parking Alert-Info"
 msgstr "Парковочная предупреждающая информация"
@@ -285,7 +271,7 @@ msgstr "Парковочная предупреждающая информаци
 msgid "Parking Help"
 msgstr "Помощь"
 
-#: parking.i18n.php:4 views/header.php:7
+#: views/header.php:7
 msgid "Parking Lot"
 msgstr "Парковка"
 
@@ -364,7 +350,7 @@ msgstr "Таймаут парковки(в секундах)"
 msgid "ParkingLot"
 msgstr "Паркующтй лот"
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: install.php:10 install.php:23
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -378,7 +364,7 @@ msgstr "Сигнал вежливости при перехвате"
 msgid "Pickup ParkedCall Any"
 msgstr "Перехват любого запаркованного звонка"
 
-#: install.php:8 parking.i18n.php:12
+#: install.php:8
 msgid "Pickup ParkedCall Prefix"
 msgstr "Префикс перехвата припаркованного вызова"
 
