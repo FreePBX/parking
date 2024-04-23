@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 12:30+0000\n"
+"POT-Creation-Date: 2024-04-23 01:53-0400\n"
 "PO-Revision-Date: 2016-12-11 06:01+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -51,6 +51,10 @@ msgstr "Destino Alternativo"
 #: views/lot.php:36
 msgid "Announcement"
 msgstr "Anuncio"
+
+#: parking.i18n.php:6
+msgid "Applications"
+msgstr "Aplicaciones"
 
 #: views/lot.php:361
 msgid ""
@@ -113,7 +117,7 @@ msgstr "Lote Por defecto"
 msgid "Defines the Feature Code to use for Direct Call Pickup"
 msgstr "Define el Código de Función a usar para Tomado de Llamada Directo"
 
-#: install.php:15
+#: install.php:15 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -175,6 +179,12 @@ msgstr "EN USO"
 #: install.php:51
 msgid "Initializing default parkinglot.."
 msgstr "Iniciando el Aparcamiento por defecto.."
+
+#: parking.i18n.php:8
+msgid ""
+"Manages parking lot extensions and other options. Parking is a way of "
+"putting calls "
+msgstr ""
 
 #: views/lot.php:459
 msgid "Name"
@@ -248,7 +258,7 @@ msgstr "Parquee usted mismo en lote nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "Parquee usted mismo. El número del lote le será anunciado"
 
-#: install.php:22
+#: install.php:22 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr "Estacionar a su Lote asignado"
 
@@ -270,6 +280,10 @@ msgstr "Aparcado"
 msgid "Parked Music Class"
 msgstr "Clase de Música de Estacionamiento"
 
+#: parking.i18n.php:10
+msgid "Parking"
+msgstr "Aparcamiento"
+
 #: views/lot.php:373
 msgid "Parking Alert-Info"
 msgstr "Alert-Info Estacionamiento"
@@ -278,7 +292,7 @@ msgstr "Alert-Info Estacionamiento"
 msgid "Parking Help"
 msgstr "Ayuda Estacionamiento"
 
-#: views/header.php:7
+#: parking.i18n.php:4 views/header.php:7
 msgid "Parking Lot"
 msgstr "Aparcamiento"
 
@@ -361,7 +375,7 @@ msgstr "Tiempo de espera de estacionamiento (segundos)"
 msgid "ParkingLot"
 msgstr "Estacionamiento"
 
-#: install.php:10 install.php:23
+#: install.php:10 install.php:23 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -377,7 +391,7 @@ msgstr "Tono de cortesía de tomada de llamada"
 msgid "Pickup ParkedCall Any"
 msgstr "Capturar Cualquier Llamada Aparcada"
 
-#: install.php:8
+#: install.php:8 parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr "Prefijo de tomado de ParketCall"
 
@@ -495,12 +509,12 @@ msgid ""
 "Destination selected below. If set to no then we will send the call directly "
 "to the destination selected below"
 msgstr ""
-"Dónde enviar una llamada aparcada que ha expirado. Si se establece en \"sí"
-"\", entonces la llamada estacionada será enviada de nuevo al dispositivo de "
-"origen que envío la llamada a este aparcamiento. Si el origen está  ocupado "
-"entonces se va a enviar la llamada al destino seleccionado a continuación. "
-"Si se establece en \"no\", entonces se va a enviar la llamada directamente "
-"al destino seleccionado a continuación"
+"Dónde enviar una llamada aparcada que ha expirado. Si se establece en "
+"\"sí\", entonces la llamada estacionada será enviada de nuevo al dispositivo "
+"de origen que envío la llamada a este aparcamiento. Si el origen está  "
+"ocupado entonces se va a enviar la llamada al destino seleccionado a "
+"continuación. Si se establece en \"no\", entonces se va a enviar la llamada "
+"directamente al destino seleccionado a continuación"
 
 #: views/lot.php:299
 msgid "Whom to play the courtesy tone to when a parked call is retrieved."
@@ -560,12 +574,6 @@ msgstr "migrando datos de vieja tabla de aparcamiento"
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicaciones"
-
-#~ msgid "Parking"
-#~ msgstr "Aparcamiento"
 
 #~ msgid ""
 #~ "Manages parking lot extensions and other options.\tParking is a way of "
