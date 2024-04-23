@@ -14,7 +14,7 @@ if (isset($tresults)) {
 		$searchvalue="$tresult";
 		$ttext = $tresult;
 		if($tresult == 'default') $ttext = _("default");
-		$mohopts .= '<option value="'.$tresult.'" '.($searchvalue == $parkedmusicclass ? 'SELECTED' : '').'>'.$ttext;
+		$mohopts .= '<option value="'.$tresult.'" '.($searchvalue == (isset($parkedmusicclass) && $parkedmusicclass) ? 'SELECTED' : '').'>'.$ttext;
 	}
 }
 if(function_exists('recordings_list')) { //only include if recordings is enabled
