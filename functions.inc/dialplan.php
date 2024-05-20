@@ -273,11 +273,10 @@ function parking_generate_parked_call() {
 	//We can accept both blind and attended (But attended only in asterisk 12!)
 	$ext->add($pc, $exten, '', new ext_gotoif('$[${LEN(${BLINDTRANSFER})} > 0 | ${LEN(${ATTENDEDTRANSFER})} > 0]','attemptpark'));
 	// Retrieve all previous recording variables, and set the CDR for this leg of the call
-	$ext->add($pc, $exten, '',new ext_set('PCHANNEL','${PARK_GET_CHANNEL(${ARG1},${ARG2})}'));
-	$ext->add($pc, $exten, '',new ext_set('PARKIE','${PCHANNEL}'));
+	$ext->add($pc, $exten, '',new ext_set('PARKIE','${PARK_GET_CHANNEL(${ARG1},${ARG2})}'));
 	$vars = ['MIXMON_DIR', 'YEAR', 'MONTH', 'DAY', 'CALLFILENAME', 'MIXMON_FORMAT', 'MIXMON_POST', 'MON_FMT', 'MIXMON_ID', 'REC_STATUS', 'REC_POLICY_MODE', 'RECORD_ID'];
 	foreach($vars as $v) {
-		$ext->add($pc, $exten, '',new ext_set($v,'${IMPORT(${PCHANNEL},'.$v.')}'));
+		$ext->add($pc, $exten, '',new ext_set($v,'${IMPORT(${PARKIE},'.$v.')}'));
 	}
 	$ext->add($pc, $exten, '', new ext_gotoif('$["${REC_STATUS}" != "RECORDING"]','next'));
 	if(version_compare($version, "12.0", "lt")) {
