@@ -14,7 +14,8 @@ class Parking extends Base {
 			$lot = parking_get('default');
 
 			$lot = $lot ?: false;
-			return $response->withJson($lot);
+			$response->getBody()->write(json_encode($lot));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllReadScopeMiddleware());
 
 		/**
@@ -24,7 +25,8 @@ class Parking extends Base {
 		$app->put('/', function ($request, $response, $args) {
 			\FreePBX::Modules()->loadFunctionsInc('parking');
 			$params = $request->getParsedBody();
-			return $response->withJson(parking_save($params));
+			$response->getBody()->write(json_encode($params));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllWriteScopeMiddleware());
 	}
 }
