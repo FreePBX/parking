@@ -11,10 +11,9 @@ if ($none !== false) {
 }
 if (isset($tresults)) {
 	foreach ($tresults as $tresult) {
-		$searchvalue="$tresult";
 		$ttext = $tresult;
 		if($tresult == 'default') $ttext = _("default");
-		$mohopts .= '<option value="'.$tresult.'" '.($searchvalue == (isset($parkedmusicclass) && $parkedmusicclass) ? 'SELECTED' : '').'>'.$ttext;
+		$mohopts .= '<option value="'.$tresult.'" '.((isset($parkedmusicclass) && $parkedmusicclass == $tresult) ? 'SELECTED' : '').'>'.$ttext;
 	}
 }
 if(function_exists('recordings_list')) { //only include if recordings is enabled
