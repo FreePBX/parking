@@ -2,8 +2,8 @@
 //    License for all code of this FreePBX module can be found in the license file inside the module directory
 //    Copyright 2015 Sangoma Technologies.
 //
-
-$tresults = music_list();
+$FreePBX = FreePBX::create();
+$tresults = $FreePBX->Music->getAllMusic();
 $none = array_search('none',$tresults);
 $mohopts = '';
 if ($none !== false) {
@@ -16,8 +16,8 @@ if (isset($tresults)) {
 		$mohopts .= '<option value="'.$tresult.'" '.((isset($parkedmusicclass) && $parkedmusicclass == $tresult) ? 'SELECTED' : '').'>'.$ttext;
 	}
 }
-if(function_exists('recordings_list')) { //only include if recordings is enabled
-	$tresults = recordings_list();
+if($FreePBX->Modules->checkStatus('recordings')) { //only include if recordings is enabled
+	$tresults = $FreePBX->Recordings->getAllRecordings();
 	$announceopts = '<option value="">'._("None")."</option>";
 	if (isset($tresults[0])) {
 		foreach ($tresults as $tresult) {
@@ -133,7 +133,7 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<span id="parkpos-help" class="help-block fpbx-help-block"><?php echo _("he starting postion of the parking lot")?></span>
+				<span id="parkpos-help" class="help-block fpbx-help-block"><?php echo _("This is the starting postion of the parking lot")?></span>
 			</div>
 		</div>
 	</div>
@@ -373,7 +373,7 @@ if(function_exists('recordings_list')) { //only include if recordings is enabled
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="alertinfo"></i>
 						</div>
 						<div class="col-md-9">
-							<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",$alertinfo);?>
+							<?php echo $FreePBX->View->alertInfoDrawSelect("alertinfo",$alertinfo);?>
 						</div>
 					</div>
 				</div>

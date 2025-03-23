@@ -8,7 +8,8 @@ $parking_defaults = ["name" => "Lot Name", "type" => "public", "parkext" => "", 
 $all_pl['lots'] = parking_get('all');
 $heading = parking_views('header',$all_pl);
 $data = [];
-switch ($_REQUEST['action'] ?? "") {
+$action = $_REQUEST['action'] ?? "";
+switch ($action) {
 	case 'modify':
 	case 'update':
 		$data = parking_get($_REQUEST['id']) ?: parking_get('default');
