@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 06:20-0400\n"
+"POT-Creation-Date: 2025-03-24 02:57-0400\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -41,11 +41,6 @@ msgstr ""
 #, perl-format
 msgid "%s already used, please use a different name."
 msgstr ""
-
-#: install.php:121
-#, php-format
-msgid "%s no longer supported"
-msgstr "%s вече не се поддържа"
 
 #: views/lot.php:384
 msgid ""
@@ -112,15 +107,16 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:52
+#: Parking.class.php:291
+#, php-format
+msgid "Database error: %s"
+msgstr ""
+
+#: Parking.class.php:286
 msgid "Default Lot"
 msgstr ""
 
-#: install.php:9
-msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr ""
-
-#: install.php:15 parking.i18n.php:14
+#: parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -129,7 +125,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Delete"
 msgstr ""
 
@@ -137,7 +133,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:35
+#: Parking.class.php:266
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ГРЕШКА: открити са много паркирания по подразбиране, изтриване и "
@@ -175,7 +171,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
-#: install.php:51
+#: Parking.class.php:280
 msgid "Initializing default parkinglot.."
 msgstr "Инициализиране на parkinglot по-подразбиране.."
 
@@ -233,10 +229,6 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: install.php:7
-msgid "Park Prefix"
-msgstr "Префикс за Паркиране"
-
 #: views/overview.php:26
 #, php-format
 msgid "Park Yourself into lot %d"
@@ -250,7 +242,7 @@ msgstr ""
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
-#: install.php:22 parking.i18n.php:16
+#: parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -359,11 +351,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:75
+#: Parking.class.php:79
 msgid "ParkingLot"
 msgstr ""
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -373,11 +365,7 @@ msgstr ""
 msgid "Pickup Courtesy Tone"
 msgstr ""
 
-#: install.php:6
-msgid "Pickup ParkedCall Any"
-msgstr "Изтегляне на Всеки Паркиран Разговор"
-
-#: install.php:8 parking.i18n.php:12
+#: parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr "Префикс за Изтегляне на Паркирани Разговори"
 
@@ -389,7 +377,7 @@ msgstr "Наименование за тази Група за Паркиран�
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Reset"
 msgstr ""
 
@@ -415,7 +403,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Submit"
 msgstr ""
 
@@ -458,6 +446,10 @@ msgid ""
 "parking lot UNLESS the call flow prior to parking the call explicitly set a "
 "different music class, such as if the call came in through a queue or ring "
 "group."
+msgstr ""
+
+#: views/lot.php:136
+msgid "This is the starting postion of the parking lot"
 msgstr ""
 
 #: views/header.php:14
@@ -510,25 +502,29 @@ msgstr ""
 msgid "default"
 msgstr "по-подразбиране"
 
-#: install.php:54
+#: Parking.class.php:287
 msgid "done"
 msgstr "Изпълнено"
-
-#: views/lot.php:136
-msgid "he starting postion of the parking lot"
-msgstr ""
-
-#: install.php:131
-msgid "migrated ... dropping old table parkinglot"
-msgstr "преместване ... премахване на стара таблица parkinglot"
-
-#: install.php:60
-msgid "migrating old parkinglot data"
-msgstr "преместване на стари данни на parkinglot"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#, php-format
+#~ msgid "%s no longer supported"
+#~ msgstr "%s вече не се поддържа"
+
+#~ msgid "Park Prefix"
+#~ msgstr "Префикс за Паркиране"
+
+#~ msgid "Pickup ParkedCall Any"
+#~ msgstr "Изтегляне на Всеки Паркиран Разговор"
+
+#~ msgid "migrated ... dropping old table parkinglot"
+#~ msgstr "преместване ... премахване на стара таблица parkinglot"
+
+#~ msgid "migrating old parkinglot data"
+#~ msgstr "преместване на стари данни на parkinglot"
 
 #~ msgid ""
 #~ "Manages parking lot extensions and other options.\tParking is a way of "

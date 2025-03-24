@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 06:20-0400\n"
+"POT-Creation-Date: 2025-03-24 02:57-0400\n"
 "PO-Revision-Date: 2014-02-24 06:09+0200\n"
 "Last-Translator: Kenichi Fukaumi <k.fukaumi@qloog.com>\n"
 "Language-Team: Japanese <http://192.168.30.85/projects/freepbx/parking/ja/>\n"
@@ -57,11 +57,6 @@ msgstr ""
 #, perl-format
 msgid "%s already used, please use a different name."
 msgstr ""
-
-#: install.php:121
-#, php-format
-msgid "%s no longer supported"
-msgstr "%sは現在、サポートされていません。"
 
 #: views/lot.php:384
 msgid ""
@@ -135,15 +130,16 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:52
+#: Parking.class.php:291
+#, php-format
+msgid "Database error: %s"
+msgstr ""
+
+#: Parking.class.php:286
 msgid "Default Lot"
 msgstr "デフォルトロット"
 
-#: install.php:9
-msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr "ダイレクトコールピックアップに使う機能コードを定義します。"
-
-#: install.php:15 parking.i18n.php:14
+#: parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -152,7 +148,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Delete"
 msgstr ""
 
@@ -160,7 +156,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: install.php:35
+#: Parking.class.php:266
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "エラー：デフォルトlotは多すぎるため、削除・再初期化します… "
 
@@ -196,7 +192,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "使用中"
 
-#: install.php:51
+#: Parking.class.php:280
 msgid "Initializing default parkinglot.."
 msgstr "デフォルトparkinglotを初期化しています… "
 
@@ -258,10 +254,6 @@ msgstr ""
 msgid "Overview"
 msgstr "一覧"
 
-#: install.php:7
-msgid "Park Prefix"
-msgstr "パークプリフィックス"
-
 #: views/overview.php:26
 #, php-format
 msgid "Park Yourself into lot %d"
@@ -275,7 +267,7 @@ msgstr "自分をロット nn にパークします"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "自分をパークします。ロット番号はあなたにアナウンスされます。"
 
-#: install.php:22 parking.i18n.php:16
+#: parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -384,11 +376,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:75
+#: Parking.class.php:79
 msgid "ParkingLot"
 msgstr ""
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -398,11 +390,7 @@ msgstr ""
 msgid "Pickup Courtesy Tone"
 msgstr ""
 
-#: install.php:6
-msgid "Pickup ParkedCall Any"
-msgstr "パークされたコールを全てピックアップする"
-
-#: install.php:8 parking.i18n.php:12
+#: parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr "パーク中通話のピックアッププレフィックス"
 
@@ -414,7 +402,7 @@ msgstr "このパーキングロットに詳細な名称を与える"
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Reset"
 msgstr ""
 
@@ -442,7 +430,7 @@ msgstr ""
 "初めに応答した人や、代わりの宛先に送り戻す前に、パークされたコールに付与され"
 "た現在のCaller ID文字列。"
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Submit"
 msgstr ""
 
@@ -498,6 +486,10 @@ msgstr ""
 "されていない時に、パーク中のコールに再生される音楽クラスです、例えば、コール"
 "がキューやリンググループ経由で入ってきたような場合です。"
 
+#: views/lot.php:136
+msgid "This is the starting postion of the parking lot"
+msgstr ""
+
 #: views/header.php:14
 msgid "This module is used to configure Parking Lot(s)"
 msgstr "パーキングロットを設定するためのモジュール"
@@ -552,25 +544,32 @@ msgstr ""
 msgid "default"
 msgstr "デフォルト"
 
-#: install.php:54
+#: Parking.class.php:287
 msgid "done"
 msgstr "完了"
-
-#: views/lot.php:136
-msgid "he starting postion of the parking lot"
-msgstr ""
-
-#: install.php:131
-msgid "migrated ... dropping old table parkinglot"
-msgstr "移行しました… 旧テーブルのparkinglotを無効にしている"
-
-#: install.php:60
-msgid "migrating old parkinglot data"
-msgstr "旧parkinglotのデータを移行中…"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#, php-format
+#~ msgid "%s no longer supported"
+#~ msgstr "%sは現在、サポートされていません。"
+
+#~ msgid "Defines the Feature Code to use for Direct Call Pickup"
+#~ msgstr "ダイレクトコールピックアップに使う機能コードを定義します。"
+
+#~ msgid "Park Prefix"
+#~ msgstr "パークプリフィックス"
+
+#~ msgid "Pickup ParkedCall Any"
+#~ msgstr "パークされたコールを全てピックアップする"
+
+#~ msgid "migrated ... dropping old table parkinglot"
+#~ msgstr "移行しました… 旧テーブルのparkinglotを無効にしている"
+
+#~ msgid "migrating old parkinglot data"
+#~ msgstr "旧parkinglotのデータを移行中…"
 
 #~ msgid ""
 #~ "Manages parking lot extensions and other options.\tParking is a way of "

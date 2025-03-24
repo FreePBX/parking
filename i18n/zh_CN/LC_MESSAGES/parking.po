@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 06:20-0400\n"
+"POT-Creation-Date: 2025-03-24 02:57-0400\n"
 "PO-Revision-Date: 2015-10-19 15:00+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -30,11 +30,6 @@ msgstr ""
 #, perl-format
 msgid "%s already used, please use a different name."
 msgstr ""
-
-#: install.php:121
-#, php-format
-msgid "%s no longer supported"
-msgstr "不再%s"
 
 #: views/lot.php:384
 msgid ""
@@ -101,15 +96,16 @@ msgstr "CallerID 添加"
 msgid "Come Back to Origin"
 msgstr "回到原状态"
 
-#: install.php:52
+#: Parking.class.php:291
+#, php-format
+msgid "Database error: %s"
+msgstr ""
+
+#: Parking.class.php:286
 msgid "Default Lot"
 msgstr "默认驻留地址"
 
-#: install.php:9
-msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr "定义功能热键支持 Direct Call Pickup"
-
-#: install.php:15 parking.i18n.php:14
+#: parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -118,7 +114,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Delete"
 msgstr "删除"
 
@@ -126,7 +122,7 @@ msgstr "删除"
 msgid "Destination"
 msgstr "目的地"
 
-#: install.php:35
+#: Parking.class.php:266
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "错误：太多默认的驻留地址，删除，正在重新设置"
 
@@ -162,7 +158,7 @@ msgstr "基本设置"
 msgid "INUSE"
 msgstr "在使用状态"
 
-#: install.php:51
+#: Parking.class.php:280
 msgid "Initializing default parkinglot.."
 msgstr "初始化默认驻留空间。。"
 
@@ -220,10 +216,6 @@ msgstr ""
 msgid "Overview"
 msgstr "总览"
 
-#: install.php:7
-msgid "Park Prefix"
-msgstr "驻留前缀"
-
 #: views/overview.php:26
 #, php-format
 msgid "Park Yourself into lot %d"
@@ -237,7 +229,7 @@ msgstr "驻留本机到nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
-#: install.php:22 parking.i18n.php:16
+#: parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -346,11 +338,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:75
+#: Parking.class.php:79
 msgid "ParkingLot"
 msgstr ""
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -360,11 +352,7 @@ msgstr ""
 msgid "Pickup Courtesy Tone"
 msgstr ""
 
-#: install.php:6
-msgid "Pickup ParkedCall Any"
-msgstr ""
-
-#: install.php:8 parking.i18n.php:12
+#: parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr ""
 
@@ -376,7 +364,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Reset"
 msgstr ""
 
@@ -402,7 +390,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Submit"
 msgstr ""
 
@@ -443,6 +431,10 @@ msgid ""
 "parking lot UNLESS the call flow prior to parking the call explicitly set a "
 "different music class, such as if the call came in through a queue or ring "
 "group."
+msgstr ""
+
+#: views/lot.php:136
+msgid "This is the starting postion of the parking lot"
 msgstr ""
 
 #: views/header.php:14
@@ -495,25 +487,23 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: install.php:54
+#: Parking.class.php:287
 msgid "done"
-msgstr ""
-
-#: views/lot.php:136
-msgid "he starting postion of the parking lot"
-msgstr ""
-
-#: install.php:131
-msgid "migrated ... dropping old table parkinglot"
-msgstr ""
-
-#: install.php:60
-msgid "migrating old parkinglot data"
 msgstr ""
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#, php-format
+#~ msgid "%s no longer supported"
+#~ msgstr "不再%s"
+
+#~ msgid "Defines the Feature Code to use for Direct Call Pickup"
+#~ msgstr "定义功能热键支持 Direct Call Pickup"
+
+#~ msgid "Park Prefix"
+#~ msgstr "驻留前缀"
 
 #~ msgid "BLF Capabilities"
 #~ msgstr "BLF功能支持"
