@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 06:20-0400\n"
+"POT-Creation-Date: 2025-03-24 02:57-0400\n"
 "PO-Revision-Date: 2018-07-27 16:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
@@ -29,11 +29,6 @@ msgstr "%s wird bereits verwendet von:%s"
 #, perl-format
 msgid "%s already used, please use a different name."
 msgstr ""
-
-#: install.php:121
-#, php-format
-msgid "%s no longer supported"
-msgstr "%s wird nicht länger unterstützt"
 
 #: views/lot.php:384
 msgid ""
@@ -106,17 +101,16 @@ msgstr "Anruferkennung voranstellen"
 msgid "Come Back to Origin"
 msgstr ""
 
-#: install.php:52
+#: Parking.class.php:291
+#, php-format
+msgid "Database error: %s"
+msgstr ""
+
+#: Parking.class.php:286
 msgid "Default Lot"
 msgstr "Stndardposition"
 
-#: install.php:9
-msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr ""
-"Legt den Funktionscode fest, der für das direkte Heranholen von Anrufen "
-"verwendet wird"
-
-#: install.php:15 parking.i18n.php:14
+#: parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -130,7 +124,7 @@ msgstr ""
 "81 geparkt ist und die Nebenstelle 8001 keinen Zugriff auf diesen privaten "
 "Parkplatz hat, könnte man *8581 wählen, um den geparkten Anruf heranzuholen."
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Delete"
 msgstr "Löschen"
 
@@ -138,7 +132,7 @@ msgstr "Löschen"
 msgid "Destination"
 msgstr "Ziel"
 
-#: install.php:35
+#: Parking.class.php:266
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "FEHLER: Zu viele Standardlots erkannt, gelöscht und neu initialisiert"
 
@@ -174,7 +168,7 @@ msgstr "Allgemeine Einstellungen"
 msgid "INUSE"
 msgstr "INUSE"
 
-#: install.php:51
+#: Parking.class.php:280
 msgid "Initializing default parkinglot.."
 msgstr "Initialisiere Standard-Parkplatz.."
 
@@ -238,10 +232,6 @@ msgstr ""
 msgid "Overview"
 msgstr "Übersicht"
 
-#: install.php:7
-msgid "Park Prefix"
-msgstr ""
-
 #: views/overview.php:26
 #, php-format
 msgid "Park Yourself into lot %d"
@@ -255,7 +245,7 @@ msgstr "Parken Sie selbst auf Platz nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "Parken Sie selbst. Die Parkplatznummer wird Ihnen mitgeteilt"
 
-#: install.php:22 parking.i18n.php:16
+#: parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr "Parken Sie auf dem Ihnen zugewiesenen Parkplatz"
 
@@ -369,11 +359,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "Zeitüberschreitung (in Sekunden) für das Parken"
 
-#: Parking.class.php:75
+#: Parking.class.php:79
 msgid "ParkingLot"
 msgstr "Parkplatz"
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -383,11 +373,7 @@ msgstr ""
 msgid "Pickup Courtesy Tone"
 msgstr ""
 
-#: install.php:6
-msgid "Pickup ParkedCall Any"
-msgstr ""
-
-#: install.php:8 parking.i18n.php:12
+#: parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr ""
 
@@ -399,7 +385,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -425,7 +411,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Submit"
 msgstr ""
 
@@ -466,6 +452,10 @@ msgid ""
 "parking lot UNLESS the call flow prior to parking the call explicitly set a "
 "different music class, such as if the call came in through a queue or ring "
 "group."
+msgstr ""
+
+#: views/lot.php:136
+msgid "This is the starting postion of the parking lot"
 msgstr ""
 
 #: views/header.php:14
@@ -518,25 +508,22 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: install.php:54
+#: Parking.class.php:287
 msgid "done"
-msgstr ""
-
-#: views/lot.php:136
-msgid "he starting postion of the parking lot"
-msgstr ""
-
-#: install.php:131
-msgid "migrated ... dropping old table parkinglot"
-msgstr ""
-
-#: install.php:60
-msgid "migrating old parkinglot data"
 msgstr ""
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr ""
+
+#, php-format
+#~ msgid "%s no longer supported"
+#~ msgstr "%s wird nicht länger unterstützt"
+
+#~ msgid "Defines the Feature Code to use for Direct Call Pickup"
+#~ msgstr ""
+#~ "Legt den Funktionscode fest, der für das direkte Heranholen von Anrufen "
+#~ "verwendet wird"
 
 #~ msgid ""
 #~ "Defines the Feature Code to use to force pickup a call that is parked in "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 06:20-0400\n"
+"POT-Creation-Date: 2025-03-24 02:57-0400\n"
 "PO-Revision-Date: 2016-03-17 00:42+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -30,11 +30,6 @@ msgstr ""
 #, perl-format
 msgid "%s already used, please use a different name."
 msgstr ""
-
-#: install.php:121
-#, php-format
-msgid "%s no longer supported"
-msgstr "%s دیگر پشتیبانی نمیشود"
 
 #: views/lot.php:384
 msgid ""
@@ -109,15 +104,16 @@ msgstr "تهیه شناسه تماس گیرنده"
 msgid "Come Back to Origin"
 msgstr "برگشت به اصل"
 
-#: install.php:52
+#: Parking.class.php:291
+#, php-format
+msgid "Database error: %s"
+msgstr ""
+
+#: Parking.class.php:286
 msgid "Default Lot"
 msgstr "پیشفرض"
 
-#: install.php:9
-msgid "Defines the Feature Code to use for Direct Call Pickup"
-msgstr "تشخیص کد ویژه برای قطع تماس مستقیم کاربر"
-
-#: install.php:15 parking.i18n.php:14
+#: parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -126,7 +122,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Delete"
 msgstr "حذف"
 
@@ -134,7 +130,7 @@ msgstr "حذف"
 msgid "Destination"
 msgstr "داخلی"
 
-#: install.php:35
+#: Parking.class.php:266
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "خطا： تعداد زیاد لات پیشفرض تشخیص داده شد"
 
@@ -170,7 +166,7 @@ msgstr "تنظیمات عمومی"
 msgid "INUSE"
 msgstr "درحال استفاده"
 
-#: install.php:51
+#: Parking.class.php:280
 msgid "Initializing default parkinglot.."
 msgstr "تشخیص لات پارک پیشفرض.."
 
@@ -231,10 +227,6 @@ msgstr ""
 msgid "Overview"
 msgstr "بازبینی"
 
-#: install.php:7
-msgid "Park Prefix"
-msgstr "پیشوند پارک شده"
-
 #: views/overview.php:26
 #, php-format
 msgid "Park Yourself into lot %d"
@@ -248,7 +240,7 @@ msgstr "پارک کنید خود را در لات nn"
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr "شماره لات به شما اعلام میشود"
 
-#: install.php:22 parking.i18n.php:16
+#: parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr "در Lot خود پارک کنید"
 
@@ -357,11 +349,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "وقفه پارک کردن (ثانیه)"
 
-#: Parking.class.php:75
+#: Parking.class.php:79
 msgid "ParkingLot"
 msgstr "Lot پارک کردن"
 
-#: install.php:10 install.php:23 parking.i18n.php:18
+#: parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -373,11 +365,7 @@ msgstr ""
 msgid "Pickup Courtesy Tone"
 msgstr "تن قطع کردن"
 
-#: install.php:6
-msgid "Pickup ParkedCall Any"
-msgstr "قطع هر تماس پارک شده"
-
-#: install.php:8 parking.i18n.php:12
+#: parking.i18n.php:12
 msgid "Pickup ParkedCall Prefix"
 msgstr "قطع پیشوند تماس پارک شده"
 
@@ -389,7 +377,7 @@ msgstr "ایجاد عنوان برای این لات"
 msgid "Re-Parking Capability"
 msgstr "قابلیت پارک کردن مجدد"
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -417,7 +405,7 @@ msgstr ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination ."
 
-#: Parking.class.php:188
+#: Parking.class.php:192
 msgid "Submit"
 msgstr "ارسال"
 
@@ -475,6 +463,10 @@ msgstr ""
 "different music class, such as if the call came in through a queue or ring "
 "group ."
 
+#: views/lot.php:136
+msgid "This is the starting postion of the parking lot"
+msgstr ""
+
 #: views/header.php:14
 msgid "This module is used to configure Parking Lot(s)"
 msgstr "این ماژول برای تنظیم لات(ها) پارک شده استفاده میشود"
@@ -530,25 +522,35 @@ msgstr ""
 msgid "default"
 msgstr "پیشفرض"
 
-#: install.php:54
+#: Parking.class.php:287
 msgid "done"
 msgstr "انجام شده"
-
-#: views/lot.php:136
-msgid "he starting postion of the parking lot"
-msgstr "او پست کردن لات پارک را شروع کرده"
-
-#: install.php:131
-msgid "migrated ... dropping old table parkinglot"
-msgstr "منتقل شده... انداختن جدول قدیمی"
-
-#: install.php:60
-msgid "migrating old parkinglot data"
-msgstr "انتقال دیتا قدیمی لات پارک شده"
 
 #: views/overview.php:17 views/overview.php:29
 msgid "nn"
 msgstr "nn"
+
+#, php-format
+#~ msgid "%s no longer supported"
+#~ msgstr "%s دیگر پشتیبانی نمیشود"
+
+#~ msgid "Defines the Feature Code to use for Direct Call Pickup"
+#~ msgstr "تشخیص کد ویژه برای قطع تماس مستقیم کاربر"
+
+#~ msgid "Park Prefix"
+#~ msgstr "پیشوند پارک شده"
+
+#~ msgid "Pickup ParkedCall Any"
+#~ msgstr "قطع هر تماس پارک شده"
+
+#~ msgid "he starting postion of the parking lot"
+#~ msgstr "او پست کردن لات پارک را شروع کرده"
+
+#~ msgid "migrated ... dropping old table parkinglot"
+#~ msgstr "منتقل شده... انداختن جدول قدیمی"
+
+#~ msgid "migrating old parkinglot data"
+#~ msgstr "انتقال دیتا قدیمی لات پارک شده"
 
 #~ msgid ""
 #~ "Manages parking lot extensions and other options.\tParking is a way of "
