@@ -4,6 +4,8 @@ class Parking implements BMO {
 	protected $FreePBX;
 	protected $db;
 	protected $astman;
+	protected $id;
+	protected $parkedCalls;
 	public function __construct($freepbx = null) {
 		if ($freepbx == null){
 			throw new Exception("Not given a FreePBX Object");
@@ -290,5 +292,46 @@ class Parking implements BMO {
 			// Log error appropriately in production
 			out(sprintf(_("Database error: %s"), $e->getMessage()));
 		}
+	}
+
+	/**
+	 * Retrieves a list of currently parked calls.
+	 *
+	 * @param string $id The ID of the parking lot to retrieve.
+	 * @return array List of parked calls.
+	 */
+	public function getParkedCalls($id = '') {
+		// the $id param can be the desired lot's id number, but for the default
+		// lot, an id of 'default' must be used
+		$this->id = strval($id);
+		$actionId = 'getParkedCalls' . str_shuffle(strval(time()));
+		$this->parkedCalls = [];
+		$this->astman->events("on");
+		$this->astman->add_event_handler(
+			"parkedcall",
+			function ($event, $data, $server, $port) {
+				$lotId = str_replace('parkinglot_', '', (string) $data['Parkinglot']);
+				if (empty($this->id) || $this->id === $lotId) {
+					unset($data['Event']);
+					unset($data['ActionID']);
+					array_push($this->parkedCalls, $data);
+				}
+			}
+		);
+
+		$this->astman->add_event_handler(
+			"parkedcallscomplete",
+			function ($event, $data, $server, $port) {
+				stream_set_timeout($this->astman->socket, 0, 1);
+			}
+		);
+
+		$response = $this->astman->ParkedCalls($actionId);
+		if ($response["Response"] == "Success") {
+			$this->astman->wait_response(true);
+			stream_set_timeout($this->astman->socket, 30);
+		}
+
+		return $this->parkedCalls;
 	}
 }
