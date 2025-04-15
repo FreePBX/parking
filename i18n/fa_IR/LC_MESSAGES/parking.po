@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-24 02:57-0400\n"
+"POT-Creation-Date: 2025-04-15 01:42-0400\n"
 "PO-Revision-Date: 2016-03-17 00:42+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -104,12 +104,12 @@ msgstr "تهیه شناسه تماس گیرنده"
 msgid "Come Back to Origin"
 msgstr "برگشت به اصل"
 
-#: Parking.class.php:291
+#: Parking.class.php:293
 #, php-format
 msgid "Database error: %s"
 msgstr ""
 
-#: Parking.class.php:286
+#: Parking.class.php:288
 msgid "Default Lot"
 msgstr "پیشفرض"
 
@@ -122,7 +122,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Delete"
 msgstr "حذف"
 
@@ -130,7 +130,7 @@ msgstr "حذف"
 msgid "Destination"
 msgstr "داخلی"
 
-#: Parking.class.php:266
+#: Parking.class.php:268
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "خطا： تعداد زیاد لات پیشفرض تشخیص داده شد"
 
@@ -166,7 +166,7 @@ msgstr "تنظیمات عمومی"
 msgid "INUSE"
 msgstr "درحال استفاده"
 
-#: Parking.class.php:280
+#: Parking.class.php:282
 msgid "Initializing default parkinglot.."
 msgstr "تشخیص لات پارک پیشفرض.."
 
@@ -349,7 +349,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "وقفه پارک کردن (ثانیه)"
 
-#: Parking.class.php:79
+#: Parking.class.php:81
 msgid "ParkingLot"
 msgstr "Lot پارک کردن"
 
@@ -377,7 +377,7 @@ msgstr "ایجاد عنوان برای این لات"
 msgid "Re-Parking Capability"
 msgstr "قابلیت پارک کردن مجدد"
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -405,7 +405,7 @@ msgstr ""
 "String to prepend to the current Caller ID associated with the parked call "
 "prior to sending back to the Originator or the Alternate Destination ."
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Submit"
 msgstr "ارسال"
 
@@ -522,7 +522,7 @@ msgstr ""
 msgid "default"
 msgstr "پیشفرض"
 
-#: Parking.class.php:287
+#: Parking.class.php:289
 msgid "done"
 msgstr "انجام شده"
 

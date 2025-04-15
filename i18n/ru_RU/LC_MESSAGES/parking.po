@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-24 02:57-0400\n"
+"POT-Creation-Date: 2025-04-15 01:42-0400\n"
 "PO-Revision-Date: 2015-12-08 23:19+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/parking/"
@@ -103,12 +103,12 @@ msgstr "Добавление CallerID"
 msgid "Come Back to Origin"
 msgstr "Возврат к источнику"
 
-#: Parking.class.php:291
+#: Parking.class.php:293
 #, php-format
 msgid "Database error: %s"
 msgstr ""
 
-#: Parking.class.php:286
+#: Parking.class.php:288
 msgid "Default Lot"
 msgstr "Лот по умолчанию"
 
@@ -121,7 +121,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Delete"
 msgstr "Удалить"
 
@@ -129,7 +129,7 @@ msgstr "Удалить"
 msgid "Destination"
 msgstr "Назначение"
 
-#: Parking.class.php:266
+#: Parking.class.php:268
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "Ошибка: обнаружено слишком много лотов по умолчанию, удаление и "
@@ -167,7 +167,7 @@ msgstr "Общие настройки"
 msgid "INUSE"
 msgstr "Используется"
 
-#: Parking.class.php:280
+#: Parking.class.php:282
 msgid "Initializing default parkinglot.."
 msgstr "Инициализация паркующего лота по умолчанию."
 
@@ -351,7 +351,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "Таймаут парковки(в секундах)"
 
-#: Parking.class.php:79
+#: Parking.class.php:81
 msgid "ParkingLot"
 msgstr "Паркующтй лот"
 
@@ -377,7 +377,7 @@ msgstr "Укажите описание для этого парковочног
 msgid "Re-Parking Capability"
 msgstr "Возможности перепарковки"
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Reset"
 msgstr "Сброс"
 
@@ -406,7 +406,7 @@ msgstr ""
 "запаркованным, прежде чем отправить его назад оригинатору или по "
 "альтернативному назначению."
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Submit"
 msgstr "Подтвердить"
 
@@ -531,7 +531,7 @@ msgstr ""
 msgid "default"
 msgstr "по умолчанию"
 
-#: Parking.class.php:287
+#: Parking.class.php:289
 msgid "done"
 msgstr "выполнено"
 

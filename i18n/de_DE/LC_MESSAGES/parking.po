@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-24 02:57-0400\n"
+"POT-Creation-Date: 2025-04-15 01:42-0400\n"
 "PO-Revision-Date: 2018-07-27 16:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/parking/de/>\n"
@@ -101,12 +101,12 @@ msgstr "Anruferkennung voranstellen"
 msgid "Come Back to Origin"
 msgstr ""
 
-#: Parking.class.php:291
+#: Parking.class.php:293
 #, php-format
 msgid "Database error: %s"
 msgstr ""
 
-#: Parking.class.php:286
+#: Parking.class.php:288
 msgid "Default Lot"
 msgstr "Stndardposition"
 
@@ -124,7 +124,7 @@ msgstr ""
 "81 geparkt ist und die Nebenstelle 8001 keinen Zugriff auf diesen privaten "
 "Parkplatz hat, könnte man *8581 wählen, um den geparkten Anruf heranzuholen."
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Delete"
 msgstr "Löschen"
 
@@ -132,7 +132,7 @@ msgstr "Löschen"
 msgid "Destination"
 msgstr "Ziel"
 
-#: Parking.class.php:266
+#: Parking.class.php:268
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr "FEHLER: Zu viele Standardlots erkannt, gelöscht und neu initialisiert"
 
@@ -168,7 +168,7 @@ msgstr "Allgemeine Einstellungen"
 msgid "INUSE"
 msgstr "INUSE"
 
-#: Parking.class.php:280
+#: Parking.class.php:282
 msgid "Initializing default parkinglot.."
 msgstr "Initialisiere Standard-Parkplatz.."
 
@@ -359,7 +359,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "Zeitüberschreitung (in Sekunden) für das Parken"
 
-#: Parking.class.php:79
+#: Parking.class.php:81
 msgid "ParkingLot"
 msgstr "Parkplatz"
 
@@ -385,7 +385,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -411,7 +411,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Submit"
 msgstr ""
 
@@ -508,7 +508,7 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: Parking.class.php:287
+#: Parking.class.php:289
 msgid "done"
 msgstr ""
 

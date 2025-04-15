@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-24 02:57-0400\n"
+"POT-Creation-Date: 2025-04-15 01:42-0400\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -107,12 +107,12 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: Parking.class.php:291
+#: Parking.class.php:293
 #, php-format
 msgid "Database error: %s"
 msgstr ""
 
-#: Parking.class.php:286
+#: Parking.class.php:288
 msgid "Default Lot"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Delete"
 msgstr ""
 
@@ -133,7 +133,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: Parking.class.php:266
+#: Parking.class.php:268
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ГРЕШКА: открити са много паркирания по подразбиране, изтриване и "
@@ -171,7 +171,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
-#: Parking.class.php:280
+#: Parking.class.php:282
 msgid "Initializing default parkinglot.."
 msgstr "Инициализиране на parkinglot по-подразбиране.."
 
@@ -351,7 +351,7 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:79
+#: Parking.class.php:81
 msgid "ParkingLot"
 msgstr ""
 
@@ -377,7 +377,7 @@ msgstr "Наименование за тази Група за Паркиран�
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Reset"
 msgstr ""
 
@@ -403,7 +403,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:192
+#: Parking.class.php:194
 msgid "Submit"
 msgstr ""
 
@@ -502,7 +502,7 @@ msgstr ""
 msgid "default"
 msgstr "по-подразбиране"
 
-#: Parking.class.php:287
+#: Parking.class.php:289
 msgid "done"
 msgstr "Изпълнено"
 
