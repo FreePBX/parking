@@ -2,7 +2,7 @@
     <rawname>parking</rawname>
     <repo>standard</repo>
     <name>Parking Lot</name>
-    <version>17.0.2.7</version>
+    <version>18.0.1</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,11 +12,8 @@
     </description>
     <more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/24543359/Parking+Module</more-info>
     <changelog>
-		*17.0.2.7* FREEI-1901 Parking - Parked calls are not displayed in P-Phones 
-		*17.0.2.6* Parking has spelling errors and is a bit dated 
-		*17.0.2.4* bump 
-        *17.0.1* 17.0
-	</changelog>
+    	*18.0.1* initial release
+    </changelog>
     <menuitems>
         <parking needsenginedb="yes">Parking</parking>
     </menuitems>
@@ -46,11 +43,11 @@
         </table>
     </database>
     <depends>
-        <module>core ge 17.0.1</module>
-        <module>framework ge 17.0.1</module>
-        <module>callrecording ge 17.0.1</module>
+        <module>core ge 18.0.1</module>
+        <module>framework ge 18.0.1</module>
+        <module>callrecording ge 18.0.1</module>
     </depends>
     <supported>
-        <version>17.0</version>
+        <version>18.0</version>
     </supported>
 </module>
