@@ -104,6 +104,7 @@ function parking_get_config($engine) {
 		// we do not use the dynamic generated ParkedCall()
 		//
 		$finalh = [];
+		$xfer_dest = 'from-internal-xfer-dest';
 		for ($slot = $parkpos1; $slot <= $parkpos2; $slot++) {
 
 			$ext->add($ph, $slot, '', new ext_macro('parked-call',$slot . ',' . ($lot['type'] == 'public' ? $park_context : '${CHANNEL(parkinglot)}')));
@@ -112,19 +113,29 @@ function parking_get_config($engine) {
 			$finalh[] = $hv;
 			$ext->addHint($ph, $slot, $hv);
 
+			// Bypass from-internal-xfer-dest Local dial for slot transfers
+			$ext->add($xfer_dest, $slot, '', new ext_goto('1', $slot, 'from-internal-xfer'));
 			if ($parkfetch_code != '' && $lot['generatefc'] == 'yes') {
 				$ext->add($ph, $parkfetch_code.$slot, '', new ext_set('FORCEPICKUP',$park_context));
 				$ext->add($ph, $parkfetch_code.$slot, '', new ext_macro('parked-call',$slot . ',' . $park_context));
 				$ext->addHint($ph, $parkfetch_code.$slot, $hv);
+				// Bypass Local dial for *85XX feature-code park/retrieve
+				$ext->add($xfer_dest, $parkfetch_code.$slot, '', new ext_goto('1', $parkfetch_code.$slot, 'from-internal-xfer'));
 			}
 
 		}
 		$ext->addHint($ph, $lot['parkext'], implode('&',$finalh));
 
+		// Bypass Local dial for lot extension (e.g. 70) and optional parkto feature code
+		if ($lot['parkext'] != '') {
+			$ext->add($xfer_dest, $lot['parkext'], '', new ext_goto('1', $lot['parkext'], 'from-internal-xfer'));
+		}
+
 		if($parkto_code != '') {
 			$id = 'app-parking';
 			$ext->addInclude('from-internal-additional', $id); // Add the include to from-internal
 			$ext->add($id, $parkto_code, '', new \ext_park());
+			$ext->add($xfer_dest, $parkto_code, '', new ext_goto('1', $parkto_code, 'from-internal-xfer'));
 		}
 
 		if ($lot['autocidpp'] == 'exten' || $lot['autocidpp'] == 'name') {
