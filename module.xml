@@ -2,7 +2,7 @@
     <rawname>parking</rawname>
     <repo>standard</repo>
     <name>Parking Lot</name>
-    <version>17.0.2.7</version>
+    <version>17.0.2.8</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
     </description>
     <more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/24543359/Parking+Module</more-info>
     <changelog>
+		*17.0.2.8* #1066  #1068 Call park failure with core 
 		*17.0.2.7* FREEI-1901 Parking - Parked calls are not displayed in P-Phones 
 		*17.0.2.6* Parking has spelling errors and is a bit dated 
 		*17.0.2.4* bump 
