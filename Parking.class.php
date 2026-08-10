@@ -17,6 +17,23 @@ class Parking implements BMO {
 	}
 
 	public function install() {
+		// Feature codes previously registered in install.php
+		$fcc = new \featurecode('parking', 'parkedcall');
+		$fcc->setDescription('Pickup ParkedCall Prefix');
+		$fcc->setHelpText(_('Defines the Feature Code to use to force pickup a call that is parked in a private lot that the extension picking up the call does not have permissions for.  Example if a caller is parked in slot 81 and extension 8001 does not have permission to that private lot they could dial *8581 to pickup the parked call.'));
+		$fcc->setDefault('*85');
+		$fcc->setProvideDest();
+		$fcc->update();
+		unset($fcc);
+
+		$fcc = new \featurecode('parking', 'parkto');
+		$fcc->setDescription(_('Park to your Assigned Lot'));
+		$fcc->setHelpText(_('Parks to your Assigned Lot if using Park Pro. If using standard parking this parks to the default lot'));
+		$fcc->setDefault('*88');
+		$fcc->setProvideDest();
+		$fcc->update();
+		unset($fcc);
+
 		//Remove duplication etc. Moved from install.php
 		$this->initializeParkingLot();
 	}
