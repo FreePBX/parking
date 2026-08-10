@@ -46,7 +46,7 @@
         </table>
     </database>
     <depends>
-        <module>core ge 17.0.1</module>
+        <module>core ge 17.0.18.51</module>
         <module>framework ge 17.0.1</module>
         <module>callrecording ge 17.0.1</module>
     </depends>
