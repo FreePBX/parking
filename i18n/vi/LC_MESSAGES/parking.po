@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 01:42-0400\n"
+"POT-Creation-Date: 2026-08-19 05:02-0400\n"
 "PO-Revision-Date: 2017-07-19 15:57+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -104,16 +104,16 @@ msgstr "Caller ID Prepend"
 msgid "Come Back to Origin"
 msgstr "Trở lại điểm ban đầu"
 
-#: Parking.class.php:293
+#: Parking.class.php:310
 #, php-format
 msgid "Database error: %s"
 msgstr ""
 
-#: Parking.class.php:288
+#: Parking.class.php:305
 msgid "Default Lot"
 msgstr "Mặc định Lot"
 
-#: parking.i18n.php:14
+#: Parking.class.php:23 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -122,7 +122,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Delete"
 msgstr "Xóa"
 
@@ -130,7 +130,7 @@ msgstr "Xóa"
 msgid "Destination"
 msgstr "Điểm đích"
 
-#: Parking.class.php:268
+#: Parking.class.php:285
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 
@@ -166,7 +166,7 @@ msgstr "Cai đặt chung"
 msgid "INUSE"
 msgstr "INUSE"
 
-#: Parking.class.php:282
+#: Parking.class.php:299
 msgid "Initializing default parkinglot.."
 msgstr "Đang khởi tạo parkinglot mặc định.."
 
@@ -241,7 +241,7 @@ msgstr ""
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
-#: parking.i18n.php:16
+#: Parking.class.php:30 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -350,11 +350,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:81
+#: Parking.class.php:98
 msgid "ParkingLot"
 msgstr ""
 
-#: parking.i18n.php:18
+#: Parking.class.php:31 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -376,7 +376,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Reset"
 msgstr ""
 
@@ -404,7 +404,7 @@ msgstr ""
 "Chuỗi để bạn thêm vào trước Caller ID hiện tại liên quan tới parked call "
 "trước khi gửi trở lại trạm gốc hoặc điểm đích thay thế."
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Submit"
 msgstr ""
 
@@ -507,7 +507,7 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: Parking.class.php:289
+#: Parking.class.php:306
 msgid "done"
 msgstr ""
 

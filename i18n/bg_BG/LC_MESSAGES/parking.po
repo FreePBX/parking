@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 01:42-0400\n"
+"POT-Creation-Date: 2026-08-19 05:02-0400\n"
 "PO-Revision-Date: 2014-08-28 18:22+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/parking/bg/"
@@ -107,16 +107,16 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: Parking.class.php:293
+#: Parking.class.php:310
 #, php-format
 msgid "Database error: %s"
 msgstr ""
 
-#: Parking.class.php:288
+#: Parking.class.php:305
 msgid "Default Lot"
 msgstr ""
 
-#: parking.i18n.php:14
+#: Parking.class.php:23 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -125,7 +125,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Delete"
 msgstr ""
 
@@ -133,7 +133,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: Parking.class.php:268
+#: Parking.class.php:285
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ГРЕШКА: открити са много паркирания по подразбиране, изтриване и "
@@ -171,7 +171,7 @@ msgstr ""
 msgid "INUSE"
 msgstr "ИЗПОЛЗВА СЕ"
 
-#: Parking.class.php:282
+#: Parking.class.php:299
 msgid "Initializing default parkinglot.."
 msgstr "Инициализиране на parkinglot по-подразбиране.."
 
@@ -242,7 +242,7 @@ msgstr ""
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
-#: parking.i18n.php:16
+#: Parking.class.php:30 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
 
@@ -351,11 +351,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:81
+#: Parking.class.php:98
 msgid "ParkingLot"
 msgstr ""
 
-#: parking.i18n.php:18
+#: Parking.class.php:31 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -377,7 +377,7 @@ msgstr "Наименование за тази Група за Паркиран�
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Reset"
 msgstr ""
 
@@ -403,7 +403,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Submit"
 msgstr ""
 
@@ -502,7 +502,7 @@ msgstr ""
 msgid "default"
 msgstr "по-подразбиране"
 
-#: Parking.class.php:289
+#: Parking.class.php:306
 msgid "done"
 msgstr "Изпълнено"
 

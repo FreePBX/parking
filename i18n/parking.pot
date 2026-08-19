@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-10 06:09-0400\n"
+"POT-Creation-Date: 2026-08-19 05:02-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,15 +97,16 @@ msgstr ""
 msgid "Come Back to Origin"
 msgstr ""
 
-#: Parking.class.php:293
+#: Parking.class.php:310
 #, php-format
 msgid "Database error: %s"
 msgstr ""
 
-#: Parking.class.php:288
+#: Parking.class.php:305
 msgid "Default Lot"
 msgstr ""
 
+#: Parking.class.php:23
 #: parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
@@ -115,7 +116,7 @@ msgid ""
 "parked call."
 msgstr ""
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Delete"
 msgstr ""
 
@@ -123,7 +124,7 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: Parking.class.php:268
+#: Parking.class.php:285
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 
@@ -160,7 +161,7 @@ msgstr ""
 msgid "INUSE"
 msgstr ""
 
-#: Parking.class.php:282
+#: Parking.class.php:299
 msgid "Initializing default parkinglot.."
 msgstr ""
 
@@ -235,6 +236,7 @@ msgstr ""
 msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 
+#: Parking.class.php:30
 #: parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr ""
@@ -348,10 +350,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr ""
 
-#: Parking.class.php:81
+#: Parking.class.php:98
 msgid "ParkingLot"
 msgstr ""
 
+#: Parking.class.php:31
 #: parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
@@ -374,7 +377,7 @@ msgstr ""
 msgid "Re-Parking Capability"
 msgstr ""
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Reset"
 msgstr ""
 
@@ -400,7 +403,7 @@ msgid ""
 "prior to sending back to the Originator or the Alternate Destination."
 msgstr ""
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Submit"
 msgstr ""
 
@@ -497,7 +500,7 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: Parking.class.php:289
+#: Parking.class.php:306
 msgid "done"
 msgstr ""
 

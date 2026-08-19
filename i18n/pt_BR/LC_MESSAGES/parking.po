@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 01:42-0400\n"
+"POT-Creation-Date: 2026-08-19 05:02-0400\n"
 "PO-Revision-Date: 2016-12-15 00:56+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -104,16 +104,16 @@ msgstr "Prefixar ID Chamador"
 msgid "Come Back to Origin"
 msgstr "Voltar à Origem"
 
-#: Parking.class.php:293
+#: Parking.class.php:310
 #, php-format
 msgid "Database error: %s"
 msgstr ""
 
-#: Parking.class.php:288
+#: Parking.class.php:305
 msgid "Default Lot"
 msgstr "Estacionamento Padrão"
 
-#: parking.i18n.php:14
+#: Parking.class.php:23 parking.i18n.php:14
 msgid ""
 "Defines the Feature Code to use to force pickup a call that is parked in a "
 "private lot that the extension picking up the call does not have permissions "
@@ -127,7 +127,7 @@ msgstr ""
 "81 e o ramal 8001 não tem permissão para este estacionamento privado, ele "
 "poderia discar *8581 para capturar a chamada estacionada."
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Delete"
 msgstr "Apagar"
 
@@ -135,7 +135,7 @@ msgstr "Apagar"
 msgid "Destination"
 msgstr "Destino"
 
-#: Parking.class.php:268
+#: Parking.class.php:285
 msgid "ERROR: too many default lots detected, deleting and reinitializing"
 msgstr ""
 "ERRO: muitos estacionamentos padrão detectados, excluindo e reinicializando"
@@ -172,7 +172,7 @@ msgstr "Configurações Gerais"
 msgid "INUSE"
 msgstr "EM USO"
 
-#: Parking.class.php:282
+#: Parking.class.php:299
 msgid "Initializing default parkinglot.."
 msgstr "Inicializando  estacionamento padrão..."
 
@@ -252,7 +252,7 @@ msgid "Park Yourself. The lot number will be announced to you"
 msgstr ""
 "Estacionar você mesmo. O número do estacionamento será anunciado para você"
 
-#: parking.i18n.php:16
+#: Parking.class.php:30 parking.i18n.php:16
 msgid "Park to your Assigned Lot"
 msgstr "Estacionar em seu Estacionamento Atribuído"
 
@@ -362,11 +362,11 @@ msgstr ""
 msgid "Parking Timeout (seconds)"
 msgstr "Tempo de Espera de Estacionamento (segundos)"
 
-#: Parking.class.php:81
+#: Parking.class.php:98
 msgid "ParkingLot"
 msgstr "Estacionamento"
 
-#: parking.i18n.php:18
+#: Parking.class.php:31 parking.i18n.php:18
 msgid ""
 "Parks to your Assigned Lot if using Park Pro. If using standard parking this "
 "parks to the default lot"
@@ -390,7 +390,7 @@ msgstr "Forneça um Título Descritivo para este Estacionamento"
 msgid "Re-Parking Capability"
 msgstr "Capacidade de Re-Estacionamento"
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -418,7 +418,7 @@ msgstr ""
 "String para prefixar ao atual ID Chamador relacionado à chamada estacionada "
 "antes de enviar de volta para o Originador ou Destino Alternativo."
 
-#: Parking.class.php:194
+#: Parking.class.php:211
 msgid "Submit"
 msgstr "Enviar"
 
@@ -544,7 +544,7 @@ msgstr "Você deve selecionar um destino válido"
 msgid "default"
 msgstr "padrão"
 
-#: Parking.class.php:289
+#: Parking.class.php:306
 msgid "done"
 msgstr "terminado"
 
