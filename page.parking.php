@@ -13,7 +13,8 @@ switch ($action) {
 	case 'modify':
 	case 'update':
 		$data = parking_get($_REQUEST['id']) ?: parking_get('default');
-		$content = parking_views('lot',$data);
+		// Without Park Pro the single lot lives inside the overview tabs.
+		$content = function_exists('parkpro_view') ? parking_views('lot', $data) : parking_views('overview', $data);
 	break;
 	case 'add':
 		$content = parking_views('lot',$parking_defaults);

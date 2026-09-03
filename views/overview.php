@@ -32,16 +32,16 @@ $extendedhelp .= show_help('
             </table>
             ',_("Example Usage"));
 ?>
-<ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#parksettings"><?php echo _("Parking Settings")?></a></li>
-  <li><a data-toggle="tab" href="#parkinfo"><?php echo _("Parking Help")?></a></li>
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation"><a class="nav-link active" data-bs-toggle="tab" href="#parksettings" role="tab"><?php echo _("Parking Settings")?></a></li>
+  <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#parkinfo" role="tab"><?php echo _("Parking Help")?></a></li>
 </ul>
 <div class="display">
 	<div class="tab-content">
-	  <div id="parkinfo" class="tab-pane">
+	  <div id="parkinfo" class="tab-pane" role="tabpanel">
 	    <?php echo $extendedhelp?>
 	  </div>
-	  <div id="parksettings" class="tab-pane active">
+	  <div id="parksettings" class="tab-pane show active" role="tabpanel">
 	    <?php echo parking_views('lot',parking_get('default'));?>
 	  </div>
 	</div>

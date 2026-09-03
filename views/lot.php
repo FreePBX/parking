@@ -57,7 +57,7 @@ if($FreePBX->Modules->checkStatus('recordings')) { //only include if recordings 
 }
 
 ?>
-<form id="parkform" action="" class='fpbx-submit' method="post">
+<form id="parkform" name="parkform" action="" class='fpbx-submit' method="post">
 <input type="hidden" name="display" value="parking">
 <input type="hidden" name="action" value="update">
 <input type="hidden" name="id" value="<?php echo $id?>">
