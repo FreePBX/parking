@@ -32,6 +32,17 @@ function parking_get_config($engine) {
 		parking_generate_parkedcallstimeout();
 		parking_generate_park_dial($pd, $por, $lot);
 
+		// Blind transfer to a lot extension runs Park() with no lot name.
+		// Force the lot that owns that extension
+		// instead of the default lot.
+		foreach (\FreePBX::Parking()->getAllParkingLots() as $plot) {
+			if (empty($plot['parkext'])) {
+				continue;
+			}
+			$lotname = (!empty($plot['defaultlot']) && $plot['defaultlot'] === 'yes') ? 'default' : 'parkinglot_'.$plot['id'];
+			$ext->add('from-internal-xfer-dest', $plot['parkext'], '', new ext_set('CHANNEL(parkinglot)', $lotname));
+			$ext->add('from-internal-xfer-dest', $plot['parkext'], '', new ext_goto('1', $plot['parkext'], 'from-internal-xfer'));
+		}
 
 		//--------------------------------------
 		// End Here if there is a parkpro module
