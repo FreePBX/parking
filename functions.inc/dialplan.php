@@ -32,16 +32,15 @@ function parking_get_config($engine) {
 		parking_generate_parkedcallstimeout();
 		parking_generate_park_dial($pd, $por, $lot);
 
-		// Blind transfer to a lot extension runs Park() with no lot name.
-		// Force the lot that owns that extension
-		// instead of the default lot.
+		// Park() must be priority 1 in the transfer context. Asterisk only
+		// announces the slot to the transferer when it detects a parking
+		// access extension, which means the first priority is Park().
 		foreach (\FreePBX::Parking()->getAllParkingLots() as $plot) {
 			if (empty($plot['parkext'])) {
 				continue;
 			}
 			$lotname = (!empty($plot['defaultlot']) && $plot['defaultlot'] === 'yes') ? 'default' : 'parkinglot_'.$plot['id'];
-			$ext->add('from-internal-xfer-dest', $plot['parkext'], '', new ext_set('CHANNEL(parkinglot)', $lotname));
-			$ext->add('from-internal-xfer-dest', $plot['parkext'], '', new ext_goto('1', $plot['parkext'], 'from-internal-xfer'));
+			$ext->add('from-internal-xfer-dest', $plot['parkext'], '', new ext_park($lotname));
 		}
 
 		//--------------------------------------
@@ -137,10 +136,8 @@ function parking_get_config($engine) {
 		}
 		$ext->addHint($ph, $lot['parkext'], implode('&',$finalh));
 
-		// Bypass Local dial for lot extension (e.g. 70) and optional parkto feature code
-		if ($lot['parkext'] != '') {
-			$ext->add($xfer_dest, $lot['parkext'], '', new ext_goto('1', $lot['parkext'], 'from-internal-xfer'));
-		}
+		// Lot extension (e.g. 70) is already Park() at priority 1 above, which
+		// also keeps it off the from-internal-xfer-dest Local dial catch-all.
 
 		if($parkto_code != '') {
 			$id = 'app-parking';
